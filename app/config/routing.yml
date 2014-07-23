@@ -1,0 +1,4 @@
+vyper_site:
+    resource: "@VyperSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
