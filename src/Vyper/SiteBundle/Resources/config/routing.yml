@@ -1,3 +1,7 @@
-vyper_site_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: VyperSiteBundle:Default:index }
+index:
+    path:     /
+    defaults: { _controller: VyperSiteBundle:Index:index }
+
+home:
+    path:     /home
+    defaults: { _controller: VyperSiteBundle:Index:index }
