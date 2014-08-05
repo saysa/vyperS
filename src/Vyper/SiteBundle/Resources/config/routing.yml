@@ -5,3 +5,7 @@ index:
 home:
     path:     /home
     defaults: { _controller: VyperSiteBundle:Index:index }
+
+login:
+    path:     /login
+    defaults: { _controller: VyperSiteBundle:Users:login }
