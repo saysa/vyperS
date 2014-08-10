@@ -9,3 +9,7 @@ home:
 login:
     path:     /login
     defaults: { _controller: VyperSiteBundle:Users:login }
+
+admin_show_articles:
+    path:     /_admin_/articles
+    defaults: { _controller: VyperSiteBundle:AdminArticle:showArticles }

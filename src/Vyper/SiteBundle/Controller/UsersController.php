@@ -35,7 +35,7 @@ class UsersController extends Controller
                 $session = $request->getSession();
                 $session->set('user', $this->match($email, $password));
 
-                return $this->redirect('home');
+                return $this->redirect($this->generateUrl('home'));
 
             }
         }
