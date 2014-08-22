@@ -308,7 +308,7 @@
 <div id="sidebar-left" class="col-sm-1">
     <div class="nav-collapse sidebar-nav collapse navbar-collapse bs-navbar-collapse">
         <ul class="nav nav-tabs nav-stacked main-menu">
-            <li{% if active_article is defined %} class="active"{% endif %}><a href="{{ base_url }}link_admin_show_article"><i class="icon-book"></i><span class="hidden-sm"> Articles</span></a></li>
+            <li{% if active_article is defined %} class="active"{% endif %}><a href="{{ path('admin_show_articles') }}"><i class="icon-book"></i><span class="hidden-sm"> Articles</span></a></li>
             <li{% if active_picture  is defined %} class="active"{% endif %}><a href="{{ base_url }}link_admin_show_picture"><i class="icon-picture"></i><span class="hidden-sm"> Pictures</span></a></li>
             <li{% if active_artist  is defined %} class="active"{% endif %}><a href="{{ base_url }}link_admin_show_artist"><i class="icon-star"></i><span class="hidden-sm"> Artists</span></a></li>
             <li{% if active_disco  is defined %} class="active"{% endif %}><a href="{{ base_url }}link_admin_show_disco"><i class="icon-star"></i><span class="hidden-sm"> Disco</span></a></li>

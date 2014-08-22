@@ -32,6 +32,13 @@ class Theme
     /**
      * @var boolean
      *
+     * @ORM\Column(name="showInMenu", type="boolean")
+     */
+    private $showInMenu;
+
+    /**
+     * @var boolean
+     *
      * @ORM\Column(name="live", type="boolean")
      */
     private $live;
@@ -181,5 +188,28 @@ class Theme
     public function getModified()
     {
         return $this->modified;
+    }
+
+    /**
+     * Set showInMenu
+     *
+     * @param boolean $showInMenu
+     * @return Theme
+     */
+    public function setShowInMenu($showInMenu)
+    {
+        $this->showInMenu = $showInMenu;
+
+        return $this;
+    }
+
+    /**
+     * Get showInMenu
+     *
+     * @return boolean 
+     */
+    public function getShowInMenu()
+    {
+        return $this->showInMenu;
     }
 }

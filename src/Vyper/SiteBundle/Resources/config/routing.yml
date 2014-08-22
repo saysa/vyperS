@@ -21,3 +21,11 @@ admin_add_article:
 admin_add_theme:
     path:     /_admin_/themes/add
     defaults: { _controller: VyperSiteBundle:AdminTheme:addTheme }
+
+admin_update_theme:
+    path:     _admin_/theme/update/:id
+    defaults: { _controller: VyperSiteBundle:AdminTheme:addTheme }
+
+admin_delete_theme:
+    path:     /_admin_/themes/add
+    defaults: { _controller: VyperSiteBundle:AdminTheme:addTheme }

@@ -38,6 +38,7 @@ class AdminThemeController extends AdminCommonController {
 
             $theme = $form->getData();
             $theme->setLive(true);
+            $theme->setShowInMenu(false);
             $theme->setDeleted(false);
             $theme->setCreated(new \DateTime('now'));
             $theme->setmodified(new \DateTime('now'));
