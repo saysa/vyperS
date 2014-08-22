@@ -25,6 +25,10 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        path_css: assets/css/
+        base_url: yoyo
+        path_js: assets/js
 
 # Assetic Configuration
 assetic:

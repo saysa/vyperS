@@ -9,6 +9,7 @@
 namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Vyper\SiteBundle\Components\View\View;
 
 class AdminArticleController extends AdminCommonController {
 
@@ -19,7 +20,7 @@ class AdminArticleController extends AdminCommonController {
             return $this->redirect($this->generateUrl('login'));
         }
 
-        echo "tas le droit";
-        exit;
+        $view = new View();
+        return $this->render('VyperSiteBundle:Adminarticle:showArticles.html.twig', $view->getView());
     }
 } 
