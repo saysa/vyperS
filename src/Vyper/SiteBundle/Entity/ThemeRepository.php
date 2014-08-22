@@ -15,6 +15,7 @@ class ThemeRepository extends EntityRepository
     public function myFindAll()
     {
         $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder->where('t.deleted = false');
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();
 
