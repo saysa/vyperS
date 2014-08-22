@@ -12,4 +12,12 @@ use Doctrine\ORM\EntityRepository;
  */
 class ArticleRepository extends EntityRepository
 {
+    public function myFindAll()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }

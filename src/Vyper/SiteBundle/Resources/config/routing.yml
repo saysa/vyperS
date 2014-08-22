@@ -13,3 +13,11 @@ login:
 admin_show_articles:
     path:     /_admin_/articles
     defaults: { _controller: VyperSiteBundle:AdminArticle:showArticles }
+
+admin_add_article:
+    path:     /_admin_/articles/add
+    defaults: { _controller: VyperSiteBundle:AdminArticle:addArticles }
+
+admin_add_theme:
+    path:     /_admin_/themes/add
+    defaults: { _controller: VyperSiteBundle:AdminTheme:addTheme }

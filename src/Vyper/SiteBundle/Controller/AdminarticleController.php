@@ -21,6 +21,16 @@ class AdminArticleController extends AdminCommonController {
         }
 
         $view = new View();
+
+        // Get all the articles not deleted
+        $articles = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->myFindAll();
+
+        $view->set('articles', $articles);
+        $view->set("active_article", true);
+
+        // Provisoire faire des liens Twig
+        $view->set('themes', array());
+
         return $this->render('VyperSiteBundle:Adminarticle:showArticles.html.twig', $view->getView());
     }
 } 
