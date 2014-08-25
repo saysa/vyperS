@@ -15,11 +15,34 @@ use Vyper\SiteBundle\Form\Admin\AdminAddTheme;
 
 class AdminThemeController extends AdminCommonController {
 
+    public function updateThemeAction(Request $request)
+    {
+        if(!$this->_secure($request) || !$this->_admin($request)) {
+
+            return $this->redirect($this->generateUrl('login'));
+        }
+
+        $view = new View();
+
+        $theme_repository = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Theme');
+        $theme = $theme_repository->findOneBy(array(
+            "id" => 2
+        ));
+
+        $form = $this->createFormBuilder($theme)
+            ->add('title', 'text')
+            ->getForm();
+
+        $view->set('form', $form->createView());
+
+        return $this->render('VyperSiteBundle:Admintheme:addTheme.html.twig', $view->getView());
+    }
+
     public function addThemeAction(Request $request)
     {
         if(!$this->_secure($request) || !$this->_admin($request)) {
 
-            return $this->redirect($this->generateUrl('/login'));
+            return $this->redirect($this->generateUrl('login'));
         }
 
         $view = new View();
@@ -31,7 +54,6 @@ class AdminThemeController extends AdminCommonController {
             ->add('title', 'text')
             ->getForm();
 
-        #$form = $this->get('form.factory')->create(new AdminAddTheme());
         if ('POST' === $request->getMethod()) {
 
             $form->handleRequest($request);

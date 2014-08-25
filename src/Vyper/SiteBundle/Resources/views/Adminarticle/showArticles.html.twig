@@ -124,8 +124,8 @@
                                     <td><input type="checkbox" class="theme-active" data-themeid="{{ theme.getId }}" {% if theme.getShowInMenu == 1 %}checked="checked"{% endif %} /></td>
                                     <td>{{ theme.getModified|date('Y-m-d') }}</td>
                                     <td>{{ theme.getTitle }}</td>
-                                    <td><a class="btn btn-info" href="{{ path('admin_update_theme') }}/{{ theme.getId }}"><i class="icon-edit "></i></a></td>
-                                    <td><a class="btn btn-danger" href="{{ path('admin_delete_theme') }}/{{ theme.getId }}"><i class="icon-trash "></i></a></td>
+                                    <td><a class="btn btn-info" href="{{ path('admin_update_theme', {'id': theme.getId}) }}"><i class="icon-edit "></i></a></td>
+                                    <td><a class="btn btn-danger" href="{{ path('admin_delete_theme', {'id': theme.getId}) }}"><i class="icon-trash "></i></a></td>
                                 </tr>
                             {% endfor %}
                             </tbody>
