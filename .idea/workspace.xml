@@ -71,19 +71,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.html.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="admin.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="304" column="0" selection-start="10345" selection-end="10345" vertical-scroll-proportion="0.0" vertical-offset="4560" max-vertical-offset="9420">
+            <state line="622" column="0" selection-start="22685" selection-end="22685" vertical-scroll-proportion="0.93963784" vertical-offset="8863" max-vertical-offset="9420">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminthemeController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AdminthemeController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminthemeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="74" selection-start="778" selection-end="778" vertical-scroll-proportion="0.44117647" vertical-offset="75" max-vertical-offset="1545">
+            <state line="28" column="74" selection-start="778" selection-end="778" vertical-scroll-proportion="-9.375" vertical-offset="75" max-vertical-offset="1545">
               <folding>
                 <element signature="e#754#775#1" expanded="true" />
                 <element signature="e#976#983#1" expanded="true" />
@@ -167,11 +167,11 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminCommonController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Theme.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/showArticles.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Admintheme/updateTheme.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminthemeController.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig" />
       </list>
     </option>
   </component>
@@ -316,7 +316,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,7 +338,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="acme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1124,13 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="0" selection-start="10345" selection-end="10345" vertical-scroll-proportion="0.0" vertical-offset="5100" max-vertical-offset="10676">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="680">
@@ -1175,7 +1176,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminthemeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="74" selection-start="778" selection-end="778" vertical-scroll-proportion="0.44117647" vertical-offset="75" max-vertical-offset="1545">
+        <state line="28" column="74" selection-start="778" selection-end="778" vertical-scroll-proportion="-9.375" vertical-offset="75" max-vertical-offset="1545">
           <folding>
             <element signature="e#754#775#1" expanded="true" />
             <element signature="e#976#983#1" expanded="true" />
@@ -1183,6 +1184,13 @@
             <element signature="e#1989#1996#1" expanded="true" />
             <element signature="e#2789#2836#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="622" column="0" selection-start="22685" selection-end="22685" vertical-scroll-proportion="0.93963784" vertical-offset="8863" max-vertical-offset="9420">
+          <folding />
         </state>
       </provider>
     </entry>
