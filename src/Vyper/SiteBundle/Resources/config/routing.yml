@@ -29,7 +29,7 @@ admin_update_theme:
         id: \d+
 
 admin_delete_theme:
-    path:     /_admin_/themes/add/{id}
-    defaults: { _controller: VyperSiteBundle:AdminTheme:addTheme }
+    path:     /_admin_/themes/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminTheme:deleteTheme }
     requirements:
         id: \d+

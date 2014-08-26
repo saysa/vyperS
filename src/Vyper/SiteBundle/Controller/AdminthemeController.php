@@ -15,6 +15,20 @@ use Vyper\SiteBundle\Form\Admin\AdminAddTheme;
 
 class AdminThemeController extends AdminCommonController {
 
+    public function deleteThemeAction($id)
+    {
+        $theme_repository = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Theme');
+        $theme = $theme_repository->findOneBy(array(
+            "id" => $id
+        ));
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($theme);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('admin_show_articles'));
+    }
+
     public function updateThemeAction(Request $request, $id)
     {
         if(!$this->_secure($request) || !$this->_admin($request)) {
