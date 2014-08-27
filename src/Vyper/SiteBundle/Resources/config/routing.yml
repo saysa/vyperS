@@ -33,3 +33,7 @@ admin_delete_theme:
     defaults: { _controller: VyperSiteBundle:AdminTheme:deleteTheme }
     requirements:
         id: \d+
+
+admin_switchThemeShowInMenu:
+   path:    /_admin_/ajax/switch_theme_show_in_menu
+   default: { _controller: VyperSiteBundle:AdminAjax: }

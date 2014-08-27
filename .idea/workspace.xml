@@ -58,7 +58,7 @@
       <file leaf-file-name="showArticles.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/showArticles.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="99" selection-start="5572" selection-end="5590" vertical-scroll-proportion="-6.3333335" vertical-offset="1753" max-vertical-offset="3030">
+            <state line="179" column="69" selection-start="7301" selection-end="7340" vertical-scroll-proportion="-13.208333" vertical-offset="2368" max-vertical-offset="3030">
               <folding>
                 <element signature="e#798#815#0" expanded="true" />
                 <element signature="e#3002#3019#0" expanded="true" />
@@ -71,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="622" column="0" selection-start="22685" selection-end="22685" vertical-scroll-proportion="0.93963784" vertical-offset="8863" max-vertical-offset="9420">
+            <state line="622" column="0" selection-start="22685" selection-end="22685" vertical-scroll-proportion="-19.458334" vertical-offset="8863" max-vertical-offset="9420">
               <folding />
             </state>
           </provider>
@@ -95,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="routing.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="19" selection-start="257" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="600">
+            <state line="38" column="53" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.8876405" vertical-offset="96" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
@@ -169,9 +169,9 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Theme.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/showArticles.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Admintheme/updateTheme.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminthemeController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
       </list>
     </option>
   </component>
@@ -686,32 +686,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1146,30 +1120,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/showArticles.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="99" selection-start="5572" selection-end="5590" vertical-scroll-proportion="-6.3333335" vertical-offset="1753" max-vertical-offset="3030">
-          <folding>
-            <element signature="e#798#815#0" expanded="true" />
-            <element signature="e#3002#3019#0" expanded="true" />
-            <element signature="e#4045#4060#0" expanded="true" />
-            <element signature="e#5409#5427#0" expanded="true" />
-            <element signature="e#5572#5590#0" expanded="true" />
-            <element signature="e#5901#5916#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="67" selection-start="1086" selection-end="1137" vertical-scroll-proportion="-9.375" vertical-offset="285" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="257" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
@@ -1189,7 +1142,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="622" column="0" selection-start="22685" selection-end="22685" vertical-scroll-proportion="0.93963784" vertical-offset="8863" max-vertical-offset="9420">
+        <state line="622" column="0" selection-start="22685" selection-end="22685" vertical-scroll-proportion="-19.458334" vertical-offset="8863" max-vertical-offset="9420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/showArticles.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="69" selection-start="7301" selection-end="7340" vertical-scroll-proportion="-13.208333" vertical-offset="2368" max-vertical-offset="3030">
+          <folding>
+            <element signature="e#798#815#0" expanded="true" />
+            <element signature="e#3002#3019#0" expanded="true" />
+            <element signature="e#4045#4060#0" expanded="true" />
+            <element signature="e#5409#5427#0" expanded="true" />
+            <element signature="e#5572#5590#0" expanded="true" />
+            <element signature="e#5901#5916#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="53" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.8876405" vertical-offset="96" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
