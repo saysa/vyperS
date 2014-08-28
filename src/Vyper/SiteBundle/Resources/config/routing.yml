@@ -36,4 +36,4 @@ admin_delete_theme:
 
 admin_switchThemeShowInMenu:
    path:    /_admin_/ajax/switch_theme_show_in_menu
-   default: { _controller: VyperSiteBundle:AdminAjax: }
+   defaults: { _controller: VyperSiteBundle:AdminAjax:toto }
