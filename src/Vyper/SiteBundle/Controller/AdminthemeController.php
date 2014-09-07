@@ -15,11 +15,11 @@ use Vyper\SiteBundle\Form\Admin\AdminAddTheme;
 
 class AdminThemeController extends AdminCommonController {
 
-    public function deleteThemeAction($id)
+    public function deleteThemeAction(Theme $theme)
     {
         $theme_repository = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Theme');
         $theme = $theme_repository->findOneBy(array(
-            "id" => $id
+            "id" => $theme->getId()
         ));
 
         $em = $this->getDoctrine()->getManager();
@@ -29,7 +29,7 @@ class AdminThemeController extends AdminCommonController {
         return $this->redirect($this->generateUrl('admin_show_articles'));
     }
 
-    public function updateThemeAction(Request $request, $id)
+    public function updateThemeAction(Request $request, Theme $theme)
     {
         if(!$this->_secure($request) || !$this->_admin($request)) {
 
@@ -40,7 +40,7 @@ class AdminThemeController extends AdminCommonController {
 
         $theme_repository = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Theme');
         $theme = $theme_repository->findOneBy(array(
-            "id" => $id
+            "id" => $theme->getId()
         ));
 
         $form = $this->createFormBuilder($theme)
