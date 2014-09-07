@@ -3,6 +3,7 @@
 namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Article
@@ -188,6 +189,13 @@ class Article
      * @ORM\Column(name="stringURL", type="string", length=255)
      */
     private $stringURL;
+
+    /**
+     * @var string
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(type="string", length=255, unique=true)
+     */
+    private $slug;
 
     /**
      * @var boolean
@@ -870,5 +878,28 @@ class Article
     public function getModified()
     {
         return $this->modified;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Article
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
