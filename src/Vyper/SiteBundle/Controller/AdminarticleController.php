@@ -48,11 +48,6 @@ class AdminArticleController extends AdminCommonController {
         $article->setAuthor("kiyomi");
         $article->setType(1);
 
-        $article->setLive(true);
-        $article->setDeleted(false);
-        $article->setCreated(new \DateTime('now'));
-        $article->setmodified(new \DateTime('now'));
-
         $em = $this->getDoctrine()->getManager();
         $em->persist($article);
         $em->flush();

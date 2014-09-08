@@ -52,8 +52,6 @@ class AdminThemeController extends AdminCommonController {
 
             $theme = $form->getData();
 
-            $theme->setmodified(new \DateTime('now'));
-
             $em = $this->getDoctrine()->getManager();
             $em->flush();
 
@@ -86,11 +84,7 @@ class AdminThemeController extends AdminCommonController {
             $form->handleRequest($request);
 
             $theme = $form->getData();
-            $theme->setLive(true);
-            $theme->setShowInMenu(false);
-            $theme->setDeleted(false);
-            $theme->setCreated(new \DateTime('now'));
-            $theme->setmodified(new \DateTime('now'));
+
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($theme);

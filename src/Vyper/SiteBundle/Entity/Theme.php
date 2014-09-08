@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\ThemeRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Theme
 {
@@ -211,5 +212,25 @@ class Theme
     public function getShowInMenu()
     {
         return $this->showInMenu;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->setLive(true);
+        $this->setShowInMenu(false);
+        $this->setDeleted(false);
+        $this->setCreated(new \DateTime('now'));
+        $this->setmodified(new \DateTime('now'));
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function preUpdate()
+    {
+        $this->setmodified(new \DateTime('now'));
     }
 }
