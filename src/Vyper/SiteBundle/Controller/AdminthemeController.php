@@ -90,6 +90,8 @@ class AdminThemeController extends AdminCommonController {
             $em->persist($theme);
             $em->flush();
 
+            $this->get('session')->getFlashBag()->add('info', 'Theme correctly saved');
+
         }
 
         $view->set('form', $form->createView());
