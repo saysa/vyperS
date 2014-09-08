@@ -102,6 +102,11 @@ class Disco
     private $continent;
 
     /**
+     * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
+     */
+    private $picture;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -506,5 +511,28 @@ class Disco
     public function getContinent()
     {
         return $this->continent;
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Vyper\SiteBundle\Entity\Picture $picture
+     * @return Disco
+     */
+    public function setPicture(\Vyper\SiteBundle\Entity\Picture $picture = null)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Vyper\SiteBundle\Entity\Picture 
+     */
+    public function getPicture()
+    {
+        return $this->picture;
     }
 }
