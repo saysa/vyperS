@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Disco.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Disco.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="572" column="0" selection-start="9764" selection-end="9764" vertical-scroll-proportion="0.5606695" vertical-offset="8312" max-vertical-offset="8835">
+            <state line="111" column="21" selection-start="2080" selection-end="2204" vertical-scroll-proportion="-3.18" vertical-offset="1506" max-vertical-offset="8835">
               <folding />
             </state>
           </provider>
@@ -109,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Album.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Album.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="7" selection-start="615" selection-end="740" vertical-scroll-proportion="-9.75" vertical-offset="366" max-vertical-offset="3735">
+            <state line="263" column="34" selection-start="4444" selection-end="4444" vertical-scroll-proportion="0.077380955" vertical-offset="3906" max-vertical-offset="4410">
               <folding />
             </state>
           </provider>
@@ -164,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminthemeController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/showArticles.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Location.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Tour.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Title.php" />
@@ -173,6 +172,7 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Artist.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php" />
       </list>
     </option>
   </component>
@@ -756,7 +756,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="22" width="1862" height="960" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3329493" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -769,7 +769,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15879121" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18131869" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18131869" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1081,13 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="7" selection-start="615" selection-end="740" vertical-scroll-proportion="-9.75" vertical-offset="366" max-vertical-offset="3735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/PictureRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
@@ -1141,7 +1134,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="572" column="0" selection-start="9764" selection-end="9764" vertical-scroll-proportion="0.5606695" vertical-offset="8312" max-vertical-offset="8835">
+        <state line="111" column="21" selection-start="2080" selection-end="2204" vertical-scroll-proportion="-3.18" vertical-offset="1506" max-vertical-offset="8835">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="263" column="34" selection-start="4444" selection-end="4444" vertical-scroll-proportion="0.077380955" vertical-offset="3906" max-vertical-offset="4410">
           <folding />
         </state>
       </provider>
