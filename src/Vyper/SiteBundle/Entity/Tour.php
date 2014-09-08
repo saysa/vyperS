@@ -77,6 +77,12 @@ class Tour
     private $type;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Continent")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $continent;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -389,5 +395,28 @@ class Tour
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Set continent
+     *
+     * @param \Vyper\SiteBundle\Entity\Continent $continent
+     * @return Tour
+     */
+    public function setContinent(\Vyper\SiteBundle\Entity\Continent $continent)
+    {
+        $this->continent = $continent;
+
+        return $this;
+    }
+
+    /**
+     * Get continent
+     *
+     * @return \Vyper\SiteBundle\Entity\Continent 
+     */
+    public function getContinent()
+    {
+        return $this->continent;
     }
 }
