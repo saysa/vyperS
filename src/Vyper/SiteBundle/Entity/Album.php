@@ -36,6 +36,12 @@ class Album
     private $description;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\AlbumCategory")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $category;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -210,5 +216,28 @@ class Album
     public function getModified()
     {
         return $this->modified;
+    }
+
+    /**
+     * Set category
+     *
+     * @param \Vyper\SiteBundle\Entity\AlbumCategory $category
+     * @return Album
+     */
+    public function setCategory(\Vyper\SiteBundle\Entity\AlbumCategory $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Vyper\SiteBundle\Entity\AlbumCategory 
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }
