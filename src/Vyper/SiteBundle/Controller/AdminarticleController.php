@@ -9,7 +9,9 @@
 namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Vyper\SiteBundle\Components\View\View;
+use Vyper\SiteBundle\Entity\Article;
 
 class AdminArticleController extends AdminCommonController {
 
@@ -23,7 +25,7 @@ class AdminArticleController extends AdminCommonController {
         $view = new View();
 
         // Get all the articles not deleted
-        $articles = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->myFindAll();
+        $articles  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->myFindAll();
         $themes    = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Theme')->myFindAll();
 
         $view->set('articles', $articles);
@@ -31,5 +33,31 @@ class AdminArticleController extends AdminCommonController {
         $view->set('themes', $themes);
 
         return $this->render('VyperSiteBundle:Adminarticle:showArticles.html.twig', $view->getView());
+    }
+
+    public function addArticleAction(Request $request)
+    {
+        $article = new Article();
+        $article->setTitle("Miyavi laisse un message");
+        $article->setDescription("desc.");
+        $article->setText("Le corps du message");
+        $article->setUser(1);
+        $article->setHighlight(0);
+        $article->setContinent(1);
+        $article->setReleaseDate(new \DateTime('now'));
+        $article->setReleaseTime(new \DateTime('now'));
+        $article->setAuthor("kiyomi");
+        $article->setType(1);
+
+        $article->setLive(true);
+        $article->setDeleted(false);
+        $article->setCreated(new \DateTime('now'));
+        $article->setmodified(new \DateTime('now'));
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($article);
+        $em->flush();
+
+        return new Response();
     }
 } 

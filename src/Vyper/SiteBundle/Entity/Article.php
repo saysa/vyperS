@@ -88,21 +88,21 @@ class Article
     /**
      * @var string
      *
-     * @ORM\Column(name="translator", type="string", length=50)
+     * @ORM\Column(name="translator", type="string", length=50, nullable=true)
      */
     private $translator;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="source", type="string", length=255)
+     * @ORM\Column(name="source", type="string", length=255, nullable=true)
      */
     private $source;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="sourceURL", type="string", length=255)
+     * @ORM\Column(name="sourceURL", type="string", length=255, nullable=true)
      */
     private $sourceURL;
 
@@ -116,14 +116,14 @@ class Article
     /**
      * @var string
      *
-     * @ORM\Column(name="metaKeywords", type="text")
+     * @ORM\Column(name="metaKeywords", type="text", nullable=true)
      */
     private $metaKeywords;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="artistsKeywords", type="text")
+     * @ORM\Column(name="artistsKeywords", type="text", nullable=true)
      */
     private $artistsKeywords;
 
@@ -135,63 +135,63 @@ class Article
     /**
      * @var integer
      *
-     * @ORM\Column(name="relatedPicture", type="integer")
+     * @ORM\Column(name="relatedPicture", type="integer", nullable=true)
      */
     private $relatedPicture;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="youtube", type="string", length=255)
+     * @ORM\Column(name="youtube", type="string", length=255, nullable=true)
      */
     private $youtube;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="relatedGallery", type="integer")
+     * @ORM\Column(name="relatedGallery", type="integer", nullable=true)
      */
     private $relatedGallery;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="relatedVideo", type="integer")
+     * @ORM\Column(name="relatedVideo", type="integer", nullable=true)
      */
     private $relatedVideo;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="relatedTheme", type="integer")
+     * @ORM\Column(name="relatedTheme", type="integer", nullable=true)
      */
     private $relatedTheme;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="relatedItem", type="integer")
+     * @ORM\Column(name="relatedItem", type="integer", nullable=true)
      */
     private $relatedItem;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="relatedEvent", type="integer")
+     * @ORM\Column(name="relatedEvent", type="integer", nullable=true)
      */
     private $relatedEvent;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="relatedTour", type="integer")
+     * @ORM\Column(name="relatedTour", type="integer", nullable=true)
      */
     private $relatedTour;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="stringURL", type="string", length=255)
+     * @ORM\Column(name="stringURL", type="string", length=255, nullable=true)
      */
     private $stringURL;
 

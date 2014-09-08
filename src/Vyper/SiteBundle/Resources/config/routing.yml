@@ -21,8 +21,8 @@ admin_show_articles:
     defaults: { _controller: VyperSiteBundle:AdminArticle:showArticles }
 
 admin_add_article:
-    path:     /_admin_/articles/add
-    defaults: { _controller: VyperSiteBundle:AdminArticle:addArticles }
+    path:     /_admin_/article/add
+    defaults: { _controller: VyperSiteBundle:AdminArticle:addArticle }
 
 admin_add_theme:
     path:     /_admin_/themes/add

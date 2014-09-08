@@ -3,7 +3,13 @@
 {% block title "Visual kei - JPop - Jrock - Jmusic - VYPER Japanese Music | Toute la Jmusic, toutes les news en temps réels" %}
 
     {% block content %}
-        Un article
 
-        {{ user_id }}
+        <h2>{{ article.title }}</h2>
+
+        <p>{{ article.description }}</p>
+
+        <div>
+            {{ article.text }}
+        </div>
+
     {% endblock %}
