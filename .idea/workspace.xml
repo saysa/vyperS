@@ -101,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Article.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Article.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="12" selection-start="784" selection-end="784" vertical-scroll-proportion="-3.18" vertical-offset="501" max-vertical-offset="13410">
+            <state line="886" column="5" selection-start="15060" selection-end="15060" vertical-scroll-proportion="1.5648535" vertical-offset="12542" max-vertical-offset="13410">
               <folding>
                 <element signature="e#43#75#0" expanded="true" />
               </folding>
@@ -112,10 +112,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Album.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Album.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="230" column="21" selection-start="3743" selection-end="3743" vertical-scroll-proportion="0.43452382" vertical-offset="3231" max-vertical-offset="3735">
+            <state line="40" column="7" selection-start="615" selection-end="740" vertical-scroll-proportion="-9.75" vertical-offset="366" max-vertical-offset="3735">
               <folding />
             </state>
           </provider>
@@ -178,8 +178,8 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminthemeController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/showArticles.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
       </list>
     </option>
   </component>
@@ -1119,19 +1119,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="12" selection-start="784" selection-end="784" vertical-scroll-proportion="-3.18" vertical-offset="501" max-vertical-offset="13410">
-          <folding>
-            <element signature="e#43#75#0" expanded="true" />
-          </folding>
+        <state line="40" column="7" selection-start="615" selection-end="740" vertical-scroll-proportion="-9.75" vertical-offset="366" max-vertical-offset="3735">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="21" selection-start="3743" selection-end="3743" vertical-scroll-proportion="0.43452382" vertical-offset="3231" max-vertical-offset="3735">
-          <folding />
+        <state line="886" column="5" selection-start="15060" selection-end="15060" vertical-scroll-proportion="1.5648535" vertical-offset="12542" max-vertical-offset="13410">
+          <folding>
+            <element signature="e#43#75#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

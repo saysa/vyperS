@@ -38,9 +38,8 @@ class Article
     private $highlight;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="continent", type="integer")
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Continent")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $continent;
 
@@ -275,28 +274,6 @@ class Article
         return $this->highlight;
     }
 
-    /**
-     * Set continent
-     *
-     * @param integer $continent
-     * @return Article
-     */
-    public function setContinent($continent)
-    {
-        $this->continent = $continent;
-
-        return $this;
-    }
-
-    /**
-     * Get continent
-     *
-     * @return integer 
-     */
-    public function getContinent()
-    {
-        return $this->continent;
-    }
 
     /**
      * Set title
@@ -884,5 +861,28 @@ class Article
     public function getArticleType()
     {
         return $this->articleType;
+    }
+
+    /**
+     * Set continent
+     *
+     * @param \Vyper\SiteBundle\Entity\Continent $continent
+     * @return Article
+     */
+    public function setContinent(\Vyper\SiteBundle\Entity\Continent $continent)
+    {
+        $this->continent = $continent;
+
+        return $this;
+    }
+
+    /**
+     * Get continent
+     *
+     * @return \Vyper\SiteBundle\Entity\Continent 
+     */
+    public function getContinent()
+    {
+        return $this->continent;
     }
 }
