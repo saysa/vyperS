@@ -43,6 +43,12 @@ class Title
     private $titleReal;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Disco")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $disco;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -240,5 +246,28 @@ class Title
     public function getModified()
     {
         return $this->modified;
+    }
+
+    /**
+     * Set disco
+     *
+     * @param \Vyper\SiteBundle\Entity\Disco $disco
+     * @return Title
+     */
+    public function setDisco(\Vyper\SiteBundle\Entity\Disco $disco)
+    {
+        $this->disco = $disco;
+
+        return $this;
+    }
+
+    /**
+     * Get disco
+     *
+     * @return \Vyper\SiteBundle\Entity\Disco 
+     */
+    public function getDisco()
+    {
+        return $this->disco;
     }
 }
