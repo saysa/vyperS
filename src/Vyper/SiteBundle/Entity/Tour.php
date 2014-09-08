@@ -71,6 +71,12 @@ class Tour
     private $artistsKeywords;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\TourType")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $type;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -360,5 +366,28 @@ class Tour
     public function getModified()
     {
         return $this->modified;
+    }
+
+    /**
+     * Set type
+     *
+     * @param \Vyper\SiteBundle\Entity\TourType $type
+     * @return Tour
+     */
+    public function setType(\Vyper\SiteBundle\Entity\TourType $type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Vyper\SiteBundle\Entity\TourType 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }
