@@ -71,6 +71,24 @@ class Event
     private $price;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Location")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $location;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\EventType")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $type;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Tour")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $tour;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -360,5 +378,74 @@ class Event
     public function getModified()
     {
         return $this->modified;
+    }
+
+    /**
+     * Set location
+     *
+     * @param \Vyper\SiteBundle\Entity\Location $location
+     * @return Event
+     */
+    public function setLocation(\Vyper\SiteBundle\Entity\Location $location)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return \Vyper\SiteBundle\Entity\Location 
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
+     * Set type
+     *
+     * @param \Vyper\SiteBundle\Entity\EventType $type
+     * @return Event
+     */
+    public function setType(\Vyper\SiteBundle\Entity\EventType $type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Vyper\SiteBundle\Entity\EventType 
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set tour
+     *
+     * @param \Vyper\SiteBundle\Entity\Tour $tour
+     * @return Event
+     */
+    public function setTour(\Vyper\SiteBundle\Entity\Tour $tour)
+    {
+        $this->tour = $tour;
+
+        return $this;
+    }
+
+    /**
+     * Get tour
+     *
+     * @return \Vyper\SiteBundle\Entity\Tour 
+     */
+    public function getTour()
+    {
+        return $this->tour;
     }
 }
