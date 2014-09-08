@@ -194,6 +194,11 @@ class Article
     private $themes;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Vyper\SiteBundle\Entity\Artist", cascade={"persist"})
+     */
+    private $artists;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -928,5 +933,38 @@ class Article
     public function getThemes()
     {
         return $this->themes;
+    }
+
+    /**
+     * Add artists
+     *
+     * @param \Vyper\SiteBundle\Entity\Artist $artist
+     * @return Article
+     */
+    public function addArtist(\Vyper\SiteBundle\Entity\Artist $artist)
+    {
+        $this->artists[] = $artist;
+
+        return $this;
+    }
+
+    /**
+     * Remove artists
+     *
+     * @param \Vyper\SiteBundle\Entity\Artist $artist
+     */
+    public function removeArtist(\Vyper\SiteBundle\Entity\Artist $artist)
+    {
+        $this->artists->removeElement($artist);
+    }
+
+    /**
+     * Get artists
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getArtists()
+    {
+        return $this->artists;
     }
 }
