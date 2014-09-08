@@ -80,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Article.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Article.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="0" selection-start="4119" selection-end="4119" vertical-scroll-proportion="203.44" vertical-offset="13367" max-vertical-offset="13845">
+            <state line="600" column="35" selection-start="10349" selection-end="10349" vertical-scroll-proportion="0.30125523" vertical-offset="8856" max-vertical-offset="14070">
               <folding>
                 <element signature="e#43#75#0" expanded="true" />
               </folding>
@@ -91,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Theme.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Theme.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Theme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="21" selection-start="3656" selection-end="3656" vertical-scroll-proportion="0.86904764" vertical-offset="2997" max-vertical-offset="3630">
+            <state line="229" column="21" selection-start="3656" selection-end="3656" vertical-scroll-proportion="-18.25" vertical-offset="2997" max-vertical-offset="3630">
               <folding />
             </state>
           </provider>
@@ -169,10 +169,10 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Tour.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Title.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Picture.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Artist.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
       </list>
     </option>
   </component>
@@ -1109,15 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="0" selection-start="4119" selection-end="4119" vertical-scroll-proportion="203.44" vertical-offset="13367" max-vertical-offset="13845">
-          <folding>
-            <element signature="e#43#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="106" column="21" selection-start="1951" selection-end="2074" vertical-scroll-proportion="-3.18" vertical-offset="1431" max-vertical-offset="8160">
@@ -1141,8 +1132,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Theme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="21" selection-start="3656" selection-end="3656" vertical-scroll-proportion="0.86904764" vertical-offset="2997" max-vertical-offset="3630">
+        <state line="229" column="21" selection-start="3656" selection-end="3656" vertical-scroll-proportion="-18.25" vertical-offset="2997" max-vertical-offset="3630">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="600" column="35" selection-start="10349" selection-end="10349" vertical-scroll-proportion="0.30125523" vertical-offset="8856" max-vertical-offset="14070">
+          <folding>
+            <element signature="e#43#75#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

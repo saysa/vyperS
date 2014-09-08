@@ -144,13 +144,6 @@ class Article
     /**
      * @var integer
      *
-     * @ORM\Column(name="relatedTheme", type="integer", nullable=true)
-     */
-    private $relatedTheme;
-
-    /**
-     * @var integer
-     *
      * @ORM\Column(name="relatedItem", type="integer", nullable=true)
      */
     private $relatedItem;
@@ -194,6 +187,11 @@ class Article
      * @ORM\JoinColumn(nullable=false)
      */
     private $picture;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Vyper\SiteBundle\Entity\Theme", cascade={"persist"})
+     */
+    private $themes;
 
     /**
      * @var boolean
@@ -604,29 +602,6 @@ class Article
     }
 
     /**
-     * Set relatedTheme
-     *
-     * @param integer $relatedTheme
-     * @return Article
-     */
-    public function setRelatedTheme($relatedTheme)
-    {
-        $this->relatedTheme = $relatedTheme;
-
-        return $this;
-    }
-
-    /**
-     * Get relatedTheme
-     *
-     * @return integer 
-     */
-    public function getRelatedTheme()
-    {
-        return $this->relatedTheme;
-    }
-
-    /**
      * Set relatedItem
      *
      * @param integer $relatedItem
@@ -913,5 +888,45 @@ class Article
     public function getPicture()
     {
         return $this->picture;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->themes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add themes
+     *
+     * @param \Vyper\SiteBundle\Entity\Theme $theme
+     * @return Article
+     */
+    public function addTheme(\Vyper\SiteBundle\Entity\Theme $theme)
+    {
+        $this->themes[] = $theme;
+
+        return $this;
+    }
+
+    /**
+     * Remove themes
+     *
+     * @param \Vyper\SiteBundle\Entity\Theme $theme
+     */
+    public function removeTheme(\Vyper\SiteBundle\Entity\Theme $theme)
+    {
+        $this->themes->removeElement($theme);
+    }
+
+    /**
+     * Get themes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getThemes()
+    {
+        return $this->themes;
     }
 }
