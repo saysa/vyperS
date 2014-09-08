@@ -71,6 +71,11 @@ class Artist
     private $keywords;
 
     /**
+     * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
+     */
+    private $picture;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -360,5 +365,28 @@ class Artist
     public function getModified()
     {
         return $this->modified;
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Vyper\SiteBundle\Entity\Picture $picture
+     * @return Artist
+     */
+    public function setPicture(\Vyper\SiteBundle\Entity\Picture $picture = null)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Vyper\SiteBundle\Entity\Picture 
+     */
+    public function getPicture()
+    {
+        return $this->picture;
     }
 }
