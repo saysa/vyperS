@@ -107,6 +107,11 @@ class Disco
     private $picture;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Vyper\SiteBundle\Entity\Artist", cascade={"persist"})
+     */
+    private $artists;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -534,5 +539,45 @@ class Disco
     public function getPicture()
     {
         return $this->picture;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->artists = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add artists
+     *
+     * @param \Vyper\SiteBundle\Entity\Artist $artist
+     * @return Disco
+     */
+    public function addArtist(\Vyper\SiteBundle\Entity\Artist $artist)
+    {
+        $this->artists[] = $artist;
+
+        return $this;
+    }
+
+    /**
+     * Remove artists
+     *
+     * @param \Vyper\SiteBundle\Entity\Artist $artist
+     */
+    public function removeArtist(\Vyper\SiteBundle\Entity\Artist $artist)
+    {
+        $this->artists->removeElement($artist);
+    }
+
+    /**
+     * Get artists
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getArtists()
+    {
+        return $this->artists;
     }
 }
