@@ -190,6 +190,12 @@ class Article
     private $slug;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Picture")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $picture;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -884,5 +890,28 @@ class Article
     public function getContinent()
     {
         return $this->continent;
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Vyper\SiteBundle\Entity\Picture $picture
+     * @return Article
+     */
+    public function setPicture(\Vyper\SiteBundle\Entity\Picture $picture)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Vyper\SiteBundle\Entity\Picture 
+     */
+    public function getPicture()
+    {
+        return $this->picture;
     }
 }
