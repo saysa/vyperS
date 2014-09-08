@@ -128,6 +128,11 @@ class Article
     private $artistsKeywords;
 
     /**
+     * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
+     */
+    private $picture;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="relatedPicture", type="integer")
@@ -901,5 +906,28 @@ class Article
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Vyper\SiteBundle\Entity\Picture $picture
+     * @return Article
+     */
+    public function setPicture(\Vyper\SiteBundle\Entity\Picture $picture)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Vyper\SiteBundle\Entity\Picture 
+     */
+    public function getPicture()
+    {
+        return $this->picture;
     }
 }
