@@ -9,7 +9,6 @@
 namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
-use Vyper\SiteBundle\Components\View\View;
 use Vyper\SiteBundle\Entity\Theme;
 use Vyper\SiteBundle\Form\Admin\AdminAddTheme;
 
@@ -36,7 +35,7 @@ class AdminThemeController extends AdminCommonController {
             return $this->redirect($this->generateUrl('login'));
         }
 
-        $view = new View();
+        $view = $this->container->get('saysa_view');
 
         $theme_repository = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Theme');
         $theme = $theme_repository->findOneBy(array(
@@ -73,7 +72,7 @@ class AdminThemeController extends AdminCommonController {
             return $this->redirect($this->generateUrl('login'));
         }
 
-        $view = new View();
+        $view = $this->container->get('saysa_view');
         $view->set("active_article", true);
 
         $theme = new Theme();

@@ -4,7 +4,6 @@ namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Vyper\SiteBundle\Components\View\View;
 use Vyper\SiteBundle\Entity\Article;
 
 class ArticleController extends Controller
@@ -16,7 +15,7 @@ class ArticleController extends Controller
      */
     public function showArticleAction(Request $request, Article $article)
     {
-        $view = new View();
+        $view = $this->container->get('saysa_view');
         $session = $request->getSession();
         $user = $session->get('user');
 

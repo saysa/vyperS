@@ -4,7 +4,6 @@ namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Vyper\SiteBundle\Components\View\View;
 
 class IndexController extends Controller
 {
@@ -14,7 +13,7 @@ class IndexController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $view = new View();
+        $view = $this->container->get('saysa_view');
         $session = $request->getSession();
         $user = $session->get('user');
         $view->set('user_id', $user);

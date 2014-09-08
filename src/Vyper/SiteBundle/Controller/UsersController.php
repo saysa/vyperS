@@ -3,7 +3,6 @@
 namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Vyper\SiteBundle\Components\View\View;
 use Vyper\SiteBundle\Form\Login\Login;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -15,7 +14,7 @@ class UsersController extends Controller
      */
     public function loginAction(Request $request)
     {
-        $view = new View();
+        $view = $this->container->get('saysa_view');
         $form = $this->get('form.factory')->create(new Login());
         if ('POST' === $request->getMethod()) {
 

@@ -10,7 +10,6 @@ namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Vyper\SiteBundle\Components\View\View;
 use Vyper\SiteBundle\Entity\Article;
 
 class AdminArticleController extends AdminCommonController {
@@ -22,7 +21,7 @@ class AdminArticleController extends AdminCommonController {
             return $this->redirect($this->generateUrl('login'));
         }
 
-        $view = new View();
+        $view = $this->container->get('saysa_view');
 
         // Get all the articles not deleted
         $articles  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->myFindAll();
