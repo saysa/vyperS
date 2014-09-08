@@ -44,19 +44,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Title.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Title.php">
+      <file leaf-file-name="Event.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="0" selection-start="1357" selection-end="1357" vertical-scroll-proportion="105.25" vertical-offset="3681" max-vertical-offset="4185">
+            <state line="500" column="0" selection-start="8452" selection-end="8452" vertical-scroll-proportion="-12.875" vertical-offset="7191" max-vertical-offset="7950">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Event.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php">
+      <file leaf-file-name="Visite.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Visite.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="500" column="0" selection-start="8452" selection-end="8452" vertical-scroll-proportion="0.6130952" vertical-offset="7191" max-vertical-offset="7950">
+            <state line="161" column="16" selection-start="2834" selection-end="2834" vertical-scroll-proportion="-1.4702381" vertical-offset="3156" max-vertical-offset="3675">
               <folding />
             </state>
           </provider>
@@ -83,7 +83,7 @@
       <file leaf-file-name="Article.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="21" selection-start="3851" selection-end="3975" vertical-scroll-proportion="-3.18" vertical-offset="2811" max-vertical-offset="14640">
+            <state line="175" column="25" selection-start="3268" selection-end="3418" vertical-scroll-proportion="-3.18" vertical-offset="2466" max-vertical-offset="14640">
               <folding>
                 <element signature="e#43#75#0" expanded="true" />
               </folding>
@@ -173,6 +173,7 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Visite.php" />
       </list>
     </option>
   </component>
@@ -759,7 +760,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3329493" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3329493" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -769,7 +770,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15879121" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18131869" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18131869" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -809,11 +810,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="24" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="510" />
@@ -1130,18 +1126,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="500" column="0" selection-start="8452" selection-end="8452" vertical-scroll-proportion="-12.875" vertical-offset="7191" max-vertical-offset="7950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="21" selection-start="3851" selection-end="3975" vertical-scroll-proportion="-3.18" vertical-offset="2811" max-vertical-offset="14640">
+        <state line="175" column="25" selection-start="3268" selection-end="3418" vertical-scroll-proportion="-3.18" vertical-offset="2466" max-vertical-offset="14640">
           <folding>
             <element signature="e#43#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Visite.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="500" column="0" selection-start="8452" selection-end="8452" vertical-scroll-proportion="0.6130952" vertical-offset="7191" max-vertical-offset="7950">
+        <state line="161" column="16" selection-start="2834" selection-end="2834" vertical-scroll-proportion="-1.4702381" vertical-offset="3156" max-vertical-offset="3675">
           <folding />
         </state>
       </provider>
