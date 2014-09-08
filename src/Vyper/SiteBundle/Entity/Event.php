@@ -1,0 +1,364 @@
+<?php
+
+namespace Vyper\SiteBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Event
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\EventRepository")
+ */
+class Event
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="realTitle", type="string", length=255)
+     */
+    private $realTitle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionReal", type="text")
+     */
+    private $descriptionReal;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="date")
+     */
+    private $date;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="time", type="time")
+     */
+    private $time;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="price", type="string", length=100)
+     */
+    private $price;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="live", type="boolean")
+     */
+    private $live;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="deleted", type="boolean")
+     */
+    private $deleted;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created", type="datetime")
+     */
+    private $created;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="modified", type="datetime")
+     */
+    private $modified;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Event
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set realTitle
+     *
+     * @param string $realTitle
+     * @return Event
+     */
+    public function setRealTitle($realTitle)
+    {
+        $this->realTitle = $realTitle;
+
+        return $this;
+    }
+
+    /**
+     * Get realTitle
+     *
+     * @return string 
+     */
+    public function getRealTitle()
+    {
+        return $this->realTitle;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Event
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set descriptionReal
+     *
+     * @param string $descriptionReal
+     * @return Event
+     */
+    public function setDescriptionReal($descriptionReal)
+    {
+        $this->descriptionReal = $descriptionReal;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionReal
+     *
+     * @return string 
+     */
+    public function getDescriptionReal()
+    {
+        return $this->descriptionReal;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     * @return Event
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime 
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set time
+     *
+     * @param \DateTime $time
+     * @return Event
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    /**
+     * Get time
+     *
+     * @return \DateTime 
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * Set price
+     *
+     * @param string $price
+     * @return Event
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return string 
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set live
+     *
+     * @param boolean $live
+     * @return Event
+     */
+    public function setLive($live)
+    {
+        $this->live = $live;
+
+        return $this;
+    }
+
+    /**
+     * Get live
+     *
+     * @return boolean 
+     */
+    public function getLive()
+    {
+        return $this->live;
+    }
+
+    /**
+     * Set deleted
+     *
+     * @param boolean $deleted
+     * @return Event
+     */
+    public function setDeleted($deleted)
+    {
+        $this->deleted = $deleted;
+
+        return $this;
+    }
+
+    /**
+     * Get deleted
+     *
+     * @return boolean 
+     */
+    public function getDeleted()
+    {
+        return $this->deleted;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     * @return Event
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime 
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     * @return Event
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime 
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+}
