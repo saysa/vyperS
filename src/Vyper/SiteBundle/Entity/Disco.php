@@ -90,6 +90,12 @@ class Disco
     private $type;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Country")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $country;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -448,5 +454,28 @@ class Disco
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Set country
+     *
+     * @param \Vyper\SiteBundle\Entity\Country $country
+     * @return Disco
+     */
+    public function setCountry(\Vyper\SiteBundle\Entity\Country $country)
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return \Vyper\SiteBundle\Entity\Country 
+     */
+    public function getCountry()
+    {
+        return $this->country;
     }
 }
