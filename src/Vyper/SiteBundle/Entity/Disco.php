@@ -78,6 +78,12 @@ class Disco
     private $details;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Medium")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $medium;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -390,5 +396,28 @@ class Disco
     public function getModified()
     {
         return $this->modified;
+    }
+
+    /**
+     * Set medium
+     *
+     * @param \Vyper\SiteBundle\Entity\Medium $medium
+     * @return Disco
+     */
+    public function setMedium(\Vyper\SiteBundle\Entity\Medium $medium)
+    {
+        $this->medium = $medium;
+
+        return $this;
+    }
+
+    /**
+     * Get medium
+     *
+     * @return \Vyper\SiteBundle\Entity\Medium 
+     */
+    public function getMedium()
+    {
+        return $this->medium;
     }
 }
