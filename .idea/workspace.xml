@@ -26,15 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdminCommonController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminCommonController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="42" selection-start="526" selection-end="526" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="645">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AdminthemeController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminthemeController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,10 +92,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Disco.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Disco.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="6" selection-start="2331" selection-end="2331" vertical-scroll-proportion="1.3452381" vertical-offset="1212" max-vertical-offset="7740">
+            <state line="126" column="6" selection-start="2331" selection-end="2331" vertical-scroll-proportion="-28.25" vertical-offset="1212" max-vertical-offset="7740">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Location.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Location.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="46" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.42261904" vertical-offset="702" max-vertical-offset="6000">
               <folding />
             </state>
           </provider>
@@ -179,6 +179,7 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Location.php" />
       </list>
     </option>
   </component>
@@ -815,11 +816,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
@@ -1131,7 +1127,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="6" selection-start="2331" selection-end="2331" vertical-scroll-proportion="1.3452381" vertical-offset="1212" max-vertical-offset="7740">
+        <state line="126" column="6" selection-start="2331" selection-end="2331" vertical-scroll-proportion="-28.25" vertical-offset="1212" max-vertical-offset="7740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Location.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="46" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.42261904" vertical-offset="702" max-vertical-offset="6000">
           <folding />
         </state>
       </provider>
