@@ -63,6 +63,40 @@ class Picture
      */
     private $height;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Album")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $album;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="live", type="boolean")
+     */
+    private $live;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="deleted", type="boolean")
+     */
+    private $deleted;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created", type="datetime")
+     */
+    private $created;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="modified", type="datetime")
+     */
+    private $modified;
+
 
     /**
      * Get id
@@ -210,5 +244,120 @@ class Picture
     public function getHeight()
     {
         return $this->height;
+    }
+
+    /**
+     * Set live
+     *
+     * @param boolean $live
+     * @return Picture
+     */
+    public function setLive($live)
+    {
+        $this->live = $live;
+
+        return $this;
+    }
+
+    /**
+     * Get live
+     *
+     * @return boolean 
+     */
+    public function getLive()
+    {
+        return $this->live;
+    }
+
+    /**
+     * Set deleted
+     *
+     * @param boolean $deleted
+     * @return Picture
+     */
+    public function setDeleted($deleted)
+    {
+        $this->deleted = $deleted;
+
+        return $this;
+    }
+
+    /**
+     * Get deleted
+     *
+     * @return boolean 
+     */
+    public function getDeleted()
+    {
+        return $this->deleted;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     * @return Picture
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime 
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     * @return Picture
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime 
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+
+    /**
+     * Set album
+     *
+     * @param \Vyper\SiteBundle\Entity\Album $album
+     * @return Picture
+     */
+    public function setAlbum(\Vyper\SiteBundle\Entity\Album $album)
+    {
+        $this->album = $album;
+
+        return $this;
+    }
+
+    /**
+     * Get album
+     *
+     * @return \Vyper\SiteBundle\Entity\Album 
+     */
+    public function getAlbum()
+    {
+        return $this->album;
     }
 }
