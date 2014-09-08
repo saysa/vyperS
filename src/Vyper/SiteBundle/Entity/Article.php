@@ -108,13 +108,6 @@ class Article
     private $sourceURL;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="type", type="integer")
-     */
-    private $type;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="metaKeywords", type="text", nullable=true)
@@ -195,6 +188,12 @@ class Article
      * @ORM\Column(name="stringURL", type="string", length=255, nullable=true)
      */
     private $stringURL;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\ArticleType")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $articleType;
 
     /**
      * @var string
@@ -516,29 +515,6 @@ class Article
     public function getSourceURL()
     {
         return $this->sourceURL;
-    }
-
-    /**
-     * Set type
-     *
-     * @param integer $type
-     * @return Article
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
-    /**
-     * Get type
-     *
-     * @return integer 
-     */
-    public function getType()
-    {
-        return $this->type;
     }
 
     /**
@@ -941,5 +917,28 @@ class Article
         $this->setDeleted(false);
         $this->setCreated(new \DateTime('now'));
         $this->setmodified(new \DateTime('now'));
+    }
+
+    /**
+     * Set articleType
+     *
+     * @param \Vyper\SiteBundle\Entity\ArticleType $articleType
+     * @return Article
+     */
+    public function setArticleType(\Vyper\SiteBundle\Entity\ArticleType $articleType)
+    {
+        $this->articleType = $articleType;
+
+        return $this;
+    }
+
+    /**
+     * Get articleType
+     *
+     * @return \Vyper\SiteBundle\Entity\ArticleType 
+     */
+    public function getArticleType()
+    {
+        return $this->articleType;
     }
 }

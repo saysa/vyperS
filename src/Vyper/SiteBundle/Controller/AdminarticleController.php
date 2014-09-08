@@ -36,6 +36,8 @@ class AdminArticleController extends AdminCommonController {
 
     public function addArticleAction(Request $request)
     {
+        $articleType = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:ArticleType')->find(1);
+
         $article = new Article();
         $article->setTitle("Miyavi laisse un message");
         $article->setDescription("desc.");
@@ -46,7 +48,7 @@ class AdminArticleController extends AdminCommonController {
         $article->setReleaseDate(new \DateTime('now'));
         $article->setReleaseTime(new \DateTime('now'));
         $article->setAuthor("kiyomi");
-        $article->setType(1);
+        $article->setArticleType($articleType);
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($article);
