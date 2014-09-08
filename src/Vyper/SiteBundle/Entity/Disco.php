@@ -84,6 +84,12 @@ class Disco
     private $medium;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\DiscoType")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $type;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -419,5 +425,28 @@ class Disco
     public function getMedium()
     {
         return $this->medium;
+    }
+
+    /**
+     * Set type
+     *
+     * @param \Vyper\SiteBundle\Entity\DiscoType $type
+     * @return Disco
+     */
+    public function setType(\Vyper\SiteBundle\Entity\DiscoType $type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Vyper\SiteBundle\Entity\DiscoType 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }
