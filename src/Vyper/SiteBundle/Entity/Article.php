@@ -122,18 +122,6 @@ class Article
     private $artistsKeywords;
 
     /**
-     * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
-     */
-    private $picture;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="relatedPicture", type="integer", nullable=true)
-     */
-    private $relatedPicture;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="youtube", type="string", length=255, nullable=true)
@@ -564,29 +552,6 @@ class Article
     }
 
     /**
-     * Set relatedPicture
-     *
-     * @param integer $relatedPicture
-     * @return Article
-     */
-    public function setRelatedPicture($relatedPicture)
-    {
-        $this->relatedPicture = $relatedPicture;
-
-        return $this;
-    }
-
-    /**
-     * Get relatedPicture
-     *
-     * @return integer 
-     */
-    public function getRelatedPicture()
-    {
-        return $this->relatedPicture;
-    }
-
-    /**
      * Set youtube
      *
      * @param string $youtube
@@ -885,28 +850,7 @@ class Article
         return $this->slug;
     }
 
-    /**
-     * Set picture
-     *
-     * @param \Vyper\SiteBundle\Entity\Picture $picture
-     * @return Article
-     */
-    public function setPicture(\Vyper\SiteBundle\Entity\Picture $picture)
-    {
-        $this->picture = $picture;
 
-        return $this;
-    }
-
-    /**
-     * Get picture
-     *
-     * @return \Vyper\SiteBundle\Entity\Picture 
-     */
-    public function getPicture()
-    {
-        return $this->picture;
-    }
 
     /**
      * @ORM\PrePersist
