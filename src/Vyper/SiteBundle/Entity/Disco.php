@@ -1,0 +1,394 @@
+<?php
+
+namespace Vyper\SiteBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Disco
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\DiscoRepository")
+ */
+class Disco
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titleReal", type="string", length=255)
+     */
+    private $titleReal;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cdJapan", type="string", length=255)
+     */
+    private $cdJapan;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="itunes", type="string", length=255)
+     */
+    private $itunes;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="amazon", type="string", length=255)
+     */
+    private $amazon;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="date")
+     */
+    private $date;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="labelMusic", type="string", length=255)
+     */
+    private $labelMusic;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="details", type="text")
+     */
+    private $details;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="live", type="boolean")
+     */
+    private $live;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="deleted", type="boolean")
+     */
+    private $deleted;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created", type="datetime")
+     */
+    private $created;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="modified", type="datetime")
+     */
+    private $modified;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Disco
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set titleReal
+     *
+     * @param string $titleReal
+     * @return Disco
+     */
+    public function setTitleReal($titleReal)
+    {
+        $this->titleReal = $titleReal;
+
+        return $this;
+    }
+
+    /**
+     * Get titleReal
+     *
+     * @return string 
+     */
+    public function getTitleReal()
+    {
+        return $this->titleReal;
+    }
+
+    /**
+     * Set cdJapan
+     *
+     * @param string $cdJapan
+     * @return Disco
+     */
+    public function setCdJapan($cdJapan)
+    {
+        $this->cdJapan = $cdJapan;
+
+        return $this;
+    }
+
+    /**
+     * Get cdJapan
+     *
+     * @return string 
+     */
+    public function getCdJapan()
+    {
+        return $this->cdJapan;
+    }
+
+    /**
+     * Set itunes
+     *
+     * @param string $itunes
+     * @return Disco
+     */
+    public function setItunes($itunes)
+    {
+        $this->itunes = $itunes;
+
+        return $this;
+    }
+
+    /**
+     * Get itunes
+     *
+     * @return string 
+     */
+    public function getItunes()
+    {
+        return $this->itunes;
+    }
+
+    /**
+     * Set amazon
+     *
+     * @param string $amazon
+     * @return Disco
+     */
+    public function setAmazon($amazon)
+    {
+        $this->amazon = $amazon;
+
+        return $this;
+    }
+
+    /**
+     * Get amazon
+     *
+     * @return string 
+     */
+    public function getAmazon()
+    {
+        return $this->amazon;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     * @return Disco
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime 
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set labelMusic
+     *
+     * @param string $labelMusic
+     * @return Disco
+     */
+    public function setLabelMusic($labelMusic)
+    {
+        $this->labelMusic = $labelMusic;
+
+        return $this;
+    }
+
+    /**
+     * Get labelMusic
+     *
+     * @return string 
+     */
+    public function getLabelMusic()
+    {
+        return $this->labelMusic;
+    }
+
+    /**
+     * Set details
+     *
+     * @param string $details
+     * @return Disco
+     */
+    public function setDetails($details)
+    {
+        $this->details = $details;
+
+        return $this;
+    }
+
+    /**
+     * Get details
+     *
+     * @return string 
+     */
+    public function getDetails()
+    {
+        return $this->details;
+    }
+
+    /**
+     * Set live
+     *
+     * @param boolean $live
+     * @return Disco
+     */
+    public function setLive($live)
+    {
+        $this->live = $live;
+
+        return $this;
+    }
+
+    /**
+     * Get live
+     *
+     * @return boolean 
+     */
+    public function getLive()
+    {
+        return $this->live;
+    }
+
+    /**
+     * Set deleted
+     *
+     * @param boolean $deleted
+     * @return Disco
+     */
+    public function setDeleted($deleted)
+    {
+        $this->deleted = $deleted;
+
+        return $this;
+    }
+
+    /**
+     * Get deleted
+     *
+     * @return boolean 
+     */
+    public function getDeleted()
+    {
+        return $this->deleted;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     * @return Disco
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime 
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     * @return Disco
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime 
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+}
