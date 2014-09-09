@@ -36,7 +36,9 @@ class AdminArticleController extends AdminCommonController {
 
     public function addArticleAction(Request $request)
     {
-        $articleType = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:ArticleType')->find(1);
+        $articleType = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:ArticleType')->find(21);
+        $continent   = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Continent')  ->find(31);
+        $picture     = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')    ->find(1);
 
         $article = new Article();
         $article->setTitle("Miyavi laisse un message");
@@ -44,11 +46,12 @@ class AdminArticleController extends AdminCommonController {
         $article->setText("Le corps du message");
         $article->setUser(1);
         $article->setHighlight(0);
-        $article->setContinent(1);
         $article->setReleaseDate(new \DateTime('now'));
         $article->setReleaseTime(new \DateTime('now'));
         $article->setAuthor("kiyomi");
         $article->setArticleType($articleType);
+        $article->setContinent($continent);
+        $article->setPicture($picture);
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($article);
