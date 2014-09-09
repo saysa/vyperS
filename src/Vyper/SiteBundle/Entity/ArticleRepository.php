@@ -3,6 +3,7 @@
 namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * ArticleRepository
@@ -20,5 +21,24 @@ class ArticleRepository extends EntityRepository
         $results = $query->getResult();
 
         return $results;
+    }
+
+    public function showAll($posts_per_page, $page)
+    {
+        if ($page < 1) {
+            throw new \InvalidArgumentException('Can not be < 1');
+        }
+
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder->where('a.deleted = false');
+        $query = $queryBuilder->getQuery();
+
+
+        $query
+            ->setFirstResult(($page-1) * $posts_per_page)
+            ->setMaxResults($posts_per_page)
+        ;
+
+        return new Paginator($query);
     }
 }

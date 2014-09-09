@@ -1,0 +1,28 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title "Visual kei - JPop - Jrock - Jmusic - VYPER Japanese Music | Toute la Jmusic, toutes les news en temps réels" %}
+
+    {% block content %}
+
+
+        {% for article in articles %}
+            <li>
+                <a href="{{ path('showArticle', {'id': article.id, 'slug': article.slug}) }}">{{ article.title }}</a>
+            </li>
+        {% endfor %}
+
+        <hr />
+
+        <div class="pagination">
+            <ul>
+                {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+                {% for p in range(1, total_articles) %}
+                    <li{% if p == page %} style="font-weight: bold;"{% endif %}>
+                        <a href="{{ path('showAllArticle', {'page': p}) }}">{{ p }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+    {% endblock %}

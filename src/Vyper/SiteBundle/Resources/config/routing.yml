@@ -10,6 +10,12 @@ login:
     path:     /login
     defaults: { _controller: VyperSiteBundle:Users:login }
 
+showAllArticle:
+    path:    /news/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1 }
+    requirements:
+        page: \d*
+
 showArticle:
     path:    /articles/{id}/{slug}.html
     defaults: { _controller: VyperSiteBundle:Article:showArticle }

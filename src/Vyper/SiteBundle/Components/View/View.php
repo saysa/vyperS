@@ -13,9 +13,15 @@ class View {
 
     private $view = array();
 
+    /**
+     * @param $twig_var
+     * @param $value
+     * @return $this
+     */
     public function set($twig_var, $value)
     {
         $this->view[$twig_var] = $value;
+        return $this;
     }
 
     /**

@@ -36,8 +36,8 @@ class AdminArticleController extends AdminCommonController {
 
     public function addArticleAction(Request $request)
     {
-        $articleType = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:ArticleType')->find(21);
-        $continent   = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Continent')  ->find(31);
+        $articleType = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:ArticleType')->find(2);
+        $continent   = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Continent')  ->find(1);
         $picture     = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')    ->find(1);
 
         $article = new Article();
