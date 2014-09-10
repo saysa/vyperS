@@ -157,6 +157,12 @@ class Article
     private $artists;
 
     /**
+     * @var integer
+     * Pour stocker l'ID du formulaire
+     */
+    private $pictureID;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -750,7 +756,7 @@ class Article
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getThemes()
+    public function getTheme()
     {
         return $this->themes;
     }
@@ -787,4 +793,32 @@ class Article
     {
         return $this->artists;
     }
+
+    /**
+     * Get themes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getThemes()
+    {
+        return $this->themes;
+    }
+
+    /**
+     * @param int $pictureID
+     */
+    public function setPictureID($pictureID)
+    {
+        $this->pictureID = $pictureID;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPictureID()
+    {
+        return $this->pictureID;
+    }
+
+
 }

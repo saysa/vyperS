@@ -37,6 +37,7 @@ class AdminArticleController extends AdminCommonController {
 
     public function addArticleAction(Request $request)
     {
+        $view = $this->container->get('saysa_view');
         $article = new Article();
         $form = $this->createForm(new ArticleType, $article);
 
@@ -46,7 +47,7 @@ class AdminArticleController extends AdminCommonController {
 
             if ($form->isValid()) {
 
-                $articleType = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:ArticleType')->find(2);
+                /*$articleType = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:ArticleType')->find(2);
                 $continent   = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Continent')  ->find(1);
                 $picture     = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')    ->find(1);
 
@@ -65,11 +66,18 @@ class AdminArticleController extends AdminCommonController {
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($article);
                 $em->flush();
+                */
+
+
+            }
+            else {
+                echo "is not valid";
             }
 
         }
-        # On envoie a la vue $form->createView();
 
-        return new Response();
+        $view->set('form', $form->createView());
+
+        return $this->render('VyperSiteBundle:Adminarticle:addArticle.html.twig', $view->getView());
     }
 } 
