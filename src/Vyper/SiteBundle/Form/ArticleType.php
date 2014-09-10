@@ -19,8 +19,8 @@ class ArticleType extends AbstractType
             ->add('title', 'text', array('attr' => array('placeholder' => 'Title')))
             ->add('description', 'textarea', array('attr' => array('placeholder' => 'Description')))
             ->add('text', 'textarea')
-            ->add('releaseDate', 'text')
-            ->add('releaseTime', 'text')
+            ->add('releaseDate', 'date', array('widget' => 'single_text'))
+            ->add('releaseTime', 'time', array('widget' => 'single_text'))
             ->add('author', 'text', array('attr' => array('placeholder' => 'Author')))
             ->add('translator', 'text', array('required' => false, 'attr' => array('placeholder' => 'Translator')))
             ->add('source', 'text', array('required' => false, 'attr' => array('placeholder' => 'Source')))
@@ -41,7 +41,8 @@ class ArticleType extends AbstractType
                 'property' => 'title',
                 'multiple' => true,
             ))
-        ->add('pictureID', 'text', array('attr' => array('placeholder' => 'Picture ID')))
+            ->add('pictureID', 'text', array('attr' => array('placeholder' => 'Picture ID')))
+
         ;
     }
     

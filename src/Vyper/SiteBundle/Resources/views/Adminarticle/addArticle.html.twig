@@ -24,11 +24,11 @@
 
                         <form class="form-horizontal" method="post" {{ form_enctype(form) }}>
 
-
+                            {{ form_widget(form._token) }}
 
                             <fieldset class="col-sm-12">
 
-
+                                <pre>{{ form_errors(form) }}</pre>
 
                                 <!-- Continent -->
                                 <div class="row">
@@ -185,6 +185,8 @@
                                         </div>
                                     </div>
                                 </div>
+
+
 
 
                                 <div class="form-actions">

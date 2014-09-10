@@ -11,6 +11,7 @@ namespace Vyper\SiteBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Vyper\SiteBundle\Entity\Article;
+use Vyper\SiteBundle\Entity\Picture;
 use Vyper\SiteBundle\Form\ArticleType;
 
 class AdminArticleController extends AdminCommonController {
@@ -45,33 +46,22 @@ class AdminArticleController extends AdminCommonController {
 
             $form->submit($request);
 
+            $picture     = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')    ->find(9);
+            $article->setUser(1);
+            $article->setPicture($picture);
+
             if ($form->isValid()) {
 
                 /*$articleType = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:ArticleType')->find(2);
                 $continent   = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Continent')  ->find(1);
                 $picture     = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')    ->find(1);
-
-                $article->setTitle("Miyavi laisse un message");
-                $article->setDescription("desc.");
-                $article->setText("Le corps du message");
-                $article->setUser(1);
-                $article->setHighlight(0);
-                $article->setReleaseDate(new \DateTime('now'));
-                $article->setReleaseTime(new \DateTime('now'));
-                $article->setAuthor("kiyomi");
-                $article->setArticleType($articleType);
-                $article->setContinent($continent);
-                $article->setPicture($picture);
-
+                */
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($article);
                 $em->flush();
-                */
 
 
-            }
-            else {
-                echo "is not valid";
+
             }
 
         }
