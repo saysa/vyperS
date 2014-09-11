@@ -43,24 +43,19 @@ class AdminArticleController extends AdminCommonController {
 
         if ($request->getMethod() == 'POST') {
 
+            $post_data = $request->request->get('vyper_sitebundle_article');
+
             $form->submit($request);
 
-            $picture     = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')    ->find(9);
+            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
             $article->setUser(1);
             $article->setPicture($picture);
 
             if ($form->isValid()) {
 
-                /*$articleType = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:ArticleType')->find(2);
-                $continent   = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Continent')  ->find(1);
-                $picture     = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')    ->find(1);
-                */
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($article);
                 $em->flush();
-
-
-
             }
 
         }
