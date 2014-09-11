@@ -4,6 +4,7 @@ namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Vyper\SiteBundle\Components\Strings\StringMethods;
 
 /**
  * Article
@@ -820,5 +821,9 @@ class Article
         return $this->pictureID;
     }
 
+    public function getReleaseDateFrontFormat()
+    {
+        return StringMethods::sqlDateToCustom($this->getReleaseDate()->format('Y-m-d'));
+    }
 
 }

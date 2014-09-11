@@ -24,7 +24,7 @@ class ArticleController extends Controller
 
         $view->set('user_id', $user);
         $view->set('article', $article);
-
+        $view->set("img_type_news", "true");
 
         return $this->render('VyperSiteBundle:Article:showArticle.html.twig', $view->getView());
     }
