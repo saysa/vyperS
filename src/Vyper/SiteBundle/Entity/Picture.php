@@ -71,6 +71,11 @@ class Picture
     private $album;
 
     /**
+     * Attribute using in the form
+     */
+    private $file;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="live", type="boolean")
@@ -362,6 +367,78 @@ class Picture
         return $this->album;
     }
 
+
+
+    /**
+     * @param mixed $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function upload()
+    {
+        if (null === $this->file) {
+            return;
+        }
+
+        $year = date("Y", time());
+        $month = date("m", time());
+        $time = time();
+        $rd = rand(0, 9999);
+        $extension = $this->file->guessExtension();
+        if (!$extension) {
+            $extension = 'bin';
+        }
+        $filename = "{$rd}-{$time}.{$extension}";
+        $this->file->move($this->getUploadRootDir() . "/{$year}/{$month}", $filename);
+
+        $meta = getimagesize("{$this->getUploadRootDir()}" . "/{$year}/{$month}/{$filename}");
+        if ($meta) {
+
+            $width = $meta[0];
+            $height = $meta[1];
+
+            $this->setFilename($filename);
+            $this->setWidth($width);
+            $this->setHeight($height);
+            $this->setSize($this->file->getClientSize());
+            $this->setMime($this->file->getClientMimeType());
+        }
+
+    }
+
+    /**
+     * @return string
+     * Returns the relative path from a web browser
+     */
+    public function getUploadDir()
+    {
+        return 'uploads/pic';
+    }
+
+    /**
+     * @return string
+     * Returns relative path from PHP code
+     */
+    protected function getUploadRootDir()
+    {
+        return APP_PATH . '/web/' . $this->getUploadDir();
+    }
+
     /**
      * @ORM\PrePersist
      */
@@ -372,4 +449,6 @@ class Picture
         $this->setCreated(new \DateTime('now'));
         $this->setmodified(new \DateTime('now'));
     }
+
+
 }

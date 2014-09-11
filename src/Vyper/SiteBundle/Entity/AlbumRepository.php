@@ -12,4 +12,13 @@ use Doctrine\ORM\EntityRepository;
  */
 class AlbumRepository extends EntityRepository
 {
+    public function myFindAll()
+    {
+        $queryBuilder = $this->createQueryBuilder('p');
+        $queryBuilder->where('p.deleted = false');
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }

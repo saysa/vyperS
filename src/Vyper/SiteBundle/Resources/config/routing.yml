@@ -50,3 +50,21 @@ admin_switchThemeShowInMenu:
    path:    /_admin_/ajax/switch_theme_show_in_menu
    defaults: { _controller: VyperSiteBundle:AdminAjax:toto }
 
+admin_show_pictures:
+    path:     /_admin_/pictures
+    defaults: { _controller: VyperSiteBundle:AdminPicture:showPictures }
+
+admin_add_picture:
+    path:     /_admin_/picture/add
+    defaults: { _controller: VyperSiteBundle:AdminPicture:addPicture }
+
+admin_add_album:
+    path:     /_admin_/album/add
+    defaults: { _controller: VyperSiteBundle:AdminAlbum:addAlbum }
+
+admin_update_album:
+    path:     _admin_/album/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminAlbum:updateAlbum }
+    requirements:
+        id: \d+
+

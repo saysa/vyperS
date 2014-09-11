@@ -9,7 +9,6 @@
 namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Vyper\SiteBundle\Entity\Article;
 use Vyper\SiteBundle\Entity\Picture;
 use Vyper\SiteBundle\Form\ArticleType;
