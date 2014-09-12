@@ -1,17 +1,28 @@
 <?php
 
-namespace Vyper\SiteBundle\Entity;
+namespace Vyper\UserBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * User
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\UserRepository")
+ * @ORM\Entity(repositoryClass="Vyper\UserBundle\Entity\UserRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
-class User
+class User extends BaseUser
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->setGender(true);
+        $this->setBirthdate(new \DateTime('now'));
+    }
+
     /**
      * @var integer
      *
@@ -19,28 +30,22 @@ class User
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="first", type="string", length=255)
+     * @ORM\Column(name="first", type="string", length=255, nullable=true)
      */
     private $first;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="last", type="string", length=32)
+     * @ORM\Column(name="last", type="string", length=32, nullable=true)
      */
     private $last;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nickname", type="string", length=32)
-     */
-    private $nickname;
 
     /**
      * @var boolean
@@ -56,87 +61,61 @@ class User
      */
     private $birthdate;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="login", type="string", length=32)
-     */
-    private $login;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=100)
-     */
-    private $email;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=32)
-     */
-    private $password;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="notes", type="text")
+     * @ORM\Column(name="notes", type="text", nullable=true)
      */
     private $notes;
 
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="admin", type="boolean")
-     */
-    private $admin;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="gmail", type="string", length=255)
+     * @ORM\Column(name="gmail", type="string", length=255, nullable=true)
      */
     private $gmail;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="mobile", type="string", length=50)
+     * @ORM\Column(name="mobile", type="string", length=50, nullable=true)
      */
     private $mobile;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="address", type="string", length=255)
+     * @ORM\Column(name="address", type="string", length=255, nullable=true)
      */
     private $address;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="country", type="integer")
+     * @ORM\Column(name="country", type="integer", nullable=true)
      */
     private $country;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="language", type="integer")
+     * @ORM\Column(name="language", type="integer", nullable=true)
      */
     private $language;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="timeDifference", type="integer")
+     * @ORM\Column(name="timeDifference", type="integer", nullable=true)
      */
     private $timeDifference;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="aboutYourself", type="text")
+     * @ORM\Column(name="aboutYourself", type="text", nullable=true)
      */
     private $aboutYourself;
 
@@ -167,6 +146,8 @@ class User
      * @ORM\Column(name="modified", type="datetime")
      */
     private $modified;
+
+
 
 
     /**
@@ -225,28 +206,6 @@ class User
         return $this->last;
     }
 
-    /**
-     * Set nickname
-     *
-     * @param string $nickname
-     * @return User
-     */
-    public function setNickname($nickname)
-    {
-        $this->nickname = $nickname;
-
-        return $this;
-    }
-
-    /**
-     * Get nickname
-     *
-     * @return string 
-     */
-    public function getNickname()
-    {
-        return $this->nickname;
-    }
 
     /**
      * Set gender
@@ -294,74 +253,8 @@ class User
         return $this->birthdate;
     }
 
-    /**
-     * Set login
-     *
-     * @param string $login
-     * @return User
-     */
-    public function setLogin($login)
-    {
-        $this->login = $login;
 
-        return $this;
-    }
 
-    /**
-     * Get login
-     *
-     * @return string 
-     */
-    public function getLogin()
-    {
-        return $this->login;
-    }
-
-    /**
-     * Set email
-     *
-     * @param string $email
-     * @return User
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get email
-     *
-     * @return string 
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * Set password
-     *
-     * @param string $password
-     * @return User
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Get password
-     *
-     * @return string 
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
 
     /**
      * Set notes
@@ -386,28 +279,7 @@ class User
         return $this->notes;
     }
 
-    /**
-     * Set admin
-     *
-     * @param boolean $admin
-     * @return User
-     */
-    public function setAdmin($admin)
-    {
-        $this->admin = $admin;
 
-        return $this;
-    }
-
-    /**
-     * Get admin
-     *
-     * @return boolean 
-     */
-    public function getAdmin()
-    {
-        return $this->admin;
-    }
 
     /**
      * Set gmail
@@ -661,4 +533,18 @@ class User
     {
         return $this->modified;
     }
+
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->setLive(true);
+        $this->setDeleted(false);
+        $this->setCreated(new \DateTime('now'));
+        $this->setmodified(new \DateTime('now'));
+    }
+
+
 }

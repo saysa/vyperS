@@ -7,6 +7,7 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
+        if (!defined("APP_PATH"))
         define("APP_PATH", dirname(dirname(__FILE__)));
 
         $bundles = array(
@@ -20,6 +21,12 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Vyper\SiteBundle\VyperSiteBundle(),
+            new Vyper\UserBundle\VyperUserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new JMS\AopBundle\JMSAopBundle(),
+            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
+            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

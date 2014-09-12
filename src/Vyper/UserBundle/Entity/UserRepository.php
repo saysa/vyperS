@@ -1,6 +1,6 @@
 <?php
 
-namespace Vyper\SiteBundle\Entity;
+namespace Vyper\UserBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 

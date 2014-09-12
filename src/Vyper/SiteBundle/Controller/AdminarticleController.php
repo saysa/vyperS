@@ -10,17 +10,18 @@ namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Vyper\SiteBundle\Entity\Article;
-use Vyper\SiteBundle\Entity\Picture;
 use Vyper\SiteBundle\Form\ArticleType;
 
 class AdminArticleController extends AdminCommonController {
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+
+     */
     public function showArticlesAction(Request $request)
     {
-        if(!$this->_secure($request) || !$this->_admin($request)) {
 
-            return $this->redirect($this->generateUrl('login'));
-        }
 
         $view = $this->container->get('saysa_view');
 
