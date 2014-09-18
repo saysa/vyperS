@@ -14,11 +14,7 @@ use Vyper\SiteBundle\Form\ArticleType;
 
 class AdminArticleController extends AdminCommonController {
 
-    /**
-     * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
 
-     */
     public function showArticlesAction(Request $request)
     {
 

@@ -21,11 +21,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Vyper\SiteBundle\VyperSiteBundle(),
-            new Vyper\UserBundle\VyperUserBundle(),
-            new FOS\UserBundle\FOSUserBundle(),
-            new JMS\AopBundle\JMSAopBundle(),
-            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
+
 
         );
 
