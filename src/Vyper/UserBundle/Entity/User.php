@@ -19,6 +19,7 @@ class User extends BaseUser
     {
         parent::__construct();
 
+        $this->setRoles(array('ROLE_AUTHOR'));
         $this->setGender(true);
         $this->setBirthdate(new \DateTime('now'));
     }

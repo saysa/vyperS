@@ -11,10 +11,16 @@ namespace Vyper\SiteBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Vyper\SiteBundle\Entity\Article;
 use Vyper\SiteBundle\Form\ArticleType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class AdminArticleController extends AdminCommonController {
 
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_AUTHOR')")
+     */
     public function showArticlesAction(Request $request)
     {
 
