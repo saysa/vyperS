@@ -8,6 +8,15 @@ DirectoryIndex app.php
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    # PIP start
+    RewriteCond %{REQUEST_URI} !wp-content/themes
+    # don't apply the AI behaviour to images inside AI's cache folder:
+    RewriteCond %{REQUEST_URI} !ai-cache
+    # Send any GIF, JPG, or PNG request that IS NOT stored inside one of the above directories
+    # to adaptive-images.php so we can select appropriately sized versions
+    RewriteRule \.(?:jpe?g|gif|png)$ Phpimageprescaler/image.php
+    # PIP end
+
     # Determine the RewriteBase automatically and set it as environment variable.
     # If you are using Apache aliases to do mass virtual hosting or installed the
     # project in a subdirectory, the base path will be prepended to allow proper
@@ -17,6 +26,8 @@ DirectoryIndex app.php
     # the following 2 lines to eliminate the overhead.
     RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
     RewriteRule ^(.*) - [E=BASE:%1]
+
+
 
     # Redirect to URI without front controller to prevent duplicate content
     # (with and without `/app.php`). Only do this redirect on the initial
@@ -32,6 +43,8 @@ DirectoryIndex app.php
     RewriteCond %{ENV:REDIRECT_STATUS} ^$
     RewriteRule ^app\.php(/(.*)|$) %{ENV:BASE}/$2 [R=301,L]
 
+
+
     # If the requested filename exists, simply serve it.
     # We only want to let Apache serve files and not directories.
     RewriteCond %{REQUEST_FILENAME} -f
@@ -39,6 +52,8 @@ DirectoryIndex app.php
 
     # Rewrite all other queries to the front controller.
     RewriteRule .? %{ENV:BASE}/app.php [L]
+
+
 </IfModule>
 
 <IfModule !mod_rewrite.c>
@@ -50,3 +65,4 @@ DirectoryIndex app.php
         # RedirectTemp cannot be used instead
     </IfModule>
 </IfModule>
+

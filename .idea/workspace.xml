@@ -28,91 +28,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdminarticleController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php">
+      <file leaf-file-name="PIP.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/PIP.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="56" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1125">
+            <state line="8" column="32" selection-start="121" selection-end="121" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="2535">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <file leaf-file-name="PipClass.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/PipClass.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1305">
+            <state line="8" column="32" selection-start="121" selection-end="121" vertical-scroll-proportion="-0.625" vertical-offset="30" max-vertical-offset="1770">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showArticle.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Source.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/Source.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="32" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.625" vertical-offset="15" max-vertical-offset="1125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SourceGif.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourceGif.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="32" selection-start="39" selection-end="39" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="330">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SourceJpg.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourceJpg.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="32" selection-start="39" selection-end="39" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SourcePng.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourcePng.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="32" selection-start="39" selection-end="39" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="330">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="27" selection-start="34" selection-end="34" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="60" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1110">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showArticle.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.4855196" vertical-offset="255" max-vertical-offset="1680">
+            <state line="44" column="79" selection-start="2130" selection-end="2130" vertical-scroll-proportion="-16.875" vertical-offset="255" max-vertical-offset="1680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Picture.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Picture.php">
+      <file leaf-file-name="pip_config.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/pip_config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="436" column="24" selection-start="7374" selection-end="7374" vertical-scroll-proportion="-15.583333" vertical-offset="6166" max-vertical-offset="7185">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="420">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="56" selection-start="909" selection-end="909" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="945">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1080">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppKernel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="47" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="750">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="security.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="600">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/UserBundle/Entity/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="42" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="8355">
+            <state line="21" column="28" selection-start="467" selection-end="467" vertical-scroll-proportion="0.4" vertical-offset="75" max-vertical-offset="780">
               <folding />
             </state>
           </provider>
@@ -131,38 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/config.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Continent.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Continents.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Continent.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/ArticleTypes.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleType.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/AlbumCategory.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Pictures.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/AlbumCategories.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Albums.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/View/View.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/ContinentType.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Themes.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/addArticle.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/ArticleType.php" />
-        <option value="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TimeType.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/PictureRepository.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/AlbumRepository.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminpicture/showPictures.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/PictureType.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminpicture/addPicture.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminpictureController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Strings/StringsMethods.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Strings/StringMethods.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/Vyper/UserBundle/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Users/login.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/UserBundle/Resources/views/User/login.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/UserBundle/DataFixtures/ORM/Albums.php" />
         <option value="$PROJECT_DIR$/src/Vyper/UserBundle/DataFixtures/ORM/Users.php" />
@@ -181,7 +149,39 @@
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Picture.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/phpimageprescaler/Config.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/Config.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/JSONEncoder.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PhpImagePrescaler.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PipClass.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/Source.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/SourceGif.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/SourceJpg.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/SourcePng.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP/Config.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP/JSONEncoder.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP/PhpImagePrescaler.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP/PIP.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP/PipClass.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP/Source.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP/SourceGif.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP/SourceJpg.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP/SourcePng.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/image.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/Config.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/JSONEncoder.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/PhpImagePrescaler.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/PIP.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/PipClass.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/Source.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourceGif.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourceJpg.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourcePng.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/image.php" />
+        <option value="$PROJECT_DIR$/web/.htaccess" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/pip_config.json" />
       </list>
     </option>
   </component>
@@ -295,19 +295,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09" />
+              <option name="myItemId" value="Phpimageprescaler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -809,6 +797,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -847,11 +891,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler" />
+      <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Components" />
       <recent name="$PROJECT_DIR$/src/Vyper/UserBundle" />
       <recent name="$PROJECT_DIR$/src/Vyper/UserBundle/Entity" />
       <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminpicture" />
-      <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller" />
-      <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP" />
     </key>
   </component>
   <component name="RunManager">
@@ -940,7 +988,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="22" width="1862" height="1058" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30124223" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -993,71 +1041,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminajaxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="290" column="17" selection-start="4921" selection-end="5163" vertical-scroll-proportion="0.0" vertical-offset="4062" max-vertical-offset="4590" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Themes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="675" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="737" column="20" selection-start="23825" selection-end="23825" vertical-scroll-proportion="0.34826884" vertical-offset="10644" max-vertical-offset="16980" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Theme.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="46" selection-start="3547" selection-end="3567" vertical-scroll-proportion="0.48766604" vertical-offset="3103" max-vertical-offset="3630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TextType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TimeType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="7" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1170" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="5" selection-start="309" selection-end="565" vertical-scroll-proportion="-10.458333" vertical-offset="79" max-vertical-offset="735" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/PictureRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="264" selection-end="520" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/AlbumRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="516" selection-end="516" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminpicture/showPictures.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="6" selection-start="1744" selection-end="1744" vertical-scroll-proportion="-9.833333" vertical-offset="424" max-vertical-offset="2220" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Form/ArticleType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="14" selection-start="1566" selection-end="1714" vertical-scroll-proportion="-12.5" vertical-offset="150" max-vertical-offset="1050" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/addArticle.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="139" selection-start="1624" selection-end="1719" vertical-scroll-proportion="-10.0" vertical-offset="315" max-vertical-offset="3180" />
@@ -1265,9 +1248,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Components/View/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="87" selection-end="130" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="7" selection-end="39" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="4515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/JSONEncoder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="32" selection-start="171" selection-end="171" vertical-scroll-proportion="-0.625" vertical-offset="30" max-vertical-offset="1065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/PhpImagePrescaler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="32" selection-start="579" selection-end="579" vertical-scroll-proportion="-0.625" vertical-offset="45" max-vertical-offset="10290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/PIP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="121" selection-end="121" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="2535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/PipClass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="121" selection-end="121" vertical-scroll-proportion="-0.625" vertical-offset="30" max-vertical-offset="1770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/Source.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.625" vertical-offset="15" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourceGif.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="39" selection-end="39" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourceJpg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="39" selection-end="39" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourcePng.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="39" selection-end="39" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="27" selection-start="34" selection-end="34" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="60" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1110">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.4855196" vertical-offset="255" max-vertical-offset="1680">
+        <state line="44" column="79" selection-start="2130" selection-end="2130" vertical-scroll-proportion="-16.875" vertical-offset="255" max-vertical-offset="1680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/pip_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="28" selection-start="467" selection-end="467" vertical-scroll-proportion="0.4" vertical-offset="75" max-vertical-offset="780">
           <folding />
         </state>
       </provider>
