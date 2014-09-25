@@ -23,6 +23,16 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
+    public function showRecentArticles()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder->where('a.deleted = false')->setMaxResults(10);
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function showAll($posts_per_page, $page)
     {
         if ($page < 1) {

@@ -43,4 +43,12 @@ class ArticleController extends Controller
         return $this->render('VyperSiteBundle:Article:showAll.html.twig', $view->getView());
     }
 
+    public function recentArticlesAction()
+    {
+        $view = $this->container->get('saysa_view');
+        $articles  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->showRecentArticles();
+        $view->set('recent_articles', $articles);
+        return $this->render('VyperSiteBundle:Article:recentArticles.html.twig', $view->getView());
+    }
+
 }
