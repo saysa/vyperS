@@ -422,6 +422,25 @@ class Picture
     }
 
     /**
+     * Returns "{$year}/{$month}" string
+     * @param null $pip_cat
+     * @return string
+     */
+    public function getPath($pip_cat = null)
+    {
+        $year  = substr($this->getCreated()->format('Y-m-d H:i:s'), 0, 4);
+        $month = substr($this->getCreated()->format('Y-m-d H:i:s'), 5, 2);
+
+        if (!is_null($pip_cat)) {
+            $pip = "?size=" . $pip_cat;
+        } else {
+            $pip = null;
+        }
+
+        return $this->getUploadDir() . "/{$year}/{$month}/" . $this->getFilename() . $pip;
+    }
+
+    /**
      * @return string
      * Returns the relative path from a web browser
      */
