@@ -26,6 +26,12 @@ admin_add_article:
     path:     /_admin_/article/add
     defaults: { _controller: VyperSiteBundle:AdminArticle:addArticle }
 
+admin_update_article:
+    path:     _admin_/article/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminArticle:updateArticle }
+    requirements:
+        id: \d+
+
 admin_add_theme:
     path:     /_admin_/themes/add
     defaults: { _controller: VyperSiteBundle:AdminTheme:addTheme }

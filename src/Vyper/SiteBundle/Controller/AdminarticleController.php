@@ -51,7 +51,7 @@ class AdminArticleController extends AdminCommonController {
             $form->submit($request);
 
             $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
-            $article->setUser(1);
+            $article->setUser($this->getUser());
             $article->setPicture($picture);
 
             if ($form->isValid()) {
@@ -66,5 +66,47 @@ class AdminArticleController extends AdminCommonController {
         $view->set('form', $form->createView());
 
         return $this->render('VyperSiteBundle:Adminarticle:addArticle.html.twig', $view->getView());
+    }
+
+    /**
+     * @param Request $request
+     * @param Article $article
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_AUTHOR')")
+     */
+    public function updateArticleAction(Request $request, Article $article)
+    {
+        $view = $this->container->get('saysa_view');
+
+        $form = $this->createForm(new ArticleType, $article);
+
+        if ('POST' === $request->getMethod()) {
+
+            $post_data = $request->request->get('vyper_sitebundle_article');
+
+            $form->submit($request);
+
+            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+
+            $article->setPicture($picture);
+
+            if ($form->isValid()) {
+
+                $em = $this->getDoctrine()->getManager();
+                $em->flush();
+            }
+
+        }
+
+        $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->myFindAll();
+
+        $view
+            ->set('article', $article)
+            ->set('artists', $artists)
+            ->set('active_article', true)
+            ->set('form', $form->createView())
+        ;
+
+        return $this->render('VyperSiteBundle:Adminarticle:updateArticle.html.twig', $view->getView());
     }
 } 

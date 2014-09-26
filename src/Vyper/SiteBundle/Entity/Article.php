@@ -25,9 +25,8 @@ class Article
     private $id;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="user", type="integer")
+     * @ORM\ManyToOne(targetEntity="Vyper\UserBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $user;
 
@@ -202,28 +201,7 @@ class Article
         return $this->id;
     }
 
-    /**
-     * Set user
-     *
-     * @param integer $user
-     * @return Article
-     */
-    public function setUser($user)
-    {
-        $this->user = $user;
 
-        return $this;
-    }
-
-    /**
-     * Get user
-     *
-     * @return integer 
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
 
     /**
      * Set highlight
@@ -826,4 +804,27 @@ class Article
         return StringMethods::sqlDateToCustom($this->getReleaseDate()->format('Y-m-d'));
     }
 
+
+    /**
+     * Set user
+     *
+     * @param \Vyper\UserBundle\Entity\User $user
+     * @return Article
+     */
+    public function setUser(\Vyper\UserBundle\Entity\User $user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Vyper\UserBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }

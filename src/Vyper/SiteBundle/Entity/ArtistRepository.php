@@ -12,4 +12,13 @@ use Doctrine\ORM\EntityRepository;
  */
 class ArtistRepository extends EntityRepository
 {
+    public function myFindAll()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder->where('a.deleted = false');
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }
