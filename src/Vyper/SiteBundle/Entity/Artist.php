@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\ArtistRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Artist
 {
@@ -74,6 +75,12 @@ class Artist
      * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
      */
     private $picture;
+
+    /**
+     * @var integer
+     * Pour stocker l'ID du formulaire
+     */
+    private $pictureID;
 
     /**
      * @var boolean
@@ -388,5 +395,32 @@ class Artist
     public function getPicture()
     {
         return $this->picture;
+    }
+
+    /**
+     * @param int $pictureID
+     */
+    public function setPictureID($pictureID)
+    {
+        $this->pictureID = $pictureID;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPictureID()
+    {
+        return $this->pictureID;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->setLive(true);
+        $this->setDeleted(false);
+        $this->setCreated(new \DateTime('now'));
+        $this->setmodified(new \DateTime('now'));
     }
 }

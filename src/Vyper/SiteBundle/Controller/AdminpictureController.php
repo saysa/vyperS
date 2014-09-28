@@ -16,11 +16,6 @@ class AdminPictureController extends AdminCommonController {
 
     public function showPicturesAction(Request $request)
     {
-        if(!$this->_secure($request) || !$this->_admin($request)) {
-
-            return $this->redirect($this->generateUrl('login'));
-        }
-
         $view = $this->container->get('saysa_view');
 
         // Get all the articles not deleted
@@ -29,7 +24,7 @@ class AdminPictureController extends AdminCommonController {
 
         $view->set('albums',         $albums);
         $view->set('pictures',       $pictures);
-        $view->set("active_article", true);
+        $view->set("active_picture", true);
 
         return $this->render('VyperSiteBundle:Adminpicture:showPictures.html.twig', $view->getView());
     }
