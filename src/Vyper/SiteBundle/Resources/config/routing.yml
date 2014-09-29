@@ -74,6 +74,30 @@ admin_add_picture:
     path:     /_admin_/picture/add
     defaults: { _controller: VyperSiteBundle:AdminPicture:addPicture }
 
+admin_show_tours:
+    path:     /_admin_/tours
+    defaults: { _controller: VyperSiteBundle:AdminTour:showTours }
+
+admin_add_tour:
+    path:     /_admin_/tour/add
+    defaults: { _controller: VyperSiteBundle:AdminTour:addTour }
+
+admin_update_tour:
+    path:     _admin_/tour/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminTour:updateTour }
+    requirements:
+        id: \d+
+
+admin_add_tourType:
+    path:     /_admin_/tourType/add
+    defaults: { _controller: VyperSiteBundle:AdminTourType:addTourType }
+
+admin_update_tourType:
+    path:     _admin_/tourType/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminTourType:updateTourType }
+    requirements:
+        id: \d+
+
 admin_add_album:
     path:     /_admin_/album/add
     defaults: { _controller: VyperSiteBundle:AdminAlbum:addAlbum }

@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\TourRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Tour
 {
@@ -31,7 +32,7 @@ class Tour
     /**
      * @var string
      *
-     * @ORM\Column(name="realTitle", type="string", length=255)
+     * @ORM\Column(name="realTitle", type="string", length=255, nullable=true)
      */
     private $realTitle;
 
@@ -45,7 +46,7 @@ class Tour
     /**
      * @var string
      *
-     * @ORM\Column(name="descriptionLocal", type="text")
+     * @ORM\Column(name="descriptionLocal", type="text", nullable=true)
      */
     private $descriptionLocal;
 
@@ -66,7 +67,7 @@ class Tour
     /**
      * @var string
      *
-     * @ORM\Column(name="artistsKeywords", type="string", length=255)
+     * @ORM\Column(name="artistsKeywords", type="string", length=255, nullable=true)
      */
     private $artistsKeywords;
 
@@ -418,5 +419,16 @@ class Tour
     public function getContinent()
     {
         return $this->continent;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->setLive(true);
+        $this->setDeleted(false);
+        $this->setCreated(new \DateTime('now'));
+        $this->setmodified(new \DateTime('now'));
     }
 }
