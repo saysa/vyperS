@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\LocationRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Location
 {
@@ -31,7 +32,7 @@ class Location
     /**
      * @var string
      *
-     * @ORM\Column(name="nameReal", type="string", length=255)
+     * @ORM\Column(name="nameReal", type="string", length=255, nullable=true)
      */
     private $nameReal;
 
@@ -45,35 +46,35 @@ class Location
     /**
      * @var string
      *
-     * @ORM\Column(name="townReal", type="string", length=255)
+     * @ORM\Column(name="townReal", type="string", length=255, nullable=true)
      */
     private $townReal;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="address", type="text")
+     * @ORM\Column(name="address", type="text", nullable=true)
      */
     private $address;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="access", type="text")
+     * @ORM\Column(name="access", type="text", nullable=true)
      */
     private $access;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="url", type="string", length=255)
+     * @ORM\Column(name="url", type="string", length=255, nullable=true)
      */
     private $url;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="googlemap", type="text")
+     * @ORM\Column(name="googlemap", type="text", nullable=true)
      */
     private $googlemap;
 
@@ -419,5 +420,16 @@ class Location
     public function getCountry()
     {
         return $this->country;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->setLive(true);
+        $this->setDeleted(false);
+        $this->setCreated(new \DateTime('now'));
+        $this->setmodified(new \DateTime('now'));
     }
 }
