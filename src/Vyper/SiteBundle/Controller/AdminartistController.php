@@ -9,9 +9,7 @@
 namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
-use Vyper\SiteBundle\Entity\Article;
 use Vyper\SiteBundle\Entity\Artist;
-use Vyper\SiteBundle\Form\ArticleType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Vyper\SiteBundle\Form\ArtistType;
 

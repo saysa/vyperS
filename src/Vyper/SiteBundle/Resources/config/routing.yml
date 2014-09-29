@@ -92,4 +92,11 @@ ajax_articleArtistLinkDelete:
     path:     /_admin_/ajax/article_artist_link_delete
     defaults: { _controller: VyperSiteBundle:AdminAjax:articleArtistLinkDelete }
 
+ajax_albumArtistLink:
+    path:     /_admin_/ajax/album_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:albumArtistLink }
+
+ajax_albumArtistLinkDelete:
+    path:     /_admin_/ajax/album_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:albumArtistLinkDelete }
 

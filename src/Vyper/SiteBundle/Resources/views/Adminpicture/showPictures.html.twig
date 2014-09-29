@@ -46,7 +46,7 @@
                                     <td>{{ picture.getModified|date('Y-m-d') }}</td>
                                     <td>{{ picture.getAlbum.getTitle }}</td>
                                     <td>{{ picture.getName }}</td>
-                                    <td><a class="btn btn-success" href="{{ base_url }}uploads/pic/{{ picture.getFilename }}"><i class="icon-zoom-in "></i></a></td>
+                                    <td><a class="btn btn-success" href="{{ asset(picture.getPath()) }}"><i class="icon-zoom-in "></i></a></td>
                                     <td><a class="btn btn-info" href="#">
                                             <i class="icon-edit "></i>
                                         </a></td>
