@@ -32,4 +32,39 @@ class AdminAjaxController extends AdminCommonController {
 
         return new Response();
     }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function articleArtistLinkAction(Request $request)
+    {
+        $artist_id = $request->request->get('artist_id');
+        if (isset($artist_id) && $artist_id != '-1') {
+
+            $em = $this->getDoctrine()->getManager();
+            $article = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->find($request->request->get('item_id'));
+            $artist  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->find($artist_id);
+
+            $article->addArtist($artist);
+            $em->flush();
+            $array = array("artist" => array("id" => $artist->getId(), "name" => $artist->getName()));
+            echo json_encode($array);
+        }
+        return new Response();
+    }
+
+    public function articleArtistLinkDeleteAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $artist_id = $request->request->get('artist_id');
+        $article = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->find($request->request->get('item_id'));
+        $artist  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->find($artist_id);
+
+        $article->removeArtist($artist);
+        $em->flush();
+
+        return new Response();
+    }
+
 } 

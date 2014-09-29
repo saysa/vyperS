@@ -83,3 +83,13 @@ admin_update_artist:
     defaults: { _controller: VyperSiteBundle:AdminArtist:updateArtist }
     requirements:
         id: \d+
+
+ajax_articleArtistLink:
+    path:     /_admin_/ajax/article_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:articleArtistLink }
+
+ajax_articleArtistLinkDelete:
+    path:     /_admin_/ajax/article_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:articleArtistLinkDelete }
+
+

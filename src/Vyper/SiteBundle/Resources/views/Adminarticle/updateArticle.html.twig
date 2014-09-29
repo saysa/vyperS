@@ -272,7 +272,11 @@
                                             <select id="artists_to_link" name="artists_to_link" class="form-control" data-rel="chosen">
                                                 <option value="-1">-- none --</option>
                                                 {% for artist in artists %}
-                                                    <option value="{{ artist.getId }}">{{ artist.getName }}</option>
+                                                    {% if artist in article.artists %}
+
+                                                    {% else %}
+                                                        <option value="{{ artist.getId }}">{{ artist.getName }}</option>
+                                                    {% endif %}
                                                 {% endfor %}
                                             </select>
                                         </div>
@@ -297,7 +301,7 @@
                                             {% for artist in article.artists %}
                                                 <tr id="{{ artist.getId }}">
                                                     <td>{{ artist.getId }}</td>
-                                                    <td>{{ artist.getIdArtist }}</td>
+                                                    <td>{{ artist.getName }}</td>
                                                     <td><a class="btn btn-danger deleteLink" href="#"><i class="icon-trash "></i> </a></td>
                                                 </tr>
                                             {% endfor %}
@@ -330,7 +334,7 @@
 
                     $.ajax({
                         type: "POST",
-                        url: "/_admin_/ajax/article_artist_link_delete",
+                        url: "{{ path('ajax_articleArtistLinkDelete') }}",
 
                         data:{
                             artist_id : artistID,
@@ -353,7 +357,7 @@
 
                     $.ajax({
                         type: "POST",
-                        url: "/_admin_/ajax/article_artist_link",
+                        url: "{{ path('ajax_articleArtistLink') }}",
                         dataType: "json",
                         data:{
                             artist_id : $('#artists_to_link').val(),
