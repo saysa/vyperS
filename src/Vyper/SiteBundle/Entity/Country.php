@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\CountryRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Country
 {
@@ -180,5 +181,16 @@ class Country
     public function getModified()
     {
         return $this->modified;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->setLive(true);
+        $this->setDeleted(false);
+        $this->setCreated(new \DateTime('now'));
+        $this->setmodified(new \DateTime('now'));
     }
 }
