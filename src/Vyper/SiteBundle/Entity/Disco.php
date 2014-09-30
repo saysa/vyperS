@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\DiscoRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Disco
 {
@@ -31,28 +32,28 @@ class Disco
     /**
      * @var string
      *
-     * @ORM\Column(name="titleReal", type="string", length=255)
+     * @ORM\Column(name="titleReal", type="string", length=255, nullable=true)
      */
     private $titleReal;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cdJapan", type="string", length=255)
+     * @ORM\Column(name="cdJapan", type="string", length=255, nullable=true)
      */
     private $cdJapan;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="itunes", type="string", length=255)
+     * @ORM\Column(name="itunes", type="string", length=255, nullable=true)
      */
     private $itunes;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="amazon", type="string", length=255)
+     * @ORM\Column(name="amazon", type="string", length=255, nullable=true)
      */
     private $amazon;
 
@@ -66,14 +67,14 @@ class Disco
     /**
      * @var string
      *
-     * @ORM\Column(name="labelMusic", type="string", length=255)
+     * @ORM\Column(name="labelMusic", type="string", length=255, nullable=true)
      */
     private $labelMusic;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="details", type="text")
+     * @ORM\Column(name="details", type="text", nullable=true)
      */
     private $details;
 
@@ -105,6 +106,12 @@ class Disco
      * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
      */
     private $picture;
+
+    /**
+     * @var integer
+     * Pour stocker l'ID du formulaire
+     */
+    private $pictureID;
 
     /**
      * @ORM\ManyToMany(targetEntity="Vyper\SiteBundle\Entity\Artist", cascade={"persist"})
@@ -579,5 +586,32 @@ class Disco
     public function getArtists()
     {
         return $this->artists;
+    }
+
+    /**
+     * @param int $pictureID
+     */
+    public function setPictureID($pictureID)
+    {
+        $this->pictureID = $pictureID;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPictureID()
+    {
+        return $this->pictureID;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->setLive(true);
+        $this->setDeleted(false);
+        $this->setCreated(new \DateTime('now'));
+        $this->setmodified(new \DateTime('now'));
     }
 }
