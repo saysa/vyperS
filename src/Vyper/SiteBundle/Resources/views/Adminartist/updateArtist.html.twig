@@ -114,7 +114,7 @@
                                         {{ form_label(form.pictureID, "Picture ID") }}
                                         <div class="controls">
                                             {{ form_widget(form.pictureID, { 'attr': {'class': 'form-control'} }) }}
-                                            <a href="/_admin_/pictures" target="_blank">View Pictures</a>
+                                            <a href="{{ path('admin_show_pictures') }}" target="_blank">View Pictures</a>
                                             {{ form_errors(form.pictureID) }}
                                         </div>
                                     </div>

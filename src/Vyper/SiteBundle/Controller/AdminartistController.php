@@ -91,8 +91,6 @@ class AdminArtistController extends AdminCommonController {
 
             $artist->setPicture($picture);
 
-            var_dump($form->isValid());
-
             if ($form->isValid()) {
                 $em = $this->getDoctrine()->getManager();
                 $em->flush();

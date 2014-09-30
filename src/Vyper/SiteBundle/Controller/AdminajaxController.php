@@ -79,6 +79,27 @@ class AdminAjaxController extends AdminCommonController {
      * @param Request $request
      * @return Response
      */
+    public function eventArtistLinkAction(Request $request)
+    {
+        $artist_id = $request->request->get('artist_id');
+        if (isset($artist_id) && $artist_id != '-1') {
+
+            $em = $this->getDoctrine()->getManager();
+            $event = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Event')->find($request->request->get('item_id'));
+            $artist  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->find($artist_id);
+
+            $event->addArtist($artist);
+            $em->flush();
+            $array = array("artist" => array("id" => $artist->getId(), "name" => $artist->getName()));
+            echo json_encode($array);
+        }
+        return new Response();
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
     public function articleArtistLinkDeleteAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -104,6 +125,23 @@ class AdminAjaxController extends AdminCommonController {
         $artist  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->find($artist_id);
 
         $album->removeArtist($artist);
+        $em->flush();
+
+        return new Response();
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function eventArtistLinkDeleteAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $artist_id = $request->request->get('artist_id');
+        $event = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Event')->find($request->request->get('item_id'));
+        $artist  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->find($artist_id);
+
+        $event->removeArtist($artist);
         $em->flush();
 
         return new Response();

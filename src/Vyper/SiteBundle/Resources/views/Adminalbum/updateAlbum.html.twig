@@ -126,7 +126,11 @@
                                             <select id="artists_to_link" name="artists_to_link" class="form-control" data-rel="chosen">
                                                 <option value="-1">-- none --</option>
                                                 {% for artist in artists %}
-                                                    <option value="{{ artist.getId }}">{{ artist.getName }}</option>
+                                                    {% if artist in album.artists %}
+
+                                                    {% else %}
+                                                        <option value="{{ artist.getId }}">{{ artist.getName }}</option>
+                                                    {% endif %}
                                                 {% endfor %}
                                             </select>
                                         </div>

@@ -32,6 +32,20 @@ admin_update_article:
     requirements:
         id: \d+
 
+admin_show_events:
+    path:     /_admin_/events
+    defaults: { _controller: VyperSiteBundle:AdminEvent:showEvents }
+
+admin_add_event:
+    path:     /_admin_/event/add
+    defaults: { _controller: VyperSiteBundle:AdminEvent:addEvent }
+
+admin_update_event:
+    path:     _admin_/event/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminEvent:updateEvent }
+    requirements:
+        id: \d+
+
 admin_show_locations:
     path:     /_admin_/locations
     defaults: { _controller: VyperSiteBundle:AdminLocation:showLocations }
@@ -137,4 +151,12 @@ ajax_albumArtistLink:
 ajax_albumArtistLinkDelete:
     path:     /_admin_/ajax/album_artist_link_delete
     defaults: { _controller: VyperSiteBundle:AdminAjax:albumArtistLinkDelete }
+
+ajax_eventArtistLink:
+    path:     /_admin_/ajax/event_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:eventArtistLink }
+
+ajax_eventArtistLinkDelete:
+    path:     /_admin_/ajax/event_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:eventArtistLinkDelete }
 
