@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\TitleRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Title
 {
@@ -269,5 +270,16 @@ class Title
     public function getDisco()
     {
         return $this->disco;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->setLive(true);
+        $this->setDeleted(false);
+        $this->setCreated(new \DateTime('now'));
+        $this->setmodified(new \DateTime('now'));
     }
 }

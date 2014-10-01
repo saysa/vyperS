@@ -23,7 +23,7 @@ class AdminDiscoController extends AdminCommonController {
 
         if ($request->getMethod() == 'POST') {
 
-            $post_data = $request->request->get('vyper_sitebundle_event');
+            $post_data = $request->request->get('vyper_sitebundle_disco');
 
             $form->submit($request);
 
@@ -62,7 +62,13 @@ class AdminDiscoController extends AdminCommonController {
 
         if ('POST' === $request->getMethod()) {
 
+            $post_data = $request->request->get('vyper_sitebundle_disco');
+
             $form->submit($request);
+
+            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+
+            $disco->setPicture($picture);
 
             if ($form->isValid()) {
                 $em = $this->getDoctrine()->getManager();
@@ -72,10 +78,15 @@ class AdminDiscoController extends AdminCommonController {
         }
 
         $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->myFindAll();
+        $titles   = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Title')->findBy(
+            array('disco' => $disco)
+        );
+
 
         $view
             ->set('disco', $disco)
             ->set('artists', $artists)
+            ->set('titles', $titles)
             ->set('active_disco', true)
             ->set('form', $form->createView())
         ;

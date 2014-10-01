@@ -478,17 +478,17 @@
                     var tr = $(this).closest('tr');
                     var titleID = tr.attr('id');
 
-                    console.log("boucle supp ? titleID est " + titleID);
+                    console.log(titleID);
 
                     $.ajax({
                         type: "POST",
-                        url: "/_admin_/ajax/delete_title_from_disco",
+                        url: "{{ path('ajax_removeTitleDisco') }}",
+
 
                         data: {
                             title_id: titleID
                         },
                         success: function (data) {
-                            console.log('je suis delete success :' + data);
                         }
                     });
 
@@ -503,11 +503,9 @@
 
                 $("#add_title_button").on("click", function () {
 
-                    console.log($('#title_number').val());
-
                     $.ajax({
                         type: "POST",
-                        url: "/_admin_/ajax/add_title_to_disco",
+                        url: "{{ path('ajax_addTitleDisco') }}",
                         dataType: "json",
                         data: {
                             title_number: $('#title_number').val(),
@@ -516,7 +514,7 @@
                             disco_id: '{{ disco.getId }}'
                         },
                         success: function (data) {
-                            $('#titleListTable tr:last').after('<tr><td>' + data.title.number + '</td><td>' + data.title.title + '</td><td>' + data.title.title_real + '</td><td></td></tr>');
+                            $('#titleListTable tr:last').after('<tr id="' + data.title.id + '"><td>' + data.title.number + '</td><td>' + data.title.title + '</td><td>' + data.title.title_real + '</td><td><a class="btn btn-danger deleteTitle" href="#"><i class="icon-trash "></i> </a></td></tr>');
                         }
                     });
 

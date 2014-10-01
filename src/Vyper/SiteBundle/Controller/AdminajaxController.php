@@ -10,6 +10,7 @@ namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Vyper\SiteBundle\Entity\Title;
 
 class AdminAjaxController extends AdminCommonController {
 
@@ -185,6 +186,34 @@ class AdminAjaxController extends AdminCommonController {
         return new Response();
     }
 
+
+    public function addTitleDiscoAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $disco = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Disco')->find($request->request->get('disco_id'));
+        $title = new Title();
+        $title->setDisco($disco);
+        $title->setNumber($request->request->get('title_number'));
+        $title->setTitle($request->request->get('title_title'));
+        $title->setTitleReal($request->request->get('title_title_real'));
+
+        $em->persist($title);
+        $em->flush();
+
+        $array = array("title" => array("id" => $title->getId(),"number" => $request->request->get('title_number'), "title" => $request->request->get('title_title'), "title_real" => $request->request->get('title_title_real')));
+        echo json_encode($array);
+
+        return new Response();
+    }
+
+    public function removeTitleDiscoAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $title = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Title')->find($request->request->get('title_id'));
+        $em->remove($title);
+        $em->flush();
+        return new Response();
+    }
 
 
 } 

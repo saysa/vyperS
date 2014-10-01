@@ -5,6 +5,8 @@ namespace Vyper\SiteBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
 
 class DiscoType extends AbstractType
 {
@@ -41,6 +43,24 @@ class DiscoType extends AbstractType
             ->add('details', 'textarea', array('required' => false))
             ->add('pictureID', 'text', array('required' => false, 'attr' => array('placeholder' => 'Picture ID')))
         ;
+
+        // On ajoute une fonction qui va écouter un évènement
+        $builder->addEventListener(
+            FormEvents::PRE_SET_DATA,    // 1er argument : L'évènement qui nous intéresse : ici, PRE_SET_DATA
+            function(FormEvent $event) { // 2e argument : La fonction à exécuter lorsque l'évènement est déclenché
+                // On récupère notre objet Advert sous-jacent
+                $disco = $event->getData();
+
+                // Cette condition est importante, on en reparle plus loin
+                if (null === $disco) {
+                    return; // On sort de la fonction sans rien faire lorsque $advert vaut null
+                }
+                if (null !== $disco->getId() && !is_null($disco->getPicture())) {
+
+                    $event->getForm()->add('pictureID', 'text', array('data' => $disco->getPicture()->getId()));
+                }
+            }
+        );
     }
     
     /**

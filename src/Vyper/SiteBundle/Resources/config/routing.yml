@@ -182,3 +182,12 @@ ajax_discoArtistLinkDelete:
     path:     /_admin_/ajax/disco_artist_link_delete
     defaults: { _controller: VyperSiteBundle:AdminAjax:discoArtistLinkDelete }
 
+ajax_addTitleDisco:
+    path:     /_admin_/ajax/add_title_to_disco
+    defaults: { _controller: VyperSiteBundle:AdminAjax:addTitleDisco }
+
+ajax_removeTitleDisco:
+    path:     /_admin_/ajax/remove_title_to_disco
+    defaults: { _controller: VyperSiteBundle:AdminAjax:removeTitleDisco }
+
+
