@@ -6,6 +6,14 @@ home:
     path:     /home
     defaults: { _controller: VyperSiteBundle:Index:index }
 
+a_propos:
+    path:     /a_propos
+    defaults: { _controller: VyperSiteBundle:Statique:aPropos }
+
+contact:
+    path:     /contact
+    defaults: { _controller: VyperSiteBundle:Statique:contact }
+
 showAllArticle:
     path:    /news/{page}
     defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1 }

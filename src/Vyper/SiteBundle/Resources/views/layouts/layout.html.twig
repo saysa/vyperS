@@ -26,6 +26,7 @@
 
     <!--  Theme -->
     <link rel='stylesheet' id='fp-style-css'  href='{{ asset('assets/css/portal.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='fp-font-awesome-css'  href='{{ asset('assets/css/fonts/font-awesome/css/font-awesome.min.css') }}' type='text/css' media='all' />
 
 
     <!--[if lt IE 9]>
@@ -73,12 +74,12 @@
             <ul class="list">
                 <li>
                     <i class="icon-home"></i>
-                    <a href="">Accueil</a>
+                    <a href="{{ path('index') }}">Accueil</a>
                 </li>
 
                 <li>
                     <i class="icon-star"></i>
-                    <a href="a_propos">A propos</a>
+                    <a href="{{ path('a_propos') }}">A propos</a>
                 </li>
 
                 <li>
