@@ -8,12 +8,6 @@ services:
     vpr_visit_increment:
         class: Vyper\SiteBundle\Components\VisitIncrement\VisitIncrement
 
-    vpr_visite_increment_listener:
-        class: Vyper\SiteBundle\Components\VisitIncrement\Listener
-        arguments: [@vpr_visit_increment, @doctrine.orm.entity_manager]
-        tags:
-            - { name: kernel.event_listener, event: kernel.controller, method: process }
-
 #    vyper_site.example:
 #        class: %vyper_site.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]

@@ -16,6 +16,10 @@ class ArticleController extends Controller
      */
     public function showArticleAction(Request $request, Article $article)
     {
+        $em = $this->getDoctrine()->getManager();
+        $increment = $this->container->get('vpr_visit_increment');
+        $increment->increment($article, $em);
+
         $view = $this->container->get('saysa_view');
         $session = $request->getSession();
         $user = $session->get('user');

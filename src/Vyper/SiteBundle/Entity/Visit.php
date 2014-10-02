@@ -5,12 +5,12 @@ namespace Vyper\SiteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Visite
+ * Visit
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\VisiteRepository")
+ * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\VisitRepository")
  */
-class Visite
+class Visit
 {
     /**
      * @var integer
@@ -80,7 +80,7 @@ class Visite
      * Set ip
      *
      * @param string $ip
-     * @return Visite
+     * @return Visit
      */
     public function setIp($ip)
     {
@@ -103,7 +103,7 @@ class Visite
      * Set created
      *
      * @param \DateTime $created
-     * @return Visite
+     * @return Visit
      */
     public function setCreated($created)
     {
@@ -126,7 +126,7 @@ class Visite
      * Set article
      *
      * @param \Vyper\SiteBundle\Entity\Article $article
-     * @return Visite
+     * @return Visit
      */
     public function setArticle(\Vyper\SiteBundle\Entity\Article $article = null)
     {
@@ -149,7 +149,7 @@ class Visite
      * Set event
      *
      * @param \Vyper\SiteBundle\Entity\Event $event
-     * @return Visite
+     * @return Visit
      */
     public function setEvent(\Vyper\SiteBundle\Entity\Event $event = null)
     {
@@ -172,7 +172,7 @@ class Visite
      * Set artist
      *
      * @param \Vyper\SiteBundle\Entity\Artist $artist
-     * @return Visite
+     * @return Visit
      */
     public function setArtist(\Vyper\SiteBundle\Entity\Artist $artist = null)
     {
@@ -195,7 +195,7 @@ class Visite
      * Set album
      *
      * @param \Vyper\SiteBundle\Entity\Album $album
-     * @return Visite
+     * @return Visit
      */
     public function setAlbum(\Vyper\SiteBundle\Entity\Album $album = null)
     {
@@ -218,7 +218,7 @@ class Visite
      * Set disco
      *
      * @param \Vyper\SiteBundle\Entity\Disco $disco
-     * @return Visite
+     * @return Visit
      */
     public function setDisco(\Vyper\SiteBundle\Entity\Disco $disco = null)
     {

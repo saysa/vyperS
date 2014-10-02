@@ -8,15 +8,43 @@
 
 namespace Vyper\SiteBundle\Components\VisitIncrement;
 
-
-use Symfony\Component\HttpFoundation\Request;
+use Vyper\SiteBundle\Entity\Album;
+use Vyper\SiteBundle\Entity\Article as Article;
+use Vyper\SiteBundle\Entity\Artist;
+use Vyper\SiteBundle\Entity\Disco;
+use Vyper\SiteBundle\Entity\Event;
+use Vyper\SiteBundle\Entity\Visit;
 
 class VisitIncrement {
 
-    public function increment(Request $request)
+    public function increment($item, $em)
     {
-        echo "incremente up";
+        $options = array(
+            'item' => $item,
+            'ip'   => $_SERVER['REMOTE_ADDR'],
+        );
 
-        return true;
+        $visit = new Visit();
+        $visit->setIp($_SERVER['REMOTE_ADDR']);
+        $visit->setCreated(new \DateTime('now'));
+
+        if ($item instanceof Article) {
+            $visit->setArticle($item);
+        } elseif ($item instanceof Event) {
+            $visit->setEvent($item);
+        } elseif ($item instanceof Artist) {
+            $visit->setArtist($item);
+        } elseif ($item instanceof Album) {
+            $visit->setAlbum($item);
+        } elseif ($item instanceof Disco) {
+            $visit->setDisco($item);
+        }
+
+        $nbVisit  = $em->getRepository('VyperSiteBundle:Visit')->findVisit($options);
+
+        if (sizeof($nbVisit) == 0) {
+            $em->persist($visit);
+            $em->flush();
+        }
     }
 } 
