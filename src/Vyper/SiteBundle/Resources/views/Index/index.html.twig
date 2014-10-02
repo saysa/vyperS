@@ -3,7 +3,642 @@
 {% block title "Visual kei - JPop - Jrock - Jmusic - VYPER Japanese Music | Toute la Jmusic, toutes les news en temps réels" %}
 
     {% block content %}
-        Vous êtes en train de lire la première page générée avec Symfony2, la homepage.
+        <div id="content" class="homepage">
+        <script>
+            jQuery(document).ready(function($) {
+                $(".main-slider").show();
+                $(".main-slider").owlCarousel({
+                    navigation : true,
+                    pagination: false,
+                    autoPlay : 5000,
+                    slideSpeed : 400,
+                    paginationSpeed : 400,
+                    singleItem: true
+                });
+            });
+        </script>
+        <div class="main-slider section">
+            {% for article in articles_carousel %}
+                <div class="item">
+                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" >
+                        <img src="{{ asset(article.picture.getPath()) }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle }}" />
+                    </a>
 
-        {{ user_id }}
+                    <div class="post-info">
+                        <div class="post-excerpt">
+                            <div class="title">
+                                <h2><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h2>
+                                <div class="sep"></div>
+                            </div>
+
+                            <div class="main-slider-description">
+                                {{ article.getDescription }}
+                            </div>
+
+                            <div class="read-more">
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- /main-slider -->
+
+        <div id="single-cats" class="section">
+        <!-- category1 -->
+
+        <div class="feat-cat one-half">
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <div class="cat-icon"><i class="icon-bell-alt"></i></div>
+                    <h4><a href="{{ base_url }}news">Dernières News</a></h4>
+                </div>
+            </div>
+
+
+
+            {% for article in latest_news %}
+                {% if loop.index == 1 %}
+
+
+                    <div class="main-post">
+
+                        {% if article.getYoutube %}
+                            <div class="thumb-wrap video-thumb">
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                            </div>
+
+                        {% else %}
+                            <div class="thumb-wrap">
+                                <div class="thumb">
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('article')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                </div>
+
+                                        <span class="comments main-color-bg">
+                                            <i class="icon-comments"></i>
+                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" title="Comment on Ellie looks younger than before">no comments</a>
+                                        </span>
+
+                                <div class="overlay">
+                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
+                                </div>
+                            </div>
+                        {% endif %}
+
+
+
+                        <div class="post-details">
+                            <h3>
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
+                            </h3>
+
+                            <div class="entry-meta">
+                                <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+
+                                {% if article.themes %}
+                                    <span class="category">
+				                                <i class="icon-folder-close"></i>
+				                                <a href="#">todo THEME</a>
+				                            </span>
+                                {% endif %}
+
+                            </div>
+                            <p>{{ article.getDescription }}</p>
+                        </div>
+                    </div>
+                    <!-- /one-half -->
+
+                {% endif %}
+            {% endfor %}
+
+
+
+            <div class="post-list">
+
+                {% for key, article in latest_news %}
+                    {% if key>0 and key<4 %}
+
+                        <div class="item-post">
+                            <div class="thumb">
+                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                            </div>
+
+                            <div class="post-right">
+                                <h5>
+                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
+                                </h5>
+
+                                <div class="entry-meta">
+			                                    <span class="date">
+			                                        <i class="icon-calendar"></i>
+                                                    {{ article.getReleaseDateFrontFormat(article.getId) }}
+			                                    </span>
+
+			                                    <span class="comments">
+			                                        <i class="icon-comments"></i>
+                                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
+			                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    {% endif %}
+                {% endfor %}
+            </div><!-- /one-half -->
+        </div><!-- /section1-cat -->
+        <!-- /category1 -->
+
+        <!-- category2 -->
+
+        <div class="feat-cat one-half last">
+
+
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <div class="cat-icon">
+                        <i class="icon-rocket"></i>
+                    </div>
+                    <h4>événements</h4>
+                </div>
+            </div>
+
+            {% if latest_events is defined %}
+            {% for event in latest_events %}
+                {% if loop.index == 1 %}
+
+
+                    <div class="main-post">
+
+
+                        <div class="thumb-wrap">
+                            <div class="thumb">
+                                <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getRawPicture(event.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                            </div>
+
+                                        <span class="comments main-color-bg">
+                                            <i class="icon-comments"></i>
+                                            <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html" title="{{ event.getTitle|escape }}">no comments</a>
+                                        </span>
+
+                            <div class="overlay">
+                                <a class="post-link" href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><i class="icon-link"></i></a>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="post-details">
+                            <h3>
+                                <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html">{{ event.getTitle|escape }}</a>
+                            </h3>
+
+                            <div class="entry-meta">
+                                <span class="date"><i class="icon-calendar"></i> {{ event.getDateEvent(event.getId) }}</span><br />
+                                {{ event.getTown(event.getId) }}<br />
+                                {{ event.getCountry(event.getId)|upper }}
+
+
+
+                            </div>
+                            <p>{{ article.getDescription }}</p>
+                        </div>
+                    </div>
+                    <!-- /one-half -->
+
+                {% endif %}
+            {% endfor %}
+            {% endif %}
+
+            <div class="post-list">
+
+                {% if latest_events is defined %}
+                {% for key, event in latest_events %}
+                    {% if key>0 and key<4 %}
+
+                        <div class="item-post">
+                            <div class="thumb">
+                                <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getMini75Picture(event.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                            </div>
+
+                            <div class="post-right">
+                                <h5>
+                                    <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html" rel="bookmark">{{ event.getTitle }}</a>
+                                </h5>
+
+                                <div class="entry-meta">
+			                                    <span class="date">
+			                                        <i class="icon-calendar"></i>
+                                                    {{ event.getDateEvent(event.getId) }}
+			                                    </span>
+
+			                                    <span class="comments">
+			                                        <i class="icon-comments"></i>
+                                                    {{ event.getTown(event.getId) }}, {{ event.getCountry(event.getId)|upper }}
+			                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+            </div><!-- /one-half -->
+
+
+
+        </div><!-- /section1-cat -->
+        <!-- /category2 -->
+
+
+
+
+
+        </div>
+
+
+
+        <div class="add_468">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- un_artist -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:468px;height:60px"
+                 data-ad-client="ca-pub-3070362287154347"
+                 data-ad-slot="6183315514"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div id="feat-categories">
+
+        <!-- category1 -->
+        <div class="feat-cat section">
+
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <div class="cat-icon">
+                        <i class="icon-bookmark"></i>
+                    </div>
+                    <h4><a href="{{ base_url }}interviews">Interviews</a></h4>
+                </div>
+            </div>
+
+            <div class="one-half main-post">
+
+                {% if latest_interviews is defined %}
+                {% for article in latest_interviews %}
+                    {% if loop.index == 1 %}
+
+
+
+                        {% if article.getYoutube %}
+                            <div class="thumb-wrap video-thumb">
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                            </div>
+
+                        {% else %}
+                            <div class="thumb-wrap">
+                                <div class="thumb">
+                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                </div>
+
+		                                        <span class="comments main-color-bg">
+		                                            <i class="icon-comments"></i>
+		                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+		                                        </span>
+
+                                <div class="overlay">
+                                    <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
+                                </div>
+                            </div>
+                        {% endif %}
+
+
+
+                        <div class="post-details">
+                            <h3>
+                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
+                            </h3>
+
+                            <div class="entry-meta">
+                                <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+                                {% if article.getRelatedTheme.getTitle %}
+                                    <span class="category">
+						                                <i class="icon-folder-close"></i>
+						                                <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
+						                            </span>
+                                {% endif %}
+
+                            </div>
+                            <p>{{ article.getDescription }}</p>
+                        </div>
+
+
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+
+            </div><!-- /one-half -->
+
+
+            <div class="one-half last">
+
+                {%  if latest_interviews is defined %}
+                {% for key, article in latest_interviews %}
+                    {% if key>0 and key<5 %}
+
+                        <div class="item-post">
+                            <div class="thumb">
+                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                            </div>
+
+                            <div class="post-right">
+                                <h5>
+                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
+                                </h5>
+
+                                <div class="entry-meta">
+				                                    <span class="date">
+				                                        <i class="icon-calendar"></i>
+                                                        {{ article.getReleaseDateFrontFormat(article.getId) }}
+				                                    </span>
+
+				                                    <span class="comments">
+                                                        <i class="icon-comments"></i>
+                                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
+                                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+
+
+
+            </div><!-- /one-half -->
+
+
+
+        </div><!-- /feat-cat -->
+        <!-- /category1 -->
+
+
+
+        <!-- category2 -->
+        <div class="feat-cat section">
+
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <div class="cat-icon">
+                        <i class="icon-leaf"></i>
+                    </div>
+
+                    <h4><a href="{{ base_url }}live-reports">Live Reports</a></h4>
+                </div>
+            </div>
+
+
+
+            <div class="one-half main-post">
+
+                {%  if latest_live_reports is defined %}
+                {% for article in latest_live_reports %}
+                    {% if loop.index == 1 %}
+
+
+
+                        {% if article.getYoutube %}
+                            <div class="thumb-wrap video-thumb">
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                            </div>
+
+                        {% else %}
+                            <div class="thumb-wrap">
+                                <div class="thumb">
+                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                </div>
+
+		                                        <span class="comments main-color-bg">
+		                                            <i class="icon-comments"></i>
+		                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+		                                        </span>
+
+                                <div class="overlay">
+                                    <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
+                                </div>
+                            </div>
+                        {% endif %}
+
+
+
+                        <div class="post-details">
+                            <h3>
+                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
+                            </h3>
+
+                            <div class="entry-meta">
+                                <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+                                {% if article.getRelatedTheme.getTitle %}
+                                    <span class="category">
+						                                <i class="icon-folder-close"></i>
+                                                        <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
+
+						                            </span>
+                                {% endif %}
+
+                            </div>
+                            <p>{{ article.getDescription }}</p>
+                        </div>
+
+
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+
+            </div><!-- /one-half -->
+
+
+
+            <div class="one-half last">
+                {%  if latest_live_reports is defined %}
+                {% for key, article in latest_live_reports %}
+                    {% if key>0 and key<5 %}
+
+                        <div class="item-post">
+                            <div class="thumb">
+                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                            </div>
+
+                            <div class="post-right">
+                                <h5>
+                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
+                                </h5>
+
+                                <div class="entry-meta">
+				                                    <span class="date">
+				                                        <i class="icon-calendar"></i>
+                                                        {{ article.getReleaseDateFrontFormat(article.getId) }}
+				                                    </span>
+
+				                                    <span class="comments">
+                                                        <i class="icon-comments"></i>
+                                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
+                                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+
+
+            </div><!-- /one-half -->
+
+
+
+        </div><!-- /feat-cat -->
+        <!-- /category2 -->
+
+
+
+
+        <!-- category2 -->
+        <div class="feat-cat section">
+
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <div class="cat-icon">
+                        <i class="icon-leaf"></i>
+                    </div>
+
+                    <h4><a href="{{ base_url }}chroniques">Chroniques</a></h4>
+                </div>
+            </div>
+
+
+
+            <div class="one-half main-post">
+
+                {% if latest_chroniques is defined %}
+                {% for article in latest_chroniques %}
+                    {% if loop.index == 1 %}
+
+
+
+                        {% if article.getYoutube %}
+                            <div class="thumb-wrap video-thumb">
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                            </div>
+
+                        {% else %}
+                            <div class="thumb-wrap">
+                                <div class="thumb">
+                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                </div>
+
+                        <span class="comments main-color-bg">
+                                <i class="icon-comments"></i>
+                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+                        </span>
+
+                                <div class="overlay">
+                                    <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
+                                </div>
+                            </div>
+                        {% endif %}
+
+
+
+                        <div class="post-details">
+                            <h3>
+                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
+                            </h3>
+
+                            <div class="entry-meta">
+                                <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+                                {% if article.getRelatedTheme.getTitle %}
+                                    <span class="category">
+                                <i class="icon-folder-close"></i>
+                                <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
+
+                        </span>
+                                {% endif %}
+
+                            </div>
+                            <p>{{ article.getDescription }}</p>
+                        </div>
+
+
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+
+            </div><!-- /one-half -->
+
+
+
+            <div class="one-half last">
+                {% if latest_chroniques is defined %}
+                {% for key, article in latest_chroniques %}
+                    {% if key>0 and key<5 %}
+
+                        <div class="item-post">
+                            <div class="thumb">
+                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                            </div>
+
+                            <div class="post-right">
+                                <h5>
+                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
+                                </h5>
+
+                                <div class="entry-meta">
+                                <span class="date">
+                                <i class="icon-calendar"></i>
+                                    {{ article.getReleaseDateFrontFormat(article.getId) }}
+                        </span>
+
+                        <span class="comments">
+                                <i class="icon-comments"></i>
+                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
+                        </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+
+
+            </div><!-- /one-half -->
+
+
+
+        </div><!-- /feat-cat -->
+        <!-- /category2 -->
+
+        <!-- category3 -->
+        <!-- /category3 -->
+
+        <!-- category4 -->
+        <!-- /category4 -->
+
+        <!-- category5 -->
+        <!-- /category5 -->
+
+        </div>
+
+
+        </div>
     {% endblock %}

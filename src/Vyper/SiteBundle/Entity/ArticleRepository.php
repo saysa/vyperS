@@ -23,6 +23,22 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
+    public function carousel()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->andWhere('a.highlight = true')
+            ->orderBy('a.releaseDate', 'DESC')
+            ->setMaxResults(8)
+        ;
+
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function showRecentArticles()
     {
         $queryBuilder = $this->createQueryBuilder('a');
@@ -32,6 +48,23 @@ class ArticleRepository extends EntityRepository
 
         return $results;
     }
+
+    public function latestNews($type)
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->andWhere('a.articleType = :type')
+            ->orderBy('a.created', 'DESC')
+            ->setMaxResults(5)
+            ->setParameter('type', $type)
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
 
     public function showAll($posts_per_page, $page)
     {

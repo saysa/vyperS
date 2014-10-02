@@ -29,6 +29,10 @@ twig:
         path_css: assets/css/
         base_url: yoyo
         path_js: assets/js
+        vyper_facebook: https://www.facebook.com/vyperjmusic
+        vyper_twitter: https://twitter.com/VYPER_JMusic
+        vyper_youtube: http://www.youtube.com/channel/UCodQ1kpPKxIG3NrE6q2iaaw
+        vyper_google_plus: https://plus.google.com/117439863059039345672
 
 # Assetic Configuration
 assetic:

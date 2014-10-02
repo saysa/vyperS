@@ -196,6 +196,31 @@
             </a>
         </div>
 
+        <ul id="menu-primary-menu" class="sf-menu sf-js-enabled sf-shadow">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home{% if front_page_index %} current_page_item{% endif %}"><a href="{{ path('index') }}" title="Accueil">Accueil</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_article is defined %} current_page_item{% endif %}"><a href="{{ base_url }}news" title="News">News</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_interview is defined %} current_page_item{% endif %}"><a href="{{ base_url }}interviews" title="Interview">Interviews</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_live_report is defined %} current_page_item{% endif %}"><a href="{{ base_url }}live-reports" title="Live Reports">Live Reports</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_chronique is defined %} current_page_item{% endif %}"><a href="{{ base_url }}chroniques" title="Chroniques">Chroniques</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_album is defined %} current_page_item{% endif %}"><a href="{{ base_url }}galerie" title="Galerie">Galerie</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_artist is defined %} current_page_item{% endif %}"><a href="{{ base_url }}artists" title="Artistes">Artistes</a></li>
+
+            {% if themes_showInMenu is defined %}
+                <li class="menu-item menu-item-type-post_type"><a href="#">Themes<span class="sf-sub-indicator"> »</span></a>
+                    <ul class="sub-menu">
+                        {% for theme in themes_showInMenu %}
+                            <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}theme/{{ theme.getId }}/1/{{ theme.getTitleUrlFormat(theme.getId) }}" title="{{ theme.getTitle }}">{{ theme.getTitle }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endif %}
+            <li class="menu-item menu-item-type-post_type"><a href="#" title="Magazine">Magazine<span class="sf-sub-indicator"> »</span></a>
+                <ul class="sub-menu">
+                    <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-000">Volume 000</a></li>
+                    <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-001">Volume 001</a></li>
+                </ul>
+            </li>
+        </ul>
 
     </div>
 </nav>
@@ -223,7 +248,9 @@
 <!-- /content -->
 <div id="sidebar">
 
-
+    <aside id="fairpixels_social_subscribers_widget-2" class="widget widget_social_counter">
+        {{ render(controller("VyperSiteBundle:Misc:socialNetwork")) }}
+    </aside>
 
 
 <aside id="fairpixels_recent_popular_widget-2" class="widget widget_tabs">
