@@ -17,6 +17,7 @@ class ArticleController extends Controller
     public function showArticleAction(Request $request, Article $article)
     {
         $em = $this->getDoctrine()->getManager();
+
         $increment = $this->container->get('vpr_visit_increment');
         $increment->increment($article, $em);
 
@@ -24,7 +25,7 @@ class ArticleController extends Controller
         $session = $request->getSession();
         $user = $session->get('user');
 
-        $article  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->find($article->getId());
+        $article  = $em->getRepository('VyperSiteBundle:Article')->find($article->getId());
 
         $view->set('user_id', $user);
         $view->set('article', $article);
@@ -53,6 +54,20 @@ class ArticleController extends Controller
         $articles  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->showRecentArticles();
         $view->set('recent_articles', $articles);
         return $this->render('VyperSiteBundle:Article:recentArticles.html.twig', $view->getView());
+    }
+
+    public function popularArticlesAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $view = $this->container->get('saysa_view');
+        $results  = $em->getRepository('VyperSiteBundle:Visit')->showPopular();
+        $popular_articles = array();
+        foreach($results as $result) {
+            $popular_articles[] = $result['item']->getArticle();
+        }
+
+        $view->set('popular_articles', $popular_articles);
+        return $this->render('VyperSiteBundle:Article:popularArticles.html.twig', $view->getView());
     }
 
 }

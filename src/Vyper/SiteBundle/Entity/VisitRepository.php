@@ -32,4 +32,21 @@ class VisitRepository extends EntityRepository
 
         return $results;
     }
+
+    public function showPopular()
+    {
+        $queryBuilder = $this->createQueryBuilder('v')
+            ->select('v as item')
+            ->addSelect('COUNT(v.article) as nb')
+            ->join('v.article', 'article')
+            ->addSelect('article')
+            ->groupBy('v.article')
+            ->orderBy('nb', 'DESC')
+            ->setMaxResults(10);
+        ;
+
+        return $queryBuilder
+            ->getQuery()
+            ->getResult();
+    }
 }

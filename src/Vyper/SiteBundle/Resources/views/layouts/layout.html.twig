@@ -34,8 +34,16 @@
     <script>window.html5 || document.write('<script src="assets/js/vendor/html5shiv.js"><\/script>')</script>
     <![endif]-->
 
+    <script type='text/javascript' src='{{ asset('assets/js/discover/jquery.js?ver=1.10.2') }}'></script>
+    <script type='text/javascript' src='{{ asset('assets/js/discover/jquery-migrate.min.js?ver=1.2.1') }}'></script>
+    <script>window.jQuery || document.write('<script src="{{ asset('assets/js/vendor/jquery-1.10.1.min.js') }}"><\/script>')</script>
 
+    <script src="{{ asset('assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
+    <script src="{{ asset('assets/js/plugins/cleditor/jquery.cleditor.min.js') }}"></script>
+    <script src="{{ asset('assets/js/owl-carousel/owl.carousel.js') }}"></script>
+    <script src="{{ asset('assets/js/liscroll.js') }}"></script>
 
 
 </head>
@@ -242,13 +250,9 @@
     <div class="tabs-content-container">
 
         {{ render(controller("VyperSiteBundle:Article:recentArticles")) }}
-
-        <div id="widget-tab2-content" class="tab-content">
-            <ul class="list post-list">
+        {{ render(controller("VyperSiteBundle:Article:popularArticles")) }}
 
 
-            </ul>
-        </div>
 
         <div id="widget-tab3-content" class="tab-content">
             <ul class="list comment-list">
@@ -387,7 +391,10 @@
 </footer>
 <!-- /footer -->
 
-
+<script src="{{ asset('assets/js/discover/superfish.js') }}"></script>
+<script src="{{ asset('assets/js/discover/flexslider-min.js') }}"></script>
+<script src="{{ asset('assets/js/discover/lightbox.js') }}"></script>
+<script src="{{ asset('assets/js/discover/script.js') }}"></script>
 
 <script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '11lxMF']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
 

@@ -21,7 +21,7 @@ showAllArticle:
         page: \d*
 
 showArticle:
-    path:    /articles/{id}/{slug}.html
+    path:    /article/{id}/{slug}.html
     defaults: { _controller: VyperSiteBundle:Article:showArticle }
     requirements:
         id: \d+
