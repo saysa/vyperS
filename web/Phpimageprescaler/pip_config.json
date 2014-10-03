@@ -23,13 +23,13 @@
                 }
             }
         },
-        "header": {
+        "flux-rss": {
             "dimensions": {
                 "mobile": {
-                    "w": 300
+                    "w": 150
                 },
                 "large": {
-                    "w": 500
+                    "w": 80
                 }
             },
             "filter": {

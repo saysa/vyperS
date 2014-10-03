@@ -42,7 +42,7 @@
                 <div class="entry-content-wrap">
                     <div class="entry-image">
                         {% if img_type_news %}
-                            <img src="{{ asset(article.picture.getPath('article')) }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle|escape }}">
+                            <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('article')) }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle|escape }}">
                         {% else %}
                             {% if article_horizontal_image %}
                                 <img  src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle|escape }}">

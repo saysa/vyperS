@@ -23,7 +23,15 @@ class AdminArticleController extends AdminCommonController {
      */
     public function showArticlesAction(Request $request)
     {
-
+        $fluxRSS = $this->container->get('vpr_flux_rss');
+        $opt = array(
+            'entity_manager'    => $this->getDoctrine()->getManager(),
+            'router'            => $this->get('router'),
+            'app_root'          => $this->get('kernel')->getRootDir(),
+            'assets'            => $this->container->get('templating.helper.assets'),
+            'request'           => $request,
+        );
+        $fluxRSS->update($opt);
 
         $view = $this->container->get('saysa_view');
 

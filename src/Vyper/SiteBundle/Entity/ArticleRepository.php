@@ -39,10 +39,10 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
-    public function showRecentArticles()
+    public function showRecentArticles($limit = 10)
     {
         $queryBuilder = $this->createQueryBuilder('a');
-        $queryBuilder->where('a.deleted = false')->setMaxResults(10);
+        $queryBuilder->where('a.deleted = false')->setMaxResults($limit);
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();
 

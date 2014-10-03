@@ -197,7 +197,7 @@
         </div>
 
         <ul id="menu-primary-menu" class="sf-menu sf-js-enabled sf-shadow">
-            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home{% if front_page_index %} current_page_item{% endif %}"><a href="{{ path('index') }}" title="Accueil">Accueil</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home{% if front_page_index is defined %} current_page_item{% endif %}"><a href="{{ path('index') }}" title="Accueil">Accueil</a></li>
             <li class="menu-item menu-item-type-post_type{% if current_article is defined %} current_page_item{% endif %}"><a href="{{ base_url }}news" title="News">News</a></li>
             <li class="menu-item menu-item-type-post_type{% if current_interview is defined %} current_page_item{% endif %}"><a href="{{ base_url }}interviews" title="Interview">Interviews</a></li>
             <li class="menu-item menu-item-type-post_type{% if current_live_report is defined %} current_page_item{% endif %}"><a href="{{ base_url }}live-reports" title="Live Reports">Live Reports</a></li>

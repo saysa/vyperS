@@ -8,6 +8,9 @@ services:
     vpr_visit_increment:
         class: Vyper\SiteBundle\Components\VisitIncrement\VisitIncrement
 
+    vpr_flux_rss:
+        class: Vyper\SiteBundle\Components\FluxRss\FluxRss
+
 #    vyper_site.example:
 #        class: %vyper_site.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
