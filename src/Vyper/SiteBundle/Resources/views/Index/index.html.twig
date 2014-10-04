@@ -72,7 +72,7 @@
                         {% else %}
                             <div class="thumb-wrap">
                                 <div class="thumb">
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('article')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
                                         <span class="comments main-color-bg">
@@ -121,12 +121,12 @@
 
                         <div class="item-post">
                             <div class="thumb">
-                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
                             </div>
 
                             <div class="post-right">
                                 <h5>
-                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
                                 </h5>
 
                                 <div class="entry-meta">
@@ -137,7 +137,7 @@
 
 			                                    <span class="comments">
 			                                        <i class="icon-comments"></i>
-                                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"></fb:comments-count> réactions</a>
 			                                    </span>
                                 </div>
                             </div>
@@ -303,16 +303,16 @@
                         {% else %}
                             <div class="thumb-wrap">
                                 <div class="thumb">
-                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
 		                                        <span class="comments main-color-bg">
 		                                            <i class="icon-comments"></i>
-		                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+		                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" title="Comment on {{ article.getTitle }}">no comments</a>
 		                                        </span>
 
                                 <div class="overlay">
-                                    <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
+                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
                                 </div>
                             </div>
                         {% endif %}
@@ -321,17 +321,18 @@
 
                         <div class="post-details">
                             <h3>
-                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
                             </h3>
 
                             <div class="entry-meta">
                                 <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
-                                {% if article.getRelatedTheme.getTitle %}
+                                {% if article.themes %}
                                     <span class="category">
-						                                <i class="icon-folder-close"></i>
-						                                <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
-						                            </span>
+				                                <i class="icon-folder-close"></i>
+				                                <a href="#">todo THEME</a>
+				                            </span>
                                 {% endif %}
+
 
                             </div>
                             <p>{{ article.getDescription }}</p>
@@ -353,12 +354,12 @@
 
                         <div class="item-post">
                             <div class="thumb">
-                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
                             </div>
 
                             <div class="post-right">
                                 <h5>
-                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
                                 </h5>
 
                                 <div class="entry-meta">
@@ -369,7 +370,7 @@
 
 				                                    <span class="comments">
                                                         <i class="icon-comments"></i>
-                                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
+                                                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"></fb:comments-count> réactions</a>
                                                     </span>
                                 </div>
                             </div>
@@ -422,16 +423,16 @@
                         {% else %}
                             <div class="thumb-wrap">
                                 <div class="thumb">
-                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
 		                                        <span class="comments main-color-bg">
 		                                            <i class="icon-comments"></i>
-		                                            <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+		                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" title="Comment on Ellie looks younger than before">no comments</a>
 		                                        </span>
 
                                 <div class="overlay">
-                                    <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
+                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
                                 </div>
                             </div>
                         {% endif %}
@@ -440,17 +441,16 @@
 
                         <div class="post-details">
                             <h3>
-                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
                             </h3>
 
                             <div class="entry-meta">
                                 <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
-                                {% if article.getRelatedTheme.getTitle %}
+                                {% if article.themes %}
                                     <span class="category">
-						                                <i class="icon-folder-close"></i>
-                                                        <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
-
-						                            </span>
+				                                <i class="icon-folder-close"></i>
+				                                <a href="#">todo THEME</a>
+				                            </span>
                                 {% endif %}
 
                             </div>
@@ -473,12 +473,12 @@
 
                         <div class="item-post">
                             <div class="thumb">
-                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
                             </div>
 
                             <div class="post-right">
                                 <h5>
-                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
                                 </h5>
 
                                 <div class="entry-meta">
@@ -489,7 +489,7 @@
 
 				                                    <span class="comments">
                                                         <i class="icon-comments"></i>
-                                                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
+                                                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"></fb:comments-count> réactions</a>
                                                     </span>
                                 </div>
                             </div>
@@ -542,16 +542,16 @@
                         {% else %}
                             <div class="thumb-wrap">
                                 <div class="thumb">
-                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getRawPicture(article.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
                         <span class="comments main-color-bg">
                                 <i class="icon-comments"></i>
-                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" title="Comment on Ellie looks younger than before">no comments</a>
+                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" title="Comment on Ellie looks younger than before">no comments</a>
                         </span>
 
                                 <div class="overlay">
-                                    <a class="post-link" href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><i class="icon-link"></i></a>
+                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
                                 </div>
                             </div>
                         {% endif %}
@@ -560,17 +560,16 @@
 
                         <div class="post-details">
                             <h3>
-                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html">{{ article.getTitle }}</a>
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
                             </h3>
 
                             <div class="entry-meta">
                                 <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
-                                {% if article.getRelatedTheme.getTitle %}
+                                {% if article.themes %}
                                     <span class="category">
-                                <i class="icon-folder-close"></i>
-                                <a href="{{ base_url }}theme/{{ article.getRelatedTheme.getId }}/1/{{ article.getRelatedTheme.getTitleUrlFormat(article.getRelatedTheme.getId) }}">{{ article.getRelatedTheme.getTitle }}</a>
-
-                        </span>
+				                                <i class="icon-folder-close"></i>
+				                                <a href="#">todo THEME</a>
+				                            </span>
                                 {% endif %}
 
                             </div>
@@ -593,12 +592,12 @@
 
                         <div class="item-post">
                             <div class="thumb">
-                                <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ article.getMini75Picture(article.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
                             </div>
 
                             <div class="post-right">
                                 <h5>
-                                    <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html" rel="bookmark">{{ article.getTitle }}</a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
                                 </h5>
 
                                 <div class="entry-meta">
@@ -609,7 +608,7 @@
 
                         <span class="comments">
                                 <i class="icon-comments"></i>
-                        <a href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ base_url }}articles/{{ article.getId }}/{{ article.getStringUrl(article.getId) }}.html"></fb:comments-count> réactions</a>
+                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"></fb:comments-count> réactions</a>
                         </span>
                                 </div>
                             </div>
