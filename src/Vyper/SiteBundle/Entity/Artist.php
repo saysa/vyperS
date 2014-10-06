@@ -3,6 +3,7 @@
 namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Artist
@@ -60,7 +61,7 @@ class Artist
     /**
      * @var string
      *
-     * @ORM\Column(name="translator", type="string", length=255)
+     * @ORM\Column(name="translator", type="string", length=255, nullable=true)
      */
     private $translator;
 
@@ -70,6 +71,13 @@ class Artist
      * @ORM\Column(name="keywords", type="string", length=255)
      */
     private $keywords;
+
+    /**
+     * @var string
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(type="string", length=255, unique=true)
+     */
+    private $slug;
 
     /**
      * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
@@ -413,6 +421,7 @@ class Artist
         return $this->pictureID;
     }
 
+
     /**
      * @ORM\PrePersist
      */
@@ -422,5 +431,28 @@ class Artist
         $this->setDeleted(false);
         $this->setCreated(new \DateTime('now'));
         $this->setmodified(new \DateTime('now'));
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Artist
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }

@@ -26,6 +26,18 @@ showArticle:
     requirements:
         id: \d+
 
+showAllArtist:
+    path:    /artistes/{page}
+    defaults: { _controller: VyperSiteBundle:Artist:showAll, page: 1 }
+    requirements:
+        page: \d*
+
+showArtist:
+    path:    /artiste/{id}/{slug}.html
+    defaults: { _controller: VyperSiteBundle:Artist:showArtist }
+    requirements:
+        id: \d+
+
 admin_show_articles:
     path:     /_admin_/articles
     defaults: { _controller: VyperSiteBundle:AdminArticle:showArticles }

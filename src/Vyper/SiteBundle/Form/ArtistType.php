@@ -22,7 +22,7 @@ class ArtistType extends AbstractType
             ->add('profile', 'textarea')
             ->add('biography', 'textarea')
             ->add('author', 'text', array('attr' => array('placeholder' => 'Author')))
-            ->add('translator', 'text', array('attr' => array('placeholder' => 'Translator')))
+            ->add('translator', 'text', array('required' => false, 'attr' => array('placeholder' => 'Translator')))
             ->add('keywords', 'text', array('attr' => array('placeholder' => 'Keywords')))
             ->add('pictureID', 'text', array('required' => false, 'attr' => array('placeholder' => 'Picture ID')))
         ;

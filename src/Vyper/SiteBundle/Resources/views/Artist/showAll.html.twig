@@ -1,0 +1,45 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Artistes | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <header class="archive-header">
+            <h2 class="archive-title">Artistes</h2>
+        </header><!-- /archive-header -->
+
+        <div class="archive-postlist">
+
+            {% for artist in artists %}
+                <div class="one-fourth{% if loop.index%4==0 %} last{% endif %}">
+                    <article class="post type-post status-publish format-standard hentry">
+                        <div class="thumb-wrap">
+                            <div class="thumb artist-thumbnail">
+                                <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}"><img  src="{{ asset(artist.picture.getPath('374-200')) }}" class="wp-post-image artists-img" alt=""></a>
+                                <div class="ribbon-caption">
+                                    <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}" class="ribbon-caption-title">
+                                        <span>{{ artist.getName }}</span>
+                                        <span class="ribbon-caption-background"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            {% endfor %}
+
+        </div>
+
+        <div class="pagination">
+
+            {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+            {% for p in range(1, total_artists) %}
+                {% if p == page %}
+                    <span class="page-numbers current">{{ p }}</span>
+                {% else %}
+                    <a href="{{ path('showAllArtist', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+    {% endblock %}
+

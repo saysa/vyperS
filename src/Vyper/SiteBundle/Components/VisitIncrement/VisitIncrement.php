@@ -30,17 +30,22 @@ class VisitIncrement {
 
         if ($item instanceof Article) {
             $visit->setArticle($item);
+            $item = 'article';
         } elseif ($item instanceof Event) {
             $visit->setEvent($item);
+            $item = 'event';
         } elseif ($item instanceof Artist) {
             $visit->setArtist($item);
+            $item = 'artist';
         } elseif ($item instanceof Album) {
             $visit->setAlbum($item);
+            $item = 'album';
         } elseif ($item instanceof Disco) {
             $visit->setDisco($item);
+            $item = 'disco';
         }
 
-        $nbVisit  = $em->getRepository('VyperSiteBundle:Visit')->findVisit($options);
+        $nbVisit  = $em->getRepository('VyperSiteBundle:Visit')->findVisit($options, $item);
 
         if (sizeof($nbVisit) == 0) {
             $em->persist($visit);

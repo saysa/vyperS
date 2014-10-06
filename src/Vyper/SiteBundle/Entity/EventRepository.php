@@ -21,4 +21,20 @@ class EventRepository extends EntityRepository
 
         return $results;
     }
+
+    public function getByArtist($artist_id)
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->join('a.artists', 'artist', 'WITH', 'artist.id = :id')
+            ->where('a.deleted = false')
+            ->orderBy('a.date', 'DESC')
+            ->setMaxResults(3)
+            ->setParameter('id', $artist_id);
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }

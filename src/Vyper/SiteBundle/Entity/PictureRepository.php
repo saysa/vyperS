@@ -21,4 +21,20 @@ class PictureRepository extends EntityRepository
 
         return $results;
     }
+
+    public function getByAlbum($album)
+    {
+        $queryBuilder = $this->createQueryBuilder('p');
+        $queryBuilder
+            ->join('p.album', 'album', 'WITH', 'album.id = :id')
+            ->where('p.deleted = false')
+            ->orderBy('p.created', 'ASC')
+            ->setMaxResults(1)
+            ->setParameter('id', $album);
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results[0];
+    }
 }

@@ -12,17 +12,17 @@ use Doctrine\ORM\EntityRepository;
  */
 class VisitRepository extends EntityRepository
 {
-    public function findVisit($options) {
+    public function findVisit($options, $item) {
 
         $earlier = new \DateTime('now');
         $earlier = $earlier->sub(new \DateInterval('PT1H'));
 
         $queryBuilder = $this->createQueryBuilder('v');
         $queryBuilder
-            ->where('v.article = :article')
+            ->where('v.' . $item . ' = :' . $item)
             ->andWhere('v.ip = :ip')
             ->andWhere('v.created > :earlier')
-            ->setParameter('article', $options['item'])
+            ->setParameter($item, $options['item'])
             ->setParameter('ip'     , $options['ip'])
             ->setParameter('earlier', $earlier)
         ;
