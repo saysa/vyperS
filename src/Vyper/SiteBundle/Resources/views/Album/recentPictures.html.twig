@@ -1,0 +1,16 @@
+<div class="flickr_stream">
+
+
+    <ul id="flickr_thumbs" class="list flickr_thumbs">
+
+        {% for picture in recent_pictures %}
+            <li>
+                <div class="widget-overlay">
+                    <a rel="lightbox[flickr-gallery]" href="{{ asset(picture.getPath()) }}" title=""><img src="{{ asset(picture.getPath('75-75')) }}" alt="" width="75" height="75"></a>
+                </div>
+            </li>
+        {% endfor %}
+
+
+    </ul>
+</div>

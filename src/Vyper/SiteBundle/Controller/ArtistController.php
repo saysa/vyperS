@@ -34,12 +34,14 @@ class ArtistController extends Controller
             $album->cover = $em->getRepository('VyperSiteBundle:Picture')->getByAlbum($album);
         }
 
+        if (sizeof($articles)>0)    $view->set('articles', $articles);
+        if (sizeof($events)>0)      $view->set('events', $events);
+        if (sizeof($discos)>0)      $view->set('discos', $discos);
+        if (sizeof($albums)>0)      $view->set('albums', $albums);
+
         $view
             ->set('artist', $artist)
-            ->set('articles', $articles)
-            ->set('events', $events)
-            ->set('discos', $discos)
-            ->set('albums', $albums)
+
         ;
 
         return $this->render('VyperSiteBundle:Artist:showArtist.html.twig', $view->getView());

@@ -203,7 +203,7 @@
             <li class="menu-item menu-item-type-post_type{% if current_live_report is defined %} current_page_item{% endif %}"><a href="{{ base_url }}live-reports" title="Live Reports">Live Reports</a></li>
             <li class="menu-item menu-item-type-post_type{% if current_chronique is defined %} current_page_item{% endif %}"><a href="{{ base_url }}chroniques" title="Chroniques">Chroniques</a></li>
             <li class="menu-item menu-item-type-post_type{% if current_album is defined %} current_page_item{% endif %}"><a href="{{ base_url }}galerie" title="Galerie">Galerie</a></li>
-            <li class="menu-item menu-item-type-post_type{% if current_artist is defined %} current_page_item{% endif %}"><a href="{{ base_url }}artists" title="Artistes">Artistes</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_artist is defined %} current_page_item{% endif %}"><a href="{{ path('showAllArtist') }}" title="Artistes">Artistes</a></li>
 
             {% if themes_showInMenu is defined %}
                 <li class="menu-item menu-item-type-post_type"><a href="#">Themes<span class="sf-sub-indicator"> »</span></a>
@@ -318,15 +318,8 @@
 <aside id="fairpixels_flickr_widget-2" class="widget widget_flickr">
     <div class="widget-title"><h4>Galerie</h4></div>
 
-    <div class="flickr_stream">
+    {{ render(controller("VyperSiteBundle:Album:recentPictures")) }}
 
-
-        <ul id="flickr_thumbs" class="list flickr_thumbs">
-
-
-
-        </ul>
-    </div>
 
 </aside>
 

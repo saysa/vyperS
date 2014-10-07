@@ -3,6 +3,7 @@
 namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Album
@@ -46,6 +47,13 @@ class Album
      * @ORM\ManyToMany(targetEntity="Vyper\SiteBundle\Entity\Artist", cascade={"persist"})
      */
     private $artists;
+
+    /**
+     * @var string
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(type="string", length=255, unique=true)
+     */
+    private $slug;
 
     /**
      * @var boolean
@@ -296,5 +304,28 @@ class Album
         $this->setDeleted(false);
         $this->setCreated(new \DateTime('now'));
         $this->setmodified(new \DateTime('now'));
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Artist
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }

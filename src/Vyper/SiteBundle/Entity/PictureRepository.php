@@ -37,4 +37,20 @@ class PictureRepository extends EntityRepository
 
         return $results[0];
     }
+
+    public function showRandom($concert)
+    {
+        $queryBuilder = $this->createQueryBuilder('p');
+        $queryBuilder
+            ->join('p.album', 'album', 'WITH', 'album.id = p.album')
+            ->where('p.deleted = false')
+            ->andWhere('album.category = :concert')
+            ->setParameter('concert', $concert);
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+
+    }
 }

@@ -20,6 +20,12 @@ showAllArticle:
     requirements:
         page: \d*
 
+showAlbum:
+    path:    /album/{id}/{slug}.html
+    defaults: { _controller: VyperSiteBundle:Album:showAlbum }
+    requirements:
+        id: \d+
+
 showArticle:
     path:    /article/{id}/{slug}.html
     defaults: { _controller: VyperSiteBundle:Article:showArticle }

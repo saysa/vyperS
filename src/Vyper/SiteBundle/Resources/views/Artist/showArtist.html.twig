@@ -231,7 +231,7 @@
                 {% for key, album in albums %}
                     <li class="one-third{% if key==2 %} last{% endif %}">
                         <div class="thumbnail">
-                            <a href="showAlbum">
+                            <a href="{{ path('showAlbum', {'id': album.getId, 'slug': album.slug}) }}">
                                 <img src="{{ asset(album.cover.getPath('374-200')) }}" class="attachment-fp239_130 wp-post-image" alt="">
                             </a>
                         </div>
