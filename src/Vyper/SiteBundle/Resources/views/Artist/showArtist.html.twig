@@ -157,12 +157,12 @@
                 {% for key, event in events %}
                     <li class="one-third{% if key==2 %} last{% endif %}">
                         <div class="thumbnail">
-                            <a href="#">
+                            <a href="{{ path('showEvent', {'id': event.getId, 'slug': event.slug}) }}">
                                 <img src="{{ asset(event.picture.getPath('374-200')) }}" class="attachment-fp239_130 wp-post-image" alt="">									</a>
                         </div>
 
                         <h5>
-                            <a href="#">
+                            <a href="{{ path('showEvent', {'id': event.getId, 'slug': event.slug}) }}">
                                 {{ event.getTitle }}
                             </a>
                         </h5>

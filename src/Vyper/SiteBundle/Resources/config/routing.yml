@@ -20,6 +20,12 @@ showAllArticle:
     requirements:
         page: \d*
 
+showEvent:
+    path:    /event/{id}/{slug}.html
+    defaults: { _controller: VyperSiteBundle:Event:showEvent }
+    requirements:
+        id: \d+
+
 showAlbum:
     path:    /album/{id}/{slug}.html
     defaults: { _controller: VyperSiteBundle:Album:showAlbum }
