@@ -22,16 +22,20 @@ class DiscoRepository extends EntityRepository
         return $results;
     }
 
-    public function getByArtist($artist_id)
+    public function getByArtist($artist_id, $limit = null)
     {
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder
             ->join('a.artists', 'artist', 'WITH', 'artist.id = :id')
             ->where('a.deleted = false')
             ->orderBy('a.date', 'DESC')
-            ->setMaxResults(3)
             ->setParameter('id', $artist_id);
         ;
+
+        if (!is_null($limit)) {
+            $queryBuilder->setMaxResults($limit);
+        }
+
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();
 

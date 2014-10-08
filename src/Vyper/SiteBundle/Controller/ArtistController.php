@@ -26,7 +26,7 @@ class ArtistController extends Controller
         $artist  = $em->getRepository('VyperSiteBundle:Artist')->find($artist->getId());
         $articles   = $em->getRepository('VyperSiteBundle:Article')->getByArtist($artist);
         $events     = $em->getRepository('VyperSiteBundle:Event')->getByArtist($artist);
-        $discos     = $em->getRepository('VyperSiteBundle:Disco')->getByArtist($artist);
+        $discos     = $em->getRepository('VyperSiteBundle:Disco')->getByArtist($artist, 3);
         $albums     = $em->getRepository('VyperSiteBundle:Album')->getByArtist($artist);
 
         foreach ($albums as $album)
@@ -59,6 +59,18 @@ class ArtistController extends Controller
             ->set('total_artists', ceil(count($artists)/$articles_per_page))
         ;
         return $this->render('VyperSiteBundle:Artist:showAll.html.twig', $view->getView());
+    }
+
+    public function showDiscoAction(Artist $artist)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $view = $this->container->get('saysa_view');
+        $discos     = $em->getRepository('VyperSiteBundle:Disco')->getByArtist($artist);
+        $view
+            ->set('artist', $artist)
+            ->set('discos', $discos)
+        ;
+        return $this->render('VyperSiteBundle:Artist:showDisco.html.twig', $view->getView());
     }
 
     public function recentArticlesAction()
