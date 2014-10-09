@@ -37,4 +37,21 @@ class EventRepository extends EntityRepository
 
         return $results;
     }
+
+    public function nextEvent()
+    {
+        $now = new \DateTime("now");
+
+        $queryBuilder = $this->createQueryBuilder('e');
+        $queryBuilder
+            ->where('e.deleted = false')
+            ->andWhere('e.date > :now')
+            ->setMaxResults(1)
+            ->setParameter('now', $now);
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }
