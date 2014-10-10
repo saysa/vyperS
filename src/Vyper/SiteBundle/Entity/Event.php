@@ -4,6 +4,7 @@ namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Vyper\SiteBundle\Components\Strings\StringMethods;
 
 /**
  * Event
@@ -585,5 +586,10 @@ class Event
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    public function getDateFrontFormat()
+    {
+        return StringMethods::sqlDateToCustom($this->getDate()->format('Y-m-d'));
     }
 }
