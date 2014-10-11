@@ -1,0 +1,7 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Page{{ status_code }} | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <h1>Désolé, la page recherchée n'existe pas</h1>
+    {% endblock %}
