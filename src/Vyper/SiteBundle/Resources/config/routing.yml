@@ -14,9 +14,27 @@ contact:
     path:     /contact
     defaults: { _controller: VyperSiteBundle:Statique:contact }
 
-showAllArticle:
-    path:    /news/{page}
-    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1 }
+musique-news:
+    path:    /musique-news/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-news }
+    requirements:
+        page: \d*
+
+musique-interviews:
+    path:    /musique-interviews/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-interviews }
+    requirements:
+        page: \d*
+
+musique-live-reports:
+    path:    /musique-live-reports/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-live-reports }
+    requirements:
+        page: \d*
+
+musique-chroniques:
+    path:    /musique-chroniques/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-chroniques }
     requirements:
         page: \d*
 
@@ -61,6 +79,24 @@ artistDiscography:
     defaults: { _controller: VyperSiteBundle:Artist:showDisco }
     requirements:
         id: \d+
+
+mangaanime:
+    path:    /manga-anime/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: manga-anime }
+    requirements:
+        page: \d*
+
+jeuxvideos:
+    path:    /jeux-videos/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: jeux-videos }
+    requirements:
+        page: \d*
+
+culture:
+    path:    /culture/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: culture }
+    requirements:
+        page: \d*
 
 admin_show_articles:
     path:     /_admin_/articles

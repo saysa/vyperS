@@ -1,8 +1,8 @@
 {
-    "debug_mode": true,
+    "debug_mode": false,
     "retina": true,
     "jpg_quality": 100,
-    "jpg_quality_retina": 80,
+    "jpg_quality_retina": 100,
     "browser_cache": 604800,
     "cache_path": "cache/pip",
     "sharpen": false,
@@ -16,10 +16,7 @@
         "article": {
             "dimensions": {
                 "0": {
-                    "w": 100
-                },
-                "1200": {
-                    "w": 200
+                    "h": 256
                 }
             }
         },
@@ -33,8 +30,7 @@
         "75-75": {
             "dimensions": {
                 "0": {
-                    "w": 75,
-                    "h": 75
+                    "w": 75
                 }
             }
         },
@@ -47,6 +43,16 @@
             }
         },
         "flux-rss": {
+            "dimensions": {
+                "mobile": {
+                    "w": 150
+                },
+                "large": {
+                    "w": 150
+                }
+            }
+        },
+        "example": {
             "dimensions": {
                 "mobile": {
                     "w": 150

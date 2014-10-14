@@ -70,7 +70,7 @@ class ArticleRepository extends EntityRepository
     }
 
 
-    public function showAll($posts_per_page, $page)
+    public function showAll($posts_per_page, $page, $type)
     {
         if ($page < 1) {
             throw new \InvalidArgumentException('Can not be < 1');
@@ -79,7 +79,9 @@ class ArticleRepository extends EntityRepository
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder
             ->where('a.deleted = false')
+            ->andWhere('a.articleType = :type')
             ->orderBy('a.releaseDate', 'DESC')
+            ->setParameter('type', $type)
         ;
         $query = $queryBuilder->getQuery();
 

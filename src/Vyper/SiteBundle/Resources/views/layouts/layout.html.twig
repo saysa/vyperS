@@ -6,13 +6,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" />
 
-
-    <title>{% block title %}vyper-jmusic.com | Visual Pop Rock{% endblock %}</title>
+    <title>{% block title %}Japan FM | Toute la J-music, une seule web radio | Radio Japonaise{% endblock %}</title>
+    <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description" content="L'actualité de la musique japonaise, visual kei, jrock, jpop au travers de news, live reports, vidéos, interviews, commentaires et plus encore." />
+        <meta name="description" content="Japan FM : Toute la J-music, une seule web radio. Japan FM est la 1ère webradio japonaise de France. Tous les hits et toute l'actu Jpop sont sur Japan FM !" />
 
 
 
@@ -78,7 +79,7 @@
 
 
 <header id="header">
-<div class="top main-color-bg">
+<div class="top">
     <div class="content-wrap">
 
         <div class="left">
@@ -102,8 +103,8 @@
         </div>
         <div class="social">
             <ul class="list">
-                <li class="twitter"><a href=""><i class="icon-twitter"></i></a></li>
-                <li class="fb"><a href=""><i class="icon-facebook"></i></a></li>
+                <li class="twitter"><a href="{{ jfm_twitter }}"><i class="icon-twitter"></i></a></li>
+                <li class="fb"><a href="{{ jfm_facebook }}"><i class="icon-facebook"></i></a></li>
                 <li class="gplus"><a href=""><i class="icon-google-plus"></i></a></li>
 
                 <li class="youtube"><a href=""><i class="icon-youtube"></i></a></li>
@@ -167,7 +168,7 @@
         <div class="logo">
             <h1>
                 <a href="" title="Vyper Japanese Music">
-                    <img src="/assets/img/logo.png" alt="Vyper Japanese Music" width="200" >
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="Japan FM" width="200" >
                 </a>
             </h1>
 
@@ -201,12 +202,20 @@
 
         <ul id="menu-primary-menu" class="sf-menu sf-js-enabled sf-shadow">
             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home{% if front_page_index is defined %} current_page_item{% endif %}"><a href="{{ path('index') }}" title="Accueil">Accueil</a></li>
-            <li class="menu-item menu-item-type-post_type{% if current_article is defined %} current_page_item{% endif %}"><a href="{{ base_url }}news" title="News">News</a></li>
-            <li class="menu-item menu-item-type-post_type{% if current_interview is defined %} current_page_item{% endif %}"><a href="{{ base_url }}interviews" title="Interview">Interviews</a></li>
-            <li class="menu-item menu-item-type-post_type{% if current_live_report is defined %} current_page_item{% endif %}"><a href="{{ base_url }}live-reports" title="Live Reports">Live Reports</a></li>
-            <li class="menu-item menu-item-type-post_type{% if current_chronique is defined %} current_page_item{% endif %}"><a href="{{ base_url }}chroniques" title="Chroniques">Chroniques</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_radio is defined %} current_page_item{% endif %}"><a href="#" title="Radio">Radio</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_musique is defined %} current_page_item{% endif %}"><a href="{{ path('musique-news') }}" title="Musique">Musique<span class="sf-sub-indicator"> »</span></a>
+                <ul class="sub-menu">
+                    <li class="menu-item menu-item-type-post_type"><a href="{{ path('musique-news') }}">News</a></li>
+                    <li class="menu-item menu-item-type-post_type"><a href="{{ path('musique-interviews') }}">Interviews</a></li>
+                    <li class="menu-item menu-item-type-post_type"><a href="{{ path('musique-live-reports') }}">Live Report</a></li>
+                    <li class="menu-item menu-item-type-post_type"><a href="{{ path('musique-chroniques') }}">Chroniques</a></li>
+                    <li class="menu-item menu-item-type-post_type"><a href="{{ path('showAllArtist') }}">Artistes</a></li>
+                </ul>
+            </li>
+            <li class="menu-item menu-item-type-post_type{% if current_mangaanime is defined %} current_page_item{% endif %}"><a href="{{ path('mangaanime') }}" title="Manga/Anime">Manga/Anime</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_jeuxvideos is defined %} current_page_item{% endif %}"><a href="{{ path('jeuxvideos') }}" title="Jeux Vidéos">Jeux Vidéos</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_culture is defined %} current_page_item{% endif %}"><a href="{{ path('culture') }}" title="Culture">Culture</a></li>
             <li class="menu-item menu-item-type-post_type{% if current_album is defined %} current_page_item{% endif %}"><a href="{{ base_url }}galerie" title="Galerie">Galerie</a></li>
-            <li class="menu-item menu-item-type-post_type{% if current_artist is defined %} current_page_item{% endif %}"><a href="{{ path('showAllArtist') }}" title="Artistes">Artistes</a></li>
 
             {% if themes_showInMenu is defined %}
                 <li class="menu-item menu-item-type-post_type"><a href="#">Themes<span class="sf-sub-indicator"> »</span></a>
@@ -217,7 +226,8 @@
                     </ul>
                 </li>
             {% endif %}
-            <li class="menu-item menu-item-type-post_type"><a href="#" title="Magazine">Magazine<span class="sf-sub-indicator"> »</span></a>
+            <li class="menu-item menu-item-type-post_type{% if current_events is defined %} current_page_item{% endif %}"><a href="#" title="Events">Events</a></li>
+            <li class="menu-item menu-item-type-post_type"><a href="#" title="Magazine">Vyper Magazine<span class="sf-sub-indicator"> »</span></a>
                 <ul class="sub-menu">
                     <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-000">Volume 000</a></li>
                     <li class="menu-item menu-item-type-post_type"><a href="{{ base_url }}vyper-magazine-vol-001">Volume 001</a></li>
@@ -328,7 +338,7 @@
 
 <aside class="widget">
     <div class="widget-title"><h4>Suivez-nous</h4></div>
-    <div class="fb-like-box" data-href="https://www.facebook.com/vyperjmusic" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+    <div class="fb-like-box" data-href="https://www.facebook.com/japanfm" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
 </aside>
 
 
@@ -390,14 +400,14 @@
     <div class="footer-info">
         <div class="content-wrap">
 
-            <div class="footer-left">©2014 Vyper Japanese Music</div>
+            <div class="footer-left">©2014 Japan FM</div>
             <div class="footer-right">
                 <ul class="list">
                     <li class="twitter">
-                        <a href=""><i class="icon-twitter"></i></a>
+                        <a href="{{ jfm_twitter }}"><i class="icon-twitter"></i></a>
                     </li>
                     <li class="fb">
-                        <a href=""><i class="icon-facebook"></i></a>
+                        <a href="{{ jfm_facebook }}"><i class="icon-facebook"></i></a>
                     </li>
                     <li class="gplus">
                         <a href="" rel="publisher"><i class="icon-google-plus"></i></a>

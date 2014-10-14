@@ -1,11 +1,11 @@
 {% extends "VyperSiteBundle:layouts:layout.html.twig" %}
 
-{% block title %}News | {{ parent() }}{% endblock %}
+{% block title %}{{ article_type }} | {{ parent() }}{% endblock %}
 
     {% block content %}
 
         <header class="archive-header">
-            <h2 class="archive-title">Todo category }}</h2>
+            <h2 class="archive-title">{{ article_type }}</h2>
         </header><!-- /archive-header -->
 
         <div class="archive-postlist">
@@ -23,10 +23,7 @@
                                     <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
-					<span class="comments main-color-bg">
-						<i class="icon-comments"></i>
-						<a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}#comments" title=""><fb:comments-count href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"></fb:comments-count> réactions</a>
-					</span>
+
 
                                 <div class="overlay">
                                     <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
@@ -40,12 +37,6 @@
                             <div class="entry-meta">
                                 <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
 
-                                {% if article.themes %}
-                                    <span class="category">
-				                                <i class="icon-folder-close"></i>
-				                                <a href="#">todo THEME</a>
-				                            </span>
-                                {% endif %}
 
                             </div>
                         </header>
@@ -81,7 +72,7 @@
                     {% if p == page %}
                         <span class="page-numbers current">{{ p }}</span>
                     {% else %}
-                        <a href="{{ path('showAllArticle', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        <a href="{{ path('musique-news', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                     {% endif %}
                 {% endfor %}
 

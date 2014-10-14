@@ -42,12 +42,12 @@
                 <div class="entry-content-wrap">
                     <div class="entry-image">
                         {% if img_type_news %}
-                            <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('article')) }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle|escape }}">
+                            <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('article')) }}" alt="{{ article.getTitle|escape }}">
                         {% else %}
                             {% if article_horizontal_image %}
-                                <img  src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle|escape }}">
+                                <img  src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle|escape }}">
                             {% else %}
-                                <img src="{{ base_url }}uploads/pic/{{ article.getRelatedPicture }}" class="wp-post-image" alt="{{ article.getTitle|escape }}">
+                                <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" class="wp-post-image" alt="{{ article.getTitle|escape }}">
                             {% endif %}
                         {% endif %}
 
@@ -103,5 +103,19 @@
 
 
         {# DISQUS #}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'japanfm'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 
     {% endblock %}

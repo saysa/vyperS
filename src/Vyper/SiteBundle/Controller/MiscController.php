@@ -15,7 +15,7 @@ class MiscController extends Controller
         /**
          * Facebook fans
          */
-        $fb = @json_decode(file_get_contents('https://graph.facebook.com/vyperjmusic'));
+        $fb = @json_decode(file_get_contents('https://graph.facebook.com/japanfm'));
         if(is_object($fb))
         {
             $fb_fans = number_format($fb->likes);

@@ -34,17 +34,76 @@ class ArticleController extends Controller
         return $this->render('VyperSiteBundle:Article:showArticle.html.twig', $view->getView());
     }
 
-    public function showAllAction(Request $request, $page)
+    public function showAllAction(Request $request, $page, $type)
     {
+        $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
         $articles_per_page = $this->container->getParameter('articles_per_page');
-        $articles  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->showAll($articles_per_page, $page);
 
+        switch($type) {
+
+            case "musique-news":
+                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Manga/Anime");
+                $view
+                    ->set('article_type', "Musique")
+                    ->set('current_musique', true)
+                ;
+                break;
+            case "musique-interviews":
+                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : interview");
+                $view
+                    ->set('article_type', "Interviews")
+                    ->set('current_musique', true)
+                ;
+                break;
+            case "musique-live-reports":
+                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : live report");
+                $view
+                    ->set('article_type', "Live Reports")
+                    ->set('current_musique', true)
+                ;
+                break;
+            case "musique-chroniques":
+                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : chronique");
+                $view
+                    ->set('article_type', "Chroniques")
+                    ->set('current_musique', true)
+                ;
+                break;
+            case "manga-anime":
+                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Manga/Anime");
+                $view
+                    ->set('article_type', "Manga/Anime")
+                    ->set('current_mangaanime', true)
+                ;
+                break;
+            case "jeux-videos":
+                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Jeux Vidéos");
+                $view
+                    ->set('article_type', "Jeux Vidéos")
+                    ->set('current_jeuxvideos', true)
+                ;
+                break;
+            case "culture":
+                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Culture");
+                $view
+                    ->set('article_type', "Culture")
+                    ->set('current_culture', true)
+                ;
+                break;
+            case "news":
+                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("news");
+                $view->set('article_type', "News");
+                break;
+        }
+
+        $articles  = $em->getRepository('VyperSiteBundle:Article')->showAll($articles_per_page, $page, $type);
         $view
             ->set('articles', $articles)
             ->set('page', $page)
             ->set('total_articles', ceil(count($articles)/$articles_per_page))
         ;
+
         return $this->render('VyperSiteBundle:Article:showAll.html.twig', $view->getView());
     }
 

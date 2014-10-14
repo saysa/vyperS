@@ -1,6 +1,6 @@
 {% extends "VyperSiteBundle:layouts:layout.html.twig" %}
 
-{% block title "Visual kei - JPop - Jrock - Jmusic - VYPER Japanese Music | Toute la Jmusic, toutes les news en temps réels" %}
+{% block title "Japan FM | Toute la Jmusic, toutes les news en temps réels" %}
 
     {% block content %}
         <div id="content" class="homepage">
@@ -75,10 +75,7 @@
                                     <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
-                                        <span class="comments main-color-bg">
-                                            <i class="icon-comments"></i>
-                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" title="Comment on Ellie looks younger than before">no comments</a>
-                                        </span>
+
 
                                 <div class="overlay">
                                     <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
@@ -96,12 +93,7 @@
                             <div class="entry-meta">
                                 <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
 
-                                {% if article.themes %}
-                                    <span class="category">
-				                                <i class="icon-folder-close"></i>
-				                                <a href="#">todo THEME</a>
-				                            </span>
-                                {% endif %}
+
 
                             </div>
                             <p>{{ article.getDescription }}</p>
@@ -177,10 +169,7 @@
                                 <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getRawPicture(event.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                             </div>
 
-                                        <span class="comments main-color-bg">
-                                            <i class="icon-comments"></i>
-                                            <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html" title="{{ event.getTitle|escape }}">no comments</a>
-                                        </span>
+
 
                             <div class="overlay">
                                 <a class="post-link" href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><i class="icon-link"></i></a>
@@ -306,10 +295,7 @@
                                     <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
-		                                        <span class="comments main-color-bg">
-		                                            <i class="icon-comments"></i>
-		                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" title="Comment on {{ article.getTitle }}">no comments</a>
-		                                        </span>
+
 
                                 <div class="overlay">
                                     <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
@@ -326,12 +312,7 @@
 
                             <div class="entry-meta">
                                 <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
-                                {% if article.themes %}
-                                    <span class="category">
-				                                <i class="icon-folder-close"></i>
-				                                <a href="#">todo THEME</a>
-				                            </span>
-                                {% endif %}
+
 
 
                             </div>
@@ -426,10 +407,7 @@
                                     <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
-		                                        <span class="comments main-color-bg">
-		                                            <i class="icon-comments"></i>
-		                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" title="Comment on Ellie looks younger than before">no comments</a>
-		                                        </span>
+
 
                                 <div class="overlay">
                                     <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
@@ -446,12 +424,7 @@
 
                             <div class="entry-meta">
                                 <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
-                                {% if article.themes %}
-                                    <span class="category">
-				                                <i class="icon-folder-close"></i>
-				                                <a href="#">todo THEME</a>
-				                            </span>
-                                {% endif %}
+
 
                             </div>
                             <p>{{ article.getDescription }}</p>
@@ -545,10 +518,6 @@
                                     <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
-                        <span class="comments main-color-bg">
-                                <i class="icon-comments"></i>
-                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" title="Comment on Ellie looks younger than before">no comments</a>
-                        </span>
 
                                 <div class="overlay">
                                     <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
@@ -565,12 +534,7 @@
 
                             <div class="entry-meta">
                                 <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
-                                {% if article.themes %}
-                                    <span class="category">
-				                                <i class="icon-folder-close"></i>
-				                                <a href="#">todo THEME</a>
-				                            </span>
-                                {% endif %}
+
 
                             </div>
                             <p>{{ article.getDescription }}</p>
