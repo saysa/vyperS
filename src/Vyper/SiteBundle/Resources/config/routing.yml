@@ -51,7 +51,7 @@ showAlbum:
         id: \d+
 
 showArticle:
-    path:    /article/{id}/{slug}.html
+    path:    /article/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Article:showArticle }
     requirements:
         id: \d+
@@ -98,6 +98,12 @@ culture:
     requirements:
         page: \d*
 
+showFlashnew:
+    path:    /breve/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Flashnew:showFlashnew }
+    requirements:
+        id: \d+
+
 admin_show_articles:
     path:     /_admin_/articles
     defaults: { _controller: VyperSiteBundle:AdminArticle:showArticles }
@@ -111,6 +117,10 @@ admin_update_article:
     defaults: { _controller: VyperSiteBundle:AdminArticle:updateArticle }
     requirements:
         id: \d+
+
+admin_add_flashnew:
+    path:     /_admin_/flashnew/add
+    defaults: { _controller: VyperSiteBundle:AdminFlashnew:addFlashnew }
 
 admin_show_discos:
     path:     /_admin_/discos

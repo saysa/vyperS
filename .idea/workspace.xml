@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2ecea67-3778-4888-8635-2c7f03fc460a" name="Default" comment="ConsoleBundle installed">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Flashnew.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/FlashnewRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminflashnewController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/FlashnewController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/FlashnewType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminflashnew/addFlashnew.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Flashnew/showFlashnew.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Flashnew/tickerlist.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/EventTypes.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/EventTypes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Flashnew.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Flashnew.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/FlashnewRepository.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/FlashnewRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <ignored path="local.dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,26 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="21" selection-start="10129" selection-end="10129" vertical-scroll-proportion="0.5378788" vertical-offset="3106" max-vertical-offset="6615">
-              <folding>
-                <element signature="e#3938#3943#0" expanded="true" />
-                <element signature="e#4090#4098#0" expanded="true" />
-                <element signature="e#7613#7618#0" expanded="true" />
-                <element signature="e#7961#7973#0" expanded="true" />
-                <element signature="e#8171#8183#0" expanded="true" />
-                <element signature="e#8289#8307#0" expanded="true" />
-                <element signature="e#8419#8439#0" expanded="true" />
-                <element signature="e#8552#8570#0" expanded="true" />
-                <element signature="e#8682#8695#0" expanded="true" />
-                <element signature="e#8904#8914#0" expanded="true" />
-                <element signature="e#9106#9116#0" expanded="true" />
-                <element signature="e#9305#9312#0" expanded="true" />
-                <element signature="n#style#0;n#ins#0;n#aside#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ins#0;n#aside#0;n#div#3;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="134" column="0" selection-start="5370" selection-end="5370" vertical-scroll-proportion="-8.32" vertical-offset="1594" max-vertical-offset="6525">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,31 +48,67 @@
       <file leaf-file-name="showAll.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="54" selection-start="3486" selection-end="3486" vertical-scroll-proportion="-21.6" vertical-offset="30" max-vertical-offset="1305">
+            <state line="65" column="0" selection-start="3095" selection-end="3095" vertical-scroll-proportion="-10.416667" vertical-offset="725" max-vertical-offset="1305">
               <folding>
-                <element signature="e#1136#1147#0" expanded="true" />
-                <element signature="e#1481#1492#0" expanded="true" />
-                <element signature="e#1790#1801#0" expanded="true" />
-                <element signature="e#2667#2719#0" expanded="true" />
-                <element signature="e#3474#3486#0" expanded="true" />
+                <marker date="1413305236000" expanded="true" signature="189:269" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="333:3091" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="454:2352" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="604:2329" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="722:940" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="1028:1646" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="1080:1350" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="1407:1611" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="1738:2150" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="1936:2116" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="2203:2298" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="2433:3023" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="2637:2850" placeholder="..." />
+                <marker date="1413305236000" expanded="false" signature="2674:2718" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="2883:2996" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="3128:3614" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleTypes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/ArticleTypes.php">
+      <file leaf-file-name="FlashnewController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/FlashnewController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="146" selection-start="643" selection-end="643" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="525">
+            <state line="28" column="52" selection-start="842" selection-end="842" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="570">
+              <folding>
+                <element signature="e#47#104#0" expanded="true" />
+                <element signature="e#375#401#1" expanded="true" />
+                <element signature="e#554#601#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showFlashnew.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Flashnew/showFlashnew.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="77" selection-start="1521" selection-end="1521" vertical-scroll-proportion="-8.166667" vertical-offset="179" max-vertical-offset="1665">
+              <folding>
+                <element signature="e#12#52#0" expanded="true" />
+                <element signature="e#2241#2293#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Article.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="804" column="5" selection-start="13938" selection-end="14082" vertical-scroll-proportion="-4.52" vertical-offset="11804" max-vertical-offset="12510">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pip_config.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/pip_config.json">
+      <file leaf-file-name="Flashnew.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Flashnew.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="28" selection-start="395" selection-end="395" vertical-scroll-proportion="-7.5" vertical-offset="90" max-vertical-offset="1215">
+            <state line="75" column="45" selection-start="1379" selection-end="1404" vertical-scroll-proportion="-9.125" vertical-offset="876" max-vertical-offset="3990">
               <folding />
             </state>
           </provider>
@@ -88,75 +117,57 @@
       <file leaf-file-name="showArticle.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="0" selection-start="4804" selection-end="4804" vertical-scroll-proportion="-18.083334" vertical-offset="1336" max-vertical-offset="1890">
+            <state line="100" column="26" selection-start="0" selection-end="4824" vertical-scroll-proportion="-7.9166665" vertical-offset="1310" max-vertical-offset="1890">
               <folding>
-                <marker date="1413280441000" expanded="true" signature="182:3044" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="351:3029" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="397:1845" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="495:1819" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="626:1089" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="1440:1790" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="1596:1756" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="1896:2960" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="1942:2769" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="2818:2892" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="3107:3578" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="3276:3453" placeholder="..." />
-                <marker date="1413280441000" expanded="false" signature="3301:3345" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="3474:3563" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="3613:3921" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="3650:3906" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="3706:3887" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="3749:3828" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="4051:4662" placeholder="..." />
-                <marker date="1413280441000" expanded="true" signature="4065:4141" placeholder="/*...*/" />
-                <marker date="1413280441000" expanded="true" signature="4256:4296" placeholder="/*...*/" />
-                <marker date="1413280441000" expanded="true" signature="4321:4641" placeholder="{...}" />
+                <marker date="1413305236000" expanded="true" signature="182:3044" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="351:3029" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="397:1845" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="495:1819" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="626:1089" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="1440:1790" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="1596:1756" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="1896:2960" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="1942:2769" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="2818:2892" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="3107:3578" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="3276:3453" placeholder="..." />
+                <marker date="1413305236000" expanded="false" signature="3301:3345" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="3474:3563" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="3613:3921" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="3650:3906" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="3706:3887" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="3749:3828" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="4051:4662" placeholder="..." />
+                <marker date="1413305236000" expanded="true" signature="4065:4141" placeholder="/*...*/" />
+                <marker date="1413305236000" expanded="true" signature="4256:4296" placeholder="/*...*/" />
+                <marker date="1413305236000" expanded="true" signature="4321:4641" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="EventController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/EventController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="36" selection-start="583" selection-end="611" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="900">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tickerlist.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Flashnew/tickerlist.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="410" selection-end="410" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="285">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="95" selection-start="1093" selection-end="1093" vertical-scroll-proportion="-16.538462" vertical-offset="110" max-vertical-offset="4185">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticleController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="20" selection-start="1174" selection-end="1174" vertical-scroll-proportion="1.5" vertical-offset="531" max-vertical-offset="2025">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticleRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="0" selection-start="1814" selection-end="1814" vertical-scroll-proportion="-6.875" vertical-offset="870" max-vertical-offset="1755">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="socialNetwork.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Misc/socialNetwork.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="82" selection-start="579" selection-end="590" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="690">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="48" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="1425">
+            <state line="51" column="0" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.3068783" vertical-offset="591" max-vertical-offset="4335">
               <folding />
             </state>
           </provider>
@@ -175,14 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Album.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Album/recentPictures.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/PictureRepository.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AlbumController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Album/showAlbum.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showEvent.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showArtist.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArtistController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/DiscoRepository.php" />
@@ -209,7 +212,6 @@
         <option value="$PROJECT_DIR$/web/.htaccess" />
         <option value="$PROJECT_DIR$/web/app_dev.php" />
         <option value="$PROJECT_DIR$/web/config.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Flashnew.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/popularArticles.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/recentArticles.html.twig" />
@@ -222,19 +224,27 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/ArticleTypes.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/EventTypes.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/FlashnewType.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminflashnewController.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminflashnew/addFlashnew.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/FlashnewRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Flashnew/tickerlist.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/FlashnewController.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Flashnew.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Flashnew/showFlashnew.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="57" />
     <option name="y" value="22" />
-    <option name="width" value="1815" />
-    <option name="height" value="980" />
+    <option name="width" value="1920" />
+    <option name="height" value="982" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -640,7 +650,143 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Flashnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Article" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adminflashnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adminarticle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adminalbum" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -722,7 +868,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
+              <option name="myItemId" value="Form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -748,11 +894,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DataFixtures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ORM" />
+              <option name="myItemId" value="Entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -835,10 +977,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Resources/java" />
       <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller" />
-      <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM" />
       <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Form" />
+      <recent name="$PROJECT_DIR$/app/Resources/java" />
+      <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM" />
       <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -1006,12 +1148,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="22" width="1815" height="980" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1920" height="982" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269663" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27702704" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4313063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2764045" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1020,11 +1161,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277027" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12351946" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25549915" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12300319" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26357827" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4313063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32731378" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1072,86 +1214,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Title.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="19" selection-start="918" selection-end="918" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="4365" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AlbumController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="110" selection-start="1053" selection-end="1155" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Strings/StringMethods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="27" selection-start="5335" selection-end="5335" vertical-scroll-proportion="0.0" vertical-offset="3105" max-vertical-offset="4815" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/EventTypeRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/EventRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="945" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showArtist.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="101" selection-start="7653" selection-end="7717" vertical-scroll-proportion="0.0" vertical-offset="2044" max-vertical-offset="4650" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="3" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="945" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="61" selection-start="403" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdmineventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="59" selection-start="789" selection-end="829" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1635" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Continents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Countries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4170" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/AlbumCategories.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="57" selection-start="817" selection-end="866" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Albums.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="36" selection-start="333" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/nextEvent.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="579" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="56" selection-start="209" selection-end="209" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="180" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showEvent.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="61" selection-start="2359" selection-end="2366" vertical-scroll-proportion="-5.625" vertical-offset="555" max-vertical-offset="1755" />
@@ -1184,16 +1246,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/PIP.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="45" selection-start="683" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="2610">
-          <folding />
-        </state>
+        <state line="31" column="45" selection-start="683" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="2610" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/Source.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="52" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="1125">
-          <folding />
-        </state>
+        <state line="34" column="52" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="1125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
@@ -1203,94 +1261,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="37" selection-start="846" selection-end="846" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
-          <folding />
-        </state>
+        <state line="16" column="37" selection-start="846" selection-end="846" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app_dev.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="16" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="540">
-          <folding />
-        </state>
+        <state line="20" column="16" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="540" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1950">
-          <folding />
-        </state>
+        <state line="12" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1950" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="16" selection-start="3236" selection-end="3241" vertical-scroll-proportion="0.0" vertical-offset="2520" max-vertical-offset="9930">
-          <folding />
-        </state>
+        <state line="168" column="16" selection-start="3236" selection-end="3241" vertical-scroll-proportion="0.0" vertical-offset="2520" max-vertical-offset="9930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="588" column="5" selection-start="9823" selection-end="10137" vertical-scroll-proportion="0.0" vertical-offset="8406" max-vertical-offset="9015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Flashnew.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="34" selection-start="2239" selection-end="2239" vertical-scroll-proportion="-7.875" vertical-offset="1866" max-vertical-offset="3945">
-          <folding>
-            <element signature="e#43#75#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="588" column="5" selection-start="9823" selection-end="10137" vertical-scroll-proportion="0.0" vertical-offset="8406" max-vertical-offset="9015" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="14" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/frameset.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <folding>
-            <element signature="e#327#331#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="12" column="14" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/PipClass.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1770">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1770" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/PIP/PhpImagePrescaler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="0" selection-start="5042" selection-end="5042" vertical-scroll-proportion="-3.68" vertical-offset="2216" max-vertical-offset="10290">
-          <folding />
-        </state>
+        <state line="174" column="0" selection-start="5042" selection-end="5042" vertical-scroll-proportion="-3.68" vertical-offset="2216" max-vertical-offset="10290" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/popularArticles.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="375">
-          <folding>
-            <element signature="e#449#460#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="1" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/recentArticles.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="375">
-          <folding>
-            <element signature="e#472#483#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="1" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/assets/img/logo.png">
@@ -1298,30 +1314,35 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="36" selection-start="476" selection-end="476" vertical-scroll-proportion="-3.6" vertical-offset="0" max-vertical-offset="9180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/assets/css/portal.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2765" column="5" selection-start="43061" selection-end="43061" vertical-scroll-proportion="-6.230769" vertical-offset="41313" max-vertical-offset="49920">
+        <state line="2765" column="5" selection-start="43061" selection-end="43061" vertical-scroll-proportion="-6.230769" vertical-offset="41313" max-vertical-offset="49920" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/ArticleTypes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="83" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MiscController.php">
+    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/pip_config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="80" selection-start="472" selection-end="472" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="480">
+        <state line="18" column="28" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="20" selection-start="3656" selection-end="3656" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="2070">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Misc/socialNetwork.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="82" selection-start="579" selection-end="590" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="690">
+        <state line="15" column="82" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="690">
           <folding />
         </state>
       </provider>
@@ -1333,103 +1354,237 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Phpimageprescaler/pip_config.json">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="395" selection-end="395" vertical-scroll-proportion="-7.5" vertical-offset="90" max-vertical-offset="1215">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9435">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="0" selection-start="4804" selection-end="4804" vertical-scroll-proportion="-18.083334" vertical-offset="1336" max-vertical-offset="1890">
+        <state line="32" column="0" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="9180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/EventTypes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="25" selection-start="565" selection-end="565" vertical-scroll-proportion="-11.208333" vertical-offset="16" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminthemeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="96" selection-start="2040" selection-end="2714" vertical-scroll-proportion="-21.625" vertical-offset="846" max-vertical-offset="1485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Form/ArticleType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Form/FlashnewType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="40" selection-start="553" selection-end="553" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="690">
           <folding>
-            <marker date="1413280441000" expanded="true" signature="182:3044" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="351:3029" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="397:1845" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="495:1819" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="626:1089" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="1440:1790" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="1596:1756" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="1896:2960" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="1942:2769" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="2818:2892" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="3107:3578" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="3276:3453" placeholder="..." />
-            <marker date="1413280441000" expanded="false" signature="3301:3345" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="3474:3563" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="3613:3921" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="3650:3906" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="3706:3887" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="3749:3828" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="4051:4662" placeholder="..." />
-            <marker date="1413280441000" expanded="true" signature="4065:4141" placeholder="/*...*/" />
-            <marker date="1413280441000" expanded="true" signature="4256:4296" placeholder="/*...*/" />
-            <marker date="1413280441000" expanded="true" signature="4321:4641" placeholder="{...}" />
+            <element signature="e#41#81#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminalbumController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="96" selection-start="511" selection-end="1126" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminalbum/addAlbum.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="69" selection-start="0" selection-end="3664" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/addArticle.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="40" selection-start="4150" selection-end="4213" vertical-scroll-proportion="-4.82" vertical-offset="944" max-vertical-offset="3180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminflashnew/addFlashnew.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="69" selection-start="318" selection-end="318" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1095">
+          <folding>
+            <element signature="e#12#51#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MiscController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="80" selection-start="472" selection-end="472" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/EventTypeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="1814" selection-end="1814" vertical-scroll-proportion="-6.875" vertical-offset="870" max-vertical-offset="1755">
+        <state line="52" column="24" selection-start="1040" selection-end="1353" vertical-scroll-proportion="-16.875" vertical-offset="360" max-vertical-offset="1755">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/FlashnewRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="1" selection-start="622" selection-end="622" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminflashnewController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="53" selection-start="2263" selection-end="2263" vertical-scroll-proportion="-17.458334" vertical-offset="571" max-vertical-offset="1740">
+          <folding>
+            <element signature="e#127#172#0" expanded="true" />
+            <element signature="e#1214#1239#1" expanded="true" />
+            <element signature="e#1326#1349#1" expanded="true" />
+            <element signature="e#1522#1575#0" expanded="true" />
+            <element signature="e#2937#2962#1" expanded="true" />
+            <element signature="e#3263#3287#1" expanded="true" />
+            <element signature="e#3525#3579#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="0" selection-start="5370" selection-end="5370" vertical-scroll-proportion="-8.32" vertical-offset="1594" max-vertical-offset="6525">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="54" selection-start="3486" selection-end="3486" vertical-scroll-proportion="-21.6" vertical-offset="30" max-vertical-offset="1305">
+        <state line="65" column="0" selection-start="3095" selection-end="3095" vertical-scroll-proportion="-10.416667" vertical-offset="725" max-vertical-offset="1305">
           <folding>
-            <element signature="e#1136#1147#0" expanded="true" />
-            <element signature="e#1481#1492#0" expanded="true" />
-            <element signature="e#1790#1801#0" expanded="true" />
-            <element signature="e#2667#2719#0" expanded="true" />
-            <element signature="e#3474#3486#0" expanded="true" />
+            <marker date="1413305236000" expanded="true" signature="189:269" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="333:3091" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="454:2352" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="604:2329" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="722:940" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="1028:1646" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="1080:1350" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="1407:1611" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="1738:2150" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="1936:2116" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="2203:2298" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="2433:3023" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="2637:2850" placeholder="..." />
+            <marker date="1413305236000" expanded="false" signature="2674:2718" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="2883:2996" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="3128:3614" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/ArticleTypes.php">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Flashnew/tickerlist.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="146" selection-start="643" selection-end="643" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="525">
+        <state line="11" column="13" selection-start="410" selection-end="410" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="285">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="36" selection-start="583" selection-end="611" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/FlashnewController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="52" selection-start="842" selection-end="842" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="570">
+          <folding>
+            <element signature="e#47#104#0" expanded="true" />
+            <element signature="e#375#401#1" expanded="true" />
+            <element signature="e#554#601#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="26" selection-start="0" selection-end="4824" vertical-scroll-proportion="-7.9166665" vertical-offset="1310" max-vertical-offset="1890">
+          <folding>
+            <marker date="1413305236000" expanded="true" signature="182:3044" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="351:3029" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="397:1845" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="495:1819" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="626:1089" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="1440:1790" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="1596:1756" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="1896:2960" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="1942:2769" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="2818:2892" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="3107:3578" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="3276:3453" placeholder="..." />
+            <marker date="1413305236000" expanded="false" signature="3301:3345" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="3474:3563" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="3613:3921" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="3650:3906" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="3706:3887" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="3749:3828" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="4051:4662" placeholder="..." />
+            <marker date="1413305236000" expanded="true" signature="4065:4141" placeholder="/*...*/" />
+            <marker date="1413305236000" expanded="true" signature="4256:4296" placeholder="/*...*/" />
+            <marker date="1413305236000" expanded="true" signature="4321:4641" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="804" column="5" selection-start="13938" selection-end="14082" vertical-scroll-proportion="-4.52" vertical-offset="11804" max-vertical-offset="12510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Flashnew.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="45" selection-start="1379" selection-end="1404" vertical-scroll-proportion="-9.125" vertical-offset="876" max-vertical-offset="3990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Flashnew/showFlashnew.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="77" selection-start="1521" selection-end="1521" vertical-scroll-proportion="-8.166667" vertical-offset="179" max-vertical-offset="1665">
+          <folding>
+            <element signature="e#12#52#0" expanded="true" />
+            <element signature="e#2241#2293#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="95" selection-start="1093" selection-end="1093" vertical-scroll-proportion="-16.538462" vertical-offset="110" max-vertical-offset="4185">
+        <state line="51" column="0" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.3068783" vertical-offset="591" max-vertical-offset="4335">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="20" selection-start="1174" selection-end="1174" vertical-scroll-proportion="1.5" vertical-offset="531" max-vertical-offset="2025">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="21" selection-start="10129" selection-end="10129" vertical-scroll-proportion="0.5378788" vertical-offset="3106" max-vertical-offset="6615">
-          <folding>
-            <element signature="e#3938#3943#0" expanded="true" />
-            <element signature="e#4090#4098#0" expanded="true" />
-            <element signature="e#7613#7618#0" expanded="true" />
-            <element signature="e#7961#7973#0" expanded="true" />
-            <element signature="e#8171#8183#0" expanded="true" />
-            <element signature="e#8289#8307#0" expanded="true" />
-            <element signature="e#8419#8439#0" expanded="true" />
-            <element signature="e#8552#8570#0" expanded="true" />
-            <element signature="e#8682#8695#0" expanded="true" />
-            <element signature="e#8904#8914#0" expanded="true" />
-            <element signature="e#9106#9116#0" expanded="true" />
-            <element signature="e#9305#9312#0" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#aside#3;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#aside#0;n#div#3;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

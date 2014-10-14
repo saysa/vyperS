@@ -131,14 +131,8 @@
                 <h6>En ce moment</h6>
             </div>
 
-            <div class="tickercontainer"><div class="mask">
-                    <ul id="ticker-posts" class="newsticker" >
+            {{ render(controller("VyperSiteBundle:Flashnew:tickerlist")) }}
 
-
-
-
-                    </ul>
-                </div></div>
 
         </div>
 
@@ -167,7 +161,7 @@
     <div class="content-wrap">
         <div class="logo">
             <h1>
-                <a href="" title="Vyper Japanese Music">
+                <a href="" title="Japan FM">
                     <img src="{{ asset('assets/img/logo.png') }}" alt="Japan FM" width="200" >
                 </a>
             </h1>
