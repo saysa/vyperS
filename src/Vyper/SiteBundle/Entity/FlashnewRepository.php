@@ -12,6 +12,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class FlashnewRepository extends EntityRepository
 {
+    public function myFindAll()
+    {
+        $queryBuilder = $this->createQueryBuilder('f');
+        $queryBuilder->where('f.deleted = false');
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function tickerList()
     {
         $queryBuilder = $this->createQueryBuilder('f');

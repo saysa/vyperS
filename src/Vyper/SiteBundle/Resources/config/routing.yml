@@ -118,6 +118,18 @@ admin_add_article:
     path:     /_admin_/article/add
     defaults: { _controller: VyperSiteBundle:AdminArticle:addArticle }
 
+admin_update_flashnew:
+    path:     _admin_/flashnew/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminFlashnew:updateFlashnew }
+    requirements:
+        id: \d+
+
+admin_delete_flashnew:
+    path:     /_admin_/flashnew/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminFlashnew:deleteFlashnew }
+    requirements:
+        id: \d+
+
 admin_update_article:
     path:     _admin_/article/update/{id}
     defaults: { _controller: VyperSiteBundle:AdminArticle:updateArticle }

@@ -23,6 +23,7 @@ class AdminArticleController extends AdminCommonController {
      */
     public function showArticlesAction(Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
         $fluxRSS = $this->container->get('vpr_flux_rss');
         $opt = array(
             'entity_manager'    => $this->getDoctrine()->getManager(),
@@ -36,12 +37,14 @@ class AdminArticleController extends AdminCommonController {
         $view = $this->container->get('saysa_view');
 
         // Get all the articles not deleted
-        $articles  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->myFindAll();
-        $themes    = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Theme')->myFindAll();
+        $articles     = $em->getRepository('VyperSiteBundle:Article')->myFindAll();
+        $themes       = $em->getRepository('VyperSiteBundle:Theme')->myFindAll();
+        $flashnews    = $em->getRepository('VyperSiteBundle:Flashnew')->myFindAll();
 
         $view->set('articles', $articles);
         $view->set("active_article", true);
         $view->set('themes', $themes);
+        $view->set('flashnews', $flashnews);
 
         return $this->render('VyperSiteBundle:Adminarticle:showArticles.html.twig', $view->getView());
     }
