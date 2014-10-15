@@ -49,4 +49,38 @@ class VisitRepository extends EntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    public function showPopularArtist()
+    {
+        $queryBuilder = $this->createQueryBuilder('v')
+            ->select('v as item')
+            ->addSelect('COUNT(v.artist) as nb')
+            ->join('v.artist', 'artist')
+            ->addSelect('artist')
+            ->groupBy('v.artist')
+            ->orderBy('nb', 'DESC')
+            ->setMaxResults(10);
+        ;
+
+        return $queryBuilder
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function showPopularDisco()
+    {
+        $queryBuilder = $this->createQueryBuilder('v')
+            ->select('v as item')
+            ->addSelect('COUNT(v.disco) as nb')
+            ->join('v.disco', 'disco')
+            ->addSelect('disco')
+            ->groupBy('v.disco')
+            ->orderBy('nb', 'DESC')
+            ->setMaxResults(10);
+        ;
+
+        return $queryBuilder
+            ->getQuery()
+            ->getResult();
+    }
 }

@@ -22,20 +22,20 @@ class IndexController extends Controller
 
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'News'));
         $latest_news = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
-        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Interview'));
-        $latest_interviews = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
-        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Live report'));
-        $latest_live_reports = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
-        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Chronique'));
-        $latest_chroniques = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Manga/Anime'));
+        $latest_manga = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Jeux Vidéos'));
+        $latest_jeux_videos = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Culture'));
+        $latest_culture = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
 
 
         $view
             ->set('articles_carousel', $articles_carousel)
             ->set('latest_news', $latest_news)
-            ->set('latest_interviews', $latest_interviews)
-            ->set('latest_live_reports', $latest_live_reports)
-            ->set('latest_chroniques', $latest_chroniques)
+            ->set('latest_mangas', $latest_manga)
+            ->set('latest_jeux_videos', $latest_jeux_videos)
+            ->set('latest_culture', $latest_culture)
             ->set('front_page_index', true)
             ->set('user_id', $user)
         ;

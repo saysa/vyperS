@@ -81,18 +81,18 @@ class ArtistController extends Controller
         return $this->render('VyperSiteBundle:Article:recentArticles.html.twig', $view->getView());
     }
 
-    public function popularArticlesAction()
+    public function popularArtistsAction()
     {
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
-        $results  = $em->getRepository('VyperSiteBundle:Visit')->showPopular();
-        $popular_articles = array();
+        $results  = $em->getRepository('VyperSiteBundle:Visit')->showPopularArtist();
+        $popular_artists = array();
         foreach($results as $result) {
-            $popular_articles[] = $result['item']->getArticle();
+            $popular_artists[] = $result['item']->getArtist();
         }
 
-        $view->set('popular_articles', $popular_articles);
-        return $this->render('VyperSiteBundle:Article:popularArticles.html.twig', $view->getView());
+        $view->set('popular_artists', $popular_artists);
+        return $this->render('VyperSiteBundle:Artist:popularArtists.html.twig', $view->getView());
     }
 
 }

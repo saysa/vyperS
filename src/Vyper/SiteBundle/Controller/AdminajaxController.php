@@ -215,5 +215,22 @@ class AdminAjaxController extends AdminCommonController {
         return new Response();
     }
 
+    public function switchArticleHighlightAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $article = $em->getRepository('VyperSiteBundle:Article')->find($request->request->get('article_id'));
+
+        if ($request->request->get('checkboxValue') == "true") {
+            $article->setHighlight(true);
+        } else {
+            $article->setHighlight(false);
+        }
+
+        $em->persist($article);
+        $em->flush();
+
+        return new Response();
+    }
+
 
 } 

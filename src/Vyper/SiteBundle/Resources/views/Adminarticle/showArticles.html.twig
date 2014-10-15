@@ -229,7 +229,7 @@
 
                     $.ajax({
                         type: "POST",
-                        url: "/_admin_/ajax/switch_article_highlight",
+                        url: "{{ path('ajax_switch_article_highlight') }}",
                         dataType: "json",
                         data:{
                             article_id : articleId,

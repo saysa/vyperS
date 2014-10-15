@@ -22,7 +22,7 @@
 
 
 
-    <meta name="author" content="vyper-jmusic.com" />
+    <meta name="author" content="japanfm.fr" />
     <meta name="ROBOTS" content="noindex,nofollow" />
 
     <!--  Theme -->
@@ -128,7 +128,7 @@
                 <div class="ticker-icon">
                     <i class="icon-rocket"></i>
                 </div>
-                <h6>En ce moment</h6>
+                <h6>Japan FM News</h6>
             </div>
 
             {{ render(controller("VyperSiteBundle:Flashnew:tickerlist")) }}
@@ -220,7 +220,7 @@
                     </ul>
                 </li>
             {% endif %}
-            <li class="menu-item menu-item-type-post_type{% if current_events is defined %} current_page_item{% endif %}"><a href="#" title="Events">Events</a></li>
+            {#  <li class="menu-item menu-item-type-post_type{% if current_events is defined %} current_page_item{% endif %}"><a href="#" title="Events">Events</a></li> #}
             <li class="menu-item menu-item-type-post_type{% if current_magazine is defined %} current_page_item{% endif %}"><a href="{{ path('showAllMagazine') }}" title="Magazine">Vyper Magazine</a>
 
             </li>
@@ -231,7 +231,7 @@
 
 <div class="clearfix"></div>
 
-
+    {{ render(controller("VyperSiteBundle:Article:headerCarousel")) }}
 
 </header>
 
@@ -345,24 +345,20 @@
     <div class="footer-widgets main-color-bg">
         <div class="content-wrap">
             <div class="one-fourth">
-                <aside class="widget widget_recent_entries">		<div class="widget-title"><h4>Artistes</h4></div>		<ul>
+                <aside class="widget widget_recent_entries">		<div class="widget-title"><h4>Articles</h4></div>
 
+                    {{ render(controller("VyperSiteBundle:Article:footerRecentArticles")) }}
 
-                    </ul>
                 </aside>
             </div>
             <div class="one-fourth">
-                <aside class="widget widget_recent_entries">		<div class="widget-title"><h4>Artistes</h4></div>		<ul>
-
-
-                    </ul>
+                <aside class="widget widget_recent_entries">		<div class="widget-title"><h4>Artistes</h4></div>
+                    {{ render(controller("VyperSiteBundle:Artist:popularArtists")) }}
                 </aside>
             </div>
             <div class="one-fourth">
-                <aside class="widget widget_recent_entries">		<div class="widget-title"><h4>Discos</h4></div>		<ul>
-
-
-                    </ul>
+                <aside class="widget widget_recent_entries">		<div class="widget-title"><h4>Discos</h4></div>
+                    {{ render(controller("VyperSiteBundle:Disco:popularDiscos")) }}
                 </aside>
             </div>
             <div class="one-fourth last">

@@ -107,6 +107,14 @@ class ArticleController extends Controller
         return $this->render('VyperSiteBundle:Article:showAll.html.twig', $view->getView());
     }
 
+    public function footerRecentArticlesAction()
+    {
+        $view = $this->container->get('saysa_view');
+        $articles  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Article')->showRecentArticles(5);
+        $view->set('footer_recent_articles', $articles);
+        return $this->render('VyperSiteBundle:Article:footerRecentArticles.html.twig', $view->getView());
+    }
+
     public function recentArticlesAction()
     {
         $view = $this->container->get('saysa_view');
@@ -127,6 +135,18 @@ class ArticleController extends Controller
 
         $view->set('popular_articles', $popular_articles);
         return $this->render('VyperSiteBundle:Article:popularArticles.html.twig', $view->getView());
+    }
+
+    public function headerCarouselAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $view = $this->container->get('saysa_view');
+        $articles  = $em->getRepository('VyperSiteBundle:Article')->showRecentArticles();
+        $view
+            ->set('mini_carousel', $articles)
+            ->set('is_carousel', true)
+        ;
+        return $this->render('VyperSiteBundle:Article:headerCarousel.html.twig', $view->getView());
     }
 
 }

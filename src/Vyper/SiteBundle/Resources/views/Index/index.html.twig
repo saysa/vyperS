@@ -52,7 +52,7 @@
             <div class="cat-header">
                 <div class="cat-title second-color-bg">
                     <div class="cat-icon"><i class="icon-bell-alt"></i></div>
-                    <h4><a href="{{ base_url }}news">Dernières News</a></h4>
+                    <h4><a href="{{ base_url }}news">Musique</a></h4>
                 </div>
             </div>
 
@@ -152,7 +152,7 @@
                     <div class="cat-icon">
                         <i class="icon-rocket"></i>
                     </div>
-                    <h4>événements</h4>
+                    <h4>Vidéo du jour</h4>
                 </div>
             </div>
 
@@ -272,14 +272,14 @@
                     <div class="cat-icon">
                         <i class="icon-bookmark"></i>
                     </div>
-                    <h4><a href="{{ base_url }}interviews">Interviews</a></h4>
+                    <h4><a href="{{ base_url }}interviews">Manga/Anime</a></h4>
                 </div>
             </div>
 
             <div class="one-half main-post">
 
-                {% if latest_interviews is defined %}
-                {% for article in latest_interviews %}
+                {% if latest_mangas is defined %}
+                {% for article in latest_mangas %}
                     {% if loop.index == 1 %}
 
 
@@ -329,8 +329,8 @@
 
             <div class="one-half last">
 
-                {%  if latest_interviews is defined %}
-                {% for key, article in latest_interviews %}
+                {%  if latest_mangas is defined %}
+                {% for key, article in latest_mangas %}
                     {% if key>0 and key<5 %}
 
                         <div class="item-post">
@@ -382,7 +382,7 @@
                         <i class="icon-leaf"></i>
                     </div>
 
-                    <h4><a href="{{ base_url }}live-reports">Live Reports</a></h4>
+                    <h4><a href="{{ base_url }}live-reports">Jeux Vidéos</a></h4>
                 </div>
             </div>
 
@@ -390,8 +390,8 @@
 
             <div class="one-half main-post">
 
-                {%  if latest_live_reports is defined %}
-                {% for article in latest_live_reports %}
+                {%  if latest_jeux_videos is defined %}
+                {% for article in latest_jeux_videos %}
                     {% if loop.index == 1 %}
 
 
@@ -440,8 +440,8 @@
 
 
             <div class="one-half last">
-                {%  if latest_live_reports is defined %}
-                {% for key, article in latest_live_reports %}
+                {%  if latest_jeux_videos is defined %}
+                {% for key, article in latest_jeux_videos %}
                     {% if key>0 and key<5 %}
 
                         <div class="item-post">
@@ -493,7 +493,7 @@
                         <i class="icon-leaf"></i>
                     </div>
 
-                    <h4><a href="{{ base_url }}chroniques">Chroniques</a></h4>
+                    <h4><a href="{{ base_url }}chroniques">Culture</a></h4>
                 </div>
             </div>
 
@@ -501,8 +501,8 @@
 
             <div class="one-half main-post">
 
-                {% if latest_chroniques is defined %}
-                {% for article in latest_chroniques %}
+                {% if latest_culture is defined %}
+                {% for article in latest_culture %}
                     {% if loop.index == 1 %}
 
 
@@ -550,8 +550,8 @@
 
 
             <div class="one-half last">
-                {% if latest_chroniques is defined %}
-                {% for key, article in latest_chroniques %}
+                {% if latest_culture is defined %}
+                {% for key, article in latest_culture %}
                     {% if key>0 and key<5 %}
 
                         <div class="item-post">
