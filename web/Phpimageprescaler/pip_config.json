@@ -20,6 +20,13 @@
                 }
             }
         },
+        "admin-mag": {
+            "dimensions": {
+                "0": {
+                    "h": 100
+                }
+            }
+        },
         "album-cover": {
             "dimensions": {
                 "0": {

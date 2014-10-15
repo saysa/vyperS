@@ -118,6 +118,20 @@ admin_add_article:
     path:     /_admin_/article/add
     defaults: { _controller: VyperSiteBundle:AdminArticle:addArticle }
 
+admin_show_magazines:
+    path:     /_admin_/magazines
+    defaults: { _controller: VyperSiteBundle:AdminMagazine:showMagazines }
+
+admin_add_magazine:
+    path:     /_admin_/magazine/add
+    defaults: { _controller: VyperSiteBundle:AdminMagazine:addMagazine }
+
+admin_update_magazine:
+    path:     _admin_/magazine/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminMagazine:updateMagazine }
+    requirements:
+        id: \d+
+
 admin_update_flashnew:
     path:     _admin_/flashnew/update/{id}
     defaults: { _controller: VyperSiteBundle:AdminFlashnew:updateFlashnew }
