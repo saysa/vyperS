@@ -39,7 +39,7 @@ musique-chroniques:
         page: \d*
 
 showEvent:
-    path:    /event/{id}/{slug}.html
+    path:    /event/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Event:showEvent }
     requirements:
         id: \d+
@@ -56,6 +56,18 @@ showAlbum:
     requirements:
         id: \d+
 
+showMagazine:
+    path:    /vyper-jmusic-magazine/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Magazine:showMagazine }
+    requirements:
+        id: \d+
+
+showAllMagazine:
+    path:    /vyper-jmusic-magazines/{page}
+    defaults: { _controller: VyperSiteBundle:Magazine:showAll, page: 1 }
+    requirements:
+        page: \d*
+
 showArticle:
     path:    /article/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Article:showArticle }
@@ -69,19 +81,19 @@ showAllArtist:
         page: \d*
 
 showArtist:
-    path:    /artiste/{id}/{slug}.html
+    path:    /artiste/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Artist:showArtist }
     requirements:
         id: \d+
 
 showDisco:
-    path:    /disco/{id}/{slug}.html
+    path:    /disco/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Disco:showDisco }
     requirements:
         id: \d+
 
 artistDiscography:
-    path:    /artist-discography/{id}/{slug}.html
+    path:    /artist-discography/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Artist:showDisco }
     requirements:
         id: \d+

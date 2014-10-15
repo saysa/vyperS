@@ -50,25 +50,25 @@ class AdminMagazineController extends AdminCommonController {
 
     /**
      * @param Request $request
-     * @param Disco $disco
+     * @param Magazine $magazine
      * @return \Symfony\Component\HttpFoundation\Response
      * @Security("has_role('ROLE_AUTHOR')")
      */
-    public function updateDiscoAction(Request $request, Disco $disco)
+    public function updateMagazineAction(Request $request, Magazine $magazine)
     {
         $view = $this->container->get('saysa_view');
 
-        $form = $this->createForm(new DiscoType, $disco);
+        $form = $this->createForm(new MagazineType, $magazine);
 
         if ('POST' === $request->getMethod()) {
 
-            $post_data = $request->request->get('vyper_sitebundle_disco');
+            $post_data = $request->request->get('vyper_sitebundle_magazine');
 
             $form->submit($request);
 
             $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
 
-            $disco->setPicture($picture);
+            $magazine->setPicture($picture);
 
             if ($form->isValid()) {
                 $em = $this->getDoctrine()->getManager();
@@ -77,21 +77,13 @@ class AdminMagazineController extends AdminCommonController {
 
         }
 
-        $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->myFindAll();
-        $titles   = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Title')->findBy(
-            array('disco' => $disco)
-        );
-
-
         $view
-            ->set('disco', $disco)
-            ->set('artists', $artists)
-            ->set('titles', $titles)
-            ->set('active_disco', true)
+            ->set('magazine', $magazine)
+            ->set('active_magazine', true)
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Admindisco:updateDisco.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:Adminmagazine:updateMagazine.html.twig', $view->getView());
     }
 
     public function showMagazinesAction()

@@ -18,6 +18,7 @@ class MagazineType extends AbstractType
     {
         $builder
             ->add('title', 'text', array('attr' => array('placeholder' => 'Title')))
+            ->add('volume', 'text', array('attr' => array('placeholder' => 'Vol. number ex: 001 or 002')))
             ->add('formFrance', 'textarea')
             ->add('formOutremer', 'textarea')
             ->add('formInternational', 'textarea')

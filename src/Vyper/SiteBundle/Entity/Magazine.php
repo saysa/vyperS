@@ -33,6 +33,13 @@ class Magazine
     /**
      * @var string
      *
+     * @ORM\Column(name="volume", type="string", length=10)
+     */
+    private $volume;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="formFrance", type="text")
      */
     private $formFrance;
@@ -401,5 +408,28 @@ class Magazine
     public function getPicture()
     {
         return $this->picture;
+    }
+
+    /**
+     * Set volume
+     *
+     * @param string $volume
+     * @return Magazine
+     */
+    public function setVolume($volume)
+    {
+        $this->volume = $volume;
+
+        return $this;
+    }
+
+    /**
+     * Get volume
+     *
+     * @return string 
+     */
+    public function getVolume()
+    {
+        return $this->volume;
     }
 }

@@ -20,6 +20,13 @@
                 }
             }
         },
+        "cover-mag-front": {
+            "dimensions": {
+                "0": {
+                    "h": 218
+                }
+            }
+        },
         "admin-mag": {
             "dimensions": {
                 "0": {

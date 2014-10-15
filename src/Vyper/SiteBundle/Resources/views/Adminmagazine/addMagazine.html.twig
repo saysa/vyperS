@@ -80,7 +80,16 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-
+                                <!-- Volume -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.volume, "Volume number") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.volume, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.volume) }}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -119,7 +128,7 @@
 
                         <div class="form-actions">
                             <input type="hidden" name="add" value="add">
-                            <button type="submit" class="btn btn-primary">Save disco</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
 
                         </div>
 
