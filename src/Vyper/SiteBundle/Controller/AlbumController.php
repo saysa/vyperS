@@ -10,6 +10,30 @@ use Vyper\SiteBundle\Entity\Album;
 
 class AlbumController extends Controller
 {
+    public function showAllAction($page, $category)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $view = $this->container->get('saysa_view');
+        $albums_per_page = $this->container->getParameter('albums_per_page');
+
+        $category = $em->getRepository('VyperSiteBundle:AlbumCategory')->findByName('concert');
+        $albums  = $em->getRepository('VyperSiteBundle:Album')->showAll($albums_per_page, $page, $category);
+
+        foreach ($albums as $album)
+        {
+            $album->cover = $em->getRepository('VyperSiteBundle:Picture')->getByAlbum($album);
+        }
+
+        $view
+            ->set('current_album', true)
+            ->set('albums', $albums)
+            ->set('page', $page)
+            ->set('total_albums', ceil(count($albums)/$albums_per_page))
+        ;
+
+        return $this->render('VyperSiteBundle:Album:showAll.html.twig', $view->getView());
+    }
+
     public function recentPicturesAction()
     {
 
@@ -34,9 +58,12 @@ class AlbumController extends Controller
         $pictures  = $em->getRepository('VyperSiteBundle:Picture')->findBy(array('album' => $album->getId()));
 
         $view = $this->container->get('saysa_view');
-        $view->set('pictures', $pictures);
-        $view->set('album', $album);
-        $view->set("img_type_news", "true");
+        $view
+            ->set('current_album', true)
+            ->set('pictures', $pictures)
+            ->set('album', $album)
+            ->set("img_type_news", "true")
+        ;
 
         return $this->render('VyperSiteBundle:Album:showAlbum.html.twig', $view->getView());
     }

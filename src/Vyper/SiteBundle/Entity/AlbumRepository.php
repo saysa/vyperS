@@ -3,6 +3,7 @@
 namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * AlbumRepository
@@ -36,5 +37,29 @@ class AlbumRepository extends EntityRepository
         $results = $query->getResult();
 
         return $results;
+    }
+
+    public function showAll($albums_per_page, $page, $category)
+    {
+        if ($page < 1) {
+            throw new \InvalidArgumentException('Can not be < 1');
+        }
+
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->andWhere('a.category = :category')
+            ->orderBy('a.created', 'DESC')
+            ->setParameter('category', $category)
+        ;
+        $query = $queryBuilder->getQuery();
+
+
+        $query
+            ->setFirstResult(($page-1) * $albums_per_page)
+            ->setMaxResults($albums_per_page)
+        ;
+
+        return new Paginator($query);
     }
 }

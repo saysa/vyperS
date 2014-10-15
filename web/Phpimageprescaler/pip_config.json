@@ -20,6 +20,13 @@
                 }
             }
         },
+        "album-cover": {
+            "dimensions": {
+                "0": {
+                    "w": 162
+                }
+            }
+        },
         "galerie": {
             "dimensions": {
                 "0": {

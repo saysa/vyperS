@@ -1,2 +1,3 @@
 parameters:
     articles_per_page: 8
+    albums_per_page: 32

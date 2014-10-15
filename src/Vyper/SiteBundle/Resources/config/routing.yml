@@ -44,8 +44,14 @@ showEvent:
     requirements:
         id: \d+
 
+showAlbums:
+    path:    /galerie/{page}
+    defaults: { _controller: VyperSiteBundle:Album:showAll, page: 1, category: concert }
+    requirements:
+        page: \d*
+
 showAlbum:
-    path:    /album/{id}/{slug}.html
+    path:    /album/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Album:showAlbum }
     requirements:
         id: \d+
