@@ -8,33 +8,31 @@ use Symfony\Component\HttpFoundation\Request;
 class StatiqueController extends Controller
 {
     /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function aProposAction(Request $request)
+    public function aProposAction()
     {
-        $view = $this->container->get('saysa_view');
-        $session = $request->getSession();
-        $user = $session->get('user');
-        $view
-            ->set('user_id', $user)
-            ->set('soe_title', 'A propos')
-        ;
-
-        return $this->render('VyperSiteBundle:Statique:aPropos.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:Statique:aPropos.html.twig');
     }
 
-    public function contactAction(Request $request)
+    public function lEquipeAction()
     {
-        $view = $this->container->get('saysa_view');
-        $session = $request->getSession();
-        $user = $session->get('user');
-        $view
-            ->set('user_id', $user)
-            ->set('soe_title', 'Contact')
-        ;
+        return $this->render('VyperSiteBundle:Statique:lEquipe.html.twig');
+    }
 
-        return $this->render('VyperSiteBundle:Statique:contact.html.twig', $view->getView());
+    public function contactAction()
+    {
+        return $this->render('VyperSiteBundle:Statique:contact.html.twig');
+    }
+
+    public function partenairesAction()
+    {
+        return $this->render('VyperSiteBundle:Statique:partenaires.html.twig');
+    }
+
+    public function cguAction()
+    {
+        return $this->render('VyperSiteBundle:Statique:cgu.html.twig');
     }
 
 }

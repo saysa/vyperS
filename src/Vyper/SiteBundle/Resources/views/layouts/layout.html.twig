@@ -23,7 +23,7 @@
 
 
     <meta name="author" content="japanfm.fr" />
-    <meta name="ROBOTS" content="noindex,nofollow" />
+    <meta name="ROBOTS" content="index,follow" />
 
     <!--  Theme -->
     {% stylesheets filter='cssrewrite, ?yui_css'
@@ -42,12 +42,18 @@
     <script type='text/javascript' src='{{ asset('assets/js/discover/jquery-migrate.min.js?ver=1.2.1') }}'></script>
     <script>window.jQuery || document.write('<script src="{{ asset('assets/js/vendor/jquery-1.10.1.min.js') }}"><\/script>')</script>
 
-    <script src="{{ asset('assets/js/plugins.js') }}"></script>
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    {% javascripts filter='yui_js'
+    'assets/js/plugins.js'
+    'assets/js/main.js'
+    'assets/js/plugins/cleditor/jquery.cleditor.min.js'
+    'assets/js/owl-carousel/owl.carousel.js'
+    'assets/js/liscroll.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 
-    <script src="{{ asset('assets/js/plugins/cleditor/jquery.cleditor.min.js') }}"></script>
-    <script src="{{ asset('assets/js/owl-carousel/owl.carousel.js') }}"></script>
-    <script src="{{ asset('assets/js/liscroll.js') }}"></script>
+
+
 
 
 </head>
@@ -84,10 +90,7 @@
 
         <div class="left">
             <ul class="list">
-                <li>
-                    <i class="icon-home"></i>
-                    <a href="{{ path('index') }}">Accueil</a>
-                </li>
+
 
                 <li>
                     <i class="icon-star"></i>
@@ -95,19 +98,26 @@
                 </li>
 
                 <li>
+                    <i class="icon-group"></i>
+                    <a href="{{ path('l_equipe') }}">L'Equipe</a>
+                </li>
+
+                <li>
                     <i class="icon-envelope"></i>
-                    <a href="contact">Contact</a>
+                    <a href="{{ path('contact') }}">Contact</a>
+                </li>
+
+                <li>
+                    <i class="icon-flag"></i>
+                    <a href="{{ path('partenaires') }}">Partenaires</a>
                 </li>
 
             </ul>
         </div>
         <div class="social">
             <ul class="list">
-                <li class="twitter"><a href="{{ jfm_twitter }}"><i class="icon-twitter"></i></a></li>
-                <li class="fb"><a href="{{ jfm_facebook }}"><i class="icon-facebook"></i></a></li>
-                <li class="gplus"><a href=""><i class="icon-google-plus"></i></a></li>
-
-                <li class="youtube"><a href=""><i class="icon-youtube"></i></a></li>
+                <li class="gplus"><a href="#"><i class="icon-comments"></i> Live Chat</a></li>
+                <li class="youtube"><a href="#"><i class="icon-play-circle"></i> Live Vidéo</a></li>
             </ul>
         </div>
     </div>
@@ -375,9 +385,8 @@
                 </aside>
             </div>
             <div>
-                <a href="recrutement">Recrutement</a> -
-                <a href="partenariat">Partenariat</a> -
-                <a href="conditions_utilisation">Conditions d'utilisation</a>
+                <a href="{{ path('partenaires') }}">Partenariat</a> -
+                <a href="{{ path('cgu') }}">Conditions d'utilisation</a>
             </div>
 
         </div>
@@ -387,7 +396,7 @@
     <div class="footer-info">
         <div class="content-wrap">
 
-            <div class="footer-left">©2014 Japan FM</div>
+            <div class="footer-left">©Japan FM 2014 Tous droits réservés</div>
             <div class="footer-right">
                 <ul class="list">
                     <li class="twitter">
@@ -411,10 +420,15 @@
 </footer>
 <!-- /footer -->
 
-<script src="{{ asset('assets/js/discover/superfish.js') }}"></script>
-<script src="{{ asset('assets/js/discover/flexslider-min.js') }}"></script>
-<script src="{{ asset('assets/js/discover/lightbox.js') }}"></script>
-<script src="{{ asset('assets/js/discover/script.js') }}"></script>
+{% javascripts filter='yui_js'
+'assets/js/discover/superfish.js'
+'assets/js/discover/flexslider-min.js'
+'assets/js/discover/lightbox.js'
+'assets/js/discover/script.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
 
 <script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '11lxMF']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
 

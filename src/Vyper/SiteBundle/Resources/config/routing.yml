@@ -7,12 +7,24 @@ home:
     defaults: { _controller: VyperSiteBundle:Index:index }
 
 a_propos:
-    path:     /a_propos
+    path:     /a-propos
     defaults: { _controller: VyperSiteBundle:Statique:aPropos }
+
+l_equipe:
+    path:     /l-equipe
+    defaults: { _controller: VyperSiteBundle:Statique:lEquipe }
 
 contact:
     path:     /contact
     defaults: { _controller: VyperSiteBundle:Statique:contact }
+
+partenaires:
+    path:     /partenaires
+    defaults: { _controller: VyperSiteBundle:Statique:partenaires }
+
+cgu:
+    path:     /conditions-utilisation
+    defaults: { _controller: VyperSiteBundle:Statique:cgu }
 
 musique-news:
     path:    /musique-news/{page}
