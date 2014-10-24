@@ -77,11 +77,33 @@ class ArticleRepository extends EntityRepository
         }
 
         $queryBuilder = $this->createQueryBuilder('a');
+
+        $queryBuilder->where('a.deleted = false');
+        if (!is_object($type[0])) {
+            $w = '';
+
+            foreach ($type as $k => $typeMusique) {
+                if (!is_string($typeMusique)) {
+                    if ($k == 1)
+                        $w = ' a.articleType = :m' . $k . 'param';
+                    else
+                        $w.= ' OR a.articleType = :m' . $k . 'param';
+
+
+                    $queryBuilder->setParameter('m' . $k . 'param', $typeMusique);
+                    #echo "set Param $k et $typeMusique <br />";
+                }
+            }
+            $queryBuilder->andWhere($w);
+        } else {
+            $queryBuilder->andWhere('a.articleType = :type')
+                ->setParameter('type', $type);
+        }
+
+
         $queryBuilder
-            ->where('a.deleted = false')
-            ->andWhere('a.articleType = :type')
             ->orderBy('a.releaseDate', 'DESC')
-            ->setParameter('type', $type)
+
         ;
         $query = $queryBuilder->getQuery();
 
@@ -95,6 +117,22 @@ class ArticleRepository extends EntityRepository
     }
 
     public function getByArtist($artist_id)
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->join('a.artists', 'artist', 'WITH', 'artist.id = :id')
+            ->where('a.deleted = false')
+            ->orderBy('a.releaseDate', 'DESC')
+            ->setMaxResults(3)
+            ->setParameter('id', $artist_id);
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
+    public function allTypeMusique($allType)
     {
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder

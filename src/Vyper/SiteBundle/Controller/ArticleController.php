@@ -43,7 +43,13 @@ class ArticleController extends Controller
         switch($type) {
 
             case "musique-news":
-                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Manga/Anime");
+                $type = array(
+                    '',
+                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : chronique"),
+                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : interview"),
+                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : live report"),
+                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : news"),
+                );
                 $view
                     ->set('article_type', "Musique")
                     ->set('current_musique', true)

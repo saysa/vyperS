@@ -26,7 +26,7 @@
     <meta name="ROBOTS" content="index,follow" />
 
     <!--  Theme -->
-    {% stylesheets filter='cssrewrite, ?yui_css'
+    {% stylesheets filter='cssrewrite'
         'assets/css/portal.css'
         'assets/css/fonts/font-awesome/css/font-awesome.min.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
@@ -42,15 +42,7 @@
     <script type='text/javascript' src='{{ asset('assets/js/discover/jquery-migrate.min.js?ver=1.2.1') }}'></script>
     <script>window.jQuery || document.write('<script src="{{ asset('assets/js/vendor/jquery-1.10.1.min.js') }}"><\/script>')</script>
 
-    {% javascripts filter='yui_js'
-    'assets/js/plugins.js'
-    'assets/js/main.js'
-    'assets/js/plugins/cleditor/jquery.cleditor.min.js'
-    'assets/js/owl-carousel/owl.carousel.js'
-    'assets/js/liscroll.js'
-    %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+
 
 
 
@@ -171,7 +163,7 @@
     <div class="content-wrap">
         <div class="logo">
             <h1>
-                <a href="" title="Japan FM">
+                <a href="{{ path('home') }}" title="Japan FM">
                     <img src="{{ asset('assets/img/logo.png') }}" alt="Japan FM" width="200" >
                 </a>
             </h1>
@@ -420,7 +412,12 @@
 </footer>
 <!-- /footer -->
 
-{% javascripts filter='yui_js'
+{% javascripts
+'assets/js/plugins.js'
+'assets/js/main.js'
+'assets/js/plugins/cleditor/jquery.cleditor.min.js'
+'assets/js/owl-carousel/owl.carousel.js'
+'assets/js/liscroll.js'
 'assets/js/discover/superfish.js'
 'assets/js/discover/flexslider-min.js'
 'assets/js/discover/lightbox.js'
@@ -428,6 +425,7 @@
 %}
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
+
 
 
 <script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '11lxMF']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
