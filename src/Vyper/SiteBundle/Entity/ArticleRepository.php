@@ -132,19 +132,5 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
-    public function allTypeMusique($allType)
-    {
-        $queryBuilder = $this->createQueryBuilder('a');
-        $queryBuilder
-            ->join('a.artists', 'artist', 'WITH', 'artist.id = :id')
-            ->where('a.deleted = false')
-            ->orderBy('a.releaseDate', 'DESC')
-            ->setMaxResults(3)
-            ->setParameter('id', $artist_id);
-        ;
-        $query = $queryBuilder->getQuery();
-        $results = $query->getResult();
 
-        return $results;
-    }
 }

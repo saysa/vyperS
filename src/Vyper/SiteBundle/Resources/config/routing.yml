@@ -248,6 +248,20 @@ admin_add_picture:
     path:     /_admin_/picture/add
     defaults: { _controller: VyperSiteBundle:AdminPicture:addPicture }
 
+admin_show_videos:
+    path:     /_admin_/videos
+    defaults: { _controller: VyperSiteBundle:AdminVideo:showVideos }
+
+admin_add_video:
+    path:     /_admin_/video/add
+    defaults: { _controller: VyperSiteBundle:AdminVideo:addVideo }
+
+admin_update_video:
+    path:     _admin_/video/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminVideo:updateVideo }
+    requirements:
+        id: \d+
+
 admin_show_tours:
     path:     /_admin_/tours
     defaults: { _controller: VyperSiteBundle:AdminTour:showTours }

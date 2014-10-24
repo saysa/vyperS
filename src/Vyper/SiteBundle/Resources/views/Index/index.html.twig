@@ -156,49 +156,32 @@
                 </div>
             </div>
 
-            {% if latest_events is defined %}
-            {% for event in latest_events %}
-                {% if loop.index == 1 %}
+            {% if last_video is defined %}
+                {% for video in last_video %}
 
 
                     <div class="main-post">
 
 
-                        <div class="thumb-wrap">
-                            <div class="thumb">
-                                <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getRawPicture(event.getId) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
-                            </div>
-
-
-
-                            <div class="overlay">
-                                <a class="post-link" href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><i class="icon-link"></i></a>
-                            </div>
+                        <div class="thumb-wrap video-thumb">
+                            <iframe width="560" height="315" src="//www.youtube.com/embed/{{ video.youtube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
                         </div>
-
-
 
 
                         <div class="post-details">
                             <h3>
-                                <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html">{{ event.getTitle|escape }}</a>
+                                <a href="#">{{ video.getTitle|escape }}</a>
                             </h3>
 
                             <div class="entry-meta">
-                                <span class="date"><i class="icon-calendar"></i> {{ event.getDateEvent(event.getId) }}</span><br />
-                                {{ event.getTown(event.getId) }}<br />
-                                {{ event.getCountry(event.getId)|upper }}
-
-
+                                <span class="date"><i class="icon-calendar"></i> video.getDateEvent(event.getId) }}</span><br />
 
                             </div>
-                            <p>{{ article.getDescription }}</p>
+                            <p>{{ video.getDescription }}</p>
                         </div>
                     </div>
                     <!-- /one-half -->
-
-                {% endif %}
-            {% endfor %}
+                {% endfor %}
             {% endif %}
 
             <div class="post-list">
