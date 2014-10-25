@@ -1,0 +1,98 @@
+{
+    "debug_mode": false,
+    "retina": true,
+    "jpg_quality": 100,
+    "jpg_quality_retina": 100,
+    "browser_cache": 604800,
+    "cache_path": "cache/pip",
+    "sharpen": false,
+    "resolutions": {
+        "mobile": 0,
+        "medium": 1000,
+        "large": 1300
+
+    },
+    "setup": {
+        "article": {
+            "dimensions": {
+                "0": {
+                    "h": 256
+                }
+            }
+        },
+        "cover-mag-front": {
+            "dimensions": {
+                "0": {
+                    "h": 218
+                }
+            }
+        },
+        "admin-mag": {
+            "dimensions": {
+                "0": {
+                    "h": 100
+                }
+            }
+        },
+        "album-cover": {
+            "dimensions": {
+                "0": {
+                    "w": 162
+                }
+            }
+        },
+        "galerie": {
+            "dimensions": {
+                "0": {
+                    "h": 400
+                }
+            }
+        },
+        "75-75": {
+            "dimensions": {
+                "0": {
+                    "w": 75
+                }
+            },
+            "crop": true
+        },
+        "374-200": {
+            "dimensions": {
+                "0": {
+                    "w": 374,
+                    "h": 200
+                }
+            }
+        },
+        "flux-rss": {
+            "dimensions": {
+                "mobile": {
+                    "w": 150
+                },
+                "large": {
+                    "w": 150
+                }
+            }
+        },
+        "example": {
+            "dimensions": {
+                "mobile": {
+                    "w": 150
+                },
+                "large": {
+                    "w": 150
+                }
+            },
+            "filter": {
+                "IMG_FILTER_GRAYSCALE": true,
+                "IMG_FILTER_COLORIZE": [
+                    100,
+                    50,
+                    0
+                ],
+                "IMG_FILTER_NEGATE": false,
+                "IMG_FILTER_BRIGHTNESS": 0
+            }
+        }
+    }
+}

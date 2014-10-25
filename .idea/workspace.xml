@@ -2,19 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2ecea67-3778-4888-8635-2c7f03fc460a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminVideoController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Video.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/VideoRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/VideoType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminVideo/addVideo.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminVideo/showVideos.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminVideo/updateVideo.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/admin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/RGB/AdobeRGB1998.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/RGB/AppleRGB.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/CoatedFOGRA27.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/CoatedFOGRA39.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/CoatedGRACoL2006.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/Color Profile Bundling License_10.15.08.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/RGB/ColorMatchRGB.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/colormanagement.org/ISOcoated_v2_grey1c_bas.ICC" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/JapanColor2001Coated.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/JapanColor2001Uncoated.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/JapanColor2002Newspaper.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/JapanColor2003WebCoated.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/JapanWebCoated.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/RGB/PAL_SECAM.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/Profile Information.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/RGB/SMPTE-C.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/Trademark Information.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/USWebCoatedSWOP.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/USWebUncoated.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/UncoatedFOGRA29.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/RGB/VideoHD.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/RGB/VideoNTSC.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/RGB/VideoPAL.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/WebCoatedFOGRA28.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/WebCoatedSWOP2006Grade3.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/Adobe/CMYK/WebCoatedSWOP2006Grade5.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/color.org/sRGB_IEC61966-2-1_black_scaled.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/resources/color.org/sRGB_IEC61966-2-1_no_black_scaling.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/AbstractFont.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/AbstractLayers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/ApplyMask.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Advanced/Border.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Box.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/BoxInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Histogram/Bucket.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Palette/CMYK.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Palette/Color/CMYK.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Advanced/Canvas.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Point/Center.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Palette/Color/ColorInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Palette/ColorParser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/Copy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/Crop.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gd/Drawer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gmagick/Drawer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Imagick/Drawer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Draw/DrawerInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gd/Effects.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gmagick/Effects.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Imagick/Effects.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Effects/EffectsInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Exception/Exception.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/Fill.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Fill/FillInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/FilterInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/FlipHorizontally.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/FlipVertically.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gd/Font.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gmagick/Font.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Imagick/Font.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/FontInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Palette/Color/Gray.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Advanced/Grayscale.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Palette/Grayscale.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Fill/Gradient/Horizontal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gd/Image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gmagick/Image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Imagick/Image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/ImageInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gd/Imagine.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gmagick/Imagine.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Imagick/Imagine.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/ImagineAware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/ImagineInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Test/ImagineTestCase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Test/Constraint/IsImageEqual.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gd/Layers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Gmagick/Layers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Imagick/Layers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/LayersInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Fill/Gradient/Linear.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/ManipulatorInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Advanced/OnPixelBased.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Exception/OutOfBoundsException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Palette/PaletteInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/Paste.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Point.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/PointInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Profile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/ProfileInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Palette/RGB.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Palette/Color/RGB.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Histogram/Range.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Advanced/RelativeResize.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/Resize.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/Rotate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/Save.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/Show.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/Strip.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/Thumbnail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Transformation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Image/Fill/Gradient/Vertical.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/libraries/imagine/Filter/Basic/WebOptimization.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/PIP/Config.php" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/Config.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/PIP/JSONEncoder.php" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/JSONEncoder.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/PIP/PIP.php" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/PIP.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/PIP/PhpImagePrescaler.php" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/PhpImagePrescaler.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/PIP/PipClass.php" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/PipClass.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/PIP/Source.php" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/Source.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourceGif.php" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourceGif.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourceJpg.php" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourceJpg.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourcePng.php" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourcePng.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/image.php" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/image.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Phpimageprescaler/pip_config.json" afterPath="$PROJECT_DIR$/web/libraries/Phpimageprescaler/pip_config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/.htaccess" afterPath="$PROJECT_DIR$/web/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="local.dev.iws" />
@@ -38,105 +142,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdminVideoController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminVideoController.php">
+      <file leaf-file-name="pip_config.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/pip_config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="37" selection-start="1840" selection-end="1840" vertical-scroll-proportion="-16.25" vertical-offset="600" max-vertical-offset="1305">
-              <folding>
-                <element signature="e#127#172#0" expanded="true" />
-                <element signature="e#979#1026#0" expanded="true" />
-                <element signature="e#2279#2328#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="0" selection-start="6651" selection-end="6651" vertical-scroll-proportion="-4.4" vertical-offset="2180" max-vertical-offset="8925">
-              <folding>
-                <element signature="e#9640#9692#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updateVideo.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminVideo/updateVideo.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="83" selection-start="3308" selection-end="3319" vertical-scroll-proportion="-16.25" vertical-offset="480" max-vertical-offset="1395">
-              <folding>
-                <element signature="e#12#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="19" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.69253296" vertical-offset="97" max-vertical-offset="780">
-              <folding>
-                <element signature="e#1974#2013#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addVideo.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminVideo/addVideo.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="14" selection-start="2423" selection-end="2423" vertical-scroll-proportion="-9.25" vertical-offset="513" max-vertical-offset="1320">
-              <folding>
-                <element signature="e#12#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updateMagazine.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminmagazine/updateMagazine.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="44" selection-start="0" selection-end="6608" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="2265">
+            <state line="57" column="10" selection-start="1195" selection-end="1195" vertical-scroll-proportion="-20.625" vertical-offset="360" max-vertical-offset="1545">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Video.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Video.php">
+      <file leaf-file-name="PhpImagePrescaler.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/PhpImagePrescaler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="33" selection-start="863" selection-end="868" vertical-scroll-proportion="-10.375" vertical-offset="471" max-vertical-offset="4395">
+            <state line="176" column="0" selection-start="5100" selection-end="5100" vertical-scroll-proportion="-10.32" vertical-offset="1914" max-vertical-offset="10695">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Source.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/Source.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="86" column="34" selection-start="2004" selection-end="2004" vertical-scroll-proportion="-10.44" vertical-offset="768" max-vertical-offset="1425">
               <folding>
-                <element signature="e#43#75#0" expanded="true" />
+                <element signature="e#42#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/VideoRepository.php">
+      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="24" selection-start="694" selection-end="694" vertical-scroll-proportion="-9.75" vertical-offset="201" max-vertical-offset="660">
+            <state line="16" column="47" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Article.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
+      <file leaf-file-name="SourceJpg.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourceJpg.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="12510">
+            <state line="11" column="9" selection-start="143" selection-end="192" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php">
+      <file leaf-file-name="SourceGif.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourceGif.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="5" selection-start="1365" selection-end="1813" vertical-scroll-proportion="-12.875" vertical-offset="711" max-vertical-offset="2115">
+            <state line="11" column="9" selection-start="192" selection-end="192" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SourcePng.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourcePng.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="9" selection-start="192" selection-end="192" vertical-scroll-proportion="0.24158126" vertical-offset="0" max-vertical-offset="683">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/Config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="220" column="27" selection-start="4004" selection-end="4006" vertical-scroll-proportion="-4.38" vertical-offset="3081" max-vertical-offset="4875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PIP.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/PIP.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="20" selection-start="392" selection-end="392" vertical-scroll-proportion="-4.38" vertical-offset="81" max-vertical-offset="2535">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="45" selection-start="82" selection-end="82" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
@@ -155,18 +247,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/FluxRss/FluxRss.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/FlashnewRepository.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminflashnew/updateFlashnew.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminflashnewController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminmagazine/showMagazines.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminmagazineController.php" />
-        <option value="$PROJECT_DIR$/web/Phpimageprescaler/pip_config.json" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Magazine.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/MagazineType.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminmagazine/addMagazine.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminmagazine/updateMagazine.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Magazine/showMagazine.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MagazineRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MagazineController.php" />
@@ -206,6 +286,18 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/VideoRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/pip_config.json" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/Config.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourceGif.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourcePng.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/PhpImagePrescaler.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/SourceJpg.php" />
+        <option value="$PROJECT_DIR$/web/Phpimageprescaler/PIP/Source.php" />
+        <option value="$PROJECT_DIR$/web/.htaccess" />
+        <option value="$PROJECT_DIR$/web/libraries/Phpimageprescaler/image.php" />
+        <option value="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/Source.php" />
+        <option value="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourceGif.php" />
+        <option value="$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourcePng.php" />
       </list>
     </option>
   </component>
@@ -311,6 +403,76 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Phpimageprescaler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Phpimageprescaler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PIP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imagine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -382,6 +544,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -561,7 +757,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../sympathy-migration/machine/wordpress" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../vyper-fw/vyper" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
     <property name="SearchEverywhereHistory" value="'soe_title&#10;:" />
@@ -574,13 +770,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Form" />
       <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller" />
       <recent name="$PROJECT_DIR$/app/Resources/java" />
       <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM" />
-      <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/libraries" />
       <recent name="$PROJECT_DIR$/web/assets/img" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Phpimageprescaler/PIP" />
@@ -741,7 +938,11 @@
       <created>1414135235419</created>
       <updated>1414135235419</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Video du jour">
+      <created>1414185508425</created>
+      <updated>1414185508425</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -777,6 +978,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45927602" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277027" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32731378" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13205537" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21458998" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -785,7 +987,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32731378" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -803,7 +1004,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Form login in progress" />
     <MESSAGE value="Theme in progress" />
     <MESSAGE value="Theme ajax switch show in menu" />
     <MESSAGE value="Use of ParamConverter" />
@@ -828,77 +1028,13 @@
     <MESSAGE value="Flashnew:update and delete" />
     <MESSAGE value="Gros avancement avant prod 1" />
     <MESSAGE value="Musique news display all musique type" />
-    <option name="LAST_COMMIT_MESSAGE" value="Musique news display all musique type" />
+    <MESSAGE value="Video du jour" />
+    <option name="LAST_COMMIT_MESSAGE" value="Video du jour" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/footerRecentArticles.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="282" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showAll.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="108" selection-start="682" selection-end="749" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/popularArtists.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="88" selection-start="146" selection-end="146" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/VisitRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="30" selection-start="2109" selection-end="2109" vertical-scroll-proportion="-16.166666" vertical-offset="752" max-vertical-offset="1380" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showDisco.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="109" selection-start="2055" selection-end="2119" vertical-scroll-proportion="-10.625" vertical-offset="630" max-vertical-offset="2145" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArtistController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="91" selection-start="1019" selection-end="1102" vertical-scroll-proportion="-7.4166665" vertical-offset="197" max-vertical-offset="1515" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="78" selection-start="659" selection-end="673" vertical-scroll-proportion="-0.625" vertical-offset="495" max-vertical-offset="9915" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Disco/popularDiscos.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="26" selection-end="40" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="195" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Disco/showDisco.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="65" selection-start="962" selection-end="962" vertical-scroll-proportion="-7.5" vertical-offset="105" max-vertical-offset="1530" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/DiscoTypeRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="524" selection-end="524" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/DiscoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="649" selection-end="649" vertical-scroll-proportion="-11.791667" vertical-offset="17" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/DiscoRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="5" selection-start="1076" selection-end="1076" vertical-scroll-proportion="-18.666666" vertical-offset="182" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Misc/socialNetwork.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="92" selection-start="915" selection-end="915" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="690" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Magazine/showMagazine.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="170" selection-start="684" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1125" />
@@ -995,33 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="23" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="2460">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="426" column="20" selection-start="16410" selection-end="16410" vertical-scroll-proportion="-26.416666" vertical-offset="5756" max-vertical-offset="6600">
-          <folding>
-            <element signature="e#3598#3606#0" expanded="false" />
-            <element signature="e#3755#3763#0" expanded="false" />
-            <element signature="e#3915#3922#0" expanded="false" />
-            <element signature="e#4069#4080#0" expanded="false" />
-            <element signature="e#5925#5929#0" expanded="false" />
-            <element signature="e#7178#7183#0" expanded="false" />
-            <element signature="e#7526#7538#0" expanded="false" />
-            <element signature="e#7736#7748#0" expanded="false" />
-            <element signature="e#7854#7872#0" expanded="false" />
-            <element signature="e#7984#8004#0" expanded="false" />
-            <element signature="e#8117#8135#0" expanded="false" />
-            <element signature="e#8247#8260#0" expanded="false" />
-            <element signature="e#8469#8479#0" expanded="false" />
-            <element signature="e#8671#8681#0" expanded="false" />
-            <element signature="e#8870#8877#0" expanded="false" />
-            <element signature="e#9056#9066#0" expanded="false" />
-            <element signature="e#10036#10051#0" expanded="false" />
-            <element signature="e#14871#14882#0" expanded="false" />
-            <element signature="e#14941#14944#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1138,7 +1247,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="114" column="18" selection-start="2187" selection-end="2332" vertical-scroll-proportion="-4.5" vertical-offset="1485" max-vertical-offset="9015">
           <folding>
-            <element signature="e#43#75#0" expanded="true" />
+            <element signature="e#43#75#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1147,7 +1256,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="33" selection-start="863" selection-end="868" vertical-scroll-proportion="-10.375" vertical-offset="471" max-vertical-offset="4395">
           <folding>
-            <element signature="e#43#75#0" expanded="true" />
+            <element signature="e#43#75#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1167,7 +1276,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="14" selection-start="2423" selection-end="2423" vertical-scroll-proportion="-9.25" vertical-offset="513" max-vertical-offset="1320">
           <folding>
-            <element signature="e#12#51#0" expanded="true" />
+            <element signature="e#12#51#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1183,7 +1292,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="83" selection-start="3308" selection-end="3319" vertical-scroll-proportion="-16.25" vertical-offset="480" max-vertical-offset="1395">
           <folding>
-            <element signature="e#12#51#0" expanded="true" />
+            <element signature="e#12#51#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1220,10 +1329,110 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="19" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.69253296" vertical-offset="97" max-vertical-offset="780">
+        <state line="39" column="19" selection-start="1829" selection-end="1829" vertical-scroll-proportion="-19.708334" vertical-offset="97" max-vertical-offset="780">
           <folding>
             <element signature="e#1974#2013#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/imagine/Gd/Font.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="707">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/PipClass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="426" column="20" selection-start="16410" selection-end="16410" vertical-scroll-proportion="-266.25" vertical-offset="0" max-vertical-offset="6600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/JSONEncoder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/pip_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="10" selection-start="1195" selection-end="1195" vertical-scroll-proportion="-20.625" vertical-offset="360" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/PIP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="20" selection-start="392" selection-end="392" vertical-scroll-proportion="-4.38" vertical-offset="81" max-vertical-offset="2535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="220" column="27" selection-start="4004" selection-end="4006" vertical-scroll-proportion="-4.38" vertical-offset="3081" max-vertical-offset="4875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/PhpImagePrescaler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="0" selection-start="5100" selection-end="5100" vertical-scroll-proportion="-10.32" vertical-offset="1914" max-vertical-offset="10695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="47" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="45" selection-start="82" selection-end="82" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/Source.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="34" selection-start="2004" selection-end="2004" vertical-scroll-proportion="-10.44" vertical-offset="768" max-vertical-offset="1425">
+          <folding>
+            <element signature="e#42#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourceJpg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="9" selection-start="143" selection-end="192" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourceGif.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="9" selection-start="192" selection-end="192" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/PIP/SourcePng.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="9" selection-start="192" selection-end="192" vertical-scroll-proportion="0.24158126" vertical-offset="0" max-vertical-offset="683">
+          <folding />
         </state>
       </provider>
     </entry>
