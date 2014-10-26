@@ -20,7 +20,7 @@ class IndexController extends Controller
 
         $articles_carousel = $em->getRepository('VyperSiteBundle:Article')->carousel();
 
-        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'News'));
+        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'musique : news'));
         $latest_news = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Manga/Anime'));
         $latest_manga = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
