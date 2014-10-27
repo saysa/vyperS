@@ -25,11 +25,7 @@
                         <div class="left">
 
 
-					<span class="comments">
-							<i class="icon-comments"></i>
-							<a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}#comments"><fb:comments-count href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}"></fb:comments-count> réactions</a>
 
-					</span>
 
                         </div>
 
@@ -69,7 +65,7 @@
             </div>
 
             <div class="entry-content">
-                {{ artist.getBiography }}
+                {{ artist.getBiography|raw }}
             </div>
         {% endif %}
 
@@ -93,7 +89,7 @@
                             <div class="one-fourth column{% if iterate==2 %} last{% set iterate = -1 %}{% endif %}">
                                 <div class="release-thumbnail">
                                     <div class="release-cover">
-                                        <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}"><img src="{{ asset(disco.picture.getPath('374-200')) }}" class="fullwidth" alt=""></a>
+                                        <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}"><img src="{{ asset(disco.picture.getPath('220')) }}" class="fullwidth" alt=""></a>
                                     </div>
 
                                     <h4 class="release-title"><a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a></h4>
@@ -280,9 +276,25 @@
         </div>
         <!-- /comments -->
 
+        {# DISQUS #}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'japanfm'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
-        <div class="fb-comments" data-href="#" data-numposts="15" data-colorscheme="light" data-width="780"></div>
+
+
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>

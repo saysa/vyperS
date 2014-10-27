@@ -3,12 +3,14 @@
 
     <ul id="flickr_thumbs" class="list flickr_thumbs">
 
-        {% for picture in recent_pictures %}
+        {% for key, picture in recent_pictures %}
+            {% if key>0 and key<10 %}
             <li>
                 <div class="widget-overlay">
                     <a rel="lightbox[flickr-gallery]" href="{{ asset(picture.getPath()) }}" title=""><img src="{{ asset(picture.getPath('75-75')) }}" alt="" width="75" height="75"></a>
                 </div>
             </li>
+            {% endif %}
         {% endfor %}
 
 

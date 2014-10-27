@@ -57,7 +57,7 @@
                         <div class="one-fourth column{% if iterate==3 %} last{% set iterate = -1 %}{% endif %}">
                             <div class="release-thumbnail">
                                 <div class="release-cover">
-                                    <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}"><img src="{{ asset(disco.picture.getPath()) }}" class="fullwidth" alt=""></a>
+                                    <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}"><img src="{{ asset(disco.picture.getPath('152')) }}" class="fullwidth" alt=""></a>
                                 </div>
 
                                 <h4 class="release-title"><a href="#">{{ disco.getTitle }}</a></h4>
