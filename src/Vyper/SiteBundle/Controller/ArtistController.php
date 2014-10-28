@@ -50,7 +50,7 @@ class ArtistController extends Controller
     public function showAllAction(Request $request, $page)
     {
         $view = $this->container->get('saysa_view');
-        $articles_per_page = $this->container->getParameter('articles_per_page');
+        $articles_per_page = $this->container->getParameter('artists_per_page');
         $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->showAll($articles_per_page, $page);
 
         $view

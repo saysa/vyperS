@@ -59,7 +59,7 @@ class ArticleRepository extends EntityRepository
         $queryBuilder
             ->where('a.deleted = false')
             ->andWhere('a.articleType = :type')
-            ->orderBy('a.created', 'DESC')
+            ->orderBy('a.releaseDate', 'DESC')
             ->setMaxResults(5)
             ->setParameter('type', $type)
         ;

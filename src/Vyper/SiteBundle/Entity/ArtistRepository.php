@@ -33,6 +33,7 @@ class ArtistRepository extends EntityRepository
 
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder->where('a.deleted = false');
+        $queryBuilder->orderBy('a.name', 'ASC');
         $query = $queryBuilder->getQuery();
 
 
