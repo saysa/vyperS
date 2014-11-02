@@ -142,6 +142,20 @@ admin_add_article:
     path:     /_admin_/article/add
     defaults: { _controller: VyperSiteBundle:AdminArticle:addArticle }
 
+admin_show_mangas:
+    path:     /_admin_/mangas
+    defaults: { _controller: VyperSiteBundle:AdminManga:showMangas }
+
+admin_add_manga:
+    path:     /_admin_/manga/add
+    defaults: { _controller: VyperSiteBundle:AdminManga:addManga }
+
+admin_update_manga:
+    path:     _admin_/manga/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminManga:updateManga }
+    requirements:
+        id: \d+
+
 admin_show_magazines:
     path:     /_admin_/magazines
     defaults: { _controller: VyperSiteBundle:AdminMagazine:showMagazines }

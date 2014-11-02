@@ -50,6 +50,7 @@ class AdminPictureController extends AdminCommonController {
         }
 
         $view->set('form', $form->createView());
+        $view->set("active_picture", true);
 
         return $this->render('VyperSiteBundle:Adminpicture:addPicture.html.twig', $view->getView());
     }

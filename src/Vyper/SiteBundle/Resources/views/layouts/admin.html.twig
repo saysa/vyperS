@@ -4,7 +4,7 @@
 
     <!-- start: Meta -->
     <meta charset="utf-8">
-    <title>Vyper Back office</title>
+    <title>Japan FM Back office</title>
     <!-- end: Meta -->
 
     <!-- start: Mobile Specific -->
@@ -37,7 +37,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -51,7 +51,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
 </button>
-<a class="navbar-brand" href="index.html"><span>Vyper Japanese Music</span></a>
+<a class="navbar-brand" href="{{ path('index') }}"><span>Japan FM</span></a>
 
 <!-- start: Header Menu -->
 <div class="nav-no-collapse header-nav">
@@ -310,23 +310,23 @@
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li{% if active_article is defined %} class="active"{% endif %}><a href="{{ path('admin_show_articles') }}"><i class="icon-book"></i><span class="hidden-sm"> Articles</span></a></li>
             <li{% if active_picture  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_pictures') }}"><i class="icon-picture"></i><span class="hidden-sm"> Pictures</span></a></li>
-            <li{% if active_video  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_videos') }}"><i class="icon-picture"></i><span class="hidden-sm"> Videos</span></a></li>
+            <li{% if active_video  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_videos') }}"><i class="fa fa-play-circle-o"></i><span class="hidden-sm"> Videos</span></a></li>
             <li{% if active_artist  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_artists') }}"><i class="icon-star"></i><span class="hidden-sm"> Artists</span></a></li>
-            <li{% if active_disco  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_discos') }}"><i class="icon-star"></i><span class="hidden-sm"> Disco</span></a></li>
-            <li{% if active_location  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_locations') }}"><i class="icon-star"></i><span class="hidden-sm"> Locations</span></a></li>
-            <li{% if active_tour  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_tours') }}"><i class="icon-star"></i><span class="hidden-sm"> Tours</span></a></li>
-            <li{% if active_event  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_events') }}"><i class="icon-star"></i><span class="hidden-sm"> Events</span></a></li>
-            <li{% if active_magazine is defined %} class="active"{% endif %}><a href="{{ path('admin_show_magazines') }}"><i class="icon-book"></i><span class="hidden-sm"> Magazines</span></a></li>
+            <li{% if active_disco  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_discos') }}"><i class="fa fa-music"></i><span class="hidden-sm"> Disco</span></a></li>
+            <li{% if active_location  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_locations') }}"><i class="icon-location-arrow"></i><span class="hidden-sm"> Locations</span></a></li>
+            <li{% if active_tour  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_tours') }}"><i class="fa fa-globe"></i><span class="hidden-sm"> Tours</span></a></li>
+            <li{% if active_event  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_events') }}"><i class="fa fa-calendar"></i><span class="hidden-sm"> Events</span></a></li>
 
-            <li>
-                <a class="dropmenu" href="#"><i class="icon-star"></i><span class="hidden-sm"> Icons</span><span class="badge badge-important">3</span></a>
+            <li{% if active_magazine is defined %} class="active"{% endif %}>
+                <a class="dropmenu" href="#"><i class="fa fa-book"></i><span class="hidden-sm"> Magazine/Manga</span></a>
                 <ul>
-                    <li><a class="submenu" href="halflings.html"><i class="icon-star"></i><span class="hidden-sm"> Halflings</span></a></li>
-                    <li><a class="submenu" href="glyphiconspro.html"><i class="icon-star"></i><span class="hidden-sm"> Glyphicons PRO</span></a></li>
-                    <li><a class="submenu" href="fontawesome.html"><i class="icon-star"></i><span class="hidden-sm"> Font Awesome</span></a></li>
+                    <li><a class="submenu" href="{{ path('admin_show_magazines') }}"><i class="fa fa-book"></i><span class="hidden-sm"> Magazines</span></a></li>
+                    <li><a class="submenu" href="{{ path('admin_show_mangas') }}"><i class="fa fa-book"></i><span class="hidden-sm"> Manga</span></a></li>
                 </ul>
             </li>
-            <li><a href="login.html"><i class="icon-lock"></i><span class="hidden-sm"> Login Page</span></a></li>
+
+
+            <li><a href="{{ path('fos_user_security_logout') }}"><i class="icon-lock"></i><span class="hidden-sm"> Logout</span></a></li>
         </ul>
     </div>
 </div>
