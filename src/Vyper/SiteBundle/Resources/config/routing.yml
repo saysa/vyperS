@@ -372,4 +372,8 @@ ajax_removeTitleDisco:
     path:     /_admin_/ajax/remove_title_to_disco
     defaults: { _controller: VyperSiteBundle:AdminAjax:removeTitleDisco }
 
+ajax_setTopManga:
+    path:     /_admin_/ajax/set_top_manga
+    defaults: { _controller: VyperSiteBundle:AdminAjax:setTopManga }
+
 

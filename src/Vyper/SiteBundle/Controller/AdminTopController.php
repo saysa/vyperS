@@ -80,6 +80,10 @@ class AdminTopController extends AdminCommonController {
         $top_manga  = $em->getRepository('VyperSiteBundle:Top')->topManga();
         $mangas = $em->getRepository('VyperSiteBundle:Manga')->findAll();
 
+        foreach ($top_manga as $top) {
+            $top->manga = $em->getRepository('VyperSiteBundle:Manga')->find($top->getItemId());
+        }
+
         $view->set('top_manga',     $top_manga);
         $view->set('mangas',        $mangas);
         $view->set("active_video",  true);

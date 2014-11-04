@@ -24,4 +24,19 @@ class TopRepository extends EntityRepository
 
         return $results;
     }
+
+    public function getManga($options)
+    {
+        $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder
+            ->where('t.type = :type')
+            ->andWhere('t.position = :position')
+            ->setParameter('type', 'manga')
+            ->setParameter('position', $options['position'])
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }
