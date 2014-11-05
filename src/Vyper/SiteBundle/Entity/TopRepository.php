@@ -17,6 +17,7 @@ class TopRepository extends EntityRepository
         $queryBuilder = $this->createQueryBuilder('t');
         $queryBuilder
             ->where('t.type = :manga')
+            ->orderBy('t.position', 'ASC')
             ->setParameter('manga', 'manga')
         ;
         $query = $queryBuilder->getQuery();

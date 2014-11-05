@@ -30,7 +30,9 @@
                                 {% set position = i+1 %}
                                 <tr>
                                     <td>{{ position }}</td>
-                                    <td>{{ top_manga[i].manga.title }}</td>
+                                    <td>{{ top_manga[i].manga.title }}
+                                        <img src="{{ asset(top_manga[i].manga.picture.getPath('75-75')) }}" alt="" />
+                                    </td>
                                     <td>
                                         <select id="top_manga_{{ position }}" class="form-control jquery-manga" data-rel="chosen" data-position="{{ position }}">
                                             <option value="-1">-- none --</option>
@@ -57,6 +59,9 @@
                 $("#jquery-container").on("change", ".jquery-manga", function() {
                     var mangaID = $(this).val();
                     var position = $(this).data('position');
+
+                    console.log('manga ID '+mangaID);
+                    console.log('position '+position);
 
                     $.ajax({
                         type: "POST",
