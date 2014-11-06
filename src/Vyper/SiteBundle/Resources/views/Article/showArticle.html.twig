@@ -23,7 +23,7 @@
                         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
                         <!-- AddThis Button END -->
                         <div class="left">
-                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat() }}</span>
+                            <span>{{ article.author }}</span> <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat() }}</span>
 
 
 
@@ -37,14 +37,12 @@
 
                 <div class="entry-content-wrap">
                     <div class="entry-image">
-                        {% if img_type_news %}
+                        {% if img_type_news is defined %}
                             <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('article')) }}" alt="{{ article.getTitle|escape }}">
                         {% else %}
-                            {% if article_horizontal_image %}
-                                <img  src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle|escape }}">
-                            {% else %}
-                                <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" class="wp-post-image" alt="{{ article.getTitle|escape }}">
-                            {% endif %}
+
+                            <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('big_format')) }}" class="wp-post-image" alt="{{ article.getTitle|escape }}">
+
                         {% endif %}
 
 

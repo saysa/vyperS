@@ -41,6 +41,13 @@
                 }
             }
         },
+        "big_format": {
+            "dimensions": {
+                "0": {
+                    "w": 780
+                }
+            }
+        },
         "galerie": {
             "dimensions": {
                 "0": {

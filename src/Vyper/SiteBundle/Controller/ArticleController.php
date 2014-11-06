@@ -26,10 +26,16 @@ class ArticleController extends Controller
         $user = $session->get('user');
 
         $article  = $em->getRepository('VyperSiteBundle:Article')->find($article->getId());
+        $article_type = $article->getArticleType()->getName();
+        $big_format_picture = $this->container->getParameter('big_format_picture');
+        if (in_array($article_type, $big_format_picture)) {
+            $view->set("img_type_big", "true");
+        } else {
+            $view->set("img_type_news", "true");
+        }
 
         $view->set('user_id', $user);
         $view->set('article', $article);
-        $view->set("img_type_news", "true");
 
         return $this->render('VyperSiteBundle:Article:showArticle.html.twig', $view->getView());
     }
