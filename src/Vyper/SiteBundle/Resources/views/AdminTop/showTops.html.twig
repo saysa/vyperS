@@ -60,9 +60,6 @@
                     var mangaID = $(this).val();
                     var position = $(this).data('position');
 
-                    console.log('manga ID '+mangaID);
-                    console.log('position '+position);
-
                     $.ajax({
                         type: "POST",
                         url: "{{ path('ajax_setTopManga') }}",
