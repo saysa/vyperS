@@ -28,9 +28,11 @@
     <!--  Theme -->
     {% stylesheets filter='cssrewrite'
         'assets/css/portal.css'
-        'assets/css/fonts/font-awesome/css/font-awesome.min.css' %}
+        'assets/css/fonts/font-awesome/css/font-awesome.min.css'
+        'assets/css/fullcalendar/fullcalendar.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
+
 
 
     <!--[if lt IE 9]>
@@ -212,6 +214,7 @@
             <li class="menu-item menu-item-type-post_type{% if current_jeuxvideos is defined %} current_page_item{% endif %}"><a href="{{ path('jeuxvideos') }}" title="Jeux Vidéos">Jeux Vidéos</a></li>
             <li class="menu-item menu-item-type-post_type{% if current_culture is defined %} current_page_item{% endif %}"><a href="{{ path('culture') }}" title="Culture">Culture</a></li>
             <li class="menu-item menu-item-type-post_type{% if current_album is defined %} current_page_item{% endif %}"><a href="{{ path('showAlbums') }}" title="Galerie">Galerie</a></li>
+            <li class="menu-item menu-item-type-post_type{% if current_event is defined %} current_page_item{% endif %}"><a href="{{ path('showAllEvent') }}" title="Events">Events</a></li>
 
             {% if themes_showInMenu is defined %}
                 <li class="menu-item menu-item-type-post_type"><a href="#">Themes<span class="sf-sub-indicator"> »</span></a>
@@ -456,6 +459,8 @@
 'assets/js/discover/lightbox.js'
 'assets/js/discover/script.js'
 'assets/js/jquery.isotope.js'
+'assets/js/vendor/moment.min.js'
+'assets/js/fullcalendar/fullcalendar.min.js'
 %}
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}

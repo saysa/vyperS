@@ -10,6 +10,50 @@ use Vyper\SiteBundle\Entity\Event;
 
 class EventController extends Controller
 {
+    public function showAllAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $view = $this->container->get('saysa_view');
+
+        $events = $em->getRepository('VyperSiteBundle:Event')->myFindAll();
+
+        $json = array();
+        foreach ($events as $event) {
+
+            $type = $event->getType()->getName();
+            switch ($type) {
+                case "Concert":
+                    $color = 'black';
+                    break;
+                case "Emission":
+                    $color = '#F90';
+                    break;
+                default:
+                    $color = 'red';
+            }
+
+            $date = $event->getDate()->format("Y-m-d");
+            $time = $event->getTime()->format("H:i:s");
+
+            $json[] = array(
+                'title' => $event->getTitle(),
+                'start' => $date.'T'.$time,
+                'color' => $color
+            );
+        }
+
+
+
+        $defaultDate = date('Y-m-d', time());
+
+        $view
+            ->set('current_magazine', true)
+            ->set('events', json_encode($json))
+            ->set('defaultDate', $defaultDate)
+        ;
+
+        return $this->render('VyperSiteBundle:Event:showAll.html.twig', $view->getView());
+    }
 
     public function showEventAction(Request $request, Event $event)
     {

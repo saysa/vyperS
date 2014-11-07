@@ -92,6 +92,10 @@ showAllArtist:
     requirements:
         page: \d*
 
+showAllEvent:
+    path:    /events
+    defaults: { _controller: VyperSiteBundle:Event:showAll }
+
 showArtist:
     path:    /artiste/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Artist:showArtist }
