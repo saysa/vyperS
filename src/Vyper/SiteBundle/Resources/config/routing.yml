@@ -132,6 +132,10 @@ culture:
     requirements:
         page: \d*
 
+radio-emissions:
+    path:    /emissions
+    defaults: { _controller: VyperSiteBundle:Program:showAllProgramTypes }
+
 showFlashnew:
     path:    /breve/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Flashnew:showFlashnew }
@@ -163,6 +167,20 @@ admin_update_manga:
 admin_show_tops:
     path:     /_admin_/tops
     defaults: { _controller: VyperSiteBundle:AdminTop:showTops }
+
+admin_show_programs:
+    path:     /_admin_/programs
+    defaults: { _controller: VyperSiteBundle:AdminProgram:showPrograms }
+
+admin_add_programType:
+    path:     /_admin_/programType/add
+    defaults: { _controller: VyperSiteBundle:AdminProgram:addProgramType }
+
+admin_update_programType:
+    path:     _admin_/programType/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminProgram:updateProgramType }
+    requirements:
+        id: \d+
 
 admin_show_magazines:
     path:     /_admin_/magazines

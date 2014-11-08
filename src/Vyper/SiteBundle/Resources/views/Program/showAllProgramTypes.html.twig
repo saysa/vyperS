@@ -1,0 +1,22 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Émissions | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <div class="post-wrap">
+            <article id="post-28" class="post-28 post type-post status-publish format-standard hentry category-entertainment category-games tag-characters tag-villain">
+                <header class="entry-header">
+                    <h1>Émissions</h1>
+                </header>
+            </article>
+        </div>
+
+
+        {% for key, programType in programTypes %}
+            Title : {{ programType.title }}<br />
+            {% if programType.presenter is defined %}Presenter : {{ programType.presenter }}<br />{% endif %}
+            Description : {{ programType.description }}<br />
+            Visuel : <br /><img src="{{ asset(programType.picture.getPath('75-75')) }}" alt="{{ programType.title }}" />
+
+        {% endfor %}
+    {% endblock %}
