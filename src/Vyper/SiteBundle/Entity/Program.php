@@ -3,12 +3,14 @@
 namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Program
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\ProgramRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Program
 {
@@ -31,16 +33,10 @@ class Program
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text")
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="presenter", type="string", length=255)
-     */
-    private $presenter;
 
     /**
      * @var \DateTime
@@ -64,18 +60,59 @@ class Program
     private $endTime;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\ProgramType")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $type;
+
+    /**
      * @var string
      *
-     * @ORM\Column(name="lang", type="string", length=255)
+     * @ORM\Column(name="lang", type="string", length=255, nullable=true)
      */
     private $lang;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="present", type="string", length=255)
+     * @ORM\Column(name="present", type="string", length=255, nullable=true)
      */
     private $present;
+
+    /**
+     * @var string
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(type="string", length=255, unique=true)
+     */
+    private $slug;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="live", type="boolean")
+     */
+    private $live;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="deleted", type="boolean")
+     */
+    private $deleted;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created", type="datetime")
+     */
+    private $created;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="modified", type="datetime")
+     */
+    private $modified;
 
 
     /**
@@ -134,28 +171,6 @@ class Program
         return $this->description;
     }
 
-    /**
-     * Set presenter
-     *
-     * @param string $presenter
-     * @return Program
-     */
-    public function setPresenter($presenter)
-    {
-        $this->presenter = $presenter;
-
-        return $this;
-    }
-
-    /**
-     * Get presenter
-     *
-     * @return string 
-     */
-    public function getPresenter()
-    {
-        return $this->presenter;
-    }
 
     /**
      * Set date
@@ -227,6 +242,29 @@ class Program
     }
 
     /**
+     * Set type
+     *
+     * @param \Vyper\SiteBundle\Entity\ProgramType $type
+     * @return Event
+     */
+    public function setType(\Vyper\SiteBundle\Entity\ProgramType $type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Vyper\SiteBundle\Entity\ProgramType
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
      * Set lang
      *
      * @param string $lang
@@ -270,5 +308,131 @@ class Program
     public function getPresent()
     {
         return $this->present;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Artist
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set live
+     *
+     * @param boolean $live
+     * @return ProgramType
+     */
+    public function setLive($live)
+    {
+        $this->live = $live;
+
+        return $this;
+    }
+
+    /**
+     * Get live
+     *
+     * @return boolean
+     */
+    public function getLive()
+    {
+        return $this->live;
+    }
+
+    /**
+     * Set deleted
+     *
+     * @param boolean $deleted
+     * @return ProgramType
+     */
+    public function setDeleted($deleted)
+    {
+        $this->deleted = $deleted;
+
+        return $this;
+    }
+
+    /**
+     * Get deleted
+     *
+     * @return boolean
+     */
+    public function getDeleted()
+    {
+        return $this->deleted;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     * @return ProgramType
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     * @return ProgramType
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->setLive(true);
+        $this->setDeleted(false);
+        $this->setCreated(new \DateTime('now'));
+        $this->setmodified(new \DateTime('now'));
     }
 }

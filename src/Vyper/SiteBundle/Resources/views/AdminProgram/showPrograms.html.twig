@@ -18,7 +18,7 @@
                     <div class="box-content">
 
                         <div class="pull-right">
-                            <a href="{{ path('admin_add_video') }}">
+                            <a href="{{ path('admin_add_program') }}">
                                 <button class="btn btn-small btn-primary"><i class="icon-plus"></i> add</button>
                             </a>
                         </div>
@@ -39,10 +39,10 @@
                             <tbody>
                             {% for program in programs %}
                                 <tr>
-                                    <td>{{ video.getId }}</td>
-                                    <td>{{ video.getModified|date('Y-m-d') }}</td>
-                                    <td>{{ video.getTitle }}</td>
-                                    <td><a class="btn btn-info" href="{{ path('admin_update_video', {'id': video.id}) }}">
+                                    <td>{{ program.getId }}</td>
+                                    <td>{{ program.date|date('Y-m-d') }}</td>
+                                    <td>{{ program.getTitle }}</td>
+                                    <td><a class="btn btn-info" href="{{ path('admin_update_program', {'id': program.id}) }}">
                                             <i class="icon-edit "></i>
                                         </a></td>
                                     <td><a class="btn btn-danger" href="#">
@@ -56,7 +56,7 @@
                         <hr>
 
                         <div class="pull-right">
-                            <a href="{{ path('admin_add_video') }}">
+                            <a href="{{ path('admin_add_program') }}">
                                 <button class="btn btn-small btn-primary"><i class="icon-plus"></i> add</button>
                             </a>
                         </div>

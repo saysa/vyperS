@@ -172,6 +172,16 @@ admin_show_programs:
     path:     /_admin_/programs
     defaults: { _controller: VyperSiteBundle:AdminProgram:showPrograms }
 
+admin_add_program:
+    path:     /_admin_/program/add
+    defaults: { _controller: VyperSiteBundle:AdminProgram:addProgram }
+
+admin_update_program:
+    path:     _admin_/program/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminProgram:updateProgram }
+    requirements:
+        id: \d+
+
 admin_add_programType:
     path:     /_admin_/programType/add
     defaults: { _controller: VyperSiteBundle:AdminProgram:addProgramType }
