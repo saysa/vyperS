@@ -2,6 +2,7 @@
 
 namespace Vyper\SiteBundle\Form;
 
+use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -22,7 +23,20 @@ class MangaType extends AbstractType
             ->add('anime', 'checkbox', array('required' => false))
             ->add('tomeNumber', 'integer', array('required' => false, 'attr' => array('placeholder' => 'Title Real')))
             ->add('publicationDate', 'date', array('widget' => 'single_text'))
-            ->add('pictureID', 'text', array('required' => false, 'attr' => array('placeholder' => 'Picture ID')))
+            ->add('pictureID', 'text', array('attr' => array('placeholder' => 'Picture ID')))
+            ->add('type', 'entity', array(
+                'required' => false,
+                'class' => 'VyperSiteBundle:MangaType',
+                'query_builder' => function(EntityRepository $entityRepository) {
+                    return $entityRepository->createQueryBuilder('t')
+                        ->orderBy('t.name');
+                    },
+                'property' => 'name',
+                'multiple' => true,
+            ))
+            ->add('publisherFR', 'text', array('required' => false, 'attr' => array('placeholder' => 'Publisher FR')))
+            ->add('publisherJA', 'text', array('required' => false, 'attr' => array('placeholder' => 'Publisher JAP')))
+            ->add('complete', 'checkbox', array('required' => false))
         ;
 
         // On ajoute une fonction qui va écouter un évènement

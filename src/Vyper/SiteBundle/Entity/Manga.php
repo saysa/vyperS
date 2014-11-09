@@ -59,6 +59,32 @@ class Manga
     private $publicationDate;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="publisherFR", type="string", length=255, nullable=true)
+     */
+    private $publisherFR;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="publisherJA", type="string", length=255, nullable=true)
+     */
+    private $publisherJA;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="complete", type="boolean")
+     */
+    private $complete;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Vyper\SiteBundle\Entity\MangaType", cascade={"persist"})
+     */
+    private $type;
+
+    /**
      * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
      */
     private $picture;
@@ -231,6 +257,29 @@ class Manga
     }
 
     /**
+     * Set type
+     *
+     * @param \Vyper\SiteBundle\Entity\MangaType $type
+     * @return Manga
+     */
+    public function setType(\Vyper\SiteBundle\Entity\MangaType $type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Vyper\SiteBundle\Entity\MangaType
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
      * Set picture
      *
      * @param \Vyper\SiteBundle\Entity\Picture $picture
@@ -393,5 +442,104 @@ class Manga
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set publisherFR
+     *
+     * @param string $publisherFR
+     * @return Manga
+     */
+    public function setPublisherFR($publisherFR)
+    {
+        $this->publisherFR = $publisherFR;
+
+        return $this;
+    }
+
+    /**
+     * Get publisherFR
+     *
+     * @return string 
+     */
+    public function getPublisherFR()
+    {
+        return $this->publisherFR;
+    }
+
+    /**
+     * Set publisherJA
+     *
+     * @param string $publisherJA
+     * @return Manga
+     */
+    public function setPublisherJA($publisherJA)
+    {
+        $this->publisherJA = $publisherJA;
+
+        return $this;
+    }
+
+    /**
+     * Get publisherJA
+     *
+     * @return string 
+     */
+    public function getPublisherJA()
+    {
+        return $this->publisherJA;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->type = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set complete
+     *
+     * @param boolean $complete
+     * @return Manga
+     */
+    public function setComplete($complete)
+    {
+        $this->complete = $complete;
+
+        return $this;
+    }
+
+    /**
+     * Get complete
+     *
+     * @return boolean 
+     */
+    public function getComplete()
+    {
+        return $this->complete;
+    }
+
+    /**
+     * Add type
+     *
+     * @param \Vyper\SiteBundle\Entity\MangaType $type
+     * @return Manga
+     */
+    public function addType(\Vyper\SiteBundle\Entity\MangaType $type)
+    {
+        $this->type[] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Remove type
+     *
+     * @param \Vyper\SiteBundle\Entity\MangaType $type
+     */
+    public function removeType(\Vyper\SiteBundle\Entity\MangaType $type)
+    {
+        $this->type->removeElement($type);
     }
 }

@@ -61,13 +61,13 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <!-- Number of Tome -->
+                                    <!-- Complete -->
                                     <div class="row">
                                         <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
-                                            {{ form_label(form.tomeNumber, "How many Tomes ?") }}
+                                            {{ form_label(form.complete, "Complete ?") }}
                                             <div class="controls">
-                                                {{ form_widget(form.tomeNumber, {  'attr': {'class': 'form-control'} }) }}
-                                                {{ form_errors(form.tomeNumber) }}
+                                                {{ form_widget(form.complete, {  'attr': {'class': 'form-control'} }) }}
+                                                {{ form_errors(form.complete) }}
                                             </div>
                                         </div>
                                     </div>
@@ -88,10 +88,55 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-
+                                    <!-- Number of Tome -->
+                                    <div class="row">
+                                        <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                            {{ form_label(form.tomeNumber, "How many Tomes ?") }}
+                                            <div class="controls">
+                                                {{ form_widget(form.tomeNumber, {  'attr': {'class': 'form-control'} }) }}
+                                                {{ form_errors(form.tomeNumber) }}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <!-- Publisher FR -->
+                                    <div class="row">
+                                        <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                            {{ form_label(form.publisherFR, "Publisher FR") }}
+                                            <div class="controls">
+                                                {{ form_widget(form.publisherFR, {  'attr': {'class': 'form-control'} }) }}
+                                                {{ form_errors(form.publisherFR) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- Publisher JA -->
+                                    <div class="row">
+                                        <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                            {{ form_label(form.publisherJA, "Publisher JP") }}
+                                            <div class="controls">
+                                                {{ form_widget(form.publisherJA, {  'attr': {'class': 'form-control'} }) }}
+                                                {{ form_errors(form.publisherJA) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Theme -->
+                            <div class="row">
+                                <div class="form-group col-lg-9">
+                                    {{ form_label(form.type) }}
+                                    <div class="controls">
+                                        {{ form_widget(form.type, { 'attr': {'class': 'form-control'} }) }}
+                                    </div>
+                                </div>
+                            </div>
 
 
                             <div class="row">
