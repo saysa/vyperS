@@ -16,12 +16,12 @@ class PictureType extends AbstractType
     {
         $builder
             ->add('name', 'text', array('attr' => array('placeholder' => 'Name')))
+            ->add('photoCredit', 'text', array('required' => false, 'attr' => array('placeholder' => 'Photo Credit')))
             ->add('file', 'file')
             ->add('album', 'entity', array(
                 'class' => 'VyperSiteBundle:Album',
                 'property' => 'title',
             ))
-
         ;
     }
     

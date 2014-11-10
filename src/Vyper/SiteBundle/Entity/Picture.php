@@ -39,6 +39,13 @@ class Picture
     /**
      * @var string
      *
+     * @ORM\Column(name="photoCredit", type="string", length=255, nullable=true)
+     */
+    private $photoCredit;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="mime", type="string", length=32)
      */
     private $mime;
@@ -470,4 +477,27 @@ class Picture
     }
 
 
+
+    /**
+     * Set photoCredit
+     *
+     * @param string $photoCredit
+     * @return Picture
+     */
+    public function setPhotoCredit($photoCredit)
+    {
+        $this->photoCredit = $photoCredit;
+
+        return $this;
+    }
+
+    /**
+     * Get photoCredit
+     *
+     * @return string 
+     */
+    public function getPhotoCredit()
+    {
+        return $this->photoCredit;
+    }
 }

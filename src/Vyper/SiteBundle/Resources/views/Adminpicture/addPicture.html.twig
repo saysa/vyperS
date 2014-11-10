@@ -36,6 +36,17 @@
                                             </div>
                                         </div>
 
+                                        <!-- photoCredit -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.photoCredit, "Photo credit") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.photoCredit, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.photoCredit) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                     <div class="col-lg-4">
