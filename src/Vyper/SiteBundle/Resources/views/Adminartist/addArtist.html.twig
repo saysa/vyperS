@@ -37,12 +37,23 @@
                                         <!-- Real Name -->
                                         <div class="row">
                                             <div class="form-group col-lg-9{%if error_real_name is defined %} has-error{% endif %}">
-                                                {{ form_label(form.realName, "Real Name *") }}
+                                                {{ form_label(form.realName, "Real Name") }}
                                                 <div class="controls">
                                                     {{ form_widget(form.realName, {  'attr': {'class': 'form-control'} }) }}
                                                     {{ form_errors(form.realName) }}
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Type -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{%if error_profile is defined %} has-error{% endif %}">
+                                        {{ form_label(form.type, "Type *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.type, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
                                         </div>
                                     </div>
                                 </div>
@@ -60,7 +71,7 @@
 
                                 <!-- Biography -->
                                 <div class="form-group hidden-phone{%if error_biography is defined %} has-error{% endif %}">
-                                    {{ form_label(form.biography, "Biography *") }}
+                                    {{ form_label(form.biography, "Biography") }}
                                     <div class="controls">
                                         {{ form_widget(form.biography, {  'attr': {'class': 'cleditor'} }) }}
                                         {{ form_errors(form.biography) }}
@@ -71,7 +82,7 @@
 
                                     <!-- Author -->
                                         <div class="form-group col-lg-3{%if error_author is defined %} has-error{% endif %}">
-                                            {{ form_label(form.author, "Author *") }}
+                                            {{ form_label(form.author, "Author") }}
                                             <div class="controls">
                                                 {{ form_widget(form.author, {  'attr': {'class': 'form-control'} }) }}
                                                 {{ form_errors(form.author) }}

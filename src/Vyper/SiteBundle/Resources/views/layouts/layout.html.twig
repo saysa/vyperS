@@ -26,13 +26,17 @@
     <meta name="ROBOTS" content="index,follow" />
 
     <!--  Theme -->
+    {#
     {% stylesheets filter='cssrewrite'
         'assets/css/portal.css'
         'assets/css/fonts/font-awesome/css/font-awesome.min.css'
         'assets/css/fullcalendar/fullcalendar.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
-
+    #}
+    <link rel="stylesheet" href="{{ asset('assets/css/portal.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/fonts/font-awesome/css/font-awesome.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/fullcalendar/fullcalendar.css') }}" type="text/css" />
 
 
     <!--[if lt IE 9]>
@@ -453,8 +457,8 @@
     <!--/footer-info -->
 </footer>
 <!-- /footer -->
-
-{% javascripts
+{#
+    {% javascripts
 'assets/js/plugins.js'
 'assets/js/main.js'
 'assets/js/plugins/cleditor/jquery.cleditor.min.js'
@@ -470,6 +474,20 @@
 %}
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
+#}
+
+<script type='text/javascript' src='{{ asset('assets/js/plugins.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/main.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/plugins/cleditor/jquery.cleditor.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/owl-carousel/owl.carousel.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/liscroll.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/discover/superfish.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/discover/flexslider-min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/discover/lightbox.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/discover/script.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/jquery.isotope.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/vendor/moment.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('assets/js/fullcalendar/fullcalendar.min.js') }}'></script>
 
 
 

@@ -18,13 +18,17 @@ class ArtistType extends AbstractType
     {
         $builder
             ->add('name', 'text', array('attr' => array('placeholder' => 'Name')))
-            ->add('realName', 'text', array('attr' => array('placeholder' => 'Real Name')))
+            ->add('realName', 'text', array('required' => false, 'attr' => array('placeholder' => 'Real Name')))
             ->add('profile', 'textarea')
-            ->add('biography', 'textarea')
-            ->add('author', 'text', array('attr' => array('placeholder' => 'Author')))
+            ->add('biography', 'textarea', array('required' => false))
+            ->add('author', 'text', array('required' => false, 'attr' => array('placeholder' => 'Author')))
             ->add('translator', 'text', array('required' => false, 'attr' => array('placeholder' => 'Translator')))
             ->add('keywords', 'text', array('attr' => array('placeholder' => 'Keywords')))
             ->add('pictureID', 'text', array('required' => false, 'attr' => array('placeholder' => 'Picture ID')))
+            ->add('type', 'entity', array(
+                'class' => 'VyperSiteBundle:ArtistType',
+                'property' => 'name',
+            ))
         ;
 
         // On ajoute une fonction qui va écouter un évènement
