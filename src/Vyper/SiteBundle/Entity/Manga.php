@@ -96,6 +96,12 @@ class Manga
     private $pictureID;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Artist")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $mangaka;
+
+    /**
      * @var string
      * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(type="string", length=255, unique=true)
@@ -541,5 +547,28 @@ class Manga
     public function removeType(\Vyper\SiteBundle\Entity\MangaType $type)
     {
         $this->type->removeElement($type);
+    }
+
+    /**
+     * Set mangaka
+     *
+     * @param \Vyper\SiteBundle\Entity\Artist $mangaka
+     * @return Manga
+     */
+    public function setMangaka(\Vyper\SiteBundle\Entity\Artist $mangaka)
+    {
+        $this->mangaka = $mangaka;
+
+        return $this;
+    }
+
+    /**
+     * Get mangaka
+     *
+     * @return \Vyper\SiteBundle\Entity\Artist 
+     */
+    public function getMangaka()
+    {
+        return $this->mangaka;
     }
 }
