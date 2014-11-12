@@ -97,7 +97,7 @@ class Manga
 
     /**
      * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Artist")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $mangaka;
 

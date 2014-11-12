@@ -46,6 +46,16 @@
                                 </div>
                             </div>
 
+                            <!-- Mangaka -->
+                            <div class="row">
+                                <div class="form-group col-lg-5{% if error_name is defined %} has-error{% endif %}">
+                                    {{ form_label(form.mangaka, "Mangaka") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.mangaka, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                        {{ form_errors(form.mangaka) }}
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="row">
                                 <div class="col-lg-4">
@@ -130,7 +140,7 @@
 
                             <!-- Theme -->
                             <div class="row">
-                                <div class="form-group col-lg-9">
+                                <div class="form-group col-lg-5">
                                     {{ form_label(form.type) }}
                                     <div class="controls">
                                         {{ form_widget(form.type, { 'attr': {'class': 'form-control'} }) }}

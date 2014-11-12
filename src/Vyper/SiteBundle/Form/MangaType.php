@@ -34,6 +34,11 @@ class MangaType extends AbstractType
                 'property' => 'name',
                 'multiple' => true,
             ))
+            ->add('mangaka', 'entity', array(
+                'required' => false,
+                'class' => 'VyperSiteBundle:Artist',
+                'property' => 'name',
+            ))
             ->add('publisherFR', 'text', array('required' => false, 'attr' => array('placeholder' => 'Publisher FR')))
             ->add('publisherJA', 'text', array('required' => false, 'attr' => array('placeholder' => 'Publisher JAP')))
             ->add('complete', 'checkbox', array('required' => false))
