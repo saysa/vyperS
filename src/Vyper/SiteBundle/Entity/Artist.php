@@ -47,6 +47,13 @@ class Artist
     /**
      * @var string
      *
+     * @ORM\Column(name="officialWebsite", type="string", length=255, nullable=true)
+     */
+    private $officialWebsite;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="profile", type="text")
      */
     private $profile;
@@ -513,5 +520,28 @@ class Artist
     public function getYoutubeChannel()
     {
         return $this->youtubeChannel;
+    }
+
+    /**
+     * Set officialWebsite
+     *
+     * @param string $officialWebsite
+     * @return Artist
+     */
+    public function setOfficialWebsite($officialWebsite)
+    {
+        $this->officialWebsite = $officialWebsite;
+
+        return $this;
+    }
+
+    /**
+     * Get officialWebsite
+     *
+     * @return string 
+     */
+    public function getOfficialWebsite()
+    {
+        return $this->officialWebsite;
     }
 }

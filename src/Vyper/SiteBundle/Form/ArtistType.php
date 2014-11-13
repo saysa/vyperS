@@ -30,6 +30,7 @@ class ArtistType extends AbstractType
                 'class' => 'VyperSiteBundle:ArtistType',
                 'property' => 'name',
             ))
+            ->add('officialWebsite', 'text', array('required' => false, 'attr' => array('placeholder' => 'Official Website')))
         ;
 
         // On ajoute une fonction qui va écouter un évènement
