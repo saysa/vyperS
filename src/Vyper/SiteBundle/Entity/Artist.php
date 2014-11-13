@@ -40,6 +40,13 @@ class Artist
     /**
      * @var string
      *
+     * @ORM\Column(name="youtubeChannel", type="string", length=255, nullable=true)
+     */
+    private $youtubeChannel;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="profile", type="text")
      */
     private $profile;
@@ -483,5 +490,28 @@ class Artist
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Set youtubeChannel
+     *
+     * @param string $youtubeChannel
+     * @return Artist
+     */
+    public function setYoutubeChannel($youtubeChannel)
+    {
+        $this->youtubeChannel = $youtubeChannel;
+
+        return $this;
+    }
+
+    /**
+     * Get youtubeChannel
+     *
+     * @return string 
+     */
+    public function getYoutubeChannel()
+    {
+        return $this->youtubeChannel;
     }
 }

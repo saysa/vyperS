@@ -77,6 +77,8 @@ class AdminArtistController extends AdminCommonController {
      */
     public function updateArtistAction(Request $request, Artist $artist)
     {
+        $em = $this->getDoctrine()->getManager();
+
         $view = $this->container->get('saysa_view');
 
         $form = $this->createForm(new ArtistType, $artist);
