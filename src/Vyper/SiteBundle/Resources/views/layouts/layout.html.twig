@@ -271,6 +271,19 @@
         {{ render(controller("VyperSiteBundle:Misc:socialNetwork")) }}
     </aside>
 
+    {% if article is defined %}
+        {% if article.album is not null %}
+            {% if article.articleType.name == 'musique : live report' %}
+                Apercu
+                {% for key, picture in article.album.pictures %}
+                    {% if key <= 2 %}
+                        i {{ key }} - 
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
     <aside class="widget widget_tabs">
         <script>
             jQuery(document).ready(function($) {

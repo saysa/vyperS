@@ -26,6 +26,10 @@ class ArticleController extends Controller
         $user = $session->get('user');
 
         $article  = $em->getRepository('VyperSiteBundle:Article')->find($article->getId());
+        if (!is_null($article->getAlbum())) {
+            $article->getAlbum()->pictures  = $em->getRepository('VyperSiteBundle:Picture')->findBy(array('album' => $article->getAlbum()->getId()));
+        }
+
         $article_type = $article->getArticleType()->getName();
         $big_format_picture = $this->container->getParameter('big_format_picture');
         if (in_array($article_type, $big_format_picture)) {
