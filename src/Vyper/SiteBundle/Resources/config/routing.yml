@@ -396,6 +396,14 @@ ajax_discoArtistLinkDelete:
     path:     /_admin_/ajax/disco_artist_link_delete
     defaults: { _controller: VyperSiteBundle:AdminAjax:discoArtistLinkDelete }
 
+ajax_magazineArtistLink:
+    path:     /_admin_/ajax/magazine_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:magazineArtistLink }
+
+ajax_magazineArtistLinkDelete:
+    path:     /_admin_/ajax/magazine_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:magazineArtistLinkDelete }
+
 ajax_addTitleDisco:
     path:     /_admin_/ajax/add_title_to_disco
     defaults: { _controller: VyperSiteBundle:AdminAjax:addTitleDisco }

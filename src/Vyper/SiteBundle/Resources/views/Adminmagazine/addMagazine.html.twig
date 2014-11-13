@@ -44,7 +44,7 @@
                                 <!-- France -->
                                 <div class="row">
                                     <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
-                                        {{ form_label(form.formFrance, "Envoie en France") }}
+                                        {{ form_label(form.formFrance, "Envoie en France *") }}
                                         <div class="controls">
                                             {{ form_widget(form.formFrance, {  'attr': {'class': 'form-control'} }) }}
                                             {{ form_errors(form.formFrance) }}
@@ -56,7 +56,7 @@
                                 <!-- Outre Mer -->
                                 <div class="row">
                                     <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
-                                        {{ form_label(form.formOutremer, "Envoie Outre Mer") }}
+                                        {{ form_label(form.formOutremer, "Envoie Outre Mer *") }}
                                         <div class="controls">
                                             {{ form_widget(form.formOutremer, {  'attr': {'class': 'form-control'} }) }}
                                             {{ form_errors(form.formOutremer) }}
@@ -71,7 +71,7 @@
                                 <!-- International -->
                                 <div class="row">
                                     <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
-                                        {{ form_label(form.formInternational, "Envoie à l'international") }}
+                                        {{ form_label(form.formInternational, "Envoie à l'international *") }}
                                         <div class="controls">
                                             {{ form_widget(form.formInternational, {  'attr': {'class': 'form-control'} }) }}
                                             {{ form_errors(form.formInternational) }}
@@ -83,7 +83,7 @@
                                 <!-- Volume -->
                                 <div class="row">
                                     <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
-                                        {{ form_label(form.volume, "Volume number") }}
+                                        {{ form_label(form.volume, "Volume number *") }}
                                         <div class="controls">
                                             {{ form_widget(form.volume, {  'attr': {'class': 'form-control'} }) }}
                                             {{ form_errors(form.volume) }}
@@ -98,7 +98,7 @@
                                 <!-- Content -->
                                 <div class="row">
                                     <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
-                                        {{ form_label(form.content, "Contenu") }}
+                                        {{ form_label(form.content, "Contenu *") }}
                                         <div class="controls">
                                             {{ form_widget(form.content, { 'attr': {'class': 'cleditor'} }) }}
                                             {{ form_errors(form.content) }}
@@ -117,7 +117,7 @@
                         <div class="row">
                             <!-- Related Picture -->
                             <div class="form-group col-lg-3">
-                                {{ form_label(form.pictureID, "Picture ID") }}
+                                {{ form_label(form.pictureID, "Picture ID *") }}
                                 <div class="controls">
                                     {{ form_widget(form.pictureID, { 'attr': {'class': 'form-control'} }) }}
                                     <a href="{{ path('admin_show_pictures') }}" target="_blank">View Pictures</a>

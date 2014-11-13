@@ -123,6 +123,27 @@ class AdminAjaxController extends AdminCommonController {
      * @param Request $request
      * @return Response
      */
+    public function magazineArtistLinkAction(Request $request)
+    {
+        $artist_id = $request->request->get('artist_id');
+        if (isset($artist_id) && $artist_id != '-1') {
+
+            $em = $this->getDoctrine()->getManager();
+            $magazine = $em->getRepository('VyperSiteBundle:Magazine')->find($request->request->get('item_id'));
+            $artist  = $em->getRepository('VyperSiteBundle:Artist')->find($artist_id);
+
+            $magazine->addArtist($artist);
+            $em->flush();
+            $array = array("artist" => array("id" => $artist->getId(), "name" => $artist->getName()));
+            echo json_encode($array);
+        }
+        return new Response();
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
     public function articleArtistLinkDeleteAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -182,6 +203,23 @@ class AdminAjaxController extends AdminCommonController {
         $artist  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->find($artist_id);
 
         $disco->removeArtist($artist);
+        $em->flush();
+
+        return new Response();
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function magazineArtistLinkDeleteAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $artist_id = $request->request->get('artist_id');
+        $magazine = $em->getRepository('VyperSiteBundle:Magazine')->find($request->request->get('item_id'));
+        $artist  = $em->getRepository('VyperSiteBundle:Artist')->find($artist_id);
+
+        $magazine->removeArtist($artist);
         $em->flush();
 
         return new Response();

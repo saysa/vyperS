@@ -77,8 +77,11 @@ class AdminMagazineController extends AdminCommonController {
 
         }
 
+        $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->myFindAll();
+
         $view
             ->set('magazine', $magazine)
+            ->set('artists', $artists)
             ->set('active_magazine', true)
             ->set('form', $form->createView())
         ;

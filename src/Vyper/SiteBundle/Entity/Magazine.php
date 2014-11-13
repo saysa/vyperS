@@ -66,6 +66,11 @@ class Magazine
     private $content;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Vyper\SiteBundle\Entity\Artist", cascade={"persist"})
+     */
+    private $artists;
+
+    /**
      * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
      */
     private $picture;
@@ -431,5 +436,45 @@ class Magazine
     public function getVolume()
     {
         return $this->volume;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->artists = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add artists
+     *
+     * @param \Vyper\SiteBundle\Entity\Artist $artists
+     * @return Magazine
+     */
+    public function addArtist(\Vyper\SiteBundle\Entity\Artist $artists)
+    {
+        $this->artists[] = $artists;
+
+        return $this;
+    }
+
+    /**
+     * Remove artists
+     *
+     * @param \Vyper\SiteBundle\Entity\Artist $artists
+     */
+    public function removeArtist(\Vyper\SiteBundle\Entity\Artist $artists)
+    {
+        $this->artists->removeElement($artists);
+    }
+
+    /**
+     * Get artists
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getArtists()
+    {
+        return $this->artists;
     }
 }
