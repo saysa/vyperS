@@ -28,53 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="showArticle.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="64" selection-start="3537" selection-end="3585" vertical-scroll-proportion="-12.125" vertical-offset="984" max-vertical-offset="2325">
-              <folding>
-                <element signature="e#3998#4007#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showDisco.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showDisco.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2145">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="279" column="37" selection-start="12039" selection-end="12039" vertical-scroll-proportion="-9.375" vertical-offset="3960" max-vertical-offset="7935">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="21" selection-start="1909" selection-end="1909" vertical-scroll-proportion="-30.875" vertical-offset="669" max-vertical-offset="9435">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventType.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Form/EventType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="64" selection-start="1517" selection-end="1517" vertical-scroll-proportion="-21.25" vertical-offset="0" max-vertical-offset="945">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="updateEvent.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminevent/updateEvent.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,11 +37,92 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showAll.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="showAll.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showAll.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="22" selection-start="1150" selection-end="1150" vertical-scroll-proportion="0.6839623" vertical-offset="45" max-vertical-offset="840">
+            <state line="17" column="29" selection-start="0" selection-end="2031" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="840">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="132" column="17" selection-start="3621" selection-end="3621" vertical-scroll-proportion="-7.1153846" vertical-offset="1795" max-vertical-offset="6435">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProgramController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ProgramController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="-3.125" vertical-offset="165" max-vertical-offset="1065">
+              <folding>
+                <element signature="e#1251#1302#0" expanded="true" />
+                <element signature="e#1719#1774#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showAllPrograms.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllPrograms.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="39" selection-start="1849" selection-end="1849" vertical-scroll-proportion="0.7783019" vertical-offset="135" max-vertical-offset="810">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProgramType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ProgramType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.875" vertical-offset="285" max-vertical-offset="5130">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Program.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Program.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="6645">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="208" column="100" selection-start="7945" selection-end="7945" vertical-scroll-proportion="-10.0" vertical-offset="2880" max-vertical-offset="7935">
+              <folding>
+                <element signature="e#3985#3993#0" expanded="true" />
+                <element signature="e#4142#4150#0" expanded="true" />
+                <element signature="e#4302#4309#0" expanded="true" />
+                <element signature="e#4456#4467#0" expanded="true" />
+                <element signature="e#6312#6316#0" expanded="true" />
+                <element signature="e#7565#7570#0" expanded="true" />
+                <element signature="e#7930#7945#0" expanded="true" />
+                <element signature="e#8056#8071#0" expanded="true" />
+                <element signature="e#8182#8202#0" expanded="true" />
+                <element signature="e#8408#8420#0" expanded="true" />
+                <element signature="e#8618#8630#0" expanded="true" />
+                <element signature="e#8736#8754#0" expanded="true" />
+                <element signature="e#8866#8886#0" expanded="true" />
+                <element signature="e#8999#9017#0" expanded="true" />
+                <element signature="e#9129#9142#0" expanded="true" />
+                <element signature="e#9351#9361#0" expanded="true" />
+                <element signature="e#9553#9563#0" expanded="true" />
+                <element signature="e#9752#9759#0" expanded="true" />
+                <element signature="e#9938#9948#0" expanded="true" />
+                <element signature="e#10127#10139#0" expanded="true" />
+                <element signature="e#11107#11122#0" expanded="true" />
+                <element signature="e#18065#18076#0" expanded="true" />
+                <element signature="e#18135#18138#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,7 +130,7 @@
       <file leaf-file-name="EventController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/EventController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="24" selection-start="965" selection-end="965" vertical-scroll-proportion="-11.25" vertical-offset="165" max-vertical-offset="1740">
+            <state line="64" column="9" selection-start="515" selection-end="1884" vertical-scroll-proportion="-35.25" vertical-offset="69" max-vertical-offset="1740">
               <folding />
             </state>
           </provider>
@@ -106,15 +140,6 @@
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showEvent.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="53.75" vertical-offset="1290" max-vertical-offset="1935">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addEvent.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminevent/addEvent.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="38" selection-start="4621" selection-end="5835" vertical-scroll-proportion="-19.0" vertical-offset="1089" max-vertical-offset="3060">
               <folding />
             </state>
           </provider>
@@ -133,12 +158,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/ProgramTypeType.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ProgramType.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminProgram/addProgramType.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminProgram/updateProgramType.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllProgramTypes.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ProgramController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Program.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/ProgramType.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminProgram/addProgram.html.twig" />
@@ -161,7 +184,6 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Magazine.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminMagazineController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminMagazine/addMagazine.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminAjaxController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminMagazine/updateMagazine.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminArticle/addArticle.html.twig" />
@@ -177,13 +199,16 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/addArticle.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/EventType.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminevent/addEvent.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminevent/updateEvent.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/EventController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showAll.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ProgramController.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllPrograms.html.twig" />
       </list>
     </option>
   </component>
@@ -492,6 +517,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Program" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1218,32 +1277,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Magazine/showMagazine.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="0" selection-end="2074" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/portal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2944" column="1" selection-start="45555" selection-end="45690" vertical-scroll-proportion="0.0" vertical-offset="44160" max-vertical-offset="50580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/images/sep.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Form/PictureType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminpicture/addPicture.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="93" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1560" />
@@ -1332,13 +1365,6 @@
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminajaxController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="221" column="17" selection-start="7805" selection-end="7805" vertical-scroll-proportion="-8.58" vertical-offset="2766" max-vertical-offset="4515" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="404" column="70" selection-start="12088" selection-end="12088" vertical-scroll-proportion="-20.384615" vertical-offset="5530" max-vertical-offset="6375">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminmagazine/updateMagazine.html.twig">
@@ -1505,13 +1531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="37" selection-start="12039" selection-end="12039" vertical-scroll-proportion="-9.375" vertical-offset="3960" max-vertical-offset="7935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="96" column="21" selection-start="1909" selection-end="1909" vertical-scroll-proportion="-30.875" vertical-offset="669" max-vertical-offset="9435">
@@ -1547,16 +1566,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/EventController.php">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ProgramType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="24" selection-start="965" selection-end="965" vertical-scroll-proportion="-11.25" vertical-offset="165" max-vertical-offset="1740">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.875" vertical-offset="285" max-vertical-offset="5130">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Program.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="17" selection-start="3621" selection-end="3621" vertical-scroll-proportion="-7.1153846" vertical-offset="1795" max-vertical-offset="6435">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showAll.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="22" selection-start="1150" selection-end="1150" vertical-scroll-proportion="0.6839623" vertical-offset="45" max-vertical-offset="840">
+        <state line="17" column="29" selection-start="0" selection-end="2031" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="208" column="100" selection-start="7945" selection-end="7945" vertical-scroll-proportion="-10.0" vertical-offset="2880" max-vertical-offset="7935">
+          <folding>
+            <element signature="e#3985#3993#0" expanded="true" />
+            <element signature="e#4142#4150#0" expanded="true" />
+            <element signature="e#4302#4309#0" expanded="true" />
+            <element signature="e#4456#4467#0" expanded="true" />
+            <element signature="e#6312#6316#0" expanded="true" />
+            <element signature="e#7565#7570#0" expanded="true" />
+            <element signature="e#7930#7945#0" expanded="true" />
+            <element signature="e#8056#8071#0" expanded="true" />
+            <element signature="e#8182#8202#0" expanded="true" />
+            <element signature="e#8408#8420#0" expanded="true" />
+            <element signature="e#8618#8630#0" expanded="true" />
+            <element signature="e#8736#8754#0" expanded="true" />
+            <element signature="e#8866#8886#0" expanded="true" />
+            <element signature="e#8999#9017#0" expanded="true" />
+            <element signature="e#9129#9142#0" expanded="true" />
+            <element signature="e#9351#9361#0" expanded="true" />
+            <element signature="e#9553#9563#0" expanded="true" />
+            <element signature="e#9752#9759#0" expanded="true" />
+            <element signature="e#9938#9948#0" expanded="true" />
+            <element signature="e#10127#10139#0" expanded="true" />
+            <element signature="e#11107#11122#0" expanded="true" />
+            <element signature="e#18065#18076#0" expanded="true" />
+            <element signature="e#18135#18138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="9" selection-start="515" selection-end="1884" vertical-scroll-proportion="-35.25" vertical-offset="69" max-vertical-offset="1740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ProgramController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="-3.125" vertical-offset="165" max-vertical-offset="1065">
+          <folding>
+            <element signature="e#1251#1302#0" expanded="true" />
+            <element signature="e#1719#1774#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllPrograms.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="39" selection-start="1849" selection-end="1849" vertical-scroll-proportion="0.7783019" vertical-offset="135" max-vertical-offset="810">
           <folding />
         </state>
       </provider>

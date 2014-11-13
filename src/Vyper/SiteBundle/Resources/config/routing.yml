@@ -132,6 +132,10 @@ culture:
     requirements:
         page: \d*
 
+radio-programme:
+    path:    /programme
+    defaults: { _controller: VyperSiteBundle:Program:showAllPrograms }
+
 radio-emissions:
     path:    /emissions
     defaults: { _controller: VyperSiteBundle:Program:showAllProgramTypes }

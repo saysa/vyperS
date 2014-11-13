@@ -8,6 +8,44 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ProgramController extends Controller
 {
 
+    public function showAllProgramsAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $view = $this->container->get('saysa_view');
+
+        $programs= $em->getRepository('VyperSiteBundle:Program')->findAll();
+
+        $json = array();
+        foreach ($programs as $event) {
+
+            $background = '#D35F5F';
+            $border = '#891F1F';
+
+            $date = $event->getDate()->format("Y-m-d");
+            $time = $event->getStartTime()->format("H:i:s");
+            $timeEnd = $event->getEndTime()->format("H:i:s");
+
+
+            $opt = array(
+                'title' => $event->getTitle(),
+                'start' => $date.'T'.$time,
+                'borderColor' => $border,
+                'backgroundColor' => $background,
+                'end' =>  $date.'T'.$timeEnd,
+            );
+            $json[] = $opt;
+        }
+
+        $defaultDate = date('Y-m-d', time());
+
+        $view
+            ->set('current_radio', true)
+            ->set('programs', json_encode($json))
+            ->set('defaultDate', $defaultDate)
+        ;
+
+        return $this->render('VyperSiteBundle:Program:showAllPrograms.html.twig', $view->getView());
+    }
 
     public function showAllProgramTypesAction()
     {
