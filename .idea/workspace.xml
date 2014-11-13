@@ -37,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showAll.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="showAll.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showAll.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="35" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.8018868" vertical-offset="0" max-vertical-offset="855">
+            <state line="34" column="35" selection-start="1218" selection-end="1218" vertical-scroll-proportion="-16.25" vertical-offset="120" max-vertical-offset="855">
               <folding />
             </state>
           </provider>
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showAllPrograms.html.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="showAllPrograms.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllPrograms.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="35" selection-start="1069" selection-end="1084" vertical-scroll-proportion="-5.0" vertical-offset="215" max-vertical-offset="855">
+            <state line="31" column="35" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.40983605" vertical-offset="215" max-vertical-offset="855">
               <folding />
             </state>
           </provider>
@@ -207,8 +207,8 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ProgramController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllPrograms.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showAll.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllPrograms.html.twig" />
       </list>
     </option>
   </component>
@@ -1635,16 +1635,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllPrograms.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showAll.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="35" selection-start="1069" selection-end="1084" vertical-scroll-proportion="-5.0" vertical-offset="215" max-vertical-offset="855">
+        <state line="34" column="35" selection-start="1218" selection-end="1218" vertical-scroll-proportion="-16.25" vertical-offset="120" max-vertical-offset="855">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showAll.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllPrograms.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="35" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.8018868" vertical-offset="0" max-vertical-offset="855">
+        <state line="31" column="35" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.40983605" vertical-offset="215" max-vertical-offset="855">
           <folding />
         </state>
       </provider>
