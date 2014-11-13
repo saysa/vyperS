@@ -67,6 +67,13 @@ class Event
     private $time;
 
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="timeEnd", type="time", nullable=true)
+     */
+    private $timeEnd;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="price", type="string", length=100, nullable=true)
@@ -591,5 +598,28 @@ class Event
     public function getDateFrontFormat()
     {
         return StringMethods::sqlDateToCustom($this->getDate()->format('Y-m-d'));
+    }
+
+    /**
+     * Set timeEnd
+     *
+     * @param \DateTime $timeEnd
+     * @return Event
+     */
+    public function setTimeEnd($timeEnd)
+    {
+        $this->timeEnd = $timeEnd;
+
+        return $this;
+    }
+
+    /**
+     * Get timeEnd
+     *
+     * @return \DateTime 
+     */
+    public function getTimeEnd()
+    {
+        return $this->timeEnd;
     }
 }

@@ -80,46 +80,50 @@
 
 
                                 <div class="row">
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-3">
+
                                         <!-- Location -->
                                         <div class="row">
-                                            <div class="form-group col-lg-9">
-                                                {{ form_label(form.location, "Location") }}
-                                                <div class="controls">
-                                                    {{ form_widget(form.location, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
-                                                </div>
+
+                                            {{ form_label(form.location, "Location") }}
+                                            <div class="controls">
+                                                {{ form_widget(form.location, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
                                             </div>
+
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
 
                                     </div>
-                                </div>
-
-
-
-
-
-
-                                <div class="row">
-                                    <!-- Date -->
-                                    <div class="form-group col-lg-3{%if error_rel_date is defined %} has-error{% endif %}">
+                                    <div class="col-lg-3">
+                                        <!-- Date -->
                                         {{ form_label(form.date, "Date *") }}
                                         <div class="controls">
                                             {{ form_widget(form.date, { 'attr': {'class': 'form-control datepicker'} }) }}
                                             {{ form_errors(form.date) }}
                                         </div>
                                     </div>
-                                    <div class="form-group col-lg-1">
-                                    </div>
+                                </div>
+
+
+                                <div class="row">
                                     <!-- Time -->
                                     <div class="form-group col-lg-2{%if error_rel_date is defined %} has-error{% endif %}">
-                                        {{ form_label(form.time, "Time *") }}
+                                        {{ form_label(form.time, "Time Start *") }}
                                         <div class="controls">
                                             {{ form_widget(form.time, { 'attr': {'class': 'form-control timepicker'} }) }}
                                             {{ form_errors(form.time) }}
                                         </div>
                                     </div>
+                                    <div class="form-group col-lg-1">
+                                    </div>
+                                    <!-- Time End -->
+                                    <div class="form-group col-lg-2{%if error_rel_date is defined %} has-error{% endif %}">
+                                        {{ form_label(form.timeEnd, "Time End") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.timeEnd, { 'attr': {'class': 'form-control timepicker'} }) }}
+                                            {{ form_errors(form.timeEnd) }}
+                                        </div>
+                                    </div>
+
                                 </div>
 
 

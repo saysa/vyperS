@@ -23,23 +23,35 @@ class EventController extends Controller
             $type = $event->getType()->getName();
             switch ($type) {
                 case "Concert":
-                    $color = 'black';
+                    $background = '#414140';
+                    $border = '#272727';
                     break;
                 case "Emission":
-                    $color = '#F90';
+                    $background = '#D35F5F';
+                    $border = '#891F1F';
                     break;
                 default:
-                    $color = 'red';
+                    $background = '#A60000';
+                    $border = '#6C0000';
             }
 
             $date = $event->getDate()->format("Y-m-d");
             $time = $event->getTime()->format("H:i:s");
+            if (!is_null($event->getTimeEnd())) {
+                $timeEnd = $event->getTimeEnd()->format("H:i:s");
+            }
 
-            $json[] = array(
+            $opt = array(
                 'title' => $event->getTitle(),
                 'start' => $date.'T'.$time,
-                'color' => $color
+                'borderColor' => $border,
+                'backgroundColor' => $background,
             );
+            if (isset($timeEnd)) {
+                $opt['end'] = $date.'T'.$timeEnd;
+            }
+
+            $json[] = $opt;
         }
 
 
