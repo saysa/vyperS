@@ -23,7 +23,7 @@
                         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
                         <!-- AddThis Button END -->
                         <div class="left">
-                            <span>{{ article.author }}</span> <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat() }}</span>
+                            <span>{{ article.author }}</span>, le <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat() }}</span>
 
 
 
@@ -50,6 +50,18 @@
 
                     <div class="entry-content">
                         {{ article.text|raw }}
+
+                        {% if article.source != '' %}
+                            {% if article.sourceURL != '' %}
+                                <p>
+                                    Source : <a href="{{ article.sourceURL }}">{{ article.source }}</a>
+                                </p>
+                            {% else %}
+                                <p>
+                                    Source : {{ article.source }}
+                                </p>
+                            {% endif %}
+                        {% endif %}
                     </div>
                     <!-- /entry-content -->
 

@@ -70,11 +70,16 @@ class AdminArticleController extends AdminCommonController {
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($article);
                 $em->flush();
+
+                $request->getSession()->getFlashBag()->add('info', 'Article added.');
+                return $this->redirect($this->generateUrl('admin_show_articles'));
+
             }
 
         }
 
         $view->set('form', $form->createView());
+        $view->set("active_article", true);
 
         return $this->render('VyperSiteBundle:Adminarticle:addArticle.html.twig', $view->getView());
     }
