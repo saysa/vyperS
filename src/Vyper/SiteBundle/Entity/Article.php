@@ -147,6 +147,12 @@ class Article
     private $picture;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Album")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $album;
+
+    /**
      * @ORM\ManyToMany(targetEntity="Vyper\SiteBundle\Entity\Theme", cascade={"persist"})
      */
     private $themes;
@@ -826,5 +832,28 @@ class Article
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set album
+     *
+     * @param \Vyper\SiteBundle\Entity\Album $album
+     * @return Article
+     */
+    public function setAlbum(\Vyper\SiteBundle\Entity\Album $album = null)
+    {
+        $this->album = $album;
+
+        return $this;
+    }
+
+    /**
+     * Get album
+     *
+     * @return \Vyper\SiteBundle\Entity\Album 
+     */
+    public function getAlbum()
+    {
+        return $this->album;
     }
 }

@@ -15,12 +15,7 @@
                     </div>
                     <div class="box-content">
 
-                        <p>
-                            {# On affiche tous les messages flash dont le nom est « info » #}
-                            {% for message in app.session.flashbag.get('info') %}
-                                {{ message }}
-                            {% endfor %}
-                        </p>
+
 
                         <form class="form-horizontal" method="post" {{ form_enctype(form) }}>
 
@@ -28,7 +23,6 @@
 
                             <fieldset class="col-sm-12">
 
-                                <pre>{{ form_errors(form) }}</pre>
 
                                 <!-- Continent -->
                                 <div class="row">
@@ -84,7 +78,7 @@
 
                                 <!-- Youtube -->
                                 <div class="row">
-                                    <div class="form-group col-lg-9{%if error_youtube is defined %} has-error{% endif %}">
+                                    <div class="form-group col-lg-5{%if error_youtube is defined %} has-error{% endif %}">
                                         {{ form_label(form.youtube) }}
                                         <div class="controls">
                                             {{ form_widget(form.youtube, { 'attr': {'class': 'form-control'} }) }}
@@ -170,6 +164,16 @@
                                         {{ form_label(form.theme) }}
                                         <div class="controls">
                                             {{ form_widget(form.theme, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Album -->
+                                <div class="row">
+                                    <div class="form-group col-lg-5">
+                                        {{ form_label(form.album, "Link an album") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.album, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
                                         </div>
                                     </div>
                                 </div>

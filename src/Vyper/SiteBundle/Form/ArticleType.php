@@ -2,6 +2,7 @@
 
 namespace Vyper\SiteBundle\Form;
 
+use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -36,6 +37,15 @@ class ArticleType extends AbstractType
             ->add('continent', 'entity', array(
                 'class' => 'VyperSiteBundle:Continent',
                 'property' => 'name',
+            ))
+            ->add('album', 'entity', array(
+                'class' => 'VyperSiteBundle:Album',
+                'property' => 'title',
+                'query_builder' => function(EntityRepository $entityRepository) {
+                        return $entityRepository->createQueryBuilder('b')
+                            ->orderBy('b.title');
+                    },
+                'required'    => false,
             ))
             ->add('theme', 'entity', array(
                 'required' => false,

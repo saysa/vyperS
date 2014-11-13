@@ -168,6 +168,16 @@
                                 </div>
                             </div>
 
+                            <!-- Album -->
+                            <div class="row">
+                                <div class="form-group col-lg-5">
+                                    {{ form_label(form.album, "Link an album") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.album, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="row">
                                 <!-- Related Picture -->
                                 <div class="form-group col-lg-3">
