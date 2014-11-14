@@ -35,7 +35,16 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-
+                            <!-- Date Release -->
+                            <div class="row">
+                                <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                    {{ form_label(form.dateRelease, "Release Date *") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.dateRelease, { 'attr': {'class': 'form-control datepicker'} }) }}
+                                        {{ form_errors(form.dateRelease) }}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

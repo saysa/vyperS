@@ -24,6 +24,7 @@ class MagazineType extends AbstractType
             ->add('formInternational', 'textarea')
             ->add('content', 'textarea')
             ->add('pictureID', 'text', array('required' => false, 'attr' => array('placeholder' => 'Picture ID')))
+            ->add('dateRelease', 'date', array('widget' => 'single_text'))
         ;
 
         // On ajoute une fonction qui va écouter un évènement

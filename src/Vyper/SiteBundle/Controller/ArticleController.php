@@ -25,9 +25,15 @@ class ArticleController extends Controller
         $session = $request->getSession();
         $user = $session->get('user');
 
-        $article  = $em->getRepository('VyperSiteBundle:Article')->find($article->getId());
         if (!is_null($article->getAlbum())) {
             $article->getAlbum()->pictures  = $em->getRepository('VyperSiteBundle:Picture')->findBy(array('album' => $article->getAlbum()->getId()));
+        }
+
+        // for each artists get magazines
+        foreach ($article->getArtists() as $k => $artist) {
+            if ($k == 0) {
+                $article->magazines    = $em->getRepository('VyperSiteBundle:Magazine')->getByArtist($artist);
+            }
         }
 
         $article_type = $article->getArticleType()->getName();

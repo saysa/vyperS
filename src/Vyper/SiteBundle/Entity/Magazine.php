@@ -71,6 +71,13 @@ class Magazine
     private $artists;
 
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateRelease", type="date")
+     */
+    private $dateRelease;
+
+    /**
      * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
      */
     private $picture;
@@ -476,5 +483,28 @@ class Magazine
     public function getArtists()
     {
         return $this->artists;
+    }
+
+    /**
+     * Set dateRelease
+     *
+     * @param \DateTime $dateRelease
+     * @return Magazine
+     */
+    public function setDateRelease($dateRelease)
+    {
+        $this->dateRelease = $dateRelease;
+
+        return $this;
+    }
+
+    /**
+     * Get dateRelease
+     *
+     * @return \DateTime 
+     */
+    public function getDateRelease()
+    {
+        return $this->dateRelease;
     }
 }

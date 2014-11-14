@@ -44,4 +44,20 @@ class MagazineRepository extends EntityRepository
 
         return new Paginator($query);
     }
+
+    public function getByArtist($artist_id)
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->join('a.artists', 'artist', 'WITH', 'artist.id = :id')
+            ->where('a.deleted = false')
+            ->orderBy('a.dateRelease', 'DESC')
+            ->setMaxResults(3)
+            ->setParameter('id', $artist_id);
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }

@@ -72,6 +72,26 @@
         </div>
         <!-- /post-wrap -->
 
+        {% if article.magazines is defined %}
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <div class="cat-icon">
+                        <i class="icon-rocket"></i>
+                    </div>
+                    <h4>Vyper Japanese Music</h4>
+                </div>
+            </div>
+
+            <ul>
+            {% for key, mag in article.magazines %}
+                {% if key <= 2 %}
+                <li>{{ mag.title }}</li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        {% endif %}
+
+
         {% if article.album is not null %}
             <div class="cat-header">
                 <div class="cat-title second-color-bg">
