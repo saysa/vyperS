@@ -11,22 +11,55 @@
         <div class="archive-postlist">
 
             {% for album in albums %}
-                <div class="one-fourth{% if loop.index%4==0 %} last{% endif %}">
-                    <article class="post type-post status-publish format-standard hentry">
-                        <div class="thumb-wrap">
-                            <div class="thumb artist-thumbnail">
-                                <a href="{{ path('showAlbum', {'id': album.getId, 'slug': album.slug}) }}"><img  src="{{ asset(album.cover.getPath('album-cover')) }}" class="wp-post-image artists-img" alt=""></a>
-                                <div class="ribbon-caption">
-                                    <a href="{{ path('showAlbum', {'id': album.getId, 'slug': album.slug}) }}" class="ribbon-caption-title">
-                                        <span>{{ album.getTitle }}</span>
-                                        <span class="ribbon-caption-background"></span>
-                                    </a>
-                                </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="thumb artist-thumbnail" style="background: url('{{ asset(album.cover.getPath('album-cover')) }}') no-repeat center;">
+                               <div class="hover-effect">
+                                   <div class="gallery-info">
+                                       <p>{{ album.getTitle }}</p>
+                                       <a href="{{ path('showAlbum', {'id': album.getId, 'slug': album.slug}) }}">Ouvrir</a>
+                                   </div>
+                               </div>
+                            </div>
+
+                        </div>
+
+            {% endfor %}
+
+            {% for album in albums %}
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="thumb artist-thumbnail" style="background: url('{{ asset(album.cover.getPath('album-cover')) }}') no-repeat center;">
+                        <div class="hover-effect">
+                            <div class="gallery-info">
+                                <p>Mindblowing One</p>
+                                <a href="{{ path('showAlbum', {'id': album.getId, 'slug': album.slug}) }}">Ouvrir</a>
                             </div>
                         </div>
-                    </article>
+                    </div>
+
                 </div>
+
             {% endfor %}
+
+            {% for album in albums %}
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="thumb artist-thumbnail" style="background: url('{{ asset(album.cover.getPath('album-cover')) }}') no-repeat center;">
+                        <div class="hover-effect">
+                            <div class="gallery-info">
+                                <p>Mindblowing One</p>
+                                <a href="{{ path('showAlbum', {'id': album.getId, 'slug': album.slug}) }}">Ouvrir</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+
+
 
         </div>
 
