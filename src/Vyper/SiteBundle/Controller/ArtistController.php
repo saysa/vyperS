@@ -54,6 +54,7 @@ class ArtistController extends Controller
         $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->showAll($articles_per_page, $page);
 
         $view
+            ->set('current_artists', true)
             ->set('artists', $artists)
             ->set('page', $page)
             ->set('total_artists', ceil(count($artists)/$articles_per_page))

@@ -59,7 +59,7 @@ class EventController extends Controller
         $defaultDate = date('Y-m-d', time());
 
         $view
-            ->set('current_magazine', true)
+            ->set('current_event', true)
             ->set('events', json_encode($json))
             ->set('defaultDate', $defaultDate)
         ;
