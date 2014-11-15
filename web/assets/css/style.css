@@ -51,6 +51,77 @@ a:hover {
     text-decoration: none;
 }
 
+#top-link	{
+    display:none;
+    position:fixed;
+    font-size: 40px;
+    right:25px;
+    bottom:55px;
+    color:#FFF;
+    padding:0 8px 3px 8px;
+    background: #A60000;
+    opacity: 0.5;
+    z-index: 100;
+    line-height: 1px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/*==== Common styles ==========*/
+.fiche-group h4,
+.content-title h4,
+.cat-header h4,
+header h1,
+h5 a,
+#sidebar .widget .widget-title h4,
+h3 a,
+header h2,
+.primary-menu ul li a
+{
+    font-family: 'Interstate';
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/*========= Headings =========*/
+h1,h2,h3,h4,h5,h5,h6{
+    font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h1{
+    font-size: 30px;
+}
+
+h2{
+    font-size: 26px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+h4{
+    font-size: 18px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+h6{
+    font-size: 14px;
+}
+
+:focus {
+    outline: 0;
+}
+
+
 /*===== Layout =====*/
 #main{
     overflow: hidden;
@@ -80,7 +151,6 @@ a:hover {
 }
 
 #sidebar{
-    width: 300px;
     float: left;
     overflow: hidden;
 }
@@ -424,6 +494,7 @@ nav .container-fluid>.navbar-collapse {
     background: #A60000;
     display: block;
     z-index: 30;
+    margin-bottom: 30px;
 }
 
 .primary-menu ul.navbar-nav li a {
@@ -539,15 +610,6 @@ nav .container-fluid>.navbar-collapse {
 }
 
 
-
-
-.primary-menu ul li a
-{
-    font-family: 'Interstate';
-    letter-spacing: 0;
-    text-transform: uppercase;
-    font-weight: normal;
-}
 
 /* 4. HOMEPAGE
  * ======================== */
@@ -684,6 +746,250 @@ nav .container-fluid>.navbar-collapse {
     padding: 7px 10px 9px;
     margin-top: 10px;
 }
+
+
+/* ========= Featured Categories =========*/
+
+.cat-header .cat-title{
+    background: #D35F5F;
+    float: left;
+    padding: 5px 10px;
+    color: #FFFFFF;
+}
+
+/* 5. BLOG
+ * ======================== */
+
+/* ========= Posts ========= */
+
+.addthis_toolbox {
+    float: right;
+    width: 138px;
+}
+
+.entry-meta{
+    overflow: hidden;
+    margin: 5px 0;
+    font-size: 13px;
+    color: #AAAAAA;
+}
+
+.entry-meta a{
+    color: #AAAAAA;
+}
+
+.entry-meta .date,
+.entry-meta .views,
+.entry-meta .comments,
+.entry-meta .category{
+    margin-right: 10px;
+}
+
+.entry-meta .tags i{
+    margin-right: 2px;
+}
+
+.entry-meta .left{
+    float: left;
+}
+
+.entry-meta .social{
+    float: right;
+    font-size: 16px;
+}
+
+.entry-meta .social span{
+    padding-right: 2px;
+}
+
+#footer .entry-meta {
+    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.content-title {
+    padding: 10px;
+}
+
+.content-title h4 {
+    color: #FFF;
+}
+
+/* ========= Posts Archive ========= */
+.archive-header{
+    margin-bottom: 20px;
+    border-bottom: 2px solid #D35F5F;
+    padding-bottom: 7px;
+}
+
+.archive-postlist .one-half{
+    overflow: hidden;
+
+    margin-bottom: 30px;
+}
+.archive-postlist .one-half article{
+    padding-bottom: 20px;
+    background: url("images/sep1.png") repeat-x scroll left bottom transparent;
+}
+
+/* ======= Pagination ======= */
+.pagination{
+    overflow: hidden;
+    margin: 30px 0;
+    font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    clear: both;
+    text-align: center;
+}
+
+.pagination a:hover{
+    color: #FFFFFF;
+    background: #D35F5F;
+}
+
+.pagination  .page-numbers {
+    background: #A60000;
+    color: #FFFFFF;
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 8px;
+    padding: 8px 14px;
+}
+
+.pagination .current {
+    background: #D35F5F;
+    color: #ffffff;
+}
+
+/* =========== Single Post ============ */
+
+.entry-image{
+    margin: 5px 0 15px;
+    text-align: center;
+}
+
+.entry-image .big-format{
+    width: 100%;
+}
+
+
+.single-post .post-wrap{
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background: url("images/sep1.png") repeat-x left bottom;
+}
+
+/* 7. SIDEBAR
+ * ======================== */
+.widget{
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.fiche-group {
+    background: #F4F4F4;
+    border-bottom: 1px solid #CCC;
+}
+
+.fiche-group h4 {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.fiche-group img {
+    padding-left: 15px;
+}
+
+#sidebar .widget .widget-title{
+    overflow: hidden;
+    border-bottom: 2px solid #D35F5F;
+    margin-bottom: 15px;
+}
+
+#sidebar .widget .widget-title h4{
+    background: #D35F5F;
+    float: left;
+    padding: 5px 10px;
+    color: #FFF;
+    font-weight: 700;
+}
+
+.widget ul,
+.widget ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======= Tabs widget ======= */
+.widget_tabs .widget-tabs-title-container ul{
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: #414140;
+}
+
+.widget_tabs .widget-tabs-title-container ul li{
+    padding: 9px 10px 10px !important;
+    float: left;
+    display: block;
+}
+
+.widget_tabs .active {
+    background: #D35F5F;
+}
+
+.widget_tabs .widget-tabs-title-container ul li a{
+    color: #FFFFFF;
+}
+
+.widget_tabs .widget-tabs-title-container ul li:first-child{
+    margin-left: 0;
+}
+
+.widget_tabs .tab-content, .widget_tabs .tab-content-top{
+    display: none;
+}
+
+.widget_tabs .widget-tab-titles-top h5,
+.widget-tabs-title-container h5 {
+    font-size: 15px;
+}
+
+.widget_tabs .post-list li{
+    overflow: hidden;
+    margin-bottom: 7px;
+    padding: 0 0 10px 0 !important;
+}
+
+.widget_tabs .comment-list li{
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 0 0 1px 0 !important;
+}
+
+.widget_tabs .comment-list .thumbnail,
+.widget_tabs .post-list .thumbnail{
+    width: 70px;
+    float: left;
+    padding: 0;
+    margin: 0 15px 0 0;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.widget_tabs .comment-list .avatar,
+.widget_tabs .post-list .wp-post-image{
+    width: 70px;
+    height: 70px;
+}
+
+.widget_tabs .comment-text{
+    line-height: 1.2;
+}
+
 
 /* 9. MEDIA QUERIES
  * ======================== */
@@ -1239,6 +1545,7 @@ nav .container-fluid>.navbar-collapse {
         margin-right: 0;
         width: 100%;
         margin-bottom: 30px;
+        min-height: 1px;
     }
 
     .last{
@@ -1350,9 +1657,14 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
 #main-container {
     margin-top: 10px;
+    background: #FFF;
 }
 
 #wrapper-2-big {
 
     background: white;
+}
+
+.add_468 {
+    text-align: center;
 }

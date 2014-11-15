@@ -36,6 +36,8 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <![endif]-->
 </head>
@@ -43,6 +45,7 @@
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
+<a href="#header" id="top-link"><i class="fa fa-chevron-up"></i> </a>
 <header id="header" class="container-fluid">
     <div class="row">
         <section class="top main-color-bg col-lg-12">
@@ -176,7 +179,7 @@
                                     <li class="q{% if current_artists is defined %} current_page_item{% endif %}"><a href="{{ path('showAllArtist') }}">Artistes</a></li>
                                     <li class="q{% if current_album is defined %} current_page_item{% endif %}"><a href="{{ path('showAlbums') }}">Galerie</a></li>
                                     <li class="q{% if current_event is defined %} current_page_item{% endif %}"><a href="{{ path('showAllEvent') }}">Events</a></li>
-                                    <li class="q{% if current_magazine is defined %} current_page_item{% endif %}"><a href="{{ path('showAllMagazine') }}">Vyper</a></li>
+                                    <li class="q{% if current_magazine is defined %} current_page_item{% endif %}"><a href="{{ path('showAllMagazine') }}"><i class="fa fa-book"></i> Vyper</a></li>
 
                                 </ul>
 
@@ -184,40 +187,8 @@
                         </div><!--/.container-fluid -->
                     </nav>
 
-                    <div class="header-carousel section main-color-reverse">
-                        <div class="">
-                            <div id="carousel-posts" class="owl-carousel">
-                                <div class="item">
-                                    <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
-                                </div>
+                    {{ render(controller("VyperSiteBundle:Article:headerCarousel")) }}
 
-                                <div class="item">
-                                    <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
-                                </div>
-
-                                <div class="item">
-                                    <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
-                                </div>
-
-                                <div class="item">
-                                    <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
-                                </div>
-
-                                <div class="item">
-                                    <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
-                                </div>
-
-                                <div class="item">
-                                    <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
-                                </div>
-
-                                <div class="item">
-                                    <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
                     <!--/.Menu + Carousel -->
                 </div>
 
@@ -228,7 +199,7 @@
                         {% block content %}{% endblock %}
                         <!-- End template -->
                     </section>
-                    <section class="col-sm-4">
+                    <section id="sidebar" class="col-sm-4">
                         <aside class="widget">
                             <ul>
                                 <li class="facebook">
@@ -236,6 +207,138 @@
                                 </li>
                             </ul>
                         </aside>
+
+                        {% if article is defined %}
+                            {% if article.album is not null %}
+                                {% if article.articleType.name == 'musique : live report' %}
+                                    Apercu
+                                    {% for key, picture in article.album.pictures %}
+                                        {% if key <= 2 %}
+                                            i {{ key }} -
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+
+                        <aside class="widget widget_tabs">
+                            <script>
+                                jQuery(document).ready(function($) {
+                                    $(".widget-tab-titles-top li").click(function() {
+                                        $(".widget-tab-titles-top li").removeClass('active');
+                                        $(this).addClass("active");
+                                        $(".tab-content-top").hide();
+                                        var selected_tab = $(this).find("a").attr("href");
+                                        $(selected_tab).fadeIn();
+                                        return false;
+                                    });
+                                });
+                            </script>
+
+                            <div class="widget-tabs-title-container">
+                                <ul class="widget-tab-titles-top">
+                                    <li class=""><h5><a href="#widget-tab4-content">Top 5 Music</a></h5></li>
+                                    <li class=""><h5><a href="#widget-tab5-content">Top 5 OST</a></h5></li>
+                                    <li class="active"><h5><a href="#widget-tab6-content">Top 5 Manga</a></h5></li>
+                                </ul>
+                            </div>
+
+                            <div class="tabs-content-container">
+                                <div id="widget-tab4-content" class="tab-content-top">
+                                    M
+                                </div>
+                                <div id="widget-tab5-content" class="tab-content-top">
+                                    O
+                                </div>
+                                {{ render(controller("VyperSiteBundle:Top:topMangas")) }}
+                            </div>
+                        </aside>
+
+                        {% if article is defined %}
+                            {% if article.artists|length > 0 %}
+                                <aside class="widget fiche-group">
+                                    {% for artist in article.artists %}
+                                        <h4>{{ artist.name }}</h4>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img  src="{{ asset(artist.picture.getPath('75-75')) }}" alt="{{ artist.name }}">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <ul>
+                                                    <li><a href="#">Biographie</a></li>
+                                                    <li><a href="#">Discographie</a></li>
+                                                    <li><a href="#">Site officiel</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </aside>
+                            {% endif %}
+                        {% endif %}
+
+
+                        <aside id="fairpixels_recent_popular_widget-2" class="widget widget_tabs">
+                            <script>
+                                jQuery(document).ready(function($) {
+                                    $(".widget-tab-titles li").click(function() {
+                                        $(".widget-tab-titles li").removeClass('active');
+                                        $(this).addClass("active");
+                                        $(".tab-content").hide();
+                                        var selected_tab = $(this).find("a").attr("href");
+                                        $(selected_tab).fadeIn();
+                                        return false;
+                                    });
+                                });
+                            </script>
+
+                            <div class="widget-tabs-title-container">
+                                <ul class="widget-tab-titles">
+                                    <li class="active"><h5><a href="#widget-tab1-content">Récents</a></h5></li>
+                                    <li class=""><h5><a href="#widget-tab2-content">Populaires</a></h5></li>
+                                    <li class=""><h5><a href="#widget-tab3-content">Evénements</a></h5></li>
+                                </ul>
+                            </div>
+                            <div class="tabs-content-container">
+
+                                {{ render(controller("VyperSiteBundle:Article:recentArticles")) }}
+                                {{ render(controller("VyperSiteBundle:Article:popularArticles")) }}
+
+
+
+                                <div id="widget-tab3-content" class="tab-content">
+                                    <ul class="list comment-list">
+
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="widget-posts-tiles">
+
+                            </div><!-- /tiles -->
+                        </aside>
+
+
+                        <aside class="widget">
+                            <div class="widget-title"><h4>Japan FM</h4></div>
+
+                            <iframe src="//www.radioking.fr/player-radio?k=8520537ef249c6e56&f=mini" width="250" height="196"></iframe>
+
+                        </aside>
+
+                        <aside class="widget">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- sidebar -->
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:300px;height:250px"
+                                 data-ad-client="ca-pub-3070362287154347"
+                                 data-ad-slot="7520447913"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </aside>
+
+
                     </section>
                 </div>
             </div>
@@ -245,8 +348,7 @@
 
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 
 <!-- Marquee logic -->
 <script>
@@ -270,19 +372,6 @@
 
 <script>
     $(document).ready(function() {
-
-        $("#carousel-posts").owlCarousel({
-            slideSpeed: 200,					//Slide speed in milliseconds
-            paginationSpeed: 800,				//Pagination speed in milliseconds
-            autoPlay: 5000,						//Autoplay every 5 seconds.
-            stopOnHover: true,					//Stop autoplay on mouse hover
-            navigation: false,					//Display "next" and "prev" buttons.
-            pagination: false,					//Display pagination
-            items : 3,							//Number of items to display
-            itemsDesktop : [1199,3],			//Number of slides visible with a particular browser width.
-            itemsTablet: [736,2],
-            itemsMobile: [462,1]
-        });
 
         $("#owl-demo").owlCarousel({
 
@@ -392,5 +481,32 @@
 
 <!-- Marquee -->
 <script type='text/javascript' src='http://cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js'></script>
+
+<!-- Top Scroll -->
+<script>
+
+
+    $(document).ready(function(){
+
+        //Check to see if the window is top if not then display button
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $('#top-link').fadeIn();
+            } else {
+                $('#top-link').fadeOut();
+            }
+        });
+
+        //Click event to scroll to top
+        $('#top-link').click(function(){
+            $('html, body').animate({scrollTop : 0},800);
+            return false;
+        });
+
+    });
+
+
+</script>
+
 </body>
 </html>

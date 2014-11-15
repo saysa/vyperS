@@ -10,7 +10,11 @@
 
         <div class="archive-postlist">
             {% for article in articles %}
-                <div class="one-half{% if loop.index%2==0 %} last{% endif %}">
+                {% if loop.index%2!=0 %}
+                    <div class="row">
+                {% endif %}
+
+                <div class="one-half{% if loop.index%2==0 %} last{% endif %} col-lg-6">
                     <article class="post type-post status-publish format-standard hentry category-graphics tag-cars tag-characters tag-girl tag-man">
 
                         {% if article.getYoutube %}
@@ -20,7 +24,7 @@
                         {% else %}
                             <div class="thumb-wrap">
                                 <div class="thumb">
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
 
@@ -46,6 +50,12 @@
                         </div>
                     </article>
                 </div>
+
+                {% if loop.index%2==0 %}
+                </div>
+                <!-- end row -->
+                {% endif %}
+
                 {% if loop.index==4 %}
                     <div class="add_468">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
