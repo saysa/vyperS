@@ -7,8 +7,8 @@ class SourceGif extends Source
 {
     public function imageCreateFrom($resource, $crop)
     {
-        if ($crop) {
-            $this->crop();
+        if (is_int($crop)) {
+            $this->crop($crop);
         }
         return imagecreatefromgif($this->getSourceFile());
     }

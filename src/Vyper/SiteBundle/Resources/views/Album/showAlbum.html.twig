@@ -7,6 +7,17 @@
             <h2 class="archive-title">{{ album.title }}</h2>
         </header><!-- /archive-header -->
 
+        <div class="gallery">
+
+        </div>
+        {% for picture in pictures %}
+            <div class="col-md-4">
+                <a rel="prettyPhoto[gallery]" href="{{ asset(picture.getPath()) }}">
+                    <img src="{{ asset(picture.getPath('gallery-thumb')) }}">
+                </a>
+            </div>
+        {% endfor %}
+
         <div class="entry-content-wrap">
 
 

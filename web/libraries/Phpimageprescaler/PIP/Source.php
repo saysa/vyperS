@@ -71,13 +71,13 @@ abstract class Source
         return $this;
     }
 
-    protected function crop()
+    protected function crop($dimension)
     {
 
         // la magie crop se fait la
         /* Create 75x75 format */
         $imagine = new Imagine();
-        $size = new Box(75, 75);
+        $size = new Box($dimension, $dimension);
         $mode = ImageInterface::THUMBNAIL_OUTBOUND;
         $imagine
             ->open($this->getSourceFile())

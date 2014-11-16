@@ -48,13 +48,21 @@
                 }
             }
         },
+        "gallery-thumb": {
+            "dimensions": {
+                "0": {
+                    "w": 240
+                }
+            },
+            "crop": 240
+        },
         "75-75": {
             "dimensions": {
                 "0": {
                     "w": 75
                 }
             },
-            "crop": true
+            "crop": 75
         },
         "152": {
             "dimensions": {

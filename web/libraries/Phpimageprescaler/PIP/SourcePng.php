@@ -7,8 +7,8 @@ class SourcePng extends Source
 {
     public function imageCreateFrom($resource, $crop)
     {
-        if ($crop) {
-            $this->crop();
+        if (is_int($crop)) {
+            $this->crop($crop);
         }
         return imagecreatefrompng($this->getSourceFile());
     }

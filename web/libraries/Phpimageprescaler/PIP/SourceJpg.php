@@ -7,8 +7,8 @@ class SourceJpg extends Source
 {
     public function imageCreateFrom($resource, $crop)
     {
-        if ($crop) {
-            $this->crop();
+        if (is_int($crop)) {
+            $this->crop($crop);
         }
 
         $return = imagecreatefromjpeg($this->getSourceFile()); // FIXME Warning: imagecreatefromjpeg(/vagrant/htdocs/watchtimenet//static/img/db/00000_s95_zoccai_zwgd0009rrdil.jpg): failed to open stream: No such file or directory
