@@ -51,10 +51,10 @@
         "gallery-thumb": {
             "dimensions": {
                 "0": {
-                    "w": 240
+                    "w": 204
                 }
             },
-            "crop": 240
+            "crop": 204
         },
         "75-75": {
             "dimensions": {

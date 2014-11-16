@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1b2a728c76847010330004577b4856cd",
+    "hash": "bba69b6287e4e19d574aa55606d7092b",
     "packages": [
         {
             "name": "coresphere/console-bundle",
@@ -1025,6 +1025,47 @@
             "time": "2014-01-12 16:20:24"
         },
         {
+            "name": "kartik-v/bootstrap-star-rating",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/bootstrap-star-rating.git",
+                "reference": "0df7922386d42224c2b148c7b4ac57766c3adf4b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/0df7922386d42224c2b148c7b4ac57766c3adf4b",
+                "reference": "0df7922386d42224c2b148c7b4ac57766c3adf4b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "kartik\\plugins\\rating\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "A simple yet powerful JQuery star rating plugin for Bootstrap.",
+            "homepage": "https://github.com/kartik-v/bootstrap-star-rating",
+            "keywords": [
+                "Rating",
+                "bootstrap",
+                "jquery",
+                "star"
+            ],
+            "time": "2014-11-14 08:35:15"
+        },
+        {
             "name": "kriswallsmith/assetic",
             "version": "v1.1.2",
             "source": {
@@ -1253,17 +1294,17 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "9b22aaee517e80aad3238ea0328458b6f964066f"
+                "reference": "b829a8097a41ccbd7d35683b1750043b23d682f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/9b22aaee517e80aad3238ea0328458b6f964066f",
-                "reference": "9b22aaee517e80aad3238ea0328458b6f964066f",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/b829a8097a41ccbd7d35683b1750043b23d682f5",
+                "reference": "b829a8097a41ccbd7d35683b1750043b23d682f5",
                 "shasum": ""
             },
             "require": {
@@ -1304,7 +1345,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2014-09-02 07:11:30"
+            "time": "2014-11-10 14:50:31"
         },
         {
             "name": "sensio/generator-bundle",
@@ -1869,25 +1910,20 @@
             "time": "2014-10-17 12:53:44"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "doctrine/doctrine-fixtures-bundle": 20,
         "doctrine/data-fixtures": 20,
         "stof/doctrine-extensions-bundle": 20,
         "friendsofsymfony/user-bundle": 20,
-        "coresphere/console-bundle": 20
+        "coresphere/console-bundle": 20,
+        "kartik-v/bootstrap-star-rating": 20
     },
     "prefer-stable": false,
     "platform": {
         "php": ">=5.3.3"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }

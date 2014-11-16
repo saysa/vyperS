@@ -364,6 +364,11 @@ admin_update_artist:
     requirements:
         id: \d+
 
+
+vote_picture:
+    path:     /ajax/vote_picture
+    defaults: { _controller: VyperSiteBundle:Ajax:votePicture }
+
 ajax_switch_article_highlight:
     path:     /_admin_/ajax/switch_article_highlight
     defaults: { _controller: VyperSiteBundle:AdminAjax:switchArticleHighlight }

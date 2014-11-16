@@ -1669,7 +1669,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     text-align: center;
 }
 
-
+/* Albums */
 .artist-thumbnail {
     width: 173px;
     height: 248px;
@@ -1720,4 +1720,35 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+}
+
+/* Album's Thumbs */
+
+.gallery .album-thumbs {
+    padding: 0;
+    margin-bottom: 7px;
+    overflow: hidden;
+    position: relative;
+}
+
+.picture-hover {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    padding-left: 15px;
+    opacity: 0.5;
+}
+
+
+/* Star Rating */
+.rating-uni {
+    font-size: 0.8em;
+}
+
+.pp_social .rating-container {
+    margin-top: -25px;
+    font-size: 0.7em;
 }

@@ -57,6 +57,12 @@ class AlbumController extends Controller
 
         $pictures  = $em->getRepository('VyperSiteBundle:Picture')->findBy(array('album' => $album->getId()));
 
+        foreach ($pictures as $picture) {
+            $picture->nbVotes  = $em->getRepository('VyperSiteBundle:Vote')->countVotes($picture);
+            $picture->averageMark = $em->getRepository('VyperSiteBundle:Vote')->averageMark($picture);
+            $picture->readonly = $em->getRepository('VyperSiteBundle:Vote')->ipAlreadyVoted($picture);
+        }
+
         $view = $this->container->get('saysa_view');
         $view
             ->set('current_album', true)
