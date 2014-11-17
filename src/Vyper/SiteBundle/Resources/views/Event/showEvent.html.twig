@@ -1,6 +1,6 @@
 {% extends "VyperSiteBundle:layouts:layout.html.twig" %}
 
-{% block title %}{{ event.title }} | {{ parent() }}{% endblock %}
+{% block title %}{{ event.title }}, {{ event.location.name }} | {{ parent() }}{% endblock %}
 
     {% block content %}
         <div class="post-wrap">
@@ -22,12 +22,12 @@
                         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
                         <!-- AddThis Button END -->
                         <div class="left">
-                            <span class="date"><i class="icon-calendar"></i> {{ event.getDateFrontFormat }}</span>
+                            <span class="date"><i class="fa fa-calendar"></i> {{ event.getDateFrontFormat }}</span>
 
 
 
 					<span class="category">
-						<i class="icon-folder-close-alt"></i>
+						<i class="fa fa-globe"></i>
                         {{ event.location.town }}, {{ event.location.country.name|upper|slice(0, 3) }}
 				    </span>
 
@@ -39,7 +39,7 @@
 
 
                 <div class="entry-content-wrap">
-                    {% if event.picture is defined %}
+                    {% if event.picture is not null %}
                         <div class="entry-image">
                             <img  src="{{ asset(event.picture.getPath('374-200')) }}" alt="{{ event.getTitle }}">
                         </div>
@@ -49,13 +49,8 @@
                         <p>
                             {{ event.getDescription }}
                         </p>
-                        <div class="cat-header">
-                            <div class="cat-title second-color-bg">
-                                <div class="cat-icon">
-                                    <i class="icon-rocket"></i>
-                                </div>
-                                <h4>Plan</h4>
-                            </div>
+                        <div class="content-title main-color-reverse">
+                            <h4>Plan</h4>
                         </div>
 
                         <div class="map">
@@ -89,13 +84,9 @@
 
         <div id="comments">
 
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-rocket"></i>
-                    </div>
-                    <h4>Donnez votre avis</h4>
-                </div>
+
+            <div class="content-title main-color-reverse">
+                <h4>Discuter</h4>
             </div>
 
 

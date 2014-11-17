@@ -48,6 +48,7 @@ class EventController extends Controller
                 'backgroundColor' => $background,
                 'description' => $event->getDescription(),
                 'googlemap' => $event->getLocation()->getGooglemap(),
+                'url' => $this->get('router')->generate('showEvent', array('id' => $event->getId(), 'slug' => $event->getSlug()))
             );
             if (isset($timeEnd)) {
                 $opt['end'] = $date.'T'.$timeEnd;

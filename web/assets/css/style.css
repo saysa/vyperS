@@ -1752,3 +1752,13 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     margin-top: -25px;
     font-size: 0.7em;
 }
+
+/* J UI dialog */
+.ui-widget-content {
+    border: none;
+}
+
+.ui-widget {
+    font-family: inherit;
+    font-size: inherit;
+}
