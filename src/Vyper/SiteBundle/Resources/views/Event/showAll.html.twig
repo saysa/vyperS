@@ -7,6 +7,16 @@
             <h2 class="archive-title">Events</h2>
         </header><!-- /archive-header -->
 
+        <div id="eventContent" title="Event Details" style="display:none;">
+            Start: <span id="startTime"></span><br>
+            End: <span id="endTime"></span><br><br>
+            <p id="eventInfo"></p>
+
+            <div id="map"></div>
+
+            <p><strong><a id="eventLink" href="" target="_blank">Read More</a></strong></p>
+        </div>
+
         <div id='calendar'></div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -43,6 +53,18 @@
                     defaultDate: '{{ defaultDate }}',
                     editable: false,
                     eventLimit: true, // allow "more" link when too many events
+                    eventRender: function (event, element) {
+                        element.attr('href', 'javascript:void(0);');
+                        element.click(function() {
+
+                            console.log(event);
+
+                            $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
+                            $("#eventInfo").html(event.description);
+                            $("#map").html('<iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=' + event.googlemap + '&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>');
+                            $("#eventContent").dialog({ modal: true, title: event.title, width:500});
+                        });
+                    },
                     events: {{ events|raw }}
                 });
 

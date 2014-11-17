@@ -46,6 +46,8 @@ class EventController extends Controller
                 'start' => $date.'T'.$time,
                 'borderColor' => $border,
                 'backgroundColor' => $background,
+                'description' => $event->getDescription(),
+                'googlemap' => $event->getLocation()->getGooglemap(),
             );
             if (isset($timeEnd)) {
                 $opt['end'] = $date.'T'.$timeEnd;
