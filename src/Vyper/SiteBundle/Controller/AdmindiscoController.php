@@ -36,6 +36,9 @@ class AdminDiscoController extends AdminCommonController {
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($disco);
                 $em->flush();
+
+                $request->getSession()->getFlashBag()->add('info', 'Disco added.');
+                return $this->redirect($this->generateUrl('admin_show_discos'));
             }
 
         }

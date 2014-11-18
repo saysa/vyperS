@@ -40,16 +40,133 @@
         <!-- /entry-content -->
 
         {% if discos %}
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-rocket"></i>
-                    </div>
-                    <h4>Discographie</h4>
-                </div>
+            <div class="content-title main-color-reverse">
+                <h4>Discographie</h4>
             </div>
 
 
+            {% for key, disco in discos %}
+                <div class="col-md-3 padding-off">
+                    <div class="release-thumbnail">
+                        <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">
+                            <img width="142" src="{{ asset(disco.picture.getPath('152')) }}" class="fullwidth" alt="">
+                        </a>
+
+                        <h6 class="release-artist">
+                            <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a>
+                        </h6>
+                        <div class="release-meta">
+                            {% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
+                                <div class="button-container tip-container">
+                                    <a href="javascript: void(0);" class="button small buy" target="_blank"><span><i class="fa fa-shopping-cart"></i> Acheter</span></a>
+                                    <div class="tip-cloud">
+                                        <div class="tip-corner"></div>
+                                        <div class="tip-content">
+                                            <ul>
+                                                {% if disco.getCdJapan %}
+                                                    <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
+                                                {% endif %}
+                                                {% if disco.getItunes %}
+                                                    <li><a href="{{ disco.getItunes }}">iTunes</a></li>
+                                                {% endif %}
+                                                {% if disco.getAmazon %}
+                                                    <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
+                                                {% endif %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <div class="release-info">{{ disco.date|date("d/m/Y") }}</div>
+                            <div class="clear"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+            {% for key, disco in discos %}
+                <div class="col-md-3 padding-off">
+                    <div class="release-thumbnail">
+                        <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">
+                            <img width="142" src="{{ asset(disco.picture.getPath('152')) }}" class="fullwidth" alt="">
+                        </a>
+
+                        <h6 class="release-artist">
+                            <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a>
+                        </h6>
+                        <div class="release-meta">
+                            {% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
+                                <div class="button-container tip-container">
+                                    <a href="javascript: void(0);" class="button small buy" target="_blank"><span><i class="fa fa-shopping-cart"></i> Acheter</span></a>
+                                    <div class="tip-cloud">
+                                        <div class="tip-corner"></div>
+                                        <div class="tip-content">
+                                            <ul>
+                                                {% if disco.getCdJapan %}
+                                                    <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
+                                                {% endif %}
+                                                {% if disco.getItunes %}
+                                                    <li><a href="{{ disco.getItunes }}">iTunes</a></li>
+                                                {% endif %}
+                                                {% if disco.getAmazon %}
+                                                    <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
+                                                {% endif %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <div class="release-info">{{ disco.date|date("d/m/Y") }}</div>
+                            <div class="clear"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+            {% for key, disco in discos %}
+                <div class="col-md-3 padding-off">
+                    <div class="release-thumbnail">
+                        <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">
+                            <img width="142" src="{{ asset(disco.picture.getPath('152')) }}" class="fullwidth" alt="">
+                        </a>
+
+                        <h6 class="release-artist">
+                            <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a>
+                        </h6>
+                        <div class="release-meta">
+                            {% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
+                                <div class="button-container tip-container">
+                                    <a href="javascript: void(0);" class="button small buy" target="_blank"><span><i class="fa fa-shopping-cart"></i> Acheter</span></a>
+                                    <div class="tip-cloud">
+                                        <div class="tip-corner"></div>
+                                        <div class="tip-content">
+                                            <ul>
+                                                {% if disco.getCdJapan %}
+                                                    <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
+                                                {% endif %}
+                                                {% if disco.getItunes %}
+                                                    <li><a href="{{ disco.getItunes }}">iTunes</a></li>
+                                                {% endif %}
+                                                {% if disco.getAmazon %}
+                                                    <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
+                                                {% endif %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <div class="release-info">{{ disco.date|date("d/m/Y") }}</div>
+                            <div class="clear"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+
+            {#
             <div class="listing-block">
                 <div class="releases-listing">
                     {% set iterate = 0 %}
@@ -98,6 +215,8 @@
                 </div>
 
             </div><!--/ listing block-->
+            #}
+
 
         {% endif %}
         <div class="clear"></div>

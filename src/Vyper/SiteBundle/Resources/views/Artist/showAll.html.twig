@@ -38,7 +38,14 @@
                     <article class="post type-post status-publish format-standard hentry">
                         <div class="thumb-wrap">
                             <div class="thumb artist-thumbnail">
-                                <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}"><img  src="{{ asset(artist.picture.getPath('162-108')) }}" class="wp-post-image artists-img" alt=""></a>
+                                <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">
+                                    {% if artist.picture is null %}
+                                        <img  src="{{ asset('assets/css/images/artists-music.jpg') }}" class="wp-post-image artists-img" alt="">
+                                    {% else %}
+                                        <img  src="{{ asset(artist.picture.getPath('162-108')) }}" class="wp-post-image artists-img" alt="">
+                                    {% endif %}
+
+                                </a>
                                 <div class="ribbon-caption">
                                     <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}" class="ribbon-caption-title">
                                         <span>{{ artist.getName }}</span>

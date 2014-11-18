@@ -37,7 +37,12 @@
                 <div class="entry-content-wrap">
 
                     <div class="one-half">
-                        <img  src="{{ asset(artist.picture.getPath('374-200')) }}" class="wp-post-image" alt="">
+                        {% if artist.picture is null %}
+                            <img  src="{{ asset('assets/css/images/artists-music.jpg?size=374-200') }}" class="wp-post-image artists-img" alt="">
+                        {% else %}
+                            <img  src="{{ asset(artist.picture.getPath('374-200')) }}" class="wp-post-image" alt="">
+                        {% endif %}
+
                     </div>
                     <div class="one-half last">
                         {{ artist.getProfile }}

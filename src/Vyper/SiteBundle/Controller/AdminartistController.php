@@ -57,6 +57,9 @@ class AdminArtistController extends AdminCommonController {
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($artist);
                 $em->flush();
+
+                $request->getSession()->getFlashBag()->add('info', 'Artist added.');
+                return $this->redirect($this->generateUrl('admin_show_artists'));
             }
 
         }
