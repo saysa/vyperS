@@ -1674,8 +1674,53 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     text-align: center;
 }
 
-/* Albums */
+/* Artists */
 .artist-thumbnail {
+    width: 204px;
+    height: 120px;
+    background: no-repeat center fixed;
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+    overflow: hidden;
+    position: relative;
+}
+
+.artist-thumbnail .gallery-info {
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+.artist-thumbnail .hover-effect .gallery-info a {
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.artist-link {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.artist-link a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.artist-link a span {
+    display: none;
+}
+
+/* Albums */
+.album-thumbnail {
     width: 173px;
     height: 248px;
     background: no-repeat center fixed;
@@ -1697,7 +1742,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     background-color: rgba(0,0,0, 0.3);
 }
 
-.gallery-info {
+.album-thumbnail .gallery-info {
     text-align: center;
     position: absolute;
     bottom: 30px;
@@ -1715,7 +1760,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     color: #fff;
 }
 
-.hover-effect .gallery-info a {
+.album-thumbnail .hover-effect .gallery-info a {
     text-transform: uppercase;
     border: 1px solid white;
     padding: 10px;
@@ -1849,4 +1894,42 @@ a.small {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+/***  Test Isotope **/
+
+.portfolioFilter a {
+    color:#666;
+    text-decoration:none;
+}
+
+.portfolioFilter a.current {
+    font-weight:bold;
+    color: #A60000;
+}
+
+.isotope-item {
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+    /* change duration value to whatever you like */
+
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
 }

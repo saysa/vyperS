@@ -8,12 +8,13 @@
 
 namespace Vyper\SiteBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Vyper\SiteBundle\Entity\ArtistType;
 
 
-class ArtistTypes implements FixtureInterface {
+class ArtistTypes extends AbstractFixture implements FixtureInterface {
 
     /**
      * Load data fixtures with the passed EntityManager
@@ -30,8 +31,15 @@ class ArtistTypes implements FixtureInterface {
             $list[$i]->setName($name);
 
             $manager->persist($list[$i]);
+
+            $this->addReference('artist-type-'.$i, $list[$i]);
         }
 
         $manager->flush();
+    }
+
+    public function getOrder()
+    {
+        return 1;
     }
 }

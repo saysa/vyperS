@@ -47,13 +47,16 @@ class ArtistController extends Controller
         return $this->render('VyperSiteBundle:Artist:showArtist.html.twig', $view->getView());
     }
 
-    public function showAllAction(Request $request, $page)
+    public function showAllAction($page)
     {
+        $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
         $articles_per_page = $this->container->getParameter('artists_per_page');
-        $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->showAll($articles_per_page, $page);
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->findAll();
+        $artistTypes = $em->getRepository('VyperSiteBundle:ArtistType')->findAll();
 
         $view
+            ->set('artistTypes', $artistTypes)
             ->set('current_artists', true)
             ->set('artists', $artists)
             ->set('page', $page)
