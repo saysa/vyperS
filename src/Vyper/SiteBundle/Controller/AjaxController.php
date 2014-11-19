@@ -34,4 +34,20 @@ class AjaxController extends Controller
 
         return new Response();
     }
+
+    public function getPlaylistAction()
+    {
+        $filename = "http://japanfm.fr/playlist/playlist.xml";
+        $playlistXML = simplexml_load_file($filename);
+
+        $playlist = array();
+        foreach ($playlistXML->xpath('//song') as $line) {
+            $playlist[] = array(
+                "title" => (string) $line->title,
+                "artist" => (string) $line->artist,
+            );
+        }
+        echo json_encode($playlist);
+        return new Response();
+    }
 }

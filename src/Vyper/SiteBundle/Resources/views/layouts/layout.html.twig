@@ -137,59 +137,58 @@
                         </div>
                     </div>
 
-                    <div>
-                        <div class="sm2-bar-ui flat">
+                    <div class="sm2-bar-ui flat">
 
-                            <div class="bd sm2-main-controls">
+                        <div class="bd sm2-main-controls">
 
-                                <div class="sm2-inline-texture"></div>
-                                <div class="sm2-inline-gradient"></div>
+                            <div class="sm2-inline-texture"></div>
+                            <div class="sm2-inline-gradient"></div>
 
-                                <div class="sm2-inline-element sm2-button-element">
-                                    <div class="sm2-button-bd">
-                                        <a href="#play" class="sm2-inline-button play-pause">Play / pause</a>
-                                    </div>
+                            <div class="sm2-inline-element sm2-button-element">
+                                <div class="sm2-button-bd">
+                                    <a href="#play" class="sm2-inline-button play-pause">Play / pause</a>
                                 </div>
+                            </div>
 
-                                <div class="sm2-inline-element sm2-inline-status">
+                            <div class="sm2-inline-element sm2-inline-status">
 
-                                    <div class="sm2-playlist">
-                                        <div class="sm2-playlist-target">
-                                            <!-- playlist <ul> + <li> markup will be injected here -->
-                                            <!-- if you want default / non-JS content, you can put that here. -->
-                                            <noscript><p>JavaScript is required.</p></noscript>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="sm2-inline-element sm2-button-element sm2-volume">
-                                    <div class="sm2-button-bd">
-                                        <span class="sm2-inline-button sm2-volume-control volume-shade"></span>
-                                        <a href="#volume" class="sm2-inline-button sm2-volume-control">volume</a>
+                                <div class="sm2-playlist">
+                                    <div class="sm2-playlist-target">
+                                        <!-- playlist <ul> + <li> markup will be injected here -->
+                                        <!-- if you want default / non-JS content, you can put that here. -->
+                                        <noscript><p>JavaScript is required.</p></noscript>
                                     </div>
                                 </div>
 
                             </div>
 
-                            <div class="bd sm2-playlist-drawer sm2-element">
-
-                                <div class="sm2-inline-texture">
-                                    <div class="sm2-box-shadow"></div>
+                            <div class="sm2-inline-element sm2-button-element sm2-volume">
+                                <div class="sm2-button-bd">
+                                    <span class="sm2-inline-button sm2-volume-control volume-shade"></span>
+                                    <a href="#volume" class="sm2-inline-button sm2-volume-control">volume</a>
                                 </div>
-
-                                <!-- playlist content is mirrored here -->
-
-                                <div class="sm2-playlist-wrapper">
-                                    <ul class="sm2-playlist-bd">
-                                        <li><a href="http://radio.japanfm.fr/japan"><b>SonReal</b> - I Tried</a></li>
-                                    </ul>
-                                </div>
-
                             </div>
 
                         </div>
+
+                        <div class="bd sm2-playlist-drawer sm2-element">
+
+                            <div class="sm2-inline-texture">
+                                <div class="sm2-box-shadow"></div>
+                            </div>
+
+                            <!-- playlist content is mirrored here -->
+
+                            <div class="sm2-playlist-wrapper">
+                                <ul class="sm2-playlist-bd">
+                                    <li><a href="http://radio.japanfm.fr/japan"><b id="currentArtist"></b> - <span id="currentTitle"></span></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
                     </div>
+
 
                 </div>
 
@@ -276,6 +275,31 @@
                         <!-- End template -->
                     </section>
                     <section id="sidebar" class="col-sm-4">
+
+                        <aside class="widget bloc-playlist">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img width="75" height="75" src="{{ asset('assets/exemple.png') }}" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <ul>
+                                        <li><a href="#">Titre</a></li>
+                                        <li><a href="#">Intergraphie</a></li>
+                                        <li><a href="#">SiVoter iciel</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="playlist">
+                                        <li>Biographie</li>
+                                        <li>Discographie</li>
+                                        <li>Site officiel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+
                         <aside class="widget">
                             <ul>
                                 <li class="facebook">
@@ -426,6 +450,38 @@
     Footer
 </footer>
 
+<!-- Get Playlist -->
+<script>
+
+    $(document).ready(function() {
+
+        getPlaylist();
+        intID = setInterval(function(){
+            getPlaylist();
+        },10000);
+
+        function getPlaylist()
+        {
+            $.ajax({
+                type: "POST",
+                url: "{{ path('get_playlist') }}",
+                dataType: "json",
+                data:{
+
+                },
+                success: function(data){
+                    $("#currentArtist").html(data[0].artist);
+                    $("#currentTitle").html(data[0].title);
+
+                    //$('#relArtistLinkTable tr:last').after('<tr id="'+ data.artist.id +'"><td>' + data.artist.id + '</td><td>' + data.artist.name + '</td><td><a class="btn btn-danger deleteLink" href="#"><i class="icon-trash "></i> </a></td></tr>');
+                }
+            });
+        }
+
+    });
+
+
+</script>
 
 
 <!-- Marquee logic -->

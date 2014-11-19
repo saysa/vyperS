@@ -893,9 +893,26 @@ nav .container-fluid>.navbar-collapse {
     overflow: hidden;
 }
 
-.fiche-group {
+.fiche-group, .bloc-playlist {
     background: #F4F4F4;
     border-bottom: 1px solid #CCC;
+}
+
+.bloc-playlist img {
+    margin-left: 5px;
+}
+
+ul.playlist li {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 35px!important;
+    line-height: 35px!important;
+    border-top: 1px solid #CCC;
+    margin-left: 15px;
+    font-size: 13px!important;
+    font-weight: bold!important;
+    outline: none;
 }
 
 .fiche-group h4 {
@@ -904,7 +921,7 @@ nav .container-fluid>.navbar-collapse {
 }
 
 .fiche-group img {
-    padding-left: 15px;
+   margin-left: 15px;
 }
 
 #sidebar .widget .widget-title{

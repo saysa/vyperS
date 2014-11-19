@@ -365,6 +365,10 @@ admin_update_artist:
         id: \d+
 
 
+get_playlist:
+    path:     /ajax/get_playlist
+    defaults: { _controller: VyperSiteBundle:Ajax:getPlaylist }
+
 vote_picture:
     path:     /ajax/vote_picture
     defaults: { _controller: VyperSiteBundle:Ajax:votePicture }
