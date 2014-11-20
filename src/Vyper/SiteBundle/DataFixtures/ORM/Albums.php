@@ -8,13 +8,14 @@
 
 namespace Vyper\SiteBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Vyper\SiteBundle\Entity\Album;
 
 
-class Albums extends AbstractFixture implements FixtureInterface {
+class Albums extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface {
 
     /**
      * Load data fixtures with the passed EntityManager
@@ -41,6 +42,6 @@ class Albums extends AbstractFixture implements FixtureInterface {
 
     public function getOrder()
     {
-        return 2;
+        return 3;
     }
 }

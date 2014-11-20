@@ -8,13 +8,15 @@
 
 namespace Vyper\SiteBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 
-class LoadUser implements FixtureInterface, ContainerAwareInterface {
+class LoadUser extends AbstractFixture implements FixtureInterface, ContainerAwareInterface, OrderedFixtureInterface {
 
     /**
      * @var ContainerInterface
@@ -51,5 +53,12 @@ class LoadUser implements FixtureInterface, ContainerAwareInterface {
 
         $manager->persist($user);
         $manager->flush();
+
+        $this->addReference('user', $user);
+    }
+
+    public function getOrder()
+    {
+        return 1;
     }
 }

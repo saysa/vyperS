@@ -8,12 +8,13 @@
 
 namespace Vyper\SiteBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Vyper\SiteBundle\Entity\ArticleType;
 
 
-class ArticleTypes implements FixtureInterface {
+class ArticleTypes extends AbstractFixture implements FixtureInterface {
 
     /**
      * Load data fixtures with the passed EntityManager
@@ -30,6 +31,8 @@ class ArticleTypes implements FixtureInterface {
             $list[$i]->setName($name);
 
             $manager->persist($list[$i]);
+
+            $this->addReference('article-type-'.$i, $list[$i]);
         }
 
         $manager->flush();

@@ -8,13 +8,14 @@
 
 namespace Vyper\SiteBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Vyper\SiteBundle\Entity\ArtistType;
 
 
-class ArtistTypes extends AbstractFixture implements FixtureInterface {
+class ArtistTypes extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface {
 
     /**
      * Load data fixtures with the passed EntityManager

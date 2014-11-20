@@ -8,13 +8,14 @@
 
 namespace Vyper\SiteBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Vyper\SiteBundle\Entity\Picture;
 
 
-class Pictures extends AbstractFixture implements FixtureInterface {
+class Pictures extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface {
 
     /**
      * Load data fixtures with the passed EntityManager
@@ -23,7 +24,7 @@ class Pictures extends AbstractFixture implements FixtureInterface {
      */
     public function load(ObjectManager $manager)
     {
-        $names = array('file01', 'file02');
+        $names = array('file01.jpg', 'file02.jpg', 'file03.jpg', 'file04.jpg', 'file05.jpg');
 
         foreach ($names as $i => $name)
         {
@@ -37,6 +38,8 @@ class Pictures extends AbstractFixture implements FixtureInterface {
             $list[$i]->setAlbum($this->getReference('album'));
 
             $manager->persist($list[$i]);
+
+            $this->addReference('picture-'.$i, $list[$i]);
         }
 
         $manager->flush();
@@ -44,6 +47,6 @@ class Pictures extends AbstractFixture implements FixtureInterface {
 
     public function getOrder()
     {
-        return 3;
+        return 4;
     }
 }

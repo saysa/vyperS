@@ -41,6 +41,6 @@ class AlbumCategories extends AbstractFixture implements FixtureInterface {
 
     public function getOrder()
     {
-        return 1;
+        return 2;
     }
 }
