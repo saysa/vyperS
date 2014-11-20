@@ -10,6 +10,16 @@ use Vyper\SiteBundle\Entity\Vote;
 
 class AjaxController extends Controller
 {
+    public function ajaxAction(Request $request)
+    {
+        if ($request->isXmlHttpRequest()) {
+            echo "is H";
+        } else {
+            echo "normal";
+        }
+        return new Response();
+    }
+
     public function votePictureAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();

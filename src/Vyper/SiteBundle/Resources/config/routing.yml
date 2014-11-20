@@ -6,6 +6,12 @@ home:
     path:     /home
     defaults: { _controller: VyperSiteBundle:Index:index }
 
+ajax_general:
+    path:    /ajax/general
+    defaults: { _controller: VyperSiteBundle:Ajax:ajax }
+    requirements:
+        _method:  POST
+
 a_propos:
     path:     /a-propos
     defaults: { _controller: VyperSiteBundle:Statique:aPropos }
@@ -364,6 +370,13 @@ admin_update_artist:
     requirements:
         id: \d+
 
+
+
+ajax_vyper:
+    path:    /ajax/vyper-jmusic-magazines
+    defaults: { _controller: VyperSiteBundle:Magazine:showAll, page: 1 }
+    requirements:
+        page: \d*
 
 get_playlist:
     path:     /ajax/get_playlist

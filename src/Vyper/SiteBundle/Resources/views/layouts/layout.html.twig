@@ -450,6 +450,55 @@
     Footer
 </footer>
 
+<!-- PushState -->
+<script>
+
+    $(function() {
+        $('nav a').click(function(e) {
+            //$("#loading").show();
+            href = $(this).attr("href");
+
+            loadContent(href);
+
+            // HISTORY.PUSHSTATE
+            history.pushState('', 'New URL: '+href, href);
+            e.preventDefault();
+
+        });
+
+        // THIS EVENT MAKES SURE THAT THE BACK/FORWARD BUTTONS WORK AS WELL
+        window.onpopstate = function(event) {
+            //$("#loading").show();
+            console.log("pathname: "+location.pathname);
+  //          loadContent(location.pathname);
+        };
+
+        function loadContent(url){
+            console.log('loadcontent '+url);
+
+            // USES JQUERY TO LOAD THE CONTENT
+            $.ajax({
+                type: "POST",
+                url: '{{ path('ajax_general') }}',
+                dataType: "json",
+                data:{
+                    cid : url
+                },
+                success: function(data){
+                    alert('die 2');
+                    console.log(data);
+                    //$("#content").html(data);
+                    //$("#loading").hide();
+                }
+            });
+
+        }
+
+
+    });
+
+</script>
+
 <!-- Get Playlist -->
 <script>
 
