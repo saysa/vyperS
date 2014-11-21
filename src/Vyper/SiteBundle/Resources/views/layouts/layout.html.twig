@@ -269,7 +269,7 @@
 
 
                 <div class="row" id="wrapper-2-big">
-                    <section class="col-sm-8">
+                    <section class="col-sm-8" id="push">
                         <!-- Start template -->
                         {% block content %}{% endblock %}
                         <!-- End template -->
@@ -480,13 +480,14 @@
             $.ajax({
                 type: "POST",
                 url: '{{ path('ajax_general') }}',
-                dataType: "json",
+                dataType: "html",
                 data:{
                     cid : url
                 },
                 success: function(data){
-                    alert('die 2');
-                    console.log(data);
+                    $("#push").html(data);
+                    //console.log(data);
+                    //alert('die 2');
                     //$("#content").html(data);
                     //$("#loading").hide();
                 }

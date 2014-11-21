@@ -3,6 +3,7 @@
 namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Vyper\SiteBundle\Components\NextEvent\NextEvent;
 use Vyper\SiteBundle\Entity\Event;
@@ -10,7 +11,7 @@ use Vyper\SiteBundle\Entity\Event;
 
 class EventController extends Controller
 {
-    public function showAllAction()
+    public function showAllAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
@@ -67,7 +68,16 @@ class EventController extends Controller
             ->set('defaultDate', $defaultDate)
         ;
 
-        return $this->render('VyperSiteBundle:Event:showAll.html.twig', $view->getView());
+        if ($request->isXmlHttpRequest()) {
+
+            $template = $this->renderView('VyperSiteBundle:Event:ajaxShowAll.html.twig', $view->getView());
+            return new Response($template);
+
+        } else {
+            return $this->render('VyperSiteBundle:Event:showAll.html.twig', $view->getView());
+        }
+
+
     }
 
     public function showEventAction(Request $request, Event $event)

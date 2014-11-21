@@ -12,12 +12,18 @@ class AjaxController extends Controller
 {
     public function ajaxAction(Request $request)
     {
+        $response=null;
         if ($request->isXmlHttpRequest()) {
-            echo "is H";
+            $string_route = $request->request->get('cid');
+            if (preg_match('!/events$!', $string_route)) {
+                return $this->forward('VyperSiteBundle:Event:showAll');
+            }
+
         } else {
             echo "normal";
         }
-        return new Response();
+
+        return new Response($response);
     }
 
     public function votePictureAction(Request $request)
