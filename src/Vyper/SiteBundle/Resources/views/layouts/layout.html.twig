@@ -57,10 +57,9 @@
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 <a href="#header" id="top-link"><i class="fa fa-chevron-up"></i> </a>
-<header id="header" class="container-fluid">
-
-    <div id="chat" style="display:none;z-index:5;">
-        <a href="#" onclick="document.getElementById('chat').style.display = 'none'"><i class="fa fa-close" style="position:fixed;top:80px;right:50px;z-index:0;"></i></a>
+<div id="chat">
+    <a href="#" id="close-chat" class="pull-right"><i class="fa fa-close"></i> </a>
+    <div id="tflash_container">
         <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="100%" height="100%" salign="tl" wmode="transparent">
             <param name="allowScriptAccess" value="sameDomain" />
             <param name="movie" value="http://flashirc.geekshed.net/tflash.php?embed=1&amp;joinonconnect=JapanFM&amp;chatonly=&amp;restricted=1&amp;key=&amp;nick=&amp;bgcolor=&amp;headercolor=">
@@ -68,7 +67,8 @@
             <embed src="http://flashirc.geekshed.net/tflash.php?embed=1&amp;joinonconnect=JapanFM&amp;chatonly=&amp;restricted=1&amp;key=&amp;nick=&amp;bgcolor=&amp;headercolor=" allowScriptAccess="always" allowNetworking="all" quality="high" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" width="100%" height="100%" salign="tl"></embed>
         </object>
     </div>
-
+</div>
+<header id="header" class="container-fluid">
     <div class="row">
         <section class="top main-color-bg col-lg-12">
             <div class="content-wrap">
@@ -100,7 +100,7 @@
                 </div>
                 <div class="social">
                     <ul class="list">
-                        <li class="gplus"><a href="#" onclick="document.getElementById('chat').style.display = 'block';"><i class="fa fa-comments"></i> Live Chat</a></li>
+                        <li class="gplus"><a href="#" id="toggle-chat"><i class="fa fa-comments"></i> Live Chat</a></li>
                         <li class="youtube"><a href="#"><i class="fa fa-play-circle"></i> Live Vidéo</a></li>
                     </ul>
                 </div>
@@ -533,6 +533,19 @@
 
 </script>
 
+
+<!-- Chat  -->
+<script>
+    $(document).ready(function() {
+        $( "#toggle-chat" ).on("click", function() {
+            $('#chat').toggle('slow');
+        });
+        $( "#close-chat" ).on("click", function() {
+            $('#chat').hide('slow');
+        });
+    });
+
+</script>
 
 <!-- Marquee logic -->
 <script>

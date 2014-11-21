@@ -1962,3 +1962,29 @@ a.small {
 .sm2-bar-ui .sm2-inline-texture {
     background: transparent;
 }
+
+/* Chat */
+#chat {
+    display: none;
+    background: #333;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    resize: both;
+    overflow: auto;
+    position:fixed;
+    right:100px;
+    bottom:0;
+    z-index: 100;
+
+    min-height: 500px;
+    width: 500px; height: 500px;
+
+}
+
+#tflash_container {
+    width: 100%; height: 90%;
+}
+
+#close-chat i {
+    color: white;
+}
