@@ -3,7 +3,6 @@
 {% block title "Japan FM | Toute la Jmusic, toutes les news en temps réels" %}
 
     {% block content %}
-        <div id="content" class="homepage">
         <script>
             jQuery(document).ready(function($) {
                 $(".main-slider").show();
@@ -45,10 +44,10 @@
         </div>
         <!-- /main-slider -->
 
-        <div id="single-cats" class="section">
+        <section class="row">
         <!-- category1 -->
 
-        <div class="feat-cat one-half">
+        <div class="col-md-6">
             <div class="cat-header">
                 <div class="cat-title second-color-bg">
                     <div class="cat-icon"><i class="icon-music"></i></div>
@@ -72,7 +71,7 @@
                         {% else %}
                             <div class="thumb-wrap">
                                 <div class="thumb">
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
 
@@ -91,7 +90,7 @@
                             </h3>
 
                             <div class="entry-meta">
-                                <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+                                <span class="date"><i class="fa fa-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
 
 
 
@@ -144,7 +143,7 @@
 
         <!-- category2 -->
 
-        <div class="feat-cat one-half last">
+        <div class="col-md-6">
 
 
             <div class="cat-header">
@@ -229,7 +228,7 @@
 
 
 
-        </div>
+        </section>
 
 
 
@@ -245,88 +244,88 @@
             </script>
         </div>
 
-        <div id="feat-categories">
 
         <!-- category1 -->
-        <div class="feat-cat section">
+        <section class="row">
+            <div class="col-md-12">
 
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-film"></i>
+                <div class="cat-header" style="display: block;">
+                    <div class="cat-title second-color-bg">
+                        <div class="cat-icon">
+                            <i class="icon-film"></i>
+                        </div>
+                        <h4><a href="{{ base_url }}interviews">Manga/Anime</a></h4>
                     </div>
-                    <h4><a href="{{ base_url }}interviews">Manga/Anime</a></h4>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col-md-6">
 
-            <div class="one-half main-post">
-
-                {% if latest_mangas is defined %}
-                {% for article in latest_mangas %}
-                    {% if loop.index == 1 %}
-
-
-
-                        {% if article.getYoutube %}
-                            <div class="thumb-wrap video-thumb">
-                                <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
-                            </div>
-
-                        {% else %}
-                            <div class="thumb-wrap">
-                                <div class="thumb">
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
-                                </div>
+                        {% if latest_mangas is defined %}
+                            {% for article in latest_mangas %}
+                                {% if loop.index == 1 %}
 
 
 
-                                <div class="overlay">
-                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
-                                </div>
-                            </div>
+                                    {% if article.getYoutube %}
+                                        <div class="thumb-wrap video-thumb">
+                                            <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                                        </div>
+
+                                    {% else %}
+                                        <div class="thumb-wrap">
+                                            <div class="thumb">
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                            </div>
+
+
+
+                                            <div class="overlay">
+                                                <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+
+
+
+                                    <div class="post-details">
+                                        <h3>
+                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
+                                        </h3>
+
+                                        <div class="entry-meta">
+                                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+
+
+
+                                        </div>
+                                        <p>{{ article.getDescription }}</p>
+                                    </div>
+
+
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
 
+                    </div><!-- /one-half -->
 
 
-                        <div class="post-details">
-                            <h3>
-                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
-                            </h3>
+                    <div class="col-md-6">
 
-                            <div class="entry-meta">
-                                <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+                        {%  if latest_mangas is defined %}
+                            {% for key, article in latest_mangas %}
+                                {% if key>0 and key<5 %}
 
+                                    <div class="item-post">
+                                        <div class="thumb">
+                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                                        </div>
 
+                                        <div class="post-right">
+                                            <h5>
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
+                                            </h5>
 
-                            </div>
-                            <p>{{ article.getDescription }}</p>
-                        </div>
-
-
-                    {% endif %}
-                {% endfor %}
-                {% endif %}
-
-            </div><!-- /one-half -->
-
-
-            <div class="one-half last">
-
-                {%  if latest_mangas is defined %}
-                {% for key, article in latest_mangas %}
-                    {% if key>0 and key<5 %}
-
-                        <div class="item-post">
-                            <div class="thumb">
-                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
-                            </div>
-
-                            <div class="post-right">
-                                <h5>
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
-                                </h5>
-
-                                <div class="entry-meta">
+                                            <div class="entry-meta">
 				                                    <span class="date">
 				                                        <i class="icon-calendar"></i>
                                                         {{ article.getReleaseDateFrontFormat(article.getId) }}
@@ -336,22 +335,21 @@
                                                         <i class="icon-comments"></i>
                                                         <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"></fb:comments-count> réactions</a>
                                                     </span>
-                                </div>
-                            </div>
-                        </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
-                    {% endif %}
-                {% endfor %}
-                {% endif %}
-
-
-
-            </div><!-- /one-half -->
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
 
 
 
-        </div><!-- /feat-cat -->
+                    </div><!-- /one-half -->
+                </div>
+            </div><!-- /feat-cat -->
+        </section>
         <!-- /category1 -->
 
 
@@ -572,19 +570,6 @@
 
 
         </div><!-- /feat-cat -->
-        <!-- /category2 -->
-
-        <!-- category3 -->
-        <!-- /category3 -->
-
-        <!-- category4 -->
-        <!-- /category4 -->
-
-        <!-- category5 -->
-        <!-- /category5 -->
-
-        </div>
 
 
-        </div>
     {% endblock %}
