@@ -17,6 +17,8 @@ class AjaxController extends Controller
             $string_route = $request->request->get('cid');
             if (preg_match('!/events$!', $string_route)) {
                 return $this->forward('VyperSiteBundle:Event:showAll');
+            } elseif (preg_match('!/podcasts$!', $string_route)) {
+                return $this->forward('VyperSiteBundle:Podcast:showAll');
             }
 
         } else {
