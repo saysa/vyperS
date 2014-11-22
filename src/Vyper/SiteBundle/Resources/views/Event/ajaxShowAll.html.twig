@@ -15,11 +15,9 @@
 
     <div id='calendar'></div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
 
-        $(document).ready(function() {
-
+            console.log('appel ajax 2');
             $('#calendar').fullCalendar({
                 header: {
                     left: 'prev,next today',
@@ -64,8 +62,9 @@
                 },
                 events: {{ events|raw }}
             });
+            console.log('appel ajax');
+            $('#calendar').fullCalendar('refetchEvents');
 
-        });
 
     </script>
 {% endblock %}

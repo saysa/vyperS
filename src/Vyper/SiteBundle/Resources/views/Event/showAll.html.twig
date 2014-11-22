@@ -19,7 +19,6 @@
 
         <div id='calendar'></div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>
 
             $(document).ready(function() {
@@ -66,7 +65,8 @@
                             $("#eventContent").dialog({ modal: true, title: event.title, width:500});
                         });
                     },
-                    events: {{ events|raw }}
+                    events: {{ events|raw }},
+                    addEventSource: events
                 });
 
             });
