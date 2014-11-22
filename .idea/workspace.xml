@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2ecea67-3778-4888-8635-2c7f03fc460a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/css/style.css" afterPath="$PROJECT_DIR$/web/assets/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="local.dev.iws" />
@@ -30,26 +30,37 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="421" column="0" selection-start="22472" selection-end="22472" vertical-scroll-proportion="0.2413793" vertical-offset="6196" max-vertical-offset="10875">
+            <state line="726" column="45" selection-start="30673" selection-end="30673" vertical-scroll-proportion="0.6298472" vertical-offset="10354" max-vertical-offset="11205">
               <folding>
-                <element signature="e#11539#11544#0" expanded="true" />
-                <element signature="e#11924#11939#0" expanded="true" />
-                <element signature="e#12031#12046#0" expanded="true" />
-                <element signature="e#12138#12158#0" expanded="true" />
-                <element signature="e#12613#12625#0" expanded="true" />
-                <element signature="e#12712#12730#0" expanded="true" />
-                <element signature="e#12823#12843#0" expanded="true" />
-                <element signature="e#12937#12955#0" expanded="true" />
-                <element signature="e#13205#13215#0" expanded="true" />
-                <element signature="e#13378#13388#0" expanded="true" />
-                <element signature="e#13548#13555#0" expanded="true" />
-                <element signature="e#13711#13724#0" expanded="true" />
-                <element signature="e#13879#13889#0" expanded="true" />
-                <element signature="e#14043#14055#0" expanded="true" />
-                <element signature="e#14211#14226#0" expanded="true" />
-                <element signature="e#24110#24122#0" expanded="true" />
-                <element signature="e#24858#24870#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#11554#11559#0" expanded="true" />
+                <element signature="e#11939#11954#0" expanded="true" />
+                <element signature="e#12046#12061#0" expanded="true" />
+                <element signature="e#12153#12173#0" expanded="true" />
+                <element signature="e#12628#12640#0" expanded="true" />
+                <element signature="e#12727#12745#0" expanded="true" />
+                <element signature="e#12838#12858#0" expanded="true" />
+                <element signature="e#12952#12970#0" expanded="true" />
+                <element signature="e#13220#13230#0" expanded="true" />
+                <element signature="e#13393#13403#0" expanded="true" />
+                <element signature="e#13563#13570#0" expanded="true" />
+                <element signature="e#13726#13739#0" expanded="true" />
+                <element signature="e#13894#13904#0" expanded="true" />
+                <element signature="e#14058#14070#0" expanded="true" />
+                <element signature="e#14226#14241#0" expanded="true" />
+                <element signature="n#style#0;n#ins#0;n#aside#5;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#24125#24137#0" expanded="true" />
+                <element signature="e#24873#24885#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1995" column="17" selection-start="35236" selection-end="35236" vertical-scroll-proportion="0.0" vertical-offset="29069" max-vertical-offset="30030">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,13 +145,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1338-1416288350.jpeg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/uploads/pic/2014/11/1338-1416288350.jpeg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
@@ -212,7 +216,6 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showAll.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArtistController.php" />
         <option value="$PROJECT_DIR$/web/assets/css/soundmanager/bar-ui.css" />
-        <option value="$PROJECT_DIR$/web/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/ArticleTypes.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Continents.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/AlbumCategories.php" />
@@ -227,6 +230,7 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AjaxController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
       </list>
     </option>
@@ -964,7 +968,11 @@
       <created>1416467913827</created>
       <updated>1416467913827</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="update index front">
+      <created>1416647365669</created>
+      <updated>1416647365669</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -992,7 +1000,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37098446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37098446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1000,6 +1008,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45927602" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32574257" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15940298" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18089552" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -1008,7 +1017,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31287128" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32574257" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1026,7 +1034,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Gros avancement avant prod 1" />
     <MESSAGE value="Musique news display all musique type" />
     <MESSAGE value="Video du jour" />
     <MESSAGE value="Crop image" />
@@ -1051,7 +1058,8 @@
     <MESSAGE value="get Playlist with Ajax" />
     <MESSAGE value="Fixture data update with Artist" />
     <MESSAGE value="Avancement Ajax" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avancement Ajax" />
+    <MESSAGE value="update index front" />
+    <option name="LAST_COMMIT_MESSAGE" value="update index front" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1084,13 +1092,6 @@
     <entry file="file://$PROJECT_DIR$/web/assets/css/soundmanager/bar-ui.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="858" column="0" selection-start="21678" selection-end="21678" vertical-scroll-proportion="0.0" vertical-offset="11573" max-vertical-offset="13545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="906" column="16" selection-start="15151" selection-end="15151" vertical-scroll-proportion="0.0" vertical-offset="13163" max-vertical-offset="29535">
           <folding />
         </state>
       </provider>
@@ -1366,27 +1367,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1995" column="17" selection-start="35236" selection-end="35236" vertical-scroll-proportion="0.0" vertical-offset="29069" max-vertical-offset="30030">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="421" column="0" selection-start="22472" selection-end="22472" vertical-scroll-proportion="0.2413793" vertical-offset="6196" max-vertical-offset="10875">
+        <state line="726" column="45" selection-start="30673" selection-end="30673" vertical-scroll-proportion="0.6298472" vertical-offset="10354" max-vertical-offset="11205">
           <folding>
-            <element signature="e#11539#11544#0" expanded="true" />
-            <element signature="e#11924#11939#0" expanded="true" />
-            <element signature="e#12031#12046#0" expanded="true" />
-            <element signature="e#12138#12158#0" expanded="true" />
-            <element signature="e#12613#12625#0" expanded="true" />
-            <element signature="e#12712#12730#0" expanded="true" />
-            <element signature="e#12823#12843#0" expanded="true" />
-            <element signature="e#12937#12955#0" expanded="true" />
-            <element signature="e#13205#13215#0" expanded="true" />
-            <element signature="e#13378#13388#0" expanded="true" />
-            <element signature="e#13548#13555#0" expanded="true" />
-            <element signature="e#13711#13724#0" expanded="true" />
-            <element signature="e#13879#13889#0" expanded="true" />
-            <element signature="e#14043#14055#0" expanded="true" />
-            <element signature="e#14211#14226#0" expanded="true" />
-            <element signature="e#24110#24122#0" expanded="true" />
-            <element signature="e#24858#24870#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#11554#11559#0" expanded="true" />
+            <element signature="e#11939#11954#0" expanded="true" />
+            <element signature="e#12046#12061#0" expanded="true" />
+            <element signature="e#12153#12173#0" expanded="true" />
+            <element signature="e#12628#12640#0" expanded="true" />
+            <element signature="e#12727#12745#0" expanded="true" />
+            <element signature="e#12838#12858#0" expanded="true" />
+            <element signature="e#12952#12970#0" expanded="true" />
+            <element signature="e#13220#13230#0" expanded="true" />
+            <element signature="e#13393#13403#0" expanded="true" />
+            <element signature="e#13563#13570#0" expanded="true" />
+            <element signature="e#13726#13739#0" expanded="true" />
+            <element signature="e#13894#13904#0" expanded="true" />
+            <element signature="e#14058#14070#0" expanded="true" />
+            <element signature="e#14226#14241#0" expanded="true" />
+            <element signature="n#style#0;n#ins#0;n#aside#5;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#24125#24137#0" expanded="true" />
+            <element signature="e#24873#24885#0" expanded="true" />
           </folding>
         </state>
       </provider>

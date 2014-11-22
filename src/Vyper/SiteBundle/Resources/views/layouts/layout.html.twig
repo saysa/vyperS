@@ -221,7 +221,7 @@
             <div class="col-lg-12">
                 <div class="row">
                     <!-- Static navbar -->
-                    <nav class="navbar navbar-default primary-menu" role="navigation">
+                    <nav id="nav-fixed" class="navbar navbar-default primary-menu" role="navigation">
                         <div class="container-fluid">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -715,6 +715,28 @@
 
 
 </script>
+
+<!-- Nac fixed -->
+<script>
+
+
+    $(document).ready(function(){
+
+        $(function() {
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 250) {
+                    $('#nav-fixed').addClass('fixed');
+                } else {
+                    $('#nav-fixed').removeClass('fixed');
+                }
+            });
+        });
+
+    });
+
+
+</script>
+
 
 </body>
 </html>

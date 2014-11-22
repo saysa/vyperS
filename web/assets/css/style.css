@@ -1988,3 +1988,10 @@ a.small {
 #close-chat i {
     color: white;
 }
+
+/* nac fixed */
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 960px;
+}
