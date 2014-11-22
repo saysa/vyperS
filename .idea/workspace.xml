@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2ecea67-3778-4888-8635-2c7f03fc460a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/podcasts/player.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/PodcastController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/js/jwplayer/jwplayer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Podcast/showAll.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/css/style.css" afterPath="$PROJECT_DIR$/web/assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="local.dev.iws" />
@@ -27,30 +31,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="726" column="45" selection-start="30673" selection-end="30673" vertical-scroll-proportion="0.6298472" vertical-offset="10354" max-vertical-offset="11205">
+            <state line="240" column="45" selection-start="12231" selection-end="12231" vertical-scroll-proportion="-9.24" vertical-offset="3138" max-vertical-offset="11205">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#11554#11559#0" expanded="true" />
                 <element signature="e#11939#11954#0" expanded="true" />
                 <element signature="e#12046#12061#0" expanded="true" />
-                <element signature="e#12153#12173#0" expanded="true" />
-                <element signature="e#12628#12640#0" expanded="true" />
-                <element signature="e#12727#12745#0" expanded="true" />
-                <element signature="e#12838#12858#0" expanded="true" />
-                <element signature="e#12952#12970#0" expanded="true" />
-                <element signature="e#13220#13230#0" expanded="true" />
-                <element signature="e#13393#13403#0" expanded="true" />
-                <element signature="e#13563#13570#0" expanded="true" />
-                <element signature="e#13726#13739#0" expanded="true" />
-                <element signature="e#13894#13904#0" expanded="true" />
-                <element signature="e#14058#14070#0" expanded="true" />
-                <element signature="e#14226#14241#0" expanded="true" />
+                <element signature="e#12153#12161#0" expanded="true" />
+                <element signature="e#12616#12628#0" expanded="true" />
+                <element signature="e#12715#12733#0" expanded="true" />
+                <element signature="e#12826#12846#0" expanded="true" />
+                <element signature="e#12940#12958#0" expanded="true" />
+                <element signature="e#13208#13218#0" expanded="true" />
+                <element signature="e#13381#13391#0" expanded="true" />
+                <element signature="e#13551#13558#0" expanded="true" />
+                <element signature="e#13714#13727#0" expanded="true" />
+                <element signature="e#13882#13892#0" expanded="true" />
+                <element signature="e#14046#14058#0" expanded="true" />
+                <element signature="e#14214#14229#0" expanded="true" />
                 <element signature="n#style#0;n#ins#0;n#aside#5;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#24125#24137#0" expanded="true" />
-                <element signature="e#24873#24885#0" expanded="true" />
+                <element signature="e#24113#24125#0" expanded="true" />
+                <element signature="e#24861#24873#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showAll.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Magazine/showAll.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="42" selection-start="0" selection-end="2886" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1125">
+              <folding>
+                <element signature="e#12#52#0" expanded="false" />
+                <element signature="e#971#983#0" expanded="false" />
+                <element signature="e#1228#1240#0" expanded="false" />
+                <element signature="e#2731#2746#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -118,24 +136,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="16" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="945">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MagazineController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MagazineController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="34" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="705">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AjaxController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AjaxController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -148,23 +148,40 @@
       <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="6765">
+            <state line="16" column="60" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6825">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="5117-1416068442.jpeg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/uploads/pic/2014/11/5117-1416068442.jpeg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="PodcastController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/PodcastController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="58" selection-start="373" selection-end="373" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="405">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file05.jpg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/uploads/pic/2014/11/file05.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="showAll.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Podcast/showAll.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="29" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.41847205" vertical-offset="98" max-vertical-offset="1005">
+              <folding>
+                <element signature="e#12#52#0" expanded="true" />
+                <element signature="e#448#503#0" expanded="true" />
+                <element signature="e#2126#2178#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jwplayer.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/assets/js/jwplayer/jwplayer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="132278" selection-start="132278" selection-end="132278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -181,9 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/headerCarousel.html.twig" />
-        <option value="$PROJECT_DIR$/web/assets/css/portal.css" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/popularArticles.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/recentArticles.html.twig" />
@@ -226,20 +240,23 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Pictures.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadArticle.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MagazineController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AjaxController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/PodcastController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
+        <option value="$PROJECT_DIR$/web/assets/js/jwplayer/jwplayer.js" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Podcast/showAll.html.twig" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="203" />
+    <option name="x" value="80" />
     <option name="y" value="23" />
-    <option name="width" value="1717" />
+    <option name="width" value="1840" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -342,59 +359,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2014" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="11" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Phpimageprescaler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libraries" />
+              <option name="myItemId" value="podcasts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -434,7 +399,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jwplayer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -523,6 +514,74 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Podcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Magazine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -711,11 +770,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/podcasts" />
+      <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller" />
       <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM" />
       <recent name="$PROJECT_DIR$/web/assets" />
       <recent name="$PROJECT_DIR$/web/assets/css/images/soundmanager" />
-      <recent name="$PROJECT_DIR$/web/assets/css/images" />
-      <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/assets" />
@@ -972,7 +1031,11 @@
       <created>1416647365669</created>
       <updated>1416647365669</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fixed nav menu">
+      <created>1416648949680</created>
+      <updated>1416648949680</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -996,7 +1059,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="203" y="23" width="1717" height="1057" extended-state="0" />
+    <frame x="80" y="23" width="1840" height="1057" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1010,8 +1073,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32574257" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15940298" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18089552" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14849833" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16852058" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1034,7 +1097,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Musique news display all musique type" />
     <MESSAGE value="Video du jour" />
     <MESSAGE value="Crop image" />
     <MESSAGE value="Correction front end" />
@@ -1059,7 +1121,8 @@
     <MESSAGE value="Fixture data update with Artist" />
     <MESSAGE value="Avancement Ajax" />
     <MESSAGE value="update index front" />
-    <option name="LAST_COMMIT_MESSAGE" value="update index front" />
+    <MESSAGE value="fixed nav menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed nav menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1067,28 +1130,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showAll.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="0" selection-start="5982" selection-end="5982" vertical-scroll-proportion="0.0" vertical-offset="2190" max-vertical-offset="2280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArtistController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="2237" selection-end="2237" vertical-scroll-proportion="-8.375" vertical-offset="639" max-vertical-offset="1575" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/js/soundmanager/soundmanager2-jsmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/js/soundmanager/bar-ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20880" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/assets/css/soundmanager/bar-ui.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="858" column="0" selection-start="21678" selection-end="21678" vertical-scroll-proportion="0.0" vertical-offset="11573" max-vertical-offset="13545">
@@ -1297,13 +1338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="6765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="16" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="945">
@@ -1374,29 +1408,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="60" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/PodcastController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="58" selection-start="373" selection-end="373" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="726" column="45" selection-start="30673" selection-end="30673" vertical-scroll-proportion="0.6298472" vertical-offset="10354" max-vertical-offset="11205">
+        <state line="240" column="45" selection-start="12231" selection-end="12231" vertical-scroll-proportion="-9.24" vertical-offset="3138" max-vertical-offset="11205">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#11554#11559#0" expanded="true" />
             <element signature="e#11939#11954#0" expanded="true" />
             <element signature="e#12046#12061#0" expanded="true" />
-            <element signature="e#12153#12173#0" expanded="true" />
-            <element signature="e#12628#12640#0" expanded="true" />
-            <element signature="e#12727#12745#0" expanded="true" />
-            <element signature="e#12838#12858#0" expanded="true" />
-            <element signature="e#12952#12970#0" expanded="true" />
-            <element signature="e#13220#13230#0" expanded="true" />
-            <element signature="e#13393#13403#0" expanded="true" />
-            <element signature="e#13563#13570#0" expanded="true" />
-            <element signature="e#13726#13739#0" expanded="true" />
-            <element signature="e#13894#13904#0" expanded="true" />
-            <element signature="e#14058#14070#0" expanded="true" />
-            <element signature="e#14226#14241#0" expanded="true" />
+            <element signature="e#12153#12161#0" expanded="true" />
+            <element signature="e#12616#12628#0" expanded="true" />
+            <element signature="e#12715#12733#0" expanded="true" />
+            <element signature="e#12826#12846#0" expanded="true" />
+            <element signature="e#12940#12958#0" expanded="true" />
+            <element signature="e#13208#13218#0" expanded="true" />
+            <element signature="e#13381#13391#0" expanded="true" />
+            <element signature="e#13551#13558#0" expanded="true" />
+            <element signature="e#13714#13727#0" expanded="true" />
+            <element signature="e#13882#13892#0" expanded="true" />
+            <element signature="e#14046#14058#0" expanded="true" />
+            <element signature="e#14214#14229#0" expanded="true" />
             <element signature="n#style#0;n#ins#0;n#aside#5;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#24125#24137#0" expanded="true" />
-            <element signature="e#24873#24885#0" expanded="true" />
+            <element signature="e#24113#24125#0" expanded="true" />
+            <element signature="e#24861#24873#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Magazine/showAll.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="42" selection-start="0" selection-end="2886" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1125">
+          <folding>
+            <element signature="e#12#52#0" expanded="false" />
+            <element signature="e#971#983#0" expanded="false" />
+            <element signature="e#1228#1240#0" expanded="false" />
+            <element signature="e#2731#2746#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/js/jwplayer/jwplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="132278" selection-start="132278" selection-end="132278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Podcast/showAll.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="29" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.41847205" vertical-offset="98" max-vertical-offset="1005">
+          <folding>
+            <element signature="e#12#52#0" expanded="true" />
+            <element signature="e#448#503#0" expanded="true" />
+            <element signature="e#2126#2178#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -12,6 +12,10 @@ ajax_general:
     requirements:
         _method:  POST
 
+podcasts:
+    path:     /podcasts
+    defaults: { _controller: VyperSiteBundle:Podcast:showAll }
+
 a_propos:
     path:     /a-propos
     defaults: { _controller: VyperSiteBundle:Statique:aPropos }
