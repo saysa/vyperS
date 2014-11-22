@@ -47,7 +47,7 @@ class ArtistController extends Controller
         return $this->render('VyperSiteBundle:Artist:showArtist.html.twig', $view->getView());
     }
 
-    public function showAllAction($page)
+    public function showAllAction(Request $request, $page)
     {
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
@@ -62,7 +62,16 @@ class ArtistController extends Controller
             ->set('page', $page)
             ->set('total_artists', ceil(count($artists)/$articles_per_page))
         ;
-        return $this->render('VyperSiteBundle:Artist:showAll.html.twig', $view->getView());
+
+        if ($request->isXmlHttpRequest()) {
+
+            $template = $this->renderView('VyperSiteBundle:Artist:ajaxShowAll.html.twig', $view->getView());
+            return new Response($template);
+
+        } else {
+            return $this->render('VyperSiteBundle:Artist:showAll.html.twig', $view->getView());
+        }
+
     }
 
     public function showDiscoAction(Artist $artist)

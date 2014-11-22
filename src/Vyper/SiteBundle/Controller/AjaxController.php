@@ -19,6 +19,8 @@ class AjaxController extends Controller
                 return $this->forward('VyperSiteBundle:Event:showAll');
             } elseif (preg_match('!/podcasts$!', $string_route)) {
                 return $this->forward('VyperSiteBundle:Podcast:showAll');
+            } elseif (preg_match('!/artistes!', $string_route)) {
+                return $this->forward('VyperSiteBundle:Artist:showAll', array('page' => 1));
             }
 
         } else {
