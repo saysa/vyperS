@@ -46,7 +46,8 @@ class AdminPictureController extends AdminCommonController {
                 $em->persist($picture);
                 $em->flush();
             }
-
+            $request->getSession()->getFlashBag()->add('info', 'Picture added.');
+            return $this->redirect($this->generateUrl('admin_show_pictures'));
         }
 
         $view->set('form', $form->createView());

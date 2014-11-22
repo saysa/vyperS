@@ -31,6 +31,9 @@ class AdminTourController extends AdminCommonController {
                 $em->flush();
             }
 
+            $request->getSession()->getFlashBag()->add('info', 'Tour added.');
+            return $this->redirect($this->generateUrl('admin_show_tours'));
+
         }
 
         $view
@@ -38,7 +41,7 @@ class AdminTourController extends AdminCommonController {
             ->set('active_tour', true)
         ;
 
-        return $this->render('VyperSiteBundle:Admintour:addTour.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminTour:addTour.html.twig', $view->getView());
     }
 
     /**
@@ -61,7 +64,7 @@ class AdminTourController extends AdminCommonController {
                 $em = $this->getDoctrine()->getManager();
                 $em->flush();
             }
-
+            $request->getSession()->getFlashBag()->add('info', 'Tour updated.');
         }
 
         $view

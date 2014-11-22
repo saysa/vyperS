@@ -31,6 +31,8 @@ class AdminLocationController extends AdminCommonController {
                 $em->flush();
             }
 
+            $request->getSession()->getFlashBag()->add('info', 'Location added.');
+            return $this->redirect($this->generateUrl('admin_show_locations'));
         }
 
         $view
