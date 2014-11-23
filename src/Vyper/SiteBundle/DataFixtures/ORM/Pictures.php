@@ -24,7 +24,18 @@ class Pictures extends AbstractFixture implements FixtureInterface, OrderedFixtu
      */
     public function load(ObjectManager $manager)
     {
-        $names = array('file01.jpg', 'file02.jpg', 'file03.jpg', 'file04.jpg', 'file05.jpg');
+        $names = array(
+            'file01.jpg',
+            'file02.jpg',
+            'file03.jpg',
+            'file04.jpg',
+            'file05.jpg',
+            'cover01.jpg',
+            'cover02.jpg',
+            'cover03.jpg',
+            'cover04.jpg',
+
+        );
 
         foreach ($names as $i => $name)
         {

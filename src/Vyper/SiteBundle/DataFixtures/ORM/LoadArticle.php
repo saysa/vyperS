@@ -75,6 +75,6 @@ class LoadArticle extends AbstractFixture implements FixtureInterface, OrderedFi
 
     public function getOrder()
     {
-        return 10;
+        return 5;
     }
 }

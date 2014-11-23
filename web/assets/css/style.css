@@ -1759,6 +1759,10 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     background-color: rgba(0,0,0, 0.3);
 }
 
+.hover-effect:hover {
+    background-color: rgba(0,0,0, 0);
+}
+
 .album-thumbnail .gallery-info {
     text-align: center;
     position: absolute;
@@ -1846,6 +1850,10 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
 h6.release-artist {
     margin-top: 30px;
+}
+
+h6.release-artist a {
+    background: teal;
 }
 
 .release-thumbnail .release-meta {
@@ -1989,9 +1997,10 @@ a.small {
     color: white;
 }
 
-/* nac fixed */
+/* nav fixed */
 .fixed {
     position: fixed;
     top: 0;
     width: 960px;
 }
+

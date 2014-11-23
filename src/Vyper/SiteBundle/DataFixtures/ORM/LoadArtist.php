@@ -45,10 +45,46 @@ class LoadArtist extends AbstractFixture implements FixtureInterface, OrderedFix
             'Gazette',
             'Gerard',
             'Zao',
+            'ALI PROJECT',
+'Alice Nine',
+'An Cafe',
+'Ayabie',
+'D',
+'DaizyStripper',
+'Deathgaze',
+'Deluhi',
+'D\'espairsRay',
+'Dio - Distraught Overlord',
+'Dir en grey',
+'Dolly',
+'Galneryus',
+'Ghost',
+'Girugämesh',
+'Guniw Tools',
+'Gackt',
+'Golden Bomber',
+'Malice Mizer',
+'Madeth Gray\'ll',
+'Matenrou Opera',
+'Merry',
+'Miyavi',
+'Moi dix Mois',
+'MUCC',
+'Schwarz Stein',
+'Shazna',
+'Sid',
+'Sincrea',
+'SuG',
+'VAMPS',
+'Versailles',
+'Vidoll',
+'Vistlip',
+            '12012',
         );
 
         foreach ($names as $i => $name)
         {
+            $randPic = mt_rand(0, 4);
             $rand = mt_rand(0, 5);
 
             $list[$i] = new Artist();
@@ -56,8 +92,10 @@ class LoadArtist extends AbstractFixture implements FixtureInterface, OrderedFix
             $list[$i]->setProfile($name);
             $list[$i]->setKeywords($name);
             $list[$i]->setType($this->getReference('artist-type-'.$rand));
+            $list[$i]->setPicture($this->getReference('picture-'.$randPic));
 
             $manager->persist($list[$i]);
+            $this->addReference('artist-'.$i, $list[$i]);
         }
 
         $manager->flush();
@@ -65,6 +103,6 @@ class LoadArtist extends AbstractFixture implements FixtureInterface, OrderedFix
 
     public function getOrder()
     {
-        return 2;
+        return 5;
     }
 }

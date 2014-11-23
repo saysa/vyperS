@@ -60,8 +60,13 @@
         <!-- /post-wrap -->
 
         {% if artist.getBiography %}
-            <div class="content-title main-color-reverse">
-                <h4>Biographie</h4>
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <div class="cat-icon">
+                        <i class="icon-rocket"></i>
+                    </div>
+                    <h4>Biographie</h4>
+                </div>
             </div>
 
             <div class="entry-content">
@@ -72,13 +77,8 @@
         <!-- /entry-content -->
 
         {% if discos is defined %}
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-rocket"></i>
-                    </div>
-                    <h4>Discographie</h4>
-                </div>
+            <div class="content-title main-color-reverse">
+                <h4>Discographie</h4>
             </div>
 
             <div class="column">
@@ -86,18 +86,19 @@
                     <div class="releases-listing">
                         {% set iterate = 0 %}
                         {% for key, disco in discos %}
-                            <div class="one-fourth column{% if iterate==2 %} last{% set iterate = -1 %}{% endif %}">
+                            <div class="col-md-3 padding-off">
                                 <div class="release-thumbnail">
-                                    <div class="release-cover">
-                                        <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}"><img src="{{ asset(disco.picture.getPath('220')) }}" class="fullwidth" alt=""></a>
-                                    </div>
+                                    <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">
+                                        <img width="142" src="{{ asset(disco.picture.getPath('152')) }}" class="fullwidth" alt="">
+                                    </a>
 
-                                    <h4 class="release-title"><a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a></h4>
-                                    <h6 class="release-artist">{{ artist.getName }}</h6>
+                                    <h6 class="release-artist">
+                                        <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a>
+                                    </h6>
                                     <div class="release-meta">
                                         {% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
                                             <div class="button-container tip-container">
-                                                <a href="javascript: void(0);" class="button small buy" target="_blank"><span>Acheter</span></a>
+                                                <a href="javascript: void(0);" class="button small buy" target="_blank"><span><i class="fa fa-shopping-cart"></i> Acheter</span></a>
                                                 <div class="tip-cloud">
                                                     <div class="tip-corner"></div>
                                                     <div class="tip-content">
@@ -116,11 +117,12 @@
                                                 </div>
                                             </div>
                                         {% endif %}
-                                        <div class="release-info">disco.getDate }}</div>
+                                        <div class="release-info">{{ disco.date|date("d/m/Y") }}</div>
                                         <div class="clear"></div>
 
                                     </div>
                                 </div>
+
                             </div>
                             {% set iterate = iterate+1 %}
                         {% endfor %}
@@ -264,9 +266,15 @@
 
 
 
-
-        <div id="comments" class="content-title main-color-reverse">
-            <h4><i class="fa fa-comments"></i> Donnez votre avis</h4>
+        <div id="comments">
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <div class="cat-icon">
+                        <i class="icon-rocket"></i>
+                    </div>
+                    <h4>Donnez votre avis</h4>
+                </div>
+            </div>
         </div>
         <!-- /comments -->
 

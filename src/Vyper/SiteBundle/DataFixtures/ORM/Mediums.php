@@ -8,12 +8,14 @@
 
 namespace Vyper\SiteBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Vyper\SiteBundle\Entity\Medium;
 
 
-class Mediums implements FixtureInterface {
+class Mediums extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface {
 
     /**
      * Load data fixtures with the passed EntityManager
@@ -26,12 +28,19 @@ class Mediums implements FixtureInterface {
 
         foreach ($names as $i => $name)
         {
-            $list_continents[$i] = new Medium();
-            $list_continents[$i]->setName($name);
+            $list[$i] = new Medium();
+            $list[$i]->setName($name);
 
-            $manager->persist($list_continents[$i]);
+            $manager->persist($list[$i]);
+
         }
 
         $manager->flush();
+        $this->addReference('medium', $list[$i]);
+    }
+
+    public function getOrder()
+    {
+        return 1;
     }
 }

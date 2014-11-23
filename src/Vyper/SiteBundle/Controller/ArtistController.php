@@ -26,7 +26,7 @@ class ArtistController extends Controller
         $artist  = $em->getRepository('VyperSiteBundle:Artist')->find($artist->getId());
         $articles   = $em->getRepository('VyperSiteBundle:Article')->getByArtist($artist);
         $events     = $em->getRepository('VyperSiteBundle:Event')->getByArtist($artist);
-        $discos     = $em->getRepository('VyperSiteBundle:Disco')->getByArtist($artist, 3);
+        $discos     = $em->getRepository('VyperSiteBundle:Disco')->getByArtist($artist, 4);
         $albums     = $em->getRepository('VyperSiteBundle:Album')->getByArtist($artist);
 
         foreach ($albums as $album)
@@ -52,7 +52,7 @@ class ArtistController extends Controller
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
         $articles_per_page = $this->container->getParameter('artists_per_page');
-        $artists  = $em->getRepository('VyperSiteBundle:Artist')->findAll();
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll();
         $artistTypes = $em->getRepository('VyperSiteBundle:ArtistType')->findAll();
 
         $view
