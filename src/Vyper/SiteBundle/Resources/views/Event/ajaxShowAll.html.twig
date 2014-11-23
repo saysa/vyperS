@@ -17,6 +17,7 @@
 
     <script>
 
+        $(document).ready(function(){
             console.log('appel ajax 2');
             $('#calendar').fullCalendar({
                 header: {
@@ -64,7 +65,7 @@
             });
             console.log('appel ajax');
             $('#calendar').fullCalendar('refetchEvents');
-
+        });
 
     </script>
 {% endblock %}
