@@ -119,10 +119,16 @@ showDisco:
         id: \d+
 
 artistDiscography:
-    path:    /artist-discography/{slug}/{id}.html
-    defaults: { _controller: VyperSiteBundle:Artist:showDisco }
+    path:    /artist-discography/{slug}/{id}.html/{page}
+    defaults: { _controller: VyperSiteBundle:Artist:showDisco, page: 1 }
     requirements:
         id: \d+
+        page: \d*
+
+infiniteScrollArtistDiscography:
+    path:    /is/artist-discography
+    defaults: { _controller: VyperSiteBundle:Artist:infinteScrollShowDisco }
+
 
 mangaanime:
     path:    /manga-anime/{page}

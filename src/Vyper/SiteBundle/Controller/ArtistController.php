@@ -74,16 +74,33 @@ class ArtistController extends Controller
 
     }
 
-    public function showDiscoAction(Artist $artist)
+    public function showDiscoAction(Artist $artist, $page)
     {
+        #var_dump($page);
+        #die();
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
-        $discos     = $em->getRepository('VyperSiteBundle:Disco')->getByArtist($artist);
+        $discos     = $em->getRepository('VyperSiteBundle:Disco')->getByArtist($artist, $page, 12);
         $view
             ->set('artist', $artist)
             ->set('discos', $discos)
+            ->set('page', $page)
         ;
         return $this->render('VyperSiteBundle:Artist:showDisco.html.twig', $view->getView());
+    }
+
+    public function infinteScrollShowDiscoAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $artist  = $em->getRepository('VyperSiteBundle:Artist')->find($request->request->get('artist'));
+        $view = $this->container->get('saysa_view');
+        $discos     = $em->getRepository('VyperSiteBundle:Disco')->getByArtist($artist, $request->request->get('page'), 12);
+        $view
+            ->set('discos', $discos)
+        ;
+
+        $template = $this->renderView('VyperSiteBundle:Artist:isShowDisco.html.twig', $view->getView());
+        return new Response($template);
     }
 
     public function recentArticlesAction()

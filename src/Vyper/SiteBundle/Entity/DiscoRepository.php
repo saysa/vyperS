@@ -3,6 +3,7 @@
 namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * DiscoRepository
@@ -22,7 +23,7 @@ class DiscoRepository extends EntityRepository
         return $results;
     }
 
-    public function getByArtist($artist_id, $limit = null)
+    public function getByArtist($artist_id, $page, $limit = null)
     {
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder
@@ -37,8 +38,12 @@ class DiscoRepository extends EntityRepository
         }
 
         $query = $queryBuilder->getQuery();
-        $results = $query->getResult();
 
-        return $results;
+        $query
+            ->setFirstResult(($page-1) * $limit)
+            ->setMaxResults($limit)
+        ;
+
+        return new Paginator($query);
     }
 }

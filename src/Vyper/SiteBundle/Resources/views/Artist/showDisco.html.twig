@@ -53,43 +53,46 @@
                         </h6>
             #}
 
-            {% for key, disco in discos %}
-                <div class="col-md-3 padding-off">
-                    <div class="release-thumbnail">
-                        <div style="height: 142px; background: url({{ asset(disco.picture.getPath('152')) }});">
+            <div id="discos" data-page="1">
+                {% for key, disco in discos %}
+                    <div class="col-md-3 padding-off item" data-discoid="{{ disco.id }}">
+                        <div class="release-thumbnail">
+                            <div style="height: 142px; background: url({{ asset(disco.picture.getPath('152')) }});">
 
-                        </div>
+                            </div>
 
-                        <div class="release-meta">
-                            {% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
-                                <div class="button-container tip-container">
-                                    <a href="javascript: void(0);" class="button small buy" target="_blank"><span><i class="fa fa-shopping-cart"></i> Acheter</span></a>
-                                    <div class="tip-cloud">
-                                        <div class="tip-corner"></div>
-                                        <div class="tip-content">
-                                            <ul>
-                                                {% if disco.getCdJapan %}
-                                                    <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
-                                                {% endif %}
-                                                {% if disco.getItunes %}
-                                                    <li><a href="{{ disco.getItunes }}">iTunes</a></li>
-                                                {% endif %}
-                                                {% if disco.getAmazon %}
-                                                    <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
-                                                {% endif %}
-                                            </ul>
+                            <div class="release-meta">
+                                {% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
+                                    <div class="button-container tip-container">
+                                        <a href="javascript: void(0);" class="button small buy" target="_blank"><span><i class="fa fa-shopping-cart"></i> Acheter</span></a>
+                                        <div class="tip-cloud">
+                                            <div class="tip-corner"></div>
+                                            <div class="tip-content">
+                                                <ul>
+                                                    {% if disco.getCdJapan %}
+                                                        <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
+                                                    {% endif %}
+                                                    {% if disco.getItunes %}
+                                                        <li><a href="{{ disco.getItunes }}">iTunes</a></li>
+                                                    {% endif %}
+                                                    {% if disco.getAmazon %}
+                                                        <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
+                                                    {% endif %}
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            {% endif %}
-                            <div class="release-info">{{ disco.date|date("d/m/Y") }}</div>
-                            <div class="clear"></div>
+                                {% endif %}
+                                <div class="release-info">{{ disco.date|date("d/m/Y") }}</div>
+                                <div class="clear"></div>
 
+                            </div>
                         </div>
-                    </div>
 
-                </div>
-            {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+
 
 
 
@@ -112,7 +115,47 @@
         </div>
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Infinte Scroll Grafikart -->
+        <script>
+
+
+            $(document).ready(function(){
+
+                //Check to see if the window is top if not then display button
+                $(window).scroll(function(){
+                    if ($(this).scrollTop() == $(document).height() - $(window).height()) {
+
+                        var page = $("#discos").data("page")+1;
+
+                        console.log(page);
+
+                        $.ajax({
+                            type: "POST",
+                            url: '{{ path('infiniteScrollArtistDiscography') }}',
+                            dataType: "html",
+                            data:{
+                                page : page,
+                                artist: {{ artist.id }}
+                            },
+                            success: function(data){
+                                $("#discos").append(data);
+                                $("#discos").data('page', page);
+                                //console.log(data);
+                                //alert('die 2');
+                                //$("#content").html(data);
+                                //$("#loading").hide();
+                            }
+                        });
+                    }
+                });
+
+
+
+            });
+
+
+        </script>
+
         <script>
 
             $(document).ready(function() {
