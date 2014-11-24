@@ -26,12 +26,15 @@
                             </thead>
 
                             <tbody>
-                            {% for i in 0..2 %}
+                            {% for i in 0..4 %}
                                 {% set position = i+1 %}
                                 <tr>
                                     <td>{{ position }}</td>
-                                    <td>{{ top_manga[i].manga.title }}
-                                        <img src="{{ asset(top_manga[i].manga.picture.getPath('75-75')) }}" alt="" />
+                                    <td>
+                                        {% if top_manga[i] is defined %}
+                                            {{ top_manga[i].manga.title }}
+                                            <img src="{{ asset(top_manga[i].manga.picture.getPath('75-75')) }}" alt="" />
+                                        {% endif %}
                                     </td>
                                     <td>
                                         <select id="top_manga_{{ position }}" class="form-control jquery-manga" data-rel="chosen" data-position="{{ position }}">
