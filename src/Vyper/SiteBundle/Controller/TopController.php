@@ -23,4 +23,32 @@ class TopController extends Controller
 
         return $this->render('VyperSiteBundle:Top:topMangas.html.twig', $view->getView());
     }
+
+    public function topMusicsAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $top_music  = $em->getRepository('VyperSiteBundle:Top')->topMusic();
+
+
+        $view = $this->container->get('saysa_view');
+        $view->set('top_musics', $top_music);
+
+        return $this->render('VyperSiteBundle:Top:topMusics.html.twig', $view->getView());
+    }
+
+    public function topOstsAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $top_music  = $em->getRepository('VyperSiteBundle:Top')->topOst();
+
+
+        $view = $this->container->get('saysa_view');
+        $view->set('top_osts', $top_music);
+
+        return $this->render('VyperSiteBundle:Top:topOsts.html.twig', $view->getView());
+    }
+
+
 }

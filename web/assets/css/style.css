@@ -2004,3 +2004,59 @@ a.small {
     width: 960px;
 }
 
+/* Top */
+.top-2-plus, .top-1 {
+    position: relative;
+}
+
+.top-1 .top-1-position {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    min-height: 22px;
+}
+
+.top-1 .number-one {
+    font-family: 'Interstate';
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+.top-1 .details {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: white;
+    font-family: 'Interstate';
+    letter-spacing: 1px;
+    font-weight: normal;
+
+}
+
+.top-1 .details .infos {
+    padding: 5px 5px 10px 0;
+}
+
+.top-1 .details span {
+    display: block;
+}
+
+.top-2-plus .position {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #414140;
+    color: #D35F5F;
+    font-family: 'Interstate';
+    font-size: 1.275em;
+    line-height: 1.62727272727273em;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.top-2-plus img, .top-1 img {
+    display: block;
+}

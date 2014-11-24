@@ -111,6 +111,22 @@
                 }
             }
         },
+        "top1": {
+            "dimensions": {
+                "0": {
+                    "w": 290,
+                    "h": 290
+                }
+            }
+        },
+        "top-2-plus": {
+            "dimensions": {
+                "0": {
+                    "w": 96,
+                    "h": 96
+                }
+            }
+        },
         "example": {
             "dimensions": {
                 "mobile": {

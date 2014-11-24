@@ -26,6 +26,34 @@ class TopRepository extends EntityRepository
         return $results;
     }
 
+    public function topMusic()
+    {
+        $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder
+            ->where('t.type = :music')
+            ->orderBy('t.position', 'ASC')
+            ->setParameter('music', 'music')
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
+    public function topOst()
+    {
+        $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder
+            ->where('t.type = :ost')
+            ->orderBy('t.position', 'ASC')
+            ->setParameter('ost', 'ost')
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function getManga($options)
     {
         $queryBuilder = $this->createQueryBuilder('t');
