@@ -78,8 +78,12 @@ class AdminVideoController extends AdminCommonController {
 
         // Get all the articles not deleted
         $videos  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Video')->myFindAll();
+        $podcast_video  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Podcast')->getVideo();
+        $podcast_audio  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Podcast')->getAudio();
 
         $view->set('videos',       $videos);
+        $view->set('podcast_video',       $podcast_video);
+        $view->set('podcast_audio',       $podcast_audio);
         $view->set("active_video", true);
 
         return $this->render('VyperSiteBundle:AdminVideo:showVideos.html.twig', $view->getView());

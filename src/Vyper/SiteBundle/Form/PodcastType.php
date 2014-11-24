@@ -21,6 +21,7 @@ class PodcastType extends AbstractType
             ->add('description', 'textarea', array('required' => false))
             ->add('filename', 'text', array('attr' => array('placeholder' => 'Filename')))
             ->add('pictureID', 'text', array('required' => false, 'attr' => array('placeholder' => 'Picture ID')))
+            ->add('type', 'text')
         ;
 
         // On ajoute une fonction qui va écouter un évènement

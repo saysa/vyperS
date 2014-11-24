@@ -336,6 +336,12 @@ admin_add_podcast:
     path:     /_admin_/podcast/add
     defaults: { _controller: VyperSiteBundle:AdminPodcast:addPodcast }
 
+admin_update_podcast:
+    path:     _admin_/podcast/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminPodcast:updatePodcast }
+    requirements:
+        id: \d+
+
 admin_show_tours:
     path:     /_admin_/tours
     defaults: { _controller: VyperSiteBundle:AdminTour:showTours }

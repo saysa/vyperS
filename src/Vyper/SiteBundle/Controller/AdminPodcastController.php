@@ -18,17 +18,26 @@ class AdminPodcastController extends AdminCommonController {
     public function addPodcastAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
-        $tour = new Podcast();
-        $form = $this->createForm(new PodcastType, $tour);
+        $podcast = new Podcast();
+        $form = $this->createForm(new PodcastType, $podcast);
 
         if ($request->getMethod() == 'POST') {
 
+            $em = $this->getDoctrine()->getManager();
+            $post_data = $request->request->get('vyper_sitebundle_podcast');
             $form->submit($request);
-            if ($form->isValid()) {
 
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($tour);
+            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $podcast->setPicture($picture);
+
+            $podcast->setType($_POST['type']);
+
+            if ($form->isValid()) {
+                $em->persist($podcast);
                 $em->flush();
+
+                $request->getSession()->getFlashBag()->add('info', 'Podcast added.');
+                return $this->redirect($this->generateUrl('admin_show_videos'));
             }
         }
 
@@ -42,15 +51,15 @@ class AdminPodcastController extends AdminCommonController {
 
     /**
      * @param Request $request
-     * @param Video $video
+     * @param Podcast $podcast
      * @return \Symfony\Component\HttpFoundation\Response
      * @Security("has_role('ROLE_AUTHOR')")
      */
-    public function updateVideoAction(Request $request, Video $video)
+    public function updatePodcastAction(Request $request, Podcast $podcast)
     {
         $view = $this->container->get('saysa_view');
 
-        $form = $this->createForm(new VideoType, $video);
+        $form = $this->createForm(new PodcastType, $podcast);
 
         if ('POST' === $request->getMethod()) {
 
@@ -64,12 +73,12 @@ class AdminPodcastController extends AdminCommonController {
         }
 
         $view
-            ->set('video', $video)
+            ->set('podcast', $podcast)
             ->set('active_video', true)
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:AdminVideo:updateVideo.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminPodcast:updatePodcast.html.twig', $view->getView());
     }
 
 

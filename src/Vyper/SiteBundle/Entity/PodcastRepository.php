@@ -12,4 +12,33 @@ use Doctrine\ORM\EntityRepository;
  */
 class PodcastRepository extends EntityRepository
 {
+    public function getVideo()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->where('a.type = :type')
+            ->orderBy('a.id', 'DESC')
+            ->setParameter('type', 'video');
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
+    public function getAudio()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->where('a.type = :type')
+            ->orderBy('a.id', 'DESC')
+            ->setParameter('type', 'audio');
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
+
 }

@@ -303,7 +303,7 @@ class Podcast
      * @param \Vyper\SiteBundle\Entity\Picture $picture
      * @return Podcast
      */
-    public function setPicture(\Vyper\SiteBundle\Entity\Picture $picture)
+    public function setPicture(\Vyper\SiteBundle\Entity\Picture $picture = null)
     {
         $this->picture = $picture;
 
