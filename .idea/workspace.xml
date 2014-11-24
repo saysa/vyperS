@@ -61,19 +61,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showDisco.html.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="showDisco.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showDisco.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="109" selection-start="2213" selection-end="2248" vertical-scroll-proportion="-11.541667" vertical-offset="608" max-vertical-offset="2700">
-              <folding />
+            <state line="146" column="35" selection-start="6169" selection-end="6169" vertical-scroll-proportion="0.41847205" vertical-offset="1823" max-vertical-offset="2775">
+              <folding>
+                <element signature="e#2172#2254#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2050" column="18" selection-start="36069" selection-end="36069" vertical-scroll-proportion="0.70857143" vertical-offset="30130" max-vertical-offset="31005">
+            <state line="2050" column="18" selection-start="36069" selection-end="36069" vertical-scroll-proportion="-23.846153" vertical-offset="30130" max-vertical-offset="31005">
               <folding />
             </state>
           </provider>
@@ -182,7 +184,6 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Repository/DiscoRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/DiscoRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showDisco.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArtistController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/isShowDisco.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadManga.php" />
@@ -198,6 +199,7 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Top/topOsts.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showDisco.html.twig" />
       </list>
     </option>
   </component>
@@ -1412,13 +1414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showDisco.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="109" selection-start="2213" selection-end="2248" vertical-scroll-proportion="-11.541667" vertical-offset="608" max-vertical-offset="2700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/pip_config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="121" column="9" selection-start="2546" selection-end="2556" vertical-scroll-proportion="-8.416667" vertical-offset="1613" max-vertical-offset="2340">
@@ -1489,8 +1484,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2050" column="18" selection-start="36069" selection-end="36069" vertical-scroll-proportion="0.70857143" vertical-offset="30130" max-vertical-offset="31005">
+        <state line="2050" column="18" selection-start="36069" selection-end="36069" vertical-scroll-proportion="-23.846153" vertical-offset="30130" max-vertical-offset="31005">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showDisco.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="35" selection-start="6169" selection-end="6169" vertical-scroll-proportion="0.41847205" vertical-offset="1823" max-vertical-offset="2775">
+          <folding>
+            <element signature="e#2172#2254#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

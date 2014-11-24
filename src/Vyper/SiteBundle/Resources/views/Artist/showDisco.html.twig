@@ -140,6 +140,11 @@
                             success: function(data){
                                 $("#discos").append(data);
                                 $("#discos").data('page', page);
+                                $(".tip-container").on("click", ".buy", function() {
+                                    $(".tip-cloud").hide();
+                                    var tipcloud = $(this).next();
+                                    tipcloud.show();
+                                });
                                 //console.log(data);
                                 //alert('die 2');
                                 //$("#content").html(data);
@@ -158,7 +163,7 @@
 
         <script>
 
-            $(document).ready(function() {
+            $(window).load(function() {
 
                 $(".tip-container").on("click", ".buy", function() {
                     $(".tip-cloud").hide();
