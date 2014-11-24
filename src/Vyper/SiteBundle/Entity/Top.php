@@ -31,7 +31,7 @@ class Top
     /**
      * @var integer
      *
-     * @ORM\Column(name="itemId", type="integer")
+     * @ORM\Column(name="itemId", type="integer", nullable=true)
      */
     private $itemId;
 
