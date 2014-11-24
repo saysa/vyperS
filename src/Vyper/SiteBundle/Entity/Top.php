@@ -42,6 +42,31 @@ class Top
      */
     private $position;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255, nullable=true)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="author", type="string", length=255, nullable=true)
+     */
+    private $author;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
+     */
+    private $picture;
+
+    /**
+     * @var integer
+     * Pour stocker l'ID du formulaire
+     */
+    private $pictureID;
+
 
     /**
      * Get id
@@ -120,5 +145,90 @@ class Top
     public function getPosition()
     {
         return $this->position;
+    }
+
+    /**
+     * @param int $pictureID
+     */
+    public function setPictureID($pictureID)
+    {
+        $this->pictureID = $pictureID;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPictureID()
+    {
+        return $this->pictureID;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Top
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set author
+     *
+     * @param string $author
+     * @return Top
+     */
+    public function setAuthor($author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return string 
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Vyper\SiteBundle\Entity\Picture $picture
+     * @return Top
+     */
+    public function setPicture(\Vyper\SiteBundle\Entity\Picture $picture = null)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Vyper\SiteBundle\Entity\Picture 
+     */
+    public function getPicture()
+    {
+        return $this->picture;
     }
 }
