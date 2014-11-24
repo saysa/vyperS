@@ -111,6 +111,14 @@
                 }
             }
         },
+        "podcast": {
+            "dimensions": {
+                "0": {
+                    "w": 236,
+                    "h": 135
+                }
+            }
+        },
         "top1": {
             "dimensions": {
                 "0": {

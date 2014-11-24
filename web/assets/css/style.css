@@ -2060,3 +2060,24 @@ a.small {
 .top-2-plus img, .top-1 img {
     display: block;
 }
+
+/* Podcast */
+.podcast-content {
+
+    margin-bottom: 7px;
+}
+
+.podcast-content img {
+    display: block;
+}
+
+.podcast-content .description {
+    background: #CCC;
+    height: 135px;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.podcast-content .description h4 {
+    font-family: 'Interstate';
+}

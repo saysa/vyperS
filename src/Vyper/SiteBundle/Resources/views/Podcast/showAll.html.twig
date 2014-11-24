@@ -6,7 +6,7 @@
         <div class="post-wrap">
             <article id="post-28" class="post type-post status-publish format-standard hentry">
                 <header class="entry-header">
-                    <h1>Podcasts</h1>
+                    <h1 id="podcast">Podcasts</h1>
                 </header>
             </article>
         </div>
@@ -33,32 +33,62 @@
             });
         </script>
         <script>
-            function loadVideo(myFile) {
+            function loadVideo(myFile, image) {
                 jwplayer().load([{
-                    file: myFile
+                    file: myFile,
+                    image: image
                 }]);
                 jwplayer().play();
             };
+
+            function scrollToPlayer() {
+                $('html, body').animate({
+                    scrollTop: $("#podcast").offset().top
+                }, 200);
+            };
+
+
         </script>
 
+
+        <div class="content-title main-color-reverse">
+            <h4>Podcast vidéo</h4>
+        </div>
+
+        {% for video in podcast_videos %}
+
+            {% if video.picture is not null %}
+                {% set image = video.picture.getPath() %}
+
+            {% else %}
+                {% set image = '' %}
+
+            {% endif %}
+
         <div class="row">
-            <div class="col-xs-6">
-                Video
-            </div>
-            <div class="col-xs-6">
-                Description
-                <a class="loadVideo" href="javascript:loadVideo('/podcasts/video2.mp4')">Video 2</a>
+            <div class="col-md-12 podcast-content">
+                <div class="pull-left">
+                    <a class="loadVideo" href="javascript:loadVideo('/podcasts/{{ video.filename }}', '{{ image }}');scrollToPlayer();">
+                    {% if video.picture is not null %}
+
+                        <img src="{{ asset(video.picture.getPath('podcast')) }}" alt="" />
+                    {% else %}
+
+                        <img src="{{ asset('assets/css/images/artists-music.jpg?size=podcast') }}" alt="" />
+                    {% endif %}
+                    </a>
+                </div>
+                <div class="description">
+
+
+                    <h4><a class="loadVideo" href="javascript:loadVideo('/podcasts/{{ video.filename }}', '{{ image }}');scrollToPlayer();">{{ video.title }}</a></h4>
+                    <p>
+                        {{ video.description }}
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-6">
-                Video
-            </div>
-            <div class="col-xs-6">
-                Description
-                <a class="loadVideo" href="javascript:loadVideo('/podcasts/video3.mp4')">Video 3</a>
-            </div>
-        </div>
+        {% endfor %}
 
 
 

@@ -11,9 +11,14 @@ class PodcastController extends Controller
 {
     public function showAllAction(Request $request)
     {
+        $podcast_videos = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Podcast')->getVideo();
         $view = $this->container->get('saysa_view');
+
+
+
         $view
             ->set('current_radio', true)
+            ->set('podcast_videos', $podcast_videos)
         ;
 
         if ($request->isXmlHttpRequest()) {
