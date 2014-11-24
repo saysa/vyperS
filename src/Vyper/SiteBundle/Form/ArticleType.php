@@ -22,6 +22,8 @@ class ArticleType extends AbstractType
             ->add('title', 'text', array('attr' => array('placeholder' => 'Title')))
             ->add('description', 'textarea', array('attr' => array('placeholder' => 'Description')))
             ->add('text', 'textarea')
+            ->add('textEN', 'textarea')
+            ->add('textJP', 'textarea')
             ->add('releaseDate', 'date', array('widget' => 'single_text'))
             ->add('releaseTime', 'time', array('widget' => 'single_text'))
             ->add('author', 'text', array('attr' => array('placeholder' => 'Author')))
