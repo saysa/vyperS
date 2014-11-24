@@ -332,6 +332,10 @@ admin_update_video:
     requirements:
         id: \d+
 
+admin_add_podcast:
+    path:     /_admin_/podcast/add
+    defaults: { _controller: VyperSiteBundle:AdminPodcast:addPodcast }
+
 admin_show_tours:
     path:     /_admin_/tours
     defaults: { _controller: VyperSiteBundle:AdminTour:showTours }
