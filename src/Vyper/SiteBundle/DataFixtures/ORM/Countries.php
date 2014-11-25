@@ -267,6 +267,10 @@ class Countries extends AbstractFixture implements FixtureInterface {
             $list_continents[$i]->setName($name);
 
             $manager->persist($list_continents[$i]);
+
+            if ($name == 'France') {
+                $this->addReference('country-france', $list_continents[$i]);
+            }
         }
         $this->addReference('country', $list_continents[$i]);
         $manager->flush();
