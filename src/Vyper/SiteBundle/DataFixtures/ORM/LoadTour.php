@@ -12,10 +12,10 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Vyper\SiteBundle\Entity\TourType;
+use Vyper\SiteBundle\Entity\Tour;
 
 
-class LoadTourType extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface {
+class LoadTour extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface {
 
     /**
      * Load data fixtures with the passed EntityManager
@@ -24,25 +24,28 @@ class LoadTourType extends AbstractFixture implements FixtureInterface, OrderedF
      */
     public function load(ObjectManager $manager)
     {
-        $names = array('festival', 'tour');
+        $names = array(
+            'Gazette Tour 2014',
+        );
 
         foreach ($names as $i => $name)
         {
-            $list[$i] = new TourType();
-            $list[$i]->setName($name);
+            $list[$i] = new Tour();
+            $list[$i]->setType($this->getReference('tour-type'));
+            $list[$i]->setContinent($this->getReference('continent'));
+            $list[$i]->setTitle($name);
+            $list[$i]->setDescription($name);
+            $list[$i]->setStart(new \DateTime("2014-07-01"));
+            $list[$i]->setEnd(new \DateTime("2014-12-01"));
 
             $manager->persist($list[$i]);
-
         }
-
-        $this->addReference('tour-type', $list[$i]);
 
         $manager->flush();
     }
 
     public function getOrder()
     {
-        return 1;
+        return 2;
     }
-
 }

@@ -32,57 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="418" column="56" selection-start="22445" selection-end="22445" vertical-scroll-proportion="-11.0" vertical-offset="6006" max-vertical-offset="10155">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="old_layout.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/old_layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="393" column="63" selection-start="15784" selection-end="15843" vertical-scroll-proportion="-8.333333" vertical-offset="5695" max-vertical-offset="7935">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/EventController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="30" selection-start="3598" selection-end="3598" vertical-scroll-proportion="-21.75" vertical-offset="1173" max-vertical-offset="1920">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoadManga.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadManga.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="74" selection-start="1774" selection-end="1814" vertical-scroll-proportion="-9.666667" vertical-offset="758" max-vertical-offset="1290">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nextEvent.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/nextEvent.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="11" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="375">
-              <folding>
-                <element signature="e#622#631#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocationType.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Form/LocationType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="810">
+            <state line="75" column="74" selection-start="1774" selection-end="1814" vertical-scroll-proportion="-14.041667" vertical-offset="653" max-vertical-offset="1290">
               <folding />
             </state>
           </provider>
@@ -99,19 +52,72 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadTourType.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LoadTourType.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadTourType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+            <state line="17" column="97" selection-start="400" selection-end="478" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="720">
+              <folding>
+                <element signature="e#135#192#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadDisco.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadDisco.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="102" column="24" selection-start="2327" selection-end="2327" vertical-scroll-proportion="-0.9166667" vertical-offset="1433" max-vertical-offset="2055">
+              <folding>
+                <element signature="e#135#192#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadUser.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Countries.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Countries.php">
+      <file leaf-file-name="Mediums.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Mediums.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="271" column="51" selection-start="6862" selection-end="6875" vertical-scroll-proportion="-14.666667" vertical-offset="3593" max-vertical-offset="4125">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="630">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadTour.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadTour.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="5" selection-start="642" selection-end="642" vertical-scroll-proportion="0.2387218" vertical-offset="173" max-vertical-offset="765">
+              <folding>
+                <element signature="e#135#192#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Continents.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Continents.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="95" selection-start="477" selection-end="477" vertical-scroll-proportion="-1.5416666" vertical-offset="143" max-vertical-offset="675">
+              <folding>
+                <element signature="e#135#192#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MangaTypes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/MangaTypes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="855">
               <folding />
             </state>
           </provider>
@@ -120,7 +126,7 @@
       <file leaf-file-name="LoadArtist.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadArtist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="26" selection-start="1600" selection-end="2168" vertical-scroll-proportion="-14.041667" vertical-offset="1028" max-vertical-offset="1560">
+            <state line="97" column="57" selection-start="2085" selection-end="2130" vertical-scroll-proportion="-12.166667" vertical-offset="1028" max-vertical-offset="1560">
               <folding />
             </state>
           </provider>
@@ -139,14 +145,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadArticle.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Artist.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Mediums.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/DiscoTypes.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Disco.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadArtist.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Pictures.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadDisco.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showArtist.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/js/infinite-scroll/infinite-scroll.js" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/EventController.php" />
@@ -190,6 +192,10 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Countries.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadLocation.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadTourType.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Continents.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadDisco.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadTour.php" />
       </list>
     </option>
   </component>
@@ -782,7 +788,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37098446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37098446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3119171" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -792,7 +798,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14849833" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17185763" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17185763" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -849,50 +855,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="16.875" vertical-offset="405" max-vertical-offset="4380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Form/ArticleType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="902" selection-end="902" vertical-scroll-proportion="-7.5" vertical-offset="120" max-vertical-offset="1485">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminArticle/updateArticle.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="34" selection-start="4843" selection-end="4843" vertical-scroll-proportion="-20.375" vertical-offset="861" max-vertical-offset="6135">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="112" selection-start="3501" selection-end="3501" vertical-scroll-proportion="-6.625" vertical-offset="846" max-vertical-offset="3030">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="7" selection-start="2051" selection-end="2051" vertical-scroll-proportion="-66.875" vertical-offset="0" max-vertical-offset="13845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="561" column="5" selection-start="9448" selection-end="9700" vertical-scroll-proportion="-9.375" vertical-offset="8190" max-vertical-offset="9465">
-          <folding>
-            <element signature="e#43#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Program.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6645">
@@ -1212,13 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadArtist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="26" selection-start="1600" selection-end="2168" vertical-scroll-proportion="-14.041667" vertical-offset="1028" max-vertical-offset="1560">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Countries.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="271" column="51" selection-start="6862" selection-end="6875" vertical-scroll-proportion="-14.666667" vertical-offset="3593" max-vertical-offset="4125">
@@ -1228,7 +1183,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadManga.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="74" selection-start="1774" selection-end="1814" vertical-scroll-proportion="-9.666667" vertical-offset="758" max-vertical-offset="1290">
+        <state line="75" column="74" selection-start="1774" selection-end="1814" vertical-scroll-proportion="-14.041667" vertical-offset="653" max-vertical-offset="1290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadArtist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="57" selection-start="2085" selection-end="2130" vertical-scroll-proportion="-12.166667" vertical-offset="1028" max-vertical-offset="1560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadTourType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="97" selection-start="400" selection-end="478" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="720">
+          <folding>
+            <element signature="e#135#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Continents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="95" selection-start="477" selection-end="477" vertical-scroll-proportion="-1.5416666" vertical-offset="143" max-vertical-offset="675">
+          <folding>
+            <element signature="e#135#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/MangaTypes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/Mediums.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
@@ -1242,10 +1243,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadTourType.php">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadDisco.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="556">
-          <folding />
+        <state line="102" column="24" selection-start="2327" selection-end="2327" vertical-scroll-proportion="-0.9166667" vertical-offset="1433" max-vertical-offset="2055">
+          <folding>
+            <element signature="e#135#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/DataFixtures/ORM/LoadTour.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="5" selection-start="642" selection-end="642" vertical-scroll-proportion="0.2387218" vertical-offset="173" max-vertical-offset="765">
+          <folding>
+            <element signature="e#135#192#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -8,13 +8,14 @@
 
 namespace Vyper\SiteBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Vyper\SiteBundle\Entity\Continent;
 
 
-class Continents extends AbstractFixture implements FixtureInterface {
+class Continents extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface {
 
     /**
      * Load data fixtures with the passed EntityManager
@@ -35,5 +36,10 @@ class Continents extends AbstractFixture implements FixtureInterface {
         }
         $this->addReference('continent', $list_continents[$i]);
         $manager->flush();
+    }
+
+    public function getOrder()
+    {
+        return 1;
     }
 }
