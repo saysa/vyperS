@@ -117,7 +117,7 @@
                                     </div>
                                     <!-- Time End -->
                                     <div class="form-group col-lg-2{%if error_rel_date is defined %} has-error{% endif %}">
-                                        {{ form_label(form.timeEnd, "Time End") }}
+                                        {{ form_label(form.timeEnd, "Time End *") }}
                                         <div class="controls">
                                             {{ form_widget(form.timeEnd, { 'attr': {'class': 'form-control timepicker'} }) }}
                                             {{ form_errors(form.timeEnd) }}

@@ -35,7 +35,7 @@ class EventType extends AbstractType
             ->add('descriptionReal', 'textarea', array('required' => false))
             ->add('date', 'date', array('widget' => 'single_text'))
             ->add('time', 'time', array('widget' => 'single_text'))
-            ->add('timeEnd', 'time', array('required' => false, 'widget' => 'single_text'))
+            ->add('timeEnd', 'time', array('widget' => 'single_text'))
             ->add('price', 'text', array('required' => false, 'attr' => array('placeholder' => 'Price and Currency')))
         ;
     }

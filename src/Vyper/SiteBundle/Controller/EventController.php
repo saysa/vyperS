@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Vyper\SiteBundle\Components\NextEvent\NextEvent;
+use Vyper\SiteBundle\Components\Strings\StringMethods;
 use Vyper\SiteBundle\Entity\Event;
 
 
@@ -17,19 +18,43 @@ class EventController extends Controller
         $view = $this->container->get('saysa_view');
 
         $events = $em->getRepository('VyperSiteBundle:Event')->myFindAll();
+        $programs = $em->getRepository('VyperSiteBundle:Program')->findAll();
 
         $json = array();
-        foreach ($events as $event) {
 
+        foreach ($programs as $program) {
+
+            $background = '#D35F5F';
+            $border = '#891F1F';
+
+            $date = $program->getDate()->format("Y-m-d");
+            $startTime = $program->getStartTime()->format("H:i:s");
+            $timeEnd = $program->getEndTime()->format("H:i:s");
+
+            $opt = array(
+                'title' => $program->getTitle(),
+                'start' => $date.'T'.$startTime,
+                'end' => $date.'T'.$timeEnd,
+                'date_info' => StringMethods::sqlDateToCustom($date),
+                'startTime_info' => $startTime,
+                'endTime_info' => $timeEnd,
+                'borderColor' => $border,
+                'backgroundColor' => $background,
+                'description' => $program->getDescription(),
+                'lang' => $program->getLang(),
+                'present' => $program->getPresent(),
+            );
+
+            $json[] = $opt;
+        }
+
+        foreach ($events as $event) {
+            $timeEnd = '';
             $type = $event->getType()->getName();
             switch ($type) {
                 case "Concert":
                     $background = '#414140';
                     $border = '#272727';
-                    break;
-                case "Emission":
-                    $background = '#D35F5F';
-                    $border = '#891F1F';
                     break;
                 default:
                     $background = '#A60000';
@@ -37,14 +62,16 @@ class EventController extends Controller
             }
 
             $date = $event->getDate()->format("Y-m-d");
-            $time = $event->getTime()->format("H:i:s");
+            $startTime = $event->getTime()->format("H:i:s");
             if (!is_null($event->getTimeEnd())) {
                 $timeEnd = $event->getTimeEnd()->format("H:i:s");
             }
 
             $opt = array(
                 'title' => $event->getTitle(),
-                'start' => $date.'T'.$time,
+                'start' => $date.'T'.$startTime,
+                'date_info' => StringMethods::sqlDateToCustom($date),
+                'startTime_info' => $startTime,
                 'borderColor' => $border,
                 'backgroundColor' => $background,
                 'description' => $event->getDescription(),
@@ -53,6 +80,7 @@ class EventController extends Controller
             );
             if (isset($timeEnd)) {
                 $opt['end'] = $date.'T'.$timeEnd;
+                $opt['endTime_info'] = $timeEnd;
             }
 
             $json[] = $opt;

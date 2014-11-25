@@ -69,7 +69,7 @@ class Event
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="timeEnd", type="time", nullable=true)
+     * @ORM\Column(name="timeEnd", type="time")
      */
     private $timeEnd;
 

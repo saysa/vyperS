@@ -8,8 +8,11 @@
         </header><!-- /archive-header -->
 
         <div id="eventContent" title="Event Details" style="display:none;">
-            Début: <span id="startTime"></span><br>
-            Fin: <span id="endTime"></span><br><br>
+            <strong class="main-color">Date:</strong> <span id="dateInfo"></span><br>
+            <strong class="main-color">Début:</strong> <span id="startTime"></span><br>
+            <strong class="main-color">Fin:</strong> <span id="endTime"></span><br><br>
+            <span id="langInfo"></span>
+            <span id="presentInfo"></span>
             <p id="eventInfo"></p>
 
             <div id="map"></div>
@@ -36,12 +39,11 @@
                         day: 'Jour'
                     },
                     columnFormat:{
-                        month: 'ddd ',    // Mon
-                        week: 'ddd d-M', // Mon 9/7
-                        day: 'dddd d-M'  // Monday 9/7
+                        month: 'ddd '    // Mon
                     },
                     firstDay:1,
                     height: 'auto',
+                    minTime : '06:00:00',
                     monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Décembre'],
                     monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Juin','Juil','Aout','Sep','Oct','Nov','Dec'],
                     dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
@@ -58,9 +60,29 @@
 
                             console.log(event);
 
-                            $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
+
+                            $("#dateInfo").html(event.date_info);
+                            $("#startTime").html(event.startTime_info);
                             $("#eventInfo").html(event.description);
-                            $("#map").html('<iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=' + event.googlemap + '&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>');
+                            if (event.endTime_info != undefined) {
+                                $("#endTime").html(event.endTime_info);
+                            } else {
+                                $("#endTime").html('-');
+                            }
+                            if (event.googlemap != undefined) {
+                                $("#map").html('<iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=' + event.googlemap + '&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>');
+                            } else {
+                                $("#map").html('');
+                            }
+
+                            if (event.lang != undefined) {
+                                $("#langInfo").html('<strong class="main-color">Langue: </strong>'+event.lang+'<br />');
+                            } else $("#langInfo").html('');
+
+                            if (event.present != undefined) {
+                                $("#presentInfo").html('<strong class="main-color">Cadeau(x): </strong>'+event.present+'<br />');
+                            } else $("#presentInfo").html('');
+
                             $("#eventLink").attr('href', event.url);
                             $("#eventContent").dialog({ modal: true, title: event.title, width:500});
                         });
