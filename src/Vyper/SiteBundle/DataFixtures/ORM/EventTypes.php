@@ -25,7 +25,6 @@ class EventTypes implements FixtureInterface {
         $names = array(
             'Concert',
             'Convention',
-            'Emission',
         );
 
         foreach ($names as $i => $name)

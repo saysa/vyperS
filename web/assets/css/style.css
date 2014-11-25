@@ -2081,3 +2081,59 @@ a.small {
 .podcast-content .description h4 {
     font-family: 'Interstate';
 }
+
+/* Features Event */
+.next_event, .featured-event {
+
+    padding: 10px !important;
+    color: #FFF;
+    background: #414140;
+
+
+}
+.featured-event a {
+    color: #FFF;
+}
+.featured-event a:hover {
+    color: #959495;
+}
+
+.featured-event {
+    width: 100%;
+    border-bottom: 1px solid #EBEBEB;
+    margin: 0 0 1.5em 0;
+    padding: 0 20px 1.5em 20px;
+    overflow: hidden;
+}
+
+.featured-event .event-date {
+    text-transform: uppercase;
+    font-size: 1.6em;
+    line-height: 1.1em;
+    float: left;
+    width: 13%;
+}
+
+.featured-event .event-date-holder {
+    float: left;
+}
+
+.featured-event .event-date-number {
+    font-size: 1.7em;
+    display: block;
+    line-height: 1em;
+    text-align: center;
+    color: #EE3450;
+}
+
+.featured-event .event-month {
+    text-align: center;
+    font-weight: bold;
+}
+
+.featured-event .event-details {
+    float: right;
+    border-left: 1px dotted #d2d2d2;
+    padding-left: 5%;
+    width: 77%;
+}

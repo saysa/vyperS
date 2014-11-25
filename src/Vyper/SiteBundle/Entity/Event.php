@@ -94,7 +94,7 @@ class Event
 
     /**
      * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Tour")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $tour;
 

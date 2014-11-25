@@ -36,6 +36,9 @@ class AdminEventController extends AdminCommonController {
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($event);
                 $em->flush();
+
+                $request->getSession()->getFlashBag()->add('info', 'Event added.');
+                return $this->redirect($this->generateUrl('admin_show_events'));
             }
 
         }

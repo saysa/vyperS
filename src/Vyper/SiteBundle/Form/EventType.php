@@ -24,6 +24,7 @@ class EventType extends AbstractType
                 'property' => 'name',
             ))
             ->add('tour', 'entity', array(
+                'required' => false,
                 'class' => 'VyperSiteBundle:Tour',
                 'property' => 'title',
             ))
