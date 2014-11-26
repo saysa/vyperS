@@ -42,24 +42,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminarticleController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AdminarticleController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="20" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.3327338" vertical-offset="1075" max-vertical-offset="1875">
+            <state line="106" column="43" selection-start="3445" selection-end="3609" vertical-scroll-proportion="-12.083333" vertical-offset="1180" max-vertical-offset="1875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminVideoController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AdminVideoController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminVideoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="35" selection-start="1031" selection-end="1031" vertical-scroll-proportion="8.125" vertical-offset="600" max-vertical-offset="1455">
+            <state line="67" column="18" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.53956836" vertical-offset="585" max-vertical-offset="1515">
               <folding>
                 <element signature="e#856#881#1" expanded="true" />
-                <element signature="e#2539#2562#1" expanded="true" />
-                <element signature="e#2654#2679#1" expanded="true" />
-                <element signature="e#2770#2795#1" expanded="true" />
+                <element signature="e#2033#2058#1" expanded="true" />
+                <element signature="e#2789#2812#1" expanded="true" />
+                <element signature="e#2904#2929#1" expanded="true" />
+                <element signature="e#3020#3045#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1365,18 +1366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminVideoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="35" selection-start="1031" selection-end="1031" vertical-scroll-proportion="8.125" vertical-offset="600" max-vertical-offset="1455">
-          <folding>
-            <element signature="e#856#881#1" expanded="true" />
-            <element signature="e#2539#2562#1" expanded="true" />
-            <element signature="e#2654#2679#1" expanded="true" />
-            <element signature="e#2770#2795#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminPodcastController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="20" selection-start="1747" selection-end="1747" vertical-scroll-proportion="-3.9583333" vertical-offset="640" max-vertical-offset="1230">
@@ -1386,8 +1375,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="20" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.3327338" vertical-offset="1075" max-vertical-offset="1875">
+        <state line="106" column="43" selection-start="3445" selection-end="3609" vertical-scroll-proportion="-12.083333" vertical-offset="1180" max-vertical-offset="1875">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminVideoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="18" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.53956836" vertical-offset="585" max-vertical-offset="1515">
+          <folding>
+            <element signature="e#856#881#1" expanded="true" />
+            <element signature="e#2033#2058#1" expanded="true" />
+            <element signature="e#2789#2812#1" expanded="true" />
+            <element signature="e#2904#2929#1" expanded="true" />
+            <element signature="e#3020#3045#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
