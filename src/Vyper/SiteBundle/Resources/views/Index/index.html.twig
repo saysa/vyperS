@@ -107,7 +107,7 @@
 
 
 
-            <div class="post-list">
+            <div class="post-list feat-cat">
 
                 {% for key, article in latest_news %}
                     {% if key>0 and key<3 %}
@@ -156,7 +156,7 @@
 
 
                         <div class="thumb-wrap video-thumb">
-                            <iframe width="560" height="315" src="//www.youtube.com/embed/{{ video.youtube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                            <iframe width="290" height="180" src="//www.youtube.com/embed/{{ video.youtube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
                         </div>
 
 
@@ -176,41 +176,7 @@
                 {% endfor %}
             {% endif %}
 
-            <div class="post-list">
 
-                {% if latest_events is defined %}
-                {% for key, event in latest_events %}
-                    {% if key>0 and key<4 %}
-
-                        <div class="item-post">
-                            <div class="thumb">
-                                <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html"><img src="{{ base_url }}uploads/pic/{{ event.getMini75Picture(event.getId) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
-                            </div>
-
-                            <div class="post-right">
-                                <h5>
-                                    <a href="{{ base_url }}event/{{ event.getId }}/{{ event.getStringUrl(event.getId) }}.html" rel="bookmark">{{ event.getTitle }}</a>
-                                </h5>
-
-                                <div class="entry-meta">
-                                    <span class="date">
-                                        <i class="fa fa-calendar"></i>
-                                        {{ event.getDateEvent(event.getId) }}
-                                    </span>
-
-                                    <span class="comments">
-                                        <i class="fa fa-comments"></i>
-                                        {{ event.getTown(event.getId) }}, {{ event.getCountry(event.getId)|upper }}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    {% endif %}
-                {% endfor %}
-                {% endif %}
-            </div><!-- /one-half -->
 
 
 
