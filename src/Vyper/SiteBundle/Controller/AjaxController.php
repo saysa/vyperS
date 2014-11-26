@@ -62,9 +62,11 @@ class AjaxController extends Controller
 
         $playlist = array();
         foreach ($playlistXML->xpath('//song') as $line) {
+            $cover = (string) $line->picture;
             $playlist[] = array(
                 "title" => (string) $line->title,
                 "artist" => (string) $line->artist,
+                "cover" => str_replace(" ","%20",$cover),
             );
         }
         echo json_encode($playlist);

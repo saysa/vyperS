@@ -3,11 +3,17 @@
 {% block title "Japan FM | Toute la Jmusic, toutes les news en temps réels" %}
 
     {% block content %}
+
+        <div id="program-banner">
+            Bannière émission prochaines emissions
+        </div>
+
+
         <script>
             jQuery(document).ready(function($) {
                 $(".main-slider").show();
                 $(".main-slider").owlCarousel({
-                    navigation : true,
+                    navigation : false,
                     pagination: false,
                     autoPlay : 5000,
                     slideSpeed : 400,
@@ -20,7 +26,7 @@
             {% for article in articles_carousel %}
                 <div class="item">
                     <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" >
-                        <img src="{{ asset(article.picture.getPath()) }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle }}" />
+                        <img src="{{ asset(article.picture.getPath('homepage-slider')) }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle }}" />
                     </a>
 
                     <div class="post-info">
@@ -48,12 +54,10 @@
         <!-- category1 -->
 
         <div class="col-md-6">
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon"><i class="icon-music"></i></div>
-                    <h4><a href="{{ base_url }}news">Musique</a></h4>
-                </div>
+            <div class="content-title second-color-bg">
+                <h4>Musique</h4>
             </div>
+
 
 
 
@@ -145,14 +149,8 @@
 
         <div class="col-md-6">
 
-
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-youtube-play"></i>
-                    </div>
-                    <h4>Vidéo du jour</h4>
-                </div>
+            <div class="content-title second-color-bg">
+                <h4>Vidéo du jour</h4>
             </div>
 
             {% if last_video is defined %}
@@ -249,14 +247,10 @@
         <section class="row">
             <div class="col-md-12">
 
-                <div class="cat-header" style="display: block;">
-                    <div class="cat-title second-color-bg">
-                        <div class="cat-icon">
-                            <i class="icon-film"></i>
-                        </div>
-                        <h4><a href="{{ base_url }}interviews">Manga/Anime</a></h4>
-                    </div>
+                <div class="content-title second-color-bg">
+                    <h4>Manga/Anime</h4>
                 </div>
+
                 <div class="row">
                     <div class="col-md-6">
 
@@ -357,16 +351,9 @@
         <!-- category2 -->
         <div class="feat-cat section">
 
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-bookmark"></i>
-                    </div>
-
-                    <h4><a href="{{ base_url }}live-reports">Jeux Vidéos</a></h4>
-                </div>
+            <div class="content-title second-color-bg">
+                <h4>Jeux Vidéos</h4>
             </div>
-
 
 
             <div class="one-half main-post">
@@ -468,17 +455,10 @@
         <!-- category2 -->
         <div class="feat-cat section">
 
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-leaf"></i>
-                    </div>
 
-                    <h4><a href="{{ base_url }}chroniques">Culture</a></h4>
-                </div>
+            <div class="content-title second-color-bg">
+                <h4>Culture</h4>
             </div>
-
-
 
             <div class="one-half main-post">
 

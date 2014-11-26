@@ -1,8 +1,8 @@
 <div id="widget-tab2-content" class="tab-content">
-pop
     <ul class="list post-list">
 
-        {% for article in popular_articles %}
+        {% for key, article in popular_articles %}
+            {% if key < 5 %}
             <li>
                 <div class="thumbnail">
                     <img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="{{ article.getTitle|escape }}">
@@ -14,6 +14,7 @@ pop
                     </div>
                 </div>
             </li>
+            {% endif %}
         {% endfor %}
 
     </ul>

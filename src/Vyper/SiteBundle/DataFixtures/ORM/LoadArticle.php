@@ -46,29 +46,31 @@ class LoadArticle extends AbstractFixture implements FixtureInterface, OrderedFi
             'Gerard Majax ce soir fait du cinéma',
             'Zao de Franco a glissé dans la marre',
         );
+        for ($j=0;$j<=20;$j++) {
+            foreach ($names as $i => $name)
+            {
 
-        foreach ($names as $i => $name)
-        {
-            $rand = mt_rand(0, sizeof($names)-1);
 
-            $randAT = mt_rand(0, 7);
-            $randPic = mt_rand(0, 4);
+                $randAT = mt_rand(0, 7);
+                $randPic = mt_rand(0, 4);
 
-            $list[$i] = new Article();
-            $list[$i]->setUser($this->getReference('user'));
-            $list[$i]->setTitle($name);
-            $list[$i]->setContinent($this->getReference('continent'));
-            $list[$i]->setArticleType($this->getReference('article-type-'.$randAT));
-            $list[$i]->setHighlight(true);
-            $list[$i]->setDescription('Je suis une description');
-            $list[$i]->setText('Je suis le contenu');
-            $list[$i]->setReleaseDate(new \DateTime('now'));
-            $list[$i]->setReleaseTime(new \DateTime('now'));
-            $list[$i]->setAuthor('KiyoMi');
-            $list[$i]->setPicture($this->getReference('picture-'.$randPic));
+                $list[$i] = new Article();
+                $list[$i]->setUser($this->getReference('user'));
+                $list[$i]->setTitle($name);
+                $list[$i]->setContinent($this->getReference('continent'));
+                $list[$i]->setArticleType($this->getReference('article-type-'.$randAT));
+                $list[$i]->setHighlight(true);
+                $list[$i]->setDescription('Je suis une description');
+                $list[$i]->setText('Je suis le contenu');
+                $list[$i]->setReleaseDate(new \DateTime('now'));
+                $list[$i]->setReleaseTime(new \DateTime('now'));
+                $list[$i]->setAuthor('KiyoMi');
+                $list[$i]->setPicture($this->getReference('picture-'.$randPic));
 
-            $manager->persist($list[$i]);
+                $manager->persist($list[$i]);
+            }
         }
+
 
         $manager->flush();
     }

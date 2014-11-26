@@ -2,7 +2,8 @@
 
     <ul class="list post-list">
 
-        {% for article in recent_articles %}
+        {% for key, article in recent_articles %}
+            {% if key < 5 %}
             <li>
                 <div class="thumbnail">
                     <img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="{{ article.getTitle|escape }}">
@@ -14,6 +15,7 @@
                     </div>
                 </div>
             </li>
+            {% endif %}
         {% endfor %}
 
     </ul>

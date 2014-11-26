@@ -111,6 +111,13 @@
                 }
             }
         },
+        "homepage-slider": {
+            "dimensions": {
+                "0": {
+                    "w": 610
+                }
+            }
+        },
         "podcast": {
             "dimensions": {
                 "0": {

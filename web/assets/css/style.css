@@ -71,6 +71,7 @@ a:hover {
 }
 
 /*==== Common styles ==========*/
+.main-slider h2,
 .fiche-group h4,
 .content-title h4,
 .cat-header h4,
@@ -752,6 +753,108 @@ nav .container-fluid>.navbar-collapse {
     margin-top: 10px;
 }
 
+/* ========= Homepage Slider =========*/
+.main-slider {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: none;
+}
+
+.main-slider ul,
+.main-slider ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-slider .item{
+    position: relative;
+}
+
+.main-slider .slider-nav a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+    border: 3px solid #FFFFFF;
+    overflow: hidden;
+    text-indent: -999em;
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+.main-slider .owl-buttons div {
+    top: 45%;
+}
+
+.main-slider .owl-prev {
+    left: 20px;
+}
+
+.main-slider .owl-next {
+    right: 20px;
+}
+
+.main-slider .slider-nav a:hover{
+    opacity: 1;
+}
+
+.main-slider .post-info{
+    position: absolute;
+    top: 28%;
+    left: 100px;
+    color: #FFFFFF;
+    width: 70%;
+    padding: 10px 12px;
+}
+
+.main-slider .post-info h2{
+    font-weight: 700;
+    text-align: center;
+}
+
+.main-slider .title .sep{
+    width: 200px;
+    height: 4px;
+    text-align: center;
+    margin: 10px auto;
+    background: #FFFFFF;
+    color: #FFFFFF;
+}
+.main-slider .post-info h2 a {
+    color: #FFFFFF;
+}
+
+.main-slider .post-excerpt{
+    line-height: 1.4;
+    color: #F9F9F9;
+    padding: 10px;
+    background-color: #222222;
+    background-color: rgba(0, 0, 0, 0.45);
+    margin: 10px 0 20px;
+}
+
+.main-slider .read-more{
+    text-align: center;
+    overflow: hidden;
+}
+
+.main-slider .read-more a{
+    color: #FFFFFF;
+    padding: 6px 10px;
+    display: inline-block;
+    opacity: 0.9;
+    border: 2px solid #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.main-slider .read-more a:hover{
+    opacity: 1;
+}
+
 
 /* ========= Featured Categories =========*/
 
@@ -896,6 +999,11 @@ nav .container-fluid>.navbar-collapse {
 .fiche-group, .bloc-playlist {
     background: #F4F4F4;
     border-bottom: 1px solid #CCC;
+}
+
+.bloc-playlist {
+    padding-top: 5px;
+    font-family: 'Interstate';
 }
 
 .bloc-playlist img {
@@ -1962,6 +2070,8 @@ a.small {
 /* Soundmanager perso */
 .sm2-bar-ui {
     font-size: 12px;
+    width: 100%;
+    max-width: 100%;
 }
 .sm2-bar-ui .sm2-main-controls,
 .sm2-bar-ui .sm2-playlist-drawer {
@@ -2136,4 +2246,12 @@ a.small {
     border-left: 1px dotted #d2d2d2;
     padding-left: 5%;
     width: 77%;
+}
+
+#program-banner {
+    background: #808080;
+    width: 100%;
+    height: 192px;
+    color: #ffffff;
+    margin-bottom: 30px;
 }
