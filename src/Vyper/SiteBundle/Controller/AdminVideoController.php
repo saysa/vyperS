@@ -18,17 +18,26 @@ class AdminVideoController extends AdminCommonController {
     public function addVideoAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
-        $tour = new Video;
-        $form = $this->createForm(new VideoType, $tour);
+        $video = new Video;
+        $form = $this->createForm(new VideoType, $video);
 
         if ($request->getMethod() == 'POST') {
 
+            $em = $this->getDoctrine()->getManager();
+            $post_data = $request->request->get('vyper_sitebundle_video');
             $form->submit($request);
+
+            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $video->setPicture($picture);
+
             if ($form->isValid()) {
 
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($tour);
+
+                $em->persist($video);
                 $em->flush();
+
+                $request->getSession()->getFlashBag()->add('info', 'Video added.');
+                return $this->redirect($this->generateUrl('admin_show_videos'));
             }
         }
 

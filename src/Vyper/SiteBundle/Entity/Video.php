@@ -52,6 +52,18 @@ class Video
     private $slug;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $picture;
+
+    /**
+     * @var integer
+     * Pour stocker l'ID du formulaire
+     */
+    private $pictureID;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="created", type="datetime")
@@ -283,5 +295,44 @@ class Video
         $this->setDeleted(false);
         $this->setCreated(new \DateTime('now'));
         $this->setmodified(new \DateTime('now'));
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Vyper\SiteBundle\Entity\Picture $picture
+     * @return Video
+     */
+    public function setPicture(\Vyper\SiteBundle\Entity\Picture $picture = null)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Vyper\SiteBundle\Entity\Picture 
+     */
+    public function getPicture()
+    {
+        return $this->picture;
+    }
+
+    /**
+     * @param int $pictureID
+     */
+    public function setPictureID($pictureID)
+    {
+        $this->pictureID = $pictureID;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPictureID()
+    {
+        return $this->pictureID;
     }
 }
