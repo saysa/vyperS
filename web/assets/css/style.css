@@ -857,12 +857,50 @@ nav .container-fluid>.navbar-collapse {
 
 
 /* ========= Featured Categories =========*/
-
 .cat-header .cat-title{
     background: #D35F5F;
     float: left;
     padding: 5px 10px;
     color: #FFFFFF;
+}
+
+.homepage-section {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background: url("images/sep1.png") repeat-x left bottom;
+}
+
+.feat-cat{
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.feat-cat .item-post{
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.feat-cat .item-post:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.feat-cat .item-post .thumb{
+    width: 75px;
+    margin-right: 10px;
+    float: left;
+}
+
+.feat-cat .item-post .wp-post-image{
+    width: 75px;
+    height: 75px;
+}
+
+.feat-cat .item-post .entry-meta{
+    margin-bottom: 0;
 }
 
 /* 5. BLOG

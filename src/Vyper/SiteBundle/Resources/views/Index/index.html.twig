@@ -59,8 +59,6 @@
             </div>
 
 
-
-
             {% for article in latest_news %}
                 {% if loop.index == 1 %}
 
@@ -112,7 +110,7 @@
             <div class="post-list">
 
                 {% for key, article in latest_news %}
-                    {% if key>0 and key<4 %}
+                    {% if key>0 and key<3 %}
 
                         <div class="item-post">
                             <div class="thumb">
@@ -125,15 +123,12 @@
                                 </h5>
 
                                 <div class="entry-meta">
-			                                    <span class="date">
-			                                        <i class="icon-calendar"></i>
-                                                    {{ article.getReleaseDateFrontFormat(article.getId) }}
-			                                    </span>
+                                    <span class="date">
+                                        <i class="fa fa-calendar"></i>
+                                        {{ article.getReleaseDateFrontFormat(article.getId) }}
+                                    </span>
 
-			                                    <span class="comments">
-			                                        <i class="icon-comments"></i>
-                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"></fb:comments-count> réactions</a>
-			                                    </span>
+
                                 </div>
                             </div>
                         </div>
@@ -171,7 +166,7 @@
                             </h3>
 
                             <div class="entry-meta">
-                                <span class="date"><i class="icon-calendar"></i> video.getDateEvent(event.getId) }}</span><br />
+                                <span class="date"><i class="fa fa-calendar"></i> video.getDateEvent(event.getId) }}</span><br />
 
                             </div>
                             <p>{{ video.getDescription }}</p>
@@ -198,15 +193,15 @@
                                 </h5>
 
                                 <div class="entry-meta">
-			                                    <span class="date">
-			                                        <i class="icon-calendar"></i>
-                                                    {{ event.getDateEvent(event.getId) }}
-			                                    </span>
+                                    <span class="date">
+                                        <i class="fa fa-calendar"></i>
+                                        {{ event.getDateEvent(event.getId) }}
+                                    </span>
 
-			                                    <span class="comments">
-			                                        <i class="icon-comments"></i>
-                                                    {{ event.getTown(event.getId) }}, {{ event.getCountry(event.getId)|upper }}
-			                                    </span>
+                                    <span class="comments">
+                                        <i class="fa fa-comments"></i>
+                                        {{ event.getTown(event.getId) }}, {{ event.getCountry(event.getId)|upper }}
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -244,106 +239,106 @@
 
 
         <!-- category1 -->
-        <section class="row">
-            <div class="col-md-12">
+        <div class="feat-cat section">
 
                 <div class="content-title second-color-bg">
                     <h4>Manga/Anime</h4>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12 homepage-section">
+                        <div class="row">
+                            <div class="col-md-6">
 
-                        {% if latest_mangas is defined %}
-                            {% for article in latest_mangas %}
-                                {% if loop.index == 1 %}
+                                {% if latest_mangas is defined %}
+                                    {% for article in latest_mangas %}
+                                        {% if loop.index == 1 %}
 
 
 
-                                    {% if article.getYoutube %}
-                                        <div class="thumb-wrap video-thumb">
-                                            <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
-                                        </div>
+                                            {% if article.getYoutube %}
+                                                <div class="thumb-wrap video-thumb">
+                                                    <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                                                </div>
 
-                                    {% else %}
-                                        <div class="thumb-wrap">
-                                            <div class="thumb">
-                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                            {% else %}
+                                                <div class="thumb-wrap">
+                                                    <div class="thumb">
+                                                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                                    </div>
+
+
+
+                                                    <div class="overlay">
+                                                        <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+
+
+
+                                            <div class="post-details">
+                                                <h3>
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
+                                                </h3>
+
+                                                <div class="entry-meta">
+                                                    <span class="date"><i class="fa fa-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+
+
+
+                                                </div>
+                                                <p>{{ article.getDescription }}</p>
                                             </div>
 
 
-
-                                            <div class="overlay">
-                                                <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
-                                            </div>
-                                        </div>
-                                    {% endif %}
-
-
-
-                                    <div class="post-details">
-                                        <h3>
-                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
-                                        </h3>
-
-                                        <div class="entry-meta">
-                                            <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
-
-
-
-                                        </div>
-                                        <p>{{ article.getDescription }}</p>
-                                    </div>
-
-
+                                        {% endif %}
+                                    {% endfor %}
                                 {% endif %}
-                            {% endfor %}
-                        {% endif %}
 
-                    </div><!-- /one-half -->
+                            </div><!-- /one-half -->
 
 
-                    <div class="col-md-6">
+                            <div class="col-md-6 feat-cat">
 
-                        {%  if latest_mangas is defined %}
-                            {% for key, article in latest_mangas %}
-                                {% if key>0 and key<5 %}
+                                {%  if latest_mangas is defined %}
+                                    {% for key, article in latest_mangas %}
+                                        {% if key>0 and key<4 %}
 
-                                    <div class="item-post">
-                                        <div class="thumb">
-                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
-                                        </div>
+                                            <div class="item-post">
+                                                <div class="thumb">
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                                                </div>
 
-                                        <div class="post-right">
-                                            <h5>
-                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
-                                            </h5>
+                                                <div class="post-right">
+                                                    <h5>
+                                                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
+                                                    </h5>
 
-                                            <div class="entry-meta">
-				                                    <span class="date">
-				                                        <i class="icon-calendar"></i>
-                                                        {{ article.getReleaseDateFrontFormat(article.getId) }}
-				                                    </span>
+                                                    <div class="entry-meta">
+                                                            <span class="date">
+                                                                <i class="fa fa-calendar"></i>
+                                                                {{ article.getReleaseDateFrontFormat(article.getId) }}
+                                                            </span>
 
-				                                    <span class="comments">
-                                                        <i class="icon-comments"></i>
-                                                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"></fb:comments-count> réactions</a>
-                                                    </span>
+
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
 
 
+                                        {% endif %}
+                                    {% endfor %}
                                 {% endif %}
-                            {% endfor %}
-                        {% endif %}
 
 
 
-                    </div><!-- /one-half -->
+                            </div><!-- /one-half -->
+                        </div>
+                    </div>
                 </div>
             </div><!-- /feat-cat -->
-        </section>
+
         <!-- /category1 -->
 
 
@@ -355,94 +350,95 @@
                 <h4>Jeux Vidéos</h4>
             </div>
 
-
-            <div class="one-half main-post">
-
-                {%  if latest_jeux_videos is defined %}
-                {% for article in latest_jeux_videos %}
-                    {% if loop.index == 1 %}
-
-
-
-                        {% if article.getYoutube %}
-                            <div class="thumb-wrap video-thumb">
-                                <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
-                            </div>
-
-                        {% else %}
-                            <div class="thumb-wrap">
-                                <div class="thumb">
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
-                                </div>
+            <div class="row">
+                <div class="col-md-12 homepage-section">
+                    <div class="row">
+                        <div class="col-md-6">
+                            {%  if latest_jeux_videos is defined %}
+                                {% for article in latest_jeux_videos %}
+                                    {% if loop.index == 1 %}
 
 
 
-                                <div class="overlay">
-                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
-                                </div>
-                            </div>
-                        {% endif %}
+                                        {% if article.getYoutube %}
+                                            <div class="thumb-wrap video-thumb">
+                                                <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                                            </div>
+
+                                        {% else %}
+                                            <div class="thumb-wrap">
+                                                <div class="thumb">
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                                </div>
 
 
 
-                        <div class="post-details">
-                            <h3>
-                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
-                            </h3>
-
-                            <div class="entry-meta">
-                                <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+                                                <div class="overlay">
+                                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
+                                                </div>
+                                            </div>
+                                        {% endif %}
 
 
-                            </div>
-                            <p>{{ article.getDescription }}</p>
+
+                                        <div class="post-details">
+                                            <h3>
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
+                                            </h3>
+
+                                            <div class="entry-meta">
+                                                <span class="date"><i class="fa fa-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+
+
+                                            </div>
+                                            <p>{{ article.getDescription }}</p>
+                                        </div>
+
+
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
                         </div>
+                        <div class="col-md-6 feat-cat">
+                            {%  if latest_jeux_videos is defined %}
+                                {% for key, article in latest_jeux_videos %}
+                                    {% if key>0 and key<4 %}
+
+                                        <div class="item-post">
+                                            <div class="thumb">
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                                            </div>
+
+                                            <div class="post-right">
+                                                <h5>
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
+                                                </h5>
+
+                                                <div class="entry-meta">
+                                                            <span class="date">
+                                                                <i class="fa fa-calendar"></i>
+                                                                {{ article.getReleaseDateFrontFormat(article.getId) }}
+                                                            </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
 
 
-                    {% endif %}
-                {% endfor %}
-                {% endif %}
-
-            </div><!-- /one-half -->
-
-
-
-            <div class="one-half last">
-                {%  if latest_jeux_videos is defined %}
-                {% for key, article in latest_jeux_videos %}
-                    {% if key>0 and key<5 %}
-
-                        <div class="item-post">
-                            <div class="thumb">
-                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
-                            </div>
-
-                            <div class="post-right">
-                                <h5>
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
-                                </h5>
-
-                                <div class="entry-meta">
-				                                    <span class="date">
-				                                        <i class="icon-calendar"></i>
-                                                        {{ article.getReleaseDateFrontFormat(article.getId) }}
-				                                    </span>
-
-				                                    <span class="comments">
-                                                        <i class="icon-comments"></i>
-                                                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"></fb:comments-count> réactions</a>
-                                                    </span>
-                                </div>
-                            </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
                         </div>
+                    </div>
+                </div>
+            </div>
 
 
-                    {% endif %}
-                {% endfor %}
-                {% endif %}
 
 
-            </div><!-- /one-half -->
+
+
+
 
 
 
@@ -460,94 +456,86 @@
                 <h4>Culture</h4>
             </div>
 
-            <div class="one-half main-post">
-
-                {% if latest_culture is defined %}
-                {% for article in latest_culture %}
-                    {% if loop.index == 1 %}
-
-
-
-                        {% if article.getYoutube %}
-                            <div class="thumb-wrap video-thumb">
-                                <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
-                            </div>
-
-                        {% else %}
-                            <div class="thumb-wrap">
-                                <div class="thumb">
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
-                                </div>
-
-
-                                <div class="overlay">
-                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
-                                </div>
-                            </div>
-                        {% endif %}
+            <div class="row">
+                <div class="col-md-12 homepage-section">
+                    <div class="row">
+                        <div class="col-md-6">
+                            {% if latest_culture is defined %}
+                                {% for article in latest_culture %}
+                                    {% if loop.index == 1 %}
 
 
 
-                        <div class="post-details">
-                            <h3>
-                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
-                            </h3>
+                                        {% if article.getYoutube %}
+                                            <div class="thumb-wrap video-thumb">
+                                                <iframe width="560" height="315" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                                            </div>
 
-                            <div class="entry-meta">
-                                <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+                                        {% else %}
+                                            <div class="thumb-wrap">
+                                                <div class="thumb">
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                                </div>
 
 
-                            </div>
-                            <p>{{ article.getDescription }}</p>
+                                                <div class="overlay">
+                                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+
+
+                                        <div class="post-details">
+                                            <h3>
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
+                                            </h3>
+
+                                            <div class="entry-meta">
+                                                <span class="date"><i class="fa fa-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+
+
+                                            </div>
+                                            <p>{{ article.getDescription }}</p>
+                                        </div>
+
+
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
                         </div>
+                        <div class="col-md-6 feat-cat">
+                            {% if latest_culture is defined %}
+                                {% for key, article in latest_culture %}
+                                    {% if key>0 and key<4 %}
+
+                                        <div class="item-post">
+                                            <div class="thumb">
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                                            </div>
+
+                                            <div class="post-right">
+                                                <h5>
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
+                                                </h5>
+
+                                                <div class="entry-meta">
+                                                    <span class="date">
+                                                    <i class="fa fa-calendar"></i>
+                                                        {{ article.getReleaseDateFrontFormat(article.getId) }}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
 
 
-                    {% endif %}
-                {% endfor %}
-                {% endif %}
-
-            </div><!-- /one-half -->
-
-
-
-            <div class="one-half last">
-                {% if latest_culture is defined %}
-                {% for key, article in latest_culture %}
-                    {% if key>0 and key<5 %}
-
-                        <div class="item-post">
-                            <div class="thumb">
-                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
-                            </div>
-
-                            <div class="post-right">
-                                <h5>
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
-                                </h5>
-
-                                <div class="entry-meta">
-                                <span class="date">
-                                <i class="icon-calendar"></i>
-                                    {{ article.getReleaseDateFrontFormat(article.getId) }}
-                        </span>
-
-                        <span class="comments">
-                                <i class="icon-comments"></i>
-                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}#comments" title="{{ article.getTitle }}"><fb:comments-count href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"></fb:comments-count> réactions</a>
-                        </span>
-                                </div>
-                            </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
                         </div>
-
-
-                    {% endif %}
-                {% endfor %}
-                {% endif %}
-
-
-            </div><!-- /one-half -->
-
-
+                    </div>
+                </div>
+            </div>
 
         </div><!-- /feat-cat -->
 
