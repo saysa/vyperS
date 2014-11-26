@@ -759,6 +759,7 @@ nav .container-fluid>.navbar-collapse {
     position: relative;
     z-index: 1;
     display: none;
+    margin-bottom: 18px;
 }
 
 .main-slider ul,
@@ -804,7 +805,7 @@ nav .container-fluid>.navbar-collapse {
 
 .main-slider .post-info{
     position: absolute;
-    top: 28%;
+    top: 35%;
     left: 100px;
     color: #FFFFFF;
     width: 70%;
@@ -865,7 +866,6 @@ nav .container-fluid>.navbar-collapse {
 }
 
 .homepage-section {
-    padding-top: 10px;
     padding-bottom: 20px;
     background: url("images/sep1.png") repeat-x left bottom;
 }
@@ -901,6 +901,39 @@ nav .container-fluid>.navbar-collapse {
 
 .feat-cat .item-post .entry-meta{
     margin-bottom: 0;
+}
+
+.cat-header{
+    overflow: hidden;
+    border-bottom: 2px solid #D35F5F;
+    margin-bottom: 15px;
+}
+
+.cat-header .cat-title{
+    background: #D35F5F;
+    float: left;
+    padding: 5px 10px;
+    color: #FFFFFF;
+}
+
+.cat-header h4{
+    float: left;
+    font-size: 16px;
+}
+
+.cat-header h4 a{
+    color: #FFFFFF;
+}
+
+.main-post p,
+.entry-excerpt p{
+    margin-bottom: 0;
+}
+
+.main-post{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 /* 5. BLOG
@@ -2298,6 +2331,12 @@ a.small {
 .latest-video .last-video {
     position: relative;
     margin-bottom: 8px;
+}
+
+.latest-video .last-video a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .latest-video .play-last-video {

@@ -505,8 +505,16 @@
                 success: function(data){
 
                     $("#currentTitle-player").html(data[0].title);
-                    $("#currentArtist-player").html(data[0].artist);
-                    $("#currentCover").attr('src', 'http://japanfm.fr/cover/'+data[0].cover);
+
+
+                    if (data[0].title == 'On Air') {
+                        $("#currentCover").attr('src', '{{ asset('assets/css/images/nocover_jfm.jpg') }}');
+                        $("#currentArtist-player").html('Japan FM');
+                    } else {
+                        $("#currentCover").attr('src', 'http://japanfm.fr/cover/'+data[0].cover);
+                        $("#currentArtist-player").html(data[0].artist);
+                    }
+
 
                     $("#currentTitle").html(data[0].title);
                     $("#currentArtist").html(data[0].artist);
