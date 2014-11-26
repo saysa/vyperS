@@ -33,11 +33,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdminPodcastController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AdminPodcastController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminPodcastController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="20" selection-start="1747" selection-end="1747" vertical-scroll-proportion="-3.9583333" vertical-offset="640" max-vertical-offset="1230">
-              <folding />
+            <state line="67" column="20" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.53956836" vertical-offset="585" max-vertical-offset="1290">
+              <folding>
+                <element signature="e#876#901#1" expanded="true" />
+                <element signature="e#2125#2150#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminVideoController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AdminVideoController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminVideoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="18" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.53956836" vertical-offset="585" max-vertical-offset="1515">
+            <state line="67" column="41" selection-start="1897" selection-end="2133" vertical-scroll-proportion="-12.5" vertical-offset="585" max-vertical-offset="1515">
               <folding>
                 <element signature="e#856#881#1" expanded="true" />
                 <element signature="e#2033#2058#1" expanded="true" />
@@ -92,7 +95,6 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/PodcastType.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/PodcastRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminPodcastController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminPodcast/addPodcast.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminPodcast/updatePodcast.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/PodcastController.php" />
@@ -130,6 +132,7 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminVideo/addVideo.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminVideo/updateVideo.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminVideoController.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminPodcastController.php" />
       </list>
     </option>
   </component>
@@ -1366,13 +1369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminPodcastController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="20" selection-start="1747" selection-end="1747" vertical-scroll-proportion="-3.9583333" vertical-offset="640" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="106" column="43" selection-start="3445" selection-end="3609" vertical-scroll-proportion="-12.083333" vertical-offset="1180" max-vertical-offset="1875">
@@ -1382,13 +1378,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminVideoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="18" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.53956836" vertical-offset="585" max-vertical-offset="1515">
+        <state line="67" column="41" selection-start="1897" selection-end="2133" vertical-scroll-proportion="-12.5" vertical-offset="585" max-vertical-offset="1515">
           <folding>
             <element signature="e#856#881#1" expanded="true" />
             <element signature="e#2033#2058#1" expanded="true" />
             <element signature="e#2789#2812#1" expanded="true" />
             <element signature="e#2904#2929#1" expanded="true" />
             <element signature="e#3020#3045#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminPodcastController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="20" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.53956836" vertical-offset="585" max-vertical-offset="1290">
+          <folding>
+            <element signature="e#876#901#1" expanded="true" />
+            <element signature="e#2125#2150#1" expanded="true" />
           </folding>
         </state>
       </provider>

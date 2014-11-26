@@ -63,6 +63,10 @@ class AdminPodcastController extends AdminCommonController {
 
         if ('POST' === $request->getMethod()) {
 
+            $post_data = $request->request->get('vyper_sitebundle_podcast');
+            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $podcast->setPicture($picture);
+
             $form->submit($request);
 
             if ($form->isValid()) {
