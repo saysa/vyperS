@@ -135,27 +135,8 @@
                         <img src="http://betatest.japanfm.fr/assets/img/logo.png" height="50">
                     </div>
 
-                    <div class="tickercontainer"><div class="mask">
-                            <ul id="ticker-posts" class="newsticker marquee" >
-                                <li>
-                                    <a href="#">Je suis un marquee</a>
-                                    <div class="sep"></div>
-                                </li>
-                                <li>
-                                    <a href="#">Je suis un marquee</a>
-                                    <div class="sep"></div>
-                                </li>
-                                <li>
-                                    <a href="#">Je suis un marquee</a>
-                                    <div class="sep"></div>
-                                </li>
-                                <li>
-                                    <a href="#">Je suis un marquee</a>
-                                    <div class="sep"></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    {{ render(controller("VyperSiteBundle:Flashnew:tickerlist")) }}
+
 
                     <div class="row">
                         <div class="col-md-7 padding-off">
