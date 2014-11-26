@@ -29,7 +29,7 @@ class IndexController extends Controller
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Culture'));
         $latest_culture = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
 
-        $last_video = $em->getRepository('VyperSiteBundle:Video')->last();
+        $last_videos = $em->getRepository('VyperSiteBundle:Video')->lastFive();
 
         $view
             ->set('articles_carousel', $articles_carousel)
@@ -37,7 +37,7 @@ class IndexController extends Controller
             ->set('latest_mangas', $latest_manga)
             ->set('latest_jeux_videos', $latest_jeux_videos)
             ->set('latest_culture', $latest_culture)
-            ->set('last_video', $last_video)
+            ->set('last_videos', $last_videos)
             ->set('front_page_index', true)
             ->set('user_id', $user)
         ;

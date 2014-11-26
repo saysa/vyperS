@@ -35,4 +35,18 @@ class VideoRepository extends EntityRepository
 
         return $results;
     }
+
+    public function lastFive()
+    {
+        $queryBuilder = $this->createQueryBuilder('v');
+        $queryBuilder
+            ->where('v.deleted = false')
+            ->orderBy('v.created', 'DESC')
+            ->setMaxResults(5)
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }
