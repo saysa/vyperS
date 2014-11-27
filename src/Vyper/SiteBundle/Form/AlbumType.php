@@ -16,6 +16,7 @@ class AlbumType extends AbstractType
     {
         $builder
             ->add('category', 'entity', array(
+                'required' => false,
                 'class' => 'VyperSiteBundle:AlbumCategory',
                 'property' => 'name',
             ))
