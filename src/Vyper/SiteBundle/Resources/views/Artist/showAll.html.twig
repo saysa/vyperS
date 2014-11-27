@@ -9,32 +9,46 @@
 
 
 
-        <div class="pagination">
 
-            {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
-            {% for p in range(1, total_artists) %}
-                {% if p == page %}
-                    <span class="page-numbers current">{{ p }}</span>
-                {% else %}
-                    <a href="{{ path('showAllArtist', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                {% endif %}
-            {% endfor %}
-
-        </div>
 
 
         <div id="filters" class="portfolioFilter">
 
             <div class="button-group" data-filter-group="a-alpha">
-                <a href="#filters" data-filter="" class="button current">All Alpha</a>
-                <a href="#filters" data-filter=".a" class="button">A</a>
-                <a href="#filters" data-filter=".b" class="button">B</a>
+                <a href="javascript: void(0);" data-filter="" class="iso current">Tous</a>
+                <a href="javascript: void(0);" data-filter=".a" class="iso">A</a>
+                <a href="javascript: void(0);" data-filter=".b" class="iso">B</a>
+                <a href="javascript: void(0);" data-filter=".c" class="iso">C</a>
+                <a href="javascript: void(0);" data-filter=".d" class="iso">D</a>
+                <a href="javascript: void(0);" data-filter=".e" class="iso">E</a>
+                <a href="javascript: void(0);" data-filter=".f" class="iso">F</a>
+                <a href="javascript: void(0);" data-filter=".g" class="iso">G</a>
+                <a href="javascript: void(0);" data-filter=".h" class="iso">H</a>
+                <a href="javascript: void(0);" data-filter=".i" class="iso">I</a>
+                <a href="javascript: void(0);" data-filter=".j" class="iso">J</a>
+                <a href="javascript: void(0);" data-filter=".k" class="iso">K</a>
+                <a href="javascript: void(0);" data-filter=".l" class="iso">L</a>
+                <a href="javascript: void(0);" data-filter=".m" class="iso">M</a>
+                <a href="javascript: void(0);" data-filter=".n" class="iso">N</a>
+                <a href="javascript: void(0);" data-filter=".o" class="iso">O</a>
+                <a href="javascript: void(0);" data-filter=".p" class="iso">P</a>
+                <a href="javascript: void(0);" data-filter=".q" class="iso">Q</a>
+                <a href="javascript: void(0);" data-filter=".r" class="iso">R</a>
+                <a href="javascript: void(0);" data-filter=".s" class="iso">S</a>
+                <a href="javascript: void(0);" data-filter=".t" class="iso">T</a>
+                <a href="javascript: void(0);" data-filter=".u" class="iso">U</a>
+                <a href="javascript: void(0);" data-filter=".v" class="iso">V</a>
+                <a href="javascript: void(0);" data-filter=".w" class="iso">W</a>
+                <a href="javascript: void(0);" data-filter=".x" class="iso">X</a>
+                <a href="javascript: void(0);" data-filter=".y" class="iso">Y</a>
+                <a href="javascript: void(0);" data-filter=".z" class="iso">Z</a>
+
             </div>
 
             <div class="button-group" data-filter-group="a-type">
-                <a href="#filters" data-filter="" class="button current">All Types</a>
+                <a href="javascript: void(0);" data-filter="" class="iso current">Tous</a>
                 {% for artistType in artistTypes %}
-                    <a href="#filters" data-filter=".at-{{ artistType.id }}" class="button">{{ artistType.name }}</a>
+                    <a href="javascript: void(0);" data-filter=".at-{{ artistType.id }}" class="iso">{{ artistType.name }}</a>
                 {% endfor %}
             </div>
 
@@ -69,37 +83,6 @@
         </div>
 
 
-        {#
-        <div class="archive-postlist portfolioContainer">
-
-            {% for artist in artists %}
-                <div class="{{ artist.keywords }} one-fourth{% if loop.index%4==0 %} last{% endif %}">
-                    <article class="post type-post status-publish format-standard hentry">
-                        <div class="thumb-wrap">
-                            <div class="thumb artist-thumbnail">
-                                <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">
-                                    {% if artist.picture is null %}
-                                        <img  src="{{ asset('assets/css/images/artists-music.jpg') }}" class="wp-post-image artists-img" alt="">
-                                    {% else %}
-                                        <img  src="{{ asset(artist.picture.getPath('162-108')) }}" class="wp-post-image artists-img" alt="">
-                                    {% endif %}
-
-                                </a>
-                                <div class="ribbon-caption">
-                                    <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}" class="ribbon-caption-title">
-                                        <span>{{ artist.getName }}</span>
-                                        <span class="ribbon-caption-background"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            {% endfor %}
-
-        </div>
-        #}
-
 
 
         <script>
@@ -115,7 +98,7 @@
                     // store filter for each group
                     var filters = {};
 
-                    $('#filters').on( 'click', '.button', function() {
+                    $('#filters').on( 'click', '.iso', function() {
                         var $this = $(this);
                         // get group key
                         var $buttonGroup = $this.parents('.button-group');
@@ -132,11 +115,11 @@
                     });
 
                     // change is-checked class on buttons
-                    $('.button-group').each( function( i, buttonGroup ) {
+                    $('.iso').each( function( i, buttonGroup ) {
                         var $buttonGroup = $( buttonGroup );
-                        $buttonGroup.on( 'click', 'button', function() {
-                            $buttonGroup.find('.is-checked').removeClass('is-checked');
-                            $( this ).addClass('is-checked');
+                        $buttonGroup.on( 'click', 'iso', function() {
+                            $buttonGroup.find('.current').removeClass('current');
+                            $( this ).addClass('current');
                         });
                     });
 
