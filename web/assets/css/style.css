@@ -2423,3 +2423,9 @@ footer .footer-top {
     padding-top: 10px;
     padding-left: 30px;
 }
+
+/* Google search */
+button-v2 {
+    width: 65px;
+    height: 24px;
+}
