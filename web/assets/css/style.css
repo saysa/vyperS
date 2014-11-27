@@ -206,10 +206,11 @@ h6{
 /* 2.0. CASING
  * ======================== */
 #casing {
+    /*
     background: black url("../img/casing/hg3/hab-int-hg3.jpg") no-repeat 50% 0;
+    */
 }
 #casing-top {
-    height: 210px;
 }
 
 /* 2. HEADER
@@ -1828,7 +1829,7 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
 /*** Japan FM V3 ****/
 
-@media all and (min-width: 992px) {
+@media all and (min-width: 1281px) {
 
     /* alter Bootstrap */
     .container {
@@ -1836,9 +1837,36 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     }
 
     #casing {
-        /*background: black url("../img/casing/hg3/hab-int-hg3.jpg") no-repeat 50% 0;*/
-        background: black url("http://eu1.swbdds.com/9/33/77/9/@/upload/hab14-hpv-rec4.jpg") no-repeat 50% 0;
+        background: black url("images/casing/hg3/hab-int-hg3.jpg") no-repeat 50% 0;
+        /*background: black url("http://eu1.swbdds.com/9/33/77/9/@/upload/hab14-hpv-rec4.jpg") no-repeat 50% 0;*/
 
+    }
+
+    #casing-top {
+        height: 210px;
+    }
+}
+
+@media all and (max-width: 1280px) {
+
+    #casing {
+        background: black url("images/casing/hg3/1280x230-hg3.jpg") no-repeat 50% 0;
+    }
+
+    #casing-top {
+        height: 210px;
+    }
+}
+
+@media all and (max-width: 719px) {
+
+    #casing {
+        background: black url("images/casing/hg3/320x100-hg3.jpg") no-repeat 50% 0;
+
+    }
+
+    #casing-top {
+        height: 100px;
     }
 }
 
@@ -2350,4 +2378,48 @@ a.small {
 
 .latest-video .last-video img {
     display: block;
+}
+
+/* Social */
+#social-links li {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+
+#social-links li a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+#social-links li span {
+    display: none;
+}
+
+#social-facebook {
+    background: url(images/social.png) no-repeat 0 0;
+}
+
+#social-twitter {
+    background: url(images/social.png) no-repeat -30px 0;
+}
+
+footer {
+    background: #1D2123;
+}
+
+footer .leaderboard {
+    margin: 10px auto;
+    width: 728px;
+}
+
+footer .border-left {
+    border-left: 1px solid #343839;
+}
+
+footer .footer-top {
+    min-height: 260px;
+    padding-top: 10px;
+    padding-left: 30px;
 }
