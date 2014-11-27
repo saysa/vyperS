@@ -61,7 +61,7 @@
                                 <!-- Profile -->
                                 <div class="row">
                                     <div class="form-group col-lg-9{%if error_profile is defined %} has-error{% endif %}">
-                                        {{ form_label(form.profile, "Profile *") }}
+                                        {{ form_label(form.profile, "Profile") }}
                                         <div class="controls">
                                             {{ form_widget(form.profile, {  'attr': {'class': 'form-control'} }) }}
                                             {{ form_errors(form.profile) }}

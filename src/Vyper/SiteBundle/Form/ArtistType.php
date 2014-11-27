@@ -19,7 +19,7 @@ class ArtistType extends AbstractType
         $builder
             ->add('name', 'text', array('attr' => array('placeholder' => 'Name')))
             ->add('realName', 'text', array('required' => false, 'attr' => array('placeholder' => 'Real Name')))
-            ->add('profile', 'textarea')
+            ->add('profile', 'textarea', array('required' => false))
             ->add('youtubeChannel', 'text', array('required' => false, 'attr' => array('placeholder' => 'Youtube Channel')))
             ->add('biography', 'textarea', array('required' => false))
             ->add('author', 'text', array('required' => false, 'attr' => array('placeholder' => 'Author')))

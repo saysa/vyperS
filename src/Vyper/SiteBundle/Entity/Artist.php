@@ -54,7 +54,7 @@ class Artist
     /**
      * @var string
      *
-     * @ORM\Column(name="profile", type="text")
+     * @ORM\Column(name="profile", type="text", nullable=true)
      */
     private $profile;
 
