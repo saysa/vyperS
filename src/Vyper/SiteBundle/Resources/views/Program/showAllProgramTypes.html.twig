@@ -4,7 +4,7 @@
 
     {% block content %}
         <div class="post-wrap">
-            <article id="post-28" class="post-28 post type-post status-publish format-standard hentry category-entertainment category-games tag-characters tag-villain">
+            <article id="post-28" class="post-28 post type-post status-publish format-standard hentry">
                 <header class="entry-header">
                     <h1>Émissions</h1>
                 </header>
@@ -13,10 +13,36 @@
 
 
         {% for key, programType in programTypes %}
-            Title : {{ programType.title }}<br />
-            {% if programType.presenter is defined %}Presenter : {{ programType.presenter }}<br />{% endif %}
-            Description : {{ programType.description }}<br />
-            Visuel : <br /><img src="{{ asset(programType.picture.getPath('75-75')) }}" alt="{{ programType.title }}" />
+            <div class="row">
+                <div class="col-md-12 podcast-content">
+                    <div class="pull-left">
+
+                            {% if programType.picture is not null %}
+
+                                <img src="{{ asset(programType.picture.getPath('podcast')) }}" alt="{{ programType.title }}" />
+                            {% else %}
+
+                                <img src="{{ asset('assets/css/images/artists-music.jpg?size=podcast') }}" alt="" />
+                            {% endif %}
+
+                    </div>
+                    <div class="description">
+
+                        <h4>{{ programType.title }}</h4>
+                        <p>
+                            {{ programType.description }}
+                        </p>
+
+                        {% if programType.presenter is not null %}
+                        <p>
+                            Avec : {{ programType.presenter }}
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+
 
         {% endfor %}
     {% endblock %}
