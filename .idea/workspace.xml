@@ -28,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="808" column="10" selection-start="13543" selection-end="13543" vertical-scroll-proportion="-5.423077" vertical-offset="11979" max-vertical-offset="36585">
+            <state line="2412" column="1" selection-start="41867" selection-end="41867" vertical-scroll-proportion="0.5371429" vertical-offset="35710" max-vertical-offset="36585">
               <folding />
             </state>
           </provider>
@@ -46,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Migration.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Migration.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/migration/Migration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="322" column="54" selection-start="9940" selection-end="9940" vertical-scroll-proportion="0.46067417" vertical-offset="4345" max-vertical-offset="5820">
+            <state line="322" column="54" selection-start="9940" selection-end="9940" vertical-scroll-proportion="7.2916665" vertical-offset="4930" max-vertical-offset="5820">
               <folding>
                 <marker date="1417180678000" expanded="true" signature="332:762" placeholder="INSERT INTO ..." />
                 <marker date="1417180678000" expanded="true" signature="2589:2970" placeholder="INSERT INTO ..." />
@@ -184,12 +184,12 @@
         <option value="$PROJECT_DIR$/web/migration/DBHandler.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showArtist.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllProgramTypes.html.twig" />
-        <option value="$PROJECT_DIR$/web/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Components/Wordwrap/Wordwrap.php" />
         <option value="$PROJECT_DIR$/web/migration/index.php" />
         <option value="$PROJECT_DIR$/web/migration/Migration.php" />
+        <option value="$PROJECT_DIR$/web/assets/css/style.css" />
       </list>
     </option>
   </component>
@@ -1503,13 +1503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="808" column="10" selection-start="13543" selection-end="13543" vertical-scroll-proportion="-5.423077" vertical-offset="11979" max-vertical-offset="36585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="50" selection-start="1632" selection-end="1632" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="8205">
@@ -1542,7 +1535,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/migration/Migration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="322" column="54" selection-start="9940" selection-end="9940" vertical-scroll-proportion="0.46067417" vertical-offset="4345" max-vertical-offset="5820">
+        <state line="322" column="54" selection-start="9940" selection-end="9940" vertical-scroll-proportion="7.2916665" vertical-offset="4930" max-vertical-offset="5820">
           <folding>
             <marker date="1417180678000" expanded="true" signature="332:762" placeholder="INSERT INTO ..." />
             <marker date="1417180678000" expanded="true" signature="2589:2970" placeholder="INSERT INTO ..." />
@@ -1550,6 +1543,13 @@
             <marker date="1417180678000" expanded="true" signature="7751:8333" placeholder="INSERT INTO ..." />
             <marker date="1417180678000" expanded="true" signature="9286:9537" placeholder="INSERT INTO ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2412" column="1" selection-start="41867" selection-end="41867" vertical-scroll-proportion="0.5371429" vertical-offset="35710" max-vertical-offset="36585">
+          <folding />
         </state>
       </provider>
     </entry>

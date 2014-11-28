@@ -2428,7 +2428,7 @@ footer .footer-top {
 }
 
 /* Google search */
-button-v2 {
+input.gsc-search-button-v2 {
     width: 65px;
     height: 24px;
 }
