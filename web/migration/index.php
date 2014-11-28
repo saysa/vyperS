@@ -9,8 +9,9 @@ if (isset($_POST['m'])) {
     $db = new DBHandler();
     $m = new Migration($db);
     //$m->addPictures($m->selectPictures());
-    $m->addArtists($m->selectArtists());
-
+    //$m->addArtists($m->selectArtists());
+    //$m->addArticles($m->selectArticles());
+    $m->addDiscos($m->selectDiscos());
 }
 
 ?>

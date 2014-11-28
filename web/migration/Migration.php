@@ -139,4 +139,200 @@ class Migration {
             'table' => 'artist'
         ));
     }
+
+    public function addArticles($opt)
+    {
+        foreach ($opt['articles'] as $post) {
+
+            foreach ($opt['pictures'] as $oldPic) {
+                if ($oldPic->id == $post->relatedPicture) {
+
+                    $r = $this->db->select(array(
+                        'table' => 'picture',
+                        'where' => array('filename' => $oldPic->filename),
+                    ));
+
+                    $obj = $r[0];
+                    $post->picture = $obj->id;
+                }
+            }
+
+            foreach ($opt['articleTypes'] as $oldArtType) {
+                if ($oldArtType->id == $post->type) {
+
+                    switch ($oldArtType->id) {
+
+                        case 2:
+                            $post->articleTypeID = 4;
+                            break;
+                        case 6:
+                            $post->articleTypeID = 5;
+                            break;
+                        case 7:
+                            $post->articleTypeID = 6;
+                            break;
+                        case 8:
+                            $post->articleTypeID = 7;
+                            break;
+                        case 10:
+                            $post->articleTypeID = 8;
+                            break;
+                    }
+                }
+            }
+
+            $slug = uniqid();
+
+
+            $query = $this->db->pdo->prepare("INSERT INTO article SET
+
+                user_id = 1,
+                continent_id = 1,
+                article_type_id = :article_type_id,
+                picture_id = :picture_id,
+                highlight = :highlight,
+                title = :title,
+                description = :description,
+                text = :text,
+                releaseDate = :releaseDate,
+                releaseTime = :releaseTime,
+                author = :author,
+                translator = :translator,
+                source = :source,
+                sourceURL = :sourceURL,
+                metaKeywords = :metaKeywords,
+                slug = :slug,
+                live = 1,
+                deleted = 0,
+                created = :created,
+                modified = :modified
+
+            ");
+
+
+            $query->bindParam(":article_type_id", $post->articleTypeID);
+            $query->bindParam(":picture_id", $post->picture);
+            $query->bindParam(":highlight", $post->highlight);
+            $query->bindParam(":title", $post->title);
+            $query->bindParam(":text", $post->text);
+            $query->bindParam(":description", $post->description);
+            $query->bindParam(":releaseDate", $post->releaseDate);
+            $query->bindParam(":releaseTime", $post->releaseTime);
+            $query->bindParam(":author", $post->author);
+            $query->bindParam(":translator", $post->translator);
+            $query->bindParam(":source", $post->source);
+            $query->bindParam(":sourceURL", $post->sourceURL);
+            $query->bindParam(":metaKeywords", $post->metaKeywords);
+            $query->bindParam(":slug", $slug);
+            $query->bindParam(":created", $post->created);
+            $query->bindParam(":modified", $post->modified);
+
+            $query->execute();
+        }
+    }
+
+    public function addDiscos($opt)
+    {
+        foreach ($opt['discos'] as $post) {
+
+            //medium sind  gleich
+            // discotype gleich
+            // country 104
+            // continent 1
+
+            foreach ($opt['pictures'] as $oldPic) {
+                if ($oldPic->id == $post->file) {
+
+                    $r = $this->db->select(array(
+                        'table' => 'picture',
+                        'where' => array('filename' => $oldPic->filename),
+                    ));
+
+                    $obj = $r[0];
+                    $post->picture = $obj->id;
+                }
+            }
+
+            $slug = uniqid();
+
+
+            $query = $this->db->pdo->prepare("INSERT INTO disco SET
+
+                medium_id = :medium_id,
+                type_id = :type_id,
+                country_id = 104,
+                continent_id = 1,
+                picture_id = :picture_id,
+                title = :title,
+                titleReal = :titleReal,
+                cdJapan = :cdJapan,
+                date = :date,
+                labelMusic = :labelMusic,
+                details = :details,
+                slug = :slug,
+                live = 1,
+                deleted = 0,
+                created = :created,
+                modified = :modified
+
+            ");
+
+            $query->bindParam(":medium_id", $post->medium);
+            $query->bindParam(":type_id", $post->type);
+            $query->bindParam(":picture_id", $post->picture);
+            $query->bindParam(":title", $post->title);
+            $query->bindParam(":titleReal", $post->titleReal);
+            $query->bindParam(":cdJapan", $post->cdJapan);
+            $query->bindParam(":date", $post->date);
+            $query->bindParam(":labelMusic", $post->labelMusic);
+            $query->bindParam(":details", $post->details);
+            $query->bindParam(":slug", $slug);
+            $query->bindParam(":created", $post->created);
+            $query->bindParam(":modified", $post->modified);
+
+            $query->execute();
+
+        }
+    }
+
+    public function selectArticles()
+    {
+        $articles = $this->db->selectOLD(array(
+            'table' => 'article'
+        ));
+
+        $articleTypes = $this->db->selectOLD(array(
+            'table' => 'articletype'
+        ));
+
+        $pictures = $this->db->selectOLD(array(
+            'table' => 'picture'
+        ));
+
+        return array(
+            'articles' => $articles,
+            'articleTypes' => $articleTypes,
+            'pictures' => $pictures,
+
+        );
+    }
+
+    public function selectDiscos()
+    {
+        $discos = $this->db->selectOLD(array(
+            'table' => 'disco'
+        ));
+
+        $pictures = $this->db->selectOLD(array(
+            'table' => 'picture'
+        ));
+
+        return array(
+            'discos' => $discos,
+            'pictures' => $pictures,
+
+        );
+
+
+    }
 } 
