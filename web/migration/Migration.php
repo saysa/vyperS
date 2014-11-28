@@ -295,6 +295,44 @@ class Migration {
         }
     }
 
+    public function addTours($tours)
+    {
+        foreach ($tours as $post) {
+
+            // type gleich
+            // continent gleich
+            $query = $this->db->pdo->prepare("INSERT INTO tour SET
+
+                type_id = :type_id,
+                continent_id = :continent_id,
+                title = :title,
+                realTitle = :realTitle,
+                description = :description,
+                start = :start,
+                end = :end,
+                artistsKeywords = :artistsKeywords,
+                live = 1,
+                deleted = 0,
+                created = :created,
+                modified = :modified
+
+            ");
+
+            $query->bindParam(":type_id", $post->type);
+            $query->bindParam(":continent_id", $post->continent);
+            $query->bindParam(":title", $post->title);
+            $query->bindParam(":realTitle", $post->realTitle);
+            $query->bindParam(":description", $post->description);
+            $query->bindParam(":start", $post->start);
+            $query->bindParam(":end", $post->end);
+            $query->bindParam(":artistsKeywords", $post->artistsKeywords);
+            $query->bindParam(":created", $post->created);
+            $query->bindParam(":modified", $post->modified);
+
+            $query->execute();
+        }
+    }
+
     public function selectArticles()
     {
         $articles = $this->db->selectOLD(array(
@@ -332,6 +370,18 @@ class Migration {
             'pictures' => $pictures,
 
         );
+
+
+    }
+
+    public function selectTours()
+    {
+        $tours = $this->db->selectOLD(array(
+            'table' => 'tour'
+        ));
+
+        return $tours;
+
 
 
     }

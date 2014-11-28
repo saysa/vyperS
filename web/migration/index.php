@@ -11,7 +11,8 @@ if (isset($_POST['m'])) {
     //$m->addPictures($m->selectPictures());
     //$m->addArtists($m->selectArtists());
     //$m->addArticles($m->selectArticles());
-    $m->addDiscos($m->selectDiscos());
+    //$m->addDiscos($m->selectDiscos());
+    $m->addTours($m->selectTours());
 }
 
 ?>
