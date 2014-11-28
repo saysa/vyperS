@@ -333,6 +333,105 @@ class Migration {
         }
     }
 
+    public function addEvents($opt)
+    {
+        foreach ($opt['events'] as $post) {
+
+            foreach ($opt['locations'] as $oldLocation) {
+                if ($oldLocation->id == $post->location) {
+
+                    $r = $this->db->select(array(
+                        'table' => 'location',
+                        'where' => array('name' => addslashes($oldLocation->name)),
+                    ));
+
+                    $obj = $r[0];
+                    $post->oldLocation = $obj->id;
+                }
+            }
+
+            foreach ($opt['tours'] as $oldTour) {
+                if ($oldTour->id == $post->relatedTour) {
+
+                    $r = $this->db->select(array(
+                        'table' => 'tour',
+                        'where' => array('title' => addslashes($oldTour->title)),
+                    ));
+
+                    $obj = $r[0];
+                    $post->oldTour = $obj->id;
+                }
+            }
+
+            foreach ($opt['pictures'] as $oldPic) {
+                if ($oldPic->id == $post->relatedPicture) {
+
+                    $r = $this->db->select(array(
+                        'table' => 'picture',
+                        'where' => array('filename' => $oldPic->filename),
+                    ));
+
+                    $obj = $r[0];
+                    $post->picture = $obj->id;
+                }
+            }
+
+            // type_id gleich
+
+            $query = $this->db->pdo->prepare("INSERT INTO event SET
+
+                location_id = :location_id,
+                type_id = :type_id,
+                tour_id = :tour_id,
+                picture_id = :picture_id,
+                title = :title,
+                realTitle = :realTitle,
+                description = :description,
+                date = :date,
+                time = :time,
+                timeEnd = :timeEnd,
+                slug = :slug,
+                live = 1,
+                deleted = 0,
+                created = :created,
+                modified = :modified
+
+            ");
+
+
+            $timeEnd = $this->getTimeEnd($post);
+            $slug = uniqid();
+
+
+            $query->bindParam(":location_id", $post->oldLocation);
+            $query->bindParam(":type_id", $post->type);
+            $query->bindParam(":tour_id", $post->oldTour);
+            $query->bindParam(":picture_id", $post->picture);
+            $query->bindParam(":title", str_replace("#", '', $post->title));
+            $query->bindParam(":realTitle", $post->realTitle);
+            $query->bindParam(":description", $post->description);
+            $query->bindParam(":date", $post->date);
+            $query->bindParam(":time", $post->time);
+            $query->bindParam(":timeEnd", $timeEnd);
+            $query->bindParam(":slug", $slug);
+            $query->bindParam(":created", $post->created);
+            $query->bindParam(":modified", $post->modified);
+
+            $query->execute();
+        }
+    }
+
+    private function getTimeEnd($event)
+    {
+        $date = $event->date;
+        $time = $event->time;
+
+        $start = new DateTime($date . " " . $time);
+        $intervalToAdd = new DateInterval("PT1H");
+        return $start->add($intervalToAdd)->format("H:i:s");
+
+    }
+
     public function selectArticles()
     {
         $articles = $this->db->selectOLD(array(
@@ -382,7 +481,31 @@ class Migration {
 
         return $tours;
 
+    }
 
+    public function selectEvents()
+    {
+        $events = $this->db->selectOLD(array(
+            'table' => 'event'
+        ));
 
+        $locations = $this->db->selectOLD(array(
+            'table' => 'location'
+        ));
+
+        $tours = $this->db->selectOLD(array(
+            'table' => 'tour'
+        ));
+
+        $pictures = $this->db->selectOLD(array(
+            'table' => 'picture'
+        ));
+
+        return array(
+            'events' => $events,
+            'locations' => $locations,
+            'tours' => $tours,
+            'pictures' => $pictures,
+        );
     }
 } 

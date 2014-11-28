@@ -99,7 +99,8 @@ class Event
     private $tour;
 
     /**
-     * @ORM\OneToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Picture")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $picture;
 

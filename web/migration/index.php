@@ -12,8 +12,10 @@ if (isset($_POST['m'])) {
     //$m->addArtists($m->selectArtists());
     //$m->addArticles($m->selectArticles());
     //$m->addDiscos($m->selectDiscos());
-    $m->addTours($m->selectTours());
+    //$m->addTours($m->selectTours());
+    $m->addEvents($m->selectEvents());
 }
+
 
 ?>
 <!DOCTYPE HTML>
