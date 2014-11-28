@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2ecea67-3778-4888-8635-2c7f03fc460a" name="Default" comment="Category album nullable">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/migration/DBHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/migration/Migration.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/migration/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/migration/Migration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/migration/DBHandler.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="local.dev.iws" />
@@ -41,12 +41,7 @@
         <entry file="file://$PROJECT_DIR$/web/migration/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="35" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="480">
-              <folding>
-                <marker date="1417127168000" expanded="true" signature="291:414" placeholder="..." />
-                <marker date="1417127168000" expanded="true" signature="298:327" placeholder="..." />
-                <marker date="1417127168000" expanded="true" signature="334:406" placeholder="..." />
-                <marker date="1417127168000" expanded="true" signature="355:398" placeholder="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,19 +49,16 @@
       <file leaf-file-name="Migration.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/migration/Migration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="12" selection-start="792" selection-end="792" vertical-scroll-proportion="3.125" vertical-offset="570" max-vertical-offset="2130">
-              <folding>
-                <marker date="1417127876000" expanded="true" signature="332:762" placeholder="INSERT INTO ..." />
-                <marker date="1417127876000" expanded="true" signature="2589:2970" placeholder="INSERT INTO ..." />
-              </folding>
+            <state line="38" column="12" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="2205">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="30" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.7153846" vertical-offset="93" max-vertical-offset="11295">
+            <state line="31" column="30" selection-start="1914" selection-end="1914" vertical-scroll-proportion="51.875" vertical-offset="1710" max-vertical-offset="11295">
               <folding />
             </state>
           </provider>
@@ -82,7 +74,7 @@
         </entry>
       </file>
       <file leaf-file-name="addArtist.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminArtist/addArtist.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminartist/addArtist.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state line="63" column="76" selection-start="3616" selection-end="3616" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2550">
               <folding />
@@ -90,8 +82,17 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="showAll.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Album/showAll.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="0" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.72115386" vertical-offset="45" max-vertical-offset="960">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="updateArtist.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminArtist/updateArtist.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminartist/updateArtist.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state line="66" column="76" selection-start="3645" selection-end="3645" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="2760">
               <folding />
@@ -103,9 +104,7 @@
         <entry file="file://$PROJECT_DIR$/web/migration/DBHandler.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="18" selection-start="447" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1275">
-              <folding>
-                <marker date="1417122251000" expanded="true" signature="1773:1826" placeholder="SELECT {$col..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,7 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminPodcast/addPodcast.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminPodcast/updatePodcast.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/PodcastController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Podcast/showAll.html.twig" />
@@ -174,13 +172,14 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminArtist/updateArtist.html.twig" />
         <option value="$PROJECT_DIR$/web/migration/index.php" />
         <option value="$PROJECT_DIR$/web/migration/Migration.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Album/showAll.html.twig" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="82" />
-    <option name="y" value="23" />
+    <option name="x" value="226" />
+    <option name="y" value="22" />
     <option name="width" value="1724" />
     <option name="height" value="1057" />
   </component>
@@ -238,6 +237,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Default" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -476,7 +478,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminArtist" />
+              <option name="myItemId" value="Album" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -671,9 +673,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Default" />
       </pane>
     </panes>
   </component>
@@ -1012,7 +1011,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="82" y="23" width="1724" height="1057" extended-state="0" />
+    <frame x="226" y="22" width="1724" height="1057" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1026,7 +1025,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1587396" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18846612" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1902497" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1083,11 +1082,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showAll.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="68" selection-start="4096" selection-end="4136" vertical-scroll-proportion="0.0" vertical-offset="614" max-vertical-offset="1515" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Album/recentPictures.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="6" selection-start="525" selection-end="525" vertical-scroll-proportion="0.29076397" vertical-offset="0" max-vertical-offset="877" />
@@ -1193,7 +1187,7 @@
         <state line="52" column="0" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="870" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminArticleController.php">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="106" column="43" selection-start="3445" selection-end="3609" vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="1995" />
       </provider>
@@ -1292,14 +1286,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminArtist/addArtist.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminartist/addArtist.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="76" selection-start="3616" selection-end="3616" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2550">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminArtist/updateArtist.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminartist/updateArtist.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="76" selection-start="3645" selection-end="3645" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="2760">
           <folding />
@@ -1309,21 +1303,14 @@
     <entry file="file://$PROJECT_DIR$/web/migration/DBHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="18" selection-start="447" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1275">
-          <folding>
-            <marker date="1417122251000" expanded="true" signature="1773:1826" placeholder="SELECT {$col..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/migration/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="35" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="480">
-          <folding>
-            <marker date="1417127168000" expanded="true" signature="291:414" placeholder="..." />
-            <marker date="1417127168000" expanded="true" signature="298:327" placeholder="..." />
-            <marker date="1417127168000" expanded="true" signature="334:406" placeholder="..." />
-            <marker date="1417127168000" expanded="true" signature="355:398" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1349,17 +1336,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/migration/Migration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="12" selection-start="792" selection-end="792" vertical-scroll-proportion="3.125" vertical-offset="570" max-vertical-offset="2130">
-          <folding>
-            <marker date="1417127876000" expanded="true" signature="332:762" placeholder="INSERT INTO ..." />
-            <marker date="1417127876000" expanded="true" signature="2589:2970" placeholder="INSERT INTO ..." />
-          </folding>
+        <state line="38" column="12" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="2205">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="30" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.7153846" vertical-offset="93" max-vertical-offset="11295">
+        <state line="31" column="30" selection-start="1914" selection-end="1914" vertical-scroll-proportion="51.875" vertical-offset="1710" max-vertical-offset="11295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Album/showAll.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.72115386" vertical-offset="45" max-vertical-offset="960">
           <folding />
         </state>
       </provider>

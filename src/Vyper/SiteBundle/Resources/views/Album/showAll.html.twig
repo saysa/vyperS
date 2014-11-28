@@ -26,39 +26,6 @@
 
             {% endfor %}
 
-            {% for album in albums %}
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="thumb album-thumbnail" style="background: url('{{ asset(album.cover.getPath('album-cover')) }}') no-repeat center;">
-                        <div class="hover-effect">
-                            <div class="gallery-info">
-                                <p>Mindblowing One</p>
-                                <a href="{{ path('showAlbum', {'id': album.getId, 'slug': album.slug}) }}">Ouvrir</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            {% endfor %}
-
-            {% for album in albums %}
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="thumb album-thumbnail" style="background: url('{{ asset(album.cover.getPath('album-cover')) }}') no-repeat center;">
-                        <div class="hover-effect">
-                            <div class="gallery-info">
-                                <p>Mindblowing One</p>
-                                <a href="{{ path('showAlbum', {'id': album.getId, 'slug': album.slug}) }}">Ouvrir</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            {% endfor %}
-
-
 
 
         </div>
