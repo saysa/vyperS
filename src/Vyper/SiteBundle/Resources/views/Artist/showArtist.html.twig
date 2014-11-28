@@ -60,13 +60,9 @@
         <!-- /post-wrap -->
 
         {% if artist.getBiography %}
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-rocket"></i>
-                    </div>
-                    <h4>Biographie</h4>
-                </div>
+
+            <div class="content-title main-color-reverse">
+                <h4>Biographie</h4>
             </div>
 
             <div class="entry-content">
@@ -84,8 +80,8 @@
             <div class="column">
                 <div class="listing-block">
                     <div class="releases-listing">
-                        {% set iterate = 0 %}
                         {% for key, disco in discos %}
+                            {% if key < 4 %}
                             <div class="col-md-3 padding-off">
                                 <div class="release-thumbnail">
                                     <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">
@@ -124,7 +120,7 @@
                                 </div>
 
                             </div>
-                            {% set iterate = iterate+1 %}
+                            {% endif %}
                         {% endfor %}
 
 
