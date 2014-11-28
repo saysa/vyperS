@@ -806,7 +806,7 @@ nav .container-fluid>.navbar-collapse {
 
 .main-slider .post-info{
     position: absolute;
-    top: 35%;
+    top: 5%;
     left: 100px;
     color: #FFFFFF;
     width: 70%;
@@ -837,6 +837,10 @@ nav .container-fluid>.navbar-collapse {
     background-color: #222222;
     background-color: rgba(0, 0, 0, 0.45);
     margin: 10px 0 20px;
+}
+
+.main-slider-description {
+    padding: 10px 0;
 }
 
 .main-slider .read-more{

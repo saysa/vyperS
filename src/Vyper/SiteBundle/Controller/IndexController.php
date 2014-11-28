@@ -4,6 +4,7 @@ namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Vyper\SiteBundle\Components\Wordwrap\Wordwrap;
 
 class IndexController extends Controller
 {
@@ -19,6 +20,11 @@ class IndexController extends Controller
         $user = $session->get('user');
 
         $articles_carousel = $em->getRepository('VyperSiteBundle:Article')->carousel();
+
+        foreach ($articles_carousel as $article) {
+            $w = new Wordwrap();
+            $article->excerpt = $w->cutElypse($article->getDescription(), 150);
+        }
 
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'musique : news'));
         $latest_news = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
