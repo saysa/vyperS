@@ -46,7 +46,7 @@ class AdminArticleController extends AdminCommonController {
         $view->set('themes', $themes);
         $view->set('flashnews', $flashnews);
 
-        return $this->render('VyperSiteBundle:Adminarticle:showArticles.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminArticle:showArticles.html.twig', $view->getView());
     }
 
     public function addArticleAction(Request $request)
@@ -81,7 +81,7 @@ class AdminArticleController extends AdminCommonController {
         $view->set('form', $form->createView());
         $view->set("active_article", true);
 
-        return $this->render('VyperSiteBundle:Adminarticle:addArticle.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminArticle:addArticle.html.twig', $view->getView());
     }
 
     /**
@@ -123,6 +123,6 @@ class AdminArticleController extends AdminCommonController {
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Adminarticle:updateArticle.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminArticle:updateArticle.html.twig', $view->getView());
     }
 } 

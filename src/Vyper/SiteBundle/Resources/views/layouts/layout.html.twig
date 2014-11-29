@@ -6,6 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{% block title %}Japan FM | Toute la J-music, une seule web radio | Radio Japonaise{% endblock %}</title>
@@ -162,7 +163,7 @@
                     </div>
 
                     <div class="title">
-                        <img src="http://betatest.japanfm.fr/assets/img/logo.png" height="50">
+                        <a href="{{ path('index') }}"><img src="http://betatest.japanfm.fr/assets/img/logo.png" height="50"></a>
                     </div>
 
                     {{ render(controller("VyperSiteBundle:Flashnew:tickerlist")) }}
@@ -580,7 +581,13 @@
                         $("#currentCover").attr('src', '{{ asset('assets/css/images/nocover_jfm.jpg') }}');
                         $("#currentArtist-player").html('Japan FM');
                     } else {
-                        $("#currentCover").attr('src', 'http://japanfm.fr/cover/'+data[0].cover);
+
+                        if (data[0].cover == '') {
+                            $("#currentCover").attr('src', '{{ asset('assets/css/images/nocover_jfm.jpg') }}');
+                        } else {
+                            $("#currentCover").attr('src', 'http://japanfm.fr/cover/'+data[0].cover);
+                        }
+
                         $("#currentArtist-player").html(data[0].artist);
                     }
 
