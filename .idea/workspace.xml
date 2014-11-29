@@ -31,7 +31,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1830" column="27" selection-start="31778" selection-end="31778" vertical-scroll-proportion="0.4342857" vertical-offset="27070" max-vertical-offset="36570">
+            <state line="2441" column="20" selection-start="42266" selection-end="42266" vertical-scroll-proportion="0.8457143" vertical-offset="35875" max-vertical-offset="36750">
               <folding />
             </state>
           </provider>
@@ -49,7 +49,7 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="276" column="81" selection-start="13839" selection-end="13839" vertical-scroll-proportion="-8.75" vertical-offset="3930" max-vertical-offset="11400">
+            <state line="521" column="43" selection-start="26430" selection-end="26430" vertical-scroll-proportion="-24.666666" vertical-offset="7223" max-vertical-offset="11790">
               <folding>
                 <element signature="e#8019#8024#0" expanded="true" />
                 <element signature="e#13162#13167#0" expanded="true" />
@@ -67,8 +67,8 @@
                 <element signature="e#15560#15570#0" expanded="true" />
                 <element signature="e#15724#15736#0" expanded="true" />
                 <element signature="e#15892#15907#0" expanded="true" />
-                <element signature="e#26699#26711#0" expanded="true" />
-                <element signature="e#27457#27469#0" expanded="true" />
+                <element signature="e#27471#27483#0" expanded="true" />
+                <element signature="e#28229#28241#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,9 +197,9 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/web/app.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllPrograms.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/css/style.css" />
       </list>
     </option>
@@ -1648,32 +1648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="276" column="81" selection-start="13839" selection-end="13839" vertical-scroll-proportion="-8.75" vertical-offset="3930" max-vertical-offset="11400">
-          <folding>
-            <element signature="e#8019#8024#0" expanded="true" />
-            <element signature="e#13162#13167#0" expanded="true" />
-            <element signature="e#13610#13625#0" expanded="true" />
-            <element signature="e#13717#13732#0" expanded="true" />
-            <element signature="e#13824#13839#0" expanded="true" />
-            <element signature="e#14294#14306#0" expanded="true" />
-            <element signature="e#14393#14411#0" expanded="true" />
-            <element signature="e#14504#14524#0" expanded="true" />
-            <element signature="e#14618#14636#0" expanded="true" />
-            <element signature="e#14886#14896#0" expanded="true" />
-            <element signature="e#15059#15069#0" expanded="true" />
-            <element signature="e#15229#15236#0" expanded="true" />
-            <element signature="e#15392#15405#0" expanded="true" />
-            <element signature="e#15560#15570#0" expanded="true" />
-            <element signature="e#15724#15736#0" expanded="true" />
-            <element signature="e#15892#15907#0" expanded="true" />
-            <element signature="e#26699#26711#0" expanded="true" />
-            <element signature="e#27457#27469#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="26" selection-start="574" selection-end="574" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="450">
@@ -1695,9 +1669,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="521" column="43" selection-start="26430" selection-end="26430" vertical-scroll-proportion="-24.666666" vertical-offset="7223" max-vertical-offset="11790">
+          <folding>
+            <element signature="e#8019#8024#0" expanded="true" />
+            <element signature="e#13162#13167#0" expanded="true" />
+            <element signature="e#13610#13625#0" expanded="true" />
+            <element signature="e#13717#13732#0" expanded="true" />
+            <element signature="e#13824#13839#0" expanded="true" />
+            <element signature="e#14294#14306#0" expanded="true" />
+            <element signature="e#14393#14411#0" expanded="true" />
+            <element signature="e#14504#14524#0" expanded="true" />
+            <element signature="e#14618#14636#0" expanded="true" />
+            <element signature="e#14886#14896#0" expanded="true" />
+            <element signature="e#15059#15069#0" expanded="true" />
+            <element signature="e#15229#15236#0" expanded="true" />
+            <element signature="e#15392#15405#0" expanded="true" />
+            <element signature="e#15560#15570#0" expanded="true" />
+            <element signature="e#15724#15736#0" expanded="true" />
+            <element signature="e#15892#15907#0" expanded="true" />
+            <element signature="e#27471#27483#0" expanded="true" />
+            <element signature="e#28229#28241#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1830" column="27" selection-start="31778" selection-end="31778" vertical-scroll-proportion="0.4342857" vertical-offset="27070" max-vertical-offset="36570">
+        <state line="2441" column="20" selection-start="42266" selection-end="42266" vertical-scroll-proportion="0.8457143" vertical-offset="35875" max-vertical-offset="36750">
           <folding />
         </state>
       </provider>

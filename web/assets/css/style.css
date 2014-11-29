@@ -2412,7 +2412,7 @@ a.small {
 }
 
 footer {
-    background: #1D2123;
+    background: #414140;
 }
 
 footer .leaderboard {
@@ -2430,3 +2430,15 @@ footer .footer-top {
     padding-left: 30px;
 }
 
+.footer ul {
+    padding: 10px 0;
+}
+
+.footer ul li {
+    display: inline-block;
+}
+
+.footer-info {
+    padding: 20px 15px;
+    background: #1D2123;
+}
