@@ -145,10 +145,10 @@
       <file leaf-file-name="showEvent.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showEvent.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="8" selection-start="3159" selection-end="3159" vertical-scroll-proportion="0.24743444" vertical-offset="833" max-vertical-offset="1710">
+            <state line="76" column="0" selection-start="3253" selection-end="3253" vertical-scroll-proportion="0.5903846" vertical-offset="833" max-vertical-offset="1710">
               <folding>
                 <element signature="e#12#52#0" expanded="true" />
-                <element signature="e#3215#3234#0" expanded="true" />
+                <element signature="e#3207#3226#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1216,7 +1216,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36994818" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36994818" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1662,10 +1662,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showEvent.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="8" selection-start="3159" selection-end="3159" vertical-scroll-proportion="0.24743444" vertical-offset="833" max-vertical-offset="1710">
+        <state line="76" column="0" selection-start="3253" selection-end="3253" vertical-scroll-proportion="0.5903846" vertical-offset="833" max-vertical-offset="1710">
           <folding>
             <element signature="e#12#52#0" expanded="true" />
-            <element signature="e#3215#3234#0" expanded="true" />
+            <element signature="e#3207#3226#0" expanded="true" />
           </folding>
         </state>
       </provider>
