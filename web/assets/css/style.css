@@ -2436,6 +2436,13 @@ footer .footer-top {
 
 .footer ul li {
     display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid #505050;
+}
+
+.footer ul li a {
+    color: #707070;
+    text-decoration: underline;
 }
 
 .footer-info {
