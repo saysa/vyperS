@@ -71,6 +71,9 @@ a:hover {
 }
 
 /*==== Common styles ==========*/
+p {
+    margin-bottom: 15px;
+}
 .main-slider h2,
 .fiche-group h4,
 .content-title h4,
@@ -91,6 +94,10 @@ header h2,
 .padding-off {
     padding: 0 !important;
 }
+
+*::-moz-selection { background:#D35F5F; color:#FFF; }
+*::-webkit-selection { background:#D35F5F; color:#FFF; }
+*::selection { background:#D35F5F; color:#FFF; }
 
 /*========= Headings =========*/
 h1,h2,h3,h4,h5,h5,h6{
