@@ -44,12 +44,13 @@ class StatiqueController extends Controller
                 $from = $_POST['contact']['email'];
                 $msg = $_POST['contact']['message'];
                 $dest = $_POST['objet'] . '@japanfm.fr';
+                #$dest = 'saysa_bounkhong@hotmail.com';
 
                 $corps = '
                 Nom et prénom : ' . $name . '<br />
                 Société : ' . $societe . '<br />
                 Corps : <br />
-                ' . $msg . '
+                ' . nl2br($msg) . '
                 ';
 
                 $message = \Swift_Message::newInstance()
