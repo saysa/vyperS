@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Vyper\SiteBundle\VyperSiteBundle(),
             new Vyper\UserBundle\VyperUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Genemu\Bundle\FormBundle\GenemuFormBundle(),
 
 
         );

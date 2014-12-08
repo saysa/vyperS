@@ -1072,6 +1072,27 @@ nav .container-fluid>.navbar-collapse {
     background: url("images/sep1.png") repeat-x left bottom;
 }
 
+/* 6. PAGES
+ * ======================== */
+.statique h2 {
+    background: #D35F5F;
+    padding: 10px 10px;
+    color: #FFFFFF;
+    font-size: 1em;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+.statique ul {
+    list-style: square;
+    margin-left: 15px;
+}
+
+.statique ul li ul {
+    list-style: disc;
+    margin-left: 15px;
+}
+
 /* 7. SIDEBAR
  * ======================== */
 .widget{

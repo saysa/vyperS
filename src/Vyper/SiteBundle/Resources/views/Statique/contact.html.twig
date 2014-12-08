@@ -8,84 +8,109 @@
         </header><!-- /archive-header -->
 
 
-        <div class="statique" style="font-size: 1.2em; line-height: 1.3em;">
+        {# On affiche tous les messages flash dont le nom est « info » #}
+        {% for message in app.session.flashbag.get('info') %}
+            <div class="alert alert-info">Message flash : {{ message }}</div>
+        {% endfor %}
 
-            <h2>Vyper Japanese Music, la passion de la musique japonaise</h2>
+        <div class="statique">
+            <form class="form-horizontal" method="post" {{ form_enctype(form) }}>
 
-            <p>
-                Composée de passionnés de musique japonaise, notre équipe réunit des personnes ayant un même point commun : l'esprit de partage et de découverte. Le site, lancé en 2013 est actuellement dans sa seconde version.
-            </p>
+                {{ form_widget(form._token) }}
 
-            <p>
-                Le site vyper-jmusic.com est édité par VYPER JAPANESE MUSIC
-            </p>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="select">Sujet : </label>
+                        <select id="select" class="form-control" name="objet">
+                            <option value="francois.gavenc">Demande commerciale et Publicité</option>
+                            <option value="ash">Programmation et émissions</option>
+                            <option value="antoine.marion">Partenariats</option>
+                            <option value="cyrielle">Contenu rédactionnel</option>
+                            <option value="matthieu.marion">Evénementiel et salons</option>
+                            <option value="francois.gavenc">International requests</option>
+                            <option value="contact">Autre demande</option>
+                        </select>
+                    </div>
+                </div>
 
-            <h2>Contacter vyper-jmusic.com</h2>
+                <!-- Sujet -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.sujet, "Sujet *") }}
+                        <div class="controls">
+                            {{ form_widget(form.sujet, {  'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(form.sujet) }}
+                        </div>
+                    </div>
+                </div>
 
 
-            <p>
-                Courrier : VYPER Japanese Music PONS Cyrielle Résidence St Roch Rue Louis Orvoen 29350 Moëlan Sur Mer<br />
+                <!-- Name -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.name, "Nom et prénom *") }}
+                        <div class="controls">
+                            {{ form_widget(form.name, {  'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(form.name) }}
+                        </div>
+                    </div>
+                </div>
 
-                E-mail : <a class="hide-contact" href="#">contact</a>
-            </p>
+                <!-- Societe -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.societe, "Société") }}
+                        <div class="controls">
+                            {{ form_widget(form.societe, {  'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(form.societe) }}
+                        </div>
+                    </div>
+                </div>
 
-            <p>
-                Rédaction de vyper-jmusic.com : <a class="hide-contact" href="#">contact</a><br />
-                Support technique : <a class="hide-webmaster" href="#">webmaster</a><br />
-                Régie publicitaire : <a class="hide-publicite" href="#">publicite</a>
-            </p>
 
-            <h2>L'équipe de vyper-jmusic.com</h2>
 
-            <p>
-            <ul>
-                <li>Cyrielle Pons - <em>Ki YoMi</em> - Gérante et Présidente de l’association VYPER Japanese Music. Rédactrice, Photographe et Correctrice.</li>
-                <li>Gaëlle Pons – <em>TsuKi</em> – Photographe et Rédactrice/Correctrice</li>
-                <li>Roxanne Rigo – <em>Caprice</em> – Photographe et Rédactrice</li>
-                <li>Saysa Bounkhong - Chef de projet Web</li>
-            </ul>
+                <!-- Email -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.email, "Adresse E-mail *") }}
+                        <div class="controls">
+                            {{ form_widget(form.email, {  'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(form.email) }}
+                        </div>
+                    </div>
+                </div>
 
-            </p>
+                <!-- Message -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.message) }}
+                        <div class="controls">
+                            {{ form_widget(form.message, {  'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(form.message) }}
+                        </div>
+                    </div>
+                </div>
 
-            <p>
-                Merci aux contributeurs occasionnels.
-            </p>
+                <!-- Code -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.securitycod, "Code de sécurité *") }}
+                        <div class="controls">
+                            {{ form_widget(form.securitycod) }}
+                            {{ form_errors(form.securitycod) }}
+                        </div>
+                    </div>
+                </div>
 
-            <h2>Informations légales</h2>
 
-            <p>
-                Vyper Japanese Music est une association de Loi 1901 à but non-lucratif enregistrée sous le numéro W294005699 auprès de la Préfecture de Quimper<br />
-                Siège social : Résidence St Roch Rue Louis Orvoen 29350 Moëlan Sur Mer<br />
-                Le site VYPER Japanese Music est un web-média destiné à promouvoir la musique japonaise sans distinction de genres en France.
 
-            </p>
+                <div class="form-actions">
+                    <input type="hidden" name="add" value="add">
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
 
+                </div>
+
+            </form>
         </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>
 
-            $(document).ready(function() {
-                var e = "contact";
-                var t = "vyper-jmusic";
-                var n = ".com"; //
-                var m = e + '@' + t + n;
-                var r = 'mailto:' + e + '@' + t + n;
-                $('.hide-contact').attr('href',r).html(m);
-
-                var e = "webmaster";
-                var t = "vyper-jmusic";
-                var n = ".com";
-                var m = e + '@' + t + n;
-                var r = 'mailto:' + e + '@' + t + n;
-                $('.hide-webmaster').attr('href',r).html(m);
-
-                var e = "publicite";
-                var t = "vyper-jmusic";
-                var n = ".com";
-                var m = e + '@' + t + n;
-                var r = 'mailto:' + e + '@' + t + n;
-                $('.hide-publicite').attr('href',r).html(m);
-            });
-
-        </script>
     {% endblock %}

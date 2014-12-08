@@ -22,7 +22,8 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures": "@dev",
         "stof/doctrine-extensions-bundle": "dev-master",
-        "friendsofsymfony/user-bundle": "dev-master"
+        "friendsofsymfony/user-bundle": "dev-master",
+        "genemu/form-bundle": "2.2.*"
     },
     "scripts": {
         "post-install-cmd": [

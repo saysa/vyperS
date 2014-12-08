@@ -32,6 +32,14 @@ cgu:
     path:     /conditions-utilisation
     defaults: { _controller: VyperSiteBundle:Statique:cgu }
 
+cgu_sms:
+    path:     /conditions-utilisation-sms
+    defaults: { _controller: VyperSiteBundle:Statique:cguSms }
+
+mentions_legales:
+    path:     /mentions-legales
+    defaults: { _controller: VyperSiteBundle:Statique:mentionsLegales }
+
 musique-news:
     path:    /musique-news/{page}
     defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-news }
