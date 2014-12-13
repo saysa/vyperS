@@ -98,6 +98,10 @@ showAllPodcasts:
     path:    /podcast
     defaults: { _controller: VyperSiteBundle:Podcast:showAll }
 
+showAllPodcastsAudio:
+    path:    /podcasts-audio
+    defaults: { _controller: VyperSiteBundle:Podcast:showAllAudio }
+
 showArticle:
     path:    /article/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Article:showArticle }

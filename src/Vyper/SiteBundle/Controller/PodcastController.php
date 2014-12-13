@@ -31,4 +31,24 @@ class PodcastController extends Controller
         }
 
     }
+
+    public function showAllAudioAction(Request $request)
+    {
+        $podcast_audios = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Podcast')->getAudio();
+        $view = $this->container->get('saysa_view');
+
+        $view
+            ->set('current_radio', true)
+            ->set('podcast_audios', $podcast_audios)
+        ;
+
+        if ($request->isXmlHttpRequest()) {
+
+            $template = $this->renderView('VyperSiteBundle:Podcast:ajaxShowAll.html.twig', $view->getView());
+            return new Response($template);
+
+        } else {
+            return $this->render('VyperSiteBundle:Podcast:showAllAudio.html.twig', $view->getView());
+        }
+    }
 }

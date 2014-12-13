@@ -22,35 +22,37 @@
 
     {# Optional theme #}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
-
+{#
     {% stylesheets filter='cssrewrite'
     'assets/css/fullcalendar/fullcalendar.css'
     'assets/css/owl-carousel/owl.carousel.css'
     'assets/css/owl-carousel/owl.theme.css'
         'assets/bootstrap-star-rating/css/star-rating.min.css'
-        'assets/css/soundmanager/bar-ui.css'
         'assets/css/reset.css'
         'assets/css/style.css'
         'assets/css/prettyphoto/prettyphoto.css'
     %}
+
+
+
     <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
+#}
 
-    {#
     <!-- Fullcalendar -->
     <link rel="stylesheet" href="{{ asset('assets/css/fullcalendar/fullcalendar.css') }}" type="text/css" />
 
     <!-- Owl Carousel Assets -->
     <link href="{{ asset('assets/css/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/owl-carousel/owl.theme.css') }}" rel="stylesheet">
-    #}
+
 
 
 
     {# Font awesome #}
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-    {#
+
         <!-- Pretty Photo -->
         <link rel='stylesheet' id='de7igner-prettyPhoto-style-css'  href='{{ asset('assets/css/prettyphoto/prettyphoto.css') }}' type='text/css' media='all' />
 
@@ -58,20 +60,21 @@
         <!-- Star Rating -->
         <link href="{{ asset('assets/bootstrap-star-rating/css/star-rating.min.css') }}" media="all" rel="stylesheet" type="text/css" />
 
-        #}
 
+    {# Jplayer #}
+    <link href="{{ asset('assets/css/jplayer/prettify-jPlayer.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/jplayer/jfm-jplayer.css') }}">
 
     {# Jquery UI #}
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet" type="text/css" />
 
-    {#
-    <!-- Soundmanager -->
-    <link href="{{ asset('assets/css/soundmanager/bar-ui.css') }}" media="all" rel="stylesheet" type="text/css" />
+
+
 
 
     <link href="{{ asset('assets/css/reset.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" />
-    #}
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -84,6 +87,127 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <![endif]-->
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+        $(document).ready(function(){
+
+            /*
+             * jQuery UI ThemeRoller
+             *
+             * Includes code to hide GUI volume controls on mobile devices.
+             * ie., Where volume controls have no effect. See noVolume option for more info.
+             *
+             * Includes fix for Flash solution with MP4 files.
+             * ie., The timeupdates are ignored for 1000ms after changing the play-head.
+             * Alternative solution would be to use the slider option: {animate:false}
+             */
+
+            var myPlayer = $("#jquery_jplayer_1"),
+                    myPlayerData,
+                    fixFlash_mp4, // Flag: The m4a and m4v Flash player gives some old currentTime values when changed.
+                    fixFlash_mp4_id, // Timeout ID used with fixFlash_mp4
+                    ignore_timeupdate, // Flag used with fixFlash_mp4
+                    options = {
+                        ready: function (event) {
+                            // Hide the volume slider on mobile browsers. ie., They have no effect.
+                            if(event.jPlayer.status.noVolume) {
+                                // Add a class and then CSS rules deal with it.
+                                $(".jp-gui").addClass("jp-no-volume");
+                            }
+                            // Determine if Flash is being used and the mp4 media type is supplied. BTW, Supplying both mp3 and mp4 is pointless.
+                            fixFlash_mp4 = event.jPlayer.flash.used && /m4a|m4v/.test(event.jPlayer.options.supplied);
+                            // Setup the player with media.
+                            $(this).jPlayer("setMedia", {
+                                // mp3: "http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                                m4a: "http://radio.japanfm.fr/japan"
+                            });
+                        },
+                        timeupdate: function(event) {
+                            if(!ignore_timeupdate) {
+                                myControl.progress.slider("value", event.jPlayer.status.currentPercentAbsolute);
+                            }
+                        },
+                        volumechange: function(event) {
+                            if(event.jPlayer.options.muted) {
+                                myControl.volume.slider("value", 0);
+                            } else {
+                                myControl.volume.slider("value", event.jPlayer.options.volume);
+                            }
+                        },
+                        swfPath: "../dist/jplayer",
+                        supplied: "m4a, oga",
+                        cssSelectorAncestor: "#jp_container_1",
+                        wmode: "window",
+                        keyEnabled: true
+                    },
+                    myControl = {
+                        progress: $(options.cssSelectorAncestor + " .jp-progress-slider"),
+                        volume: $(options.cssSelectorAncestor + " .jp-volume-slider")
+                    };
+
+            // Instance jPlayer
+            myPlayer.jPlayer(options);
+
+            // A pointer to the jPlayer data object
+            myPlayerData = myPlayer.data("jPlayer");
+
+            // Define hover states of the buttons
+            $('.jp-gui ul li').hover(
+                    function() { $(this).addClass('ui-state-hover'); },
+                    function() { $(this).removeClass('ui-state-hover'); }
+            );
+
+            // Create the progress slider control
+            myControl.progress.slider({
+                animate: "fast",
+                max: 100,
+                range: "min",
+                step: 0.1,
+                value : 0,
+                slide: function(event, ui) {
+                    var sp = myPlayerData.status.seekPercent;
+                    if(sp > 0) {
+                        // Apply a fix to mp4 formats when the Flash is used.
+                        if(fixFlash_mp4) {
+                            ignore_timeupdate = true;
+                            clearTimeout(fixFlash_mp4_id);
+                            fixFlash_mp4_id = setTimeout(function() {
+                                ignore_timeupdate = false;
+                            },1000);
+                        }
+                        // Move the play-head to the value and factor in the seek percent.
+                        myPlayer.jPlayer("playHead", ui.value * (100 / sp));
+                    } else {
+                        // Create a timeout to reset this slider to zero.
+                        setTimeout(function() {
+                            myControl.progress.slider("value", 0);
+                        }, 0);
+                    }
+                }
+            });
+
+            // Create the volume slider control
+            myControl.volume.slider({
+                animate: "fast",
+                max: 1,
+                range: "min",
+                step: 0.01,
+                value : $.jPlayer.prototype.options.volume,
+                slide: function(event, ui) {
+                    myPlayer.jPlayer("option", "muted", false);
+                    myPlayer.jPlayer("option", "volume", ui.value);
+                }
+            });
+
+
+            $("#jplayer_inspector").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
+        });
+        //]]>
+    </script>
+
+
 </head>
 <body>
 <!--[if lt IE 9]>
@@ -141,111 +265,74 @@
             </div>
         </section>
         <!-- /top -section -->
-        <section class="col-lg-12 ticker-section">
-            <div class="content-wrap">
+        <section id="bar-fixed" class="container">
+            <div id="jp_container_1" class="jp-state-looped jp-state-playing">
 
+                <div class="row">
+                    <div class="col-lg-8 left">
+                        <div id="jquery_jplayer_1" class="jp-jplayer" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="http://radio.japanfm.fr/japan"></audio></div>
 
-
-                <div class="ticker" style="display: block;">
-
-                    <div class="search pull-right">
-                        <script>
-                            (function() {
-                                var cx = '001775883577770650674:f0b74h1hzdo';
-                                var gcse = document.createElement('script');
-                                gcse.type = 'text/javascript';
-                                gcse.async = true;
-                                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                                        '//www.google.com/cse/cse.js?cx=' + cx;
-                                var s = document.getElementsByTagName('script')[0];
-                                s.parentNode.insertBefore(gcse, s);
-                            })();
-                        </script>
-                        <gcse:search></gcse:search>
-                    </div>
-
-                    <div class="title">
-                        <a href="{{ path('index') }}"><img src="http://betatest.japanfm.fr/assets/img/logo.png" height="50"></a>
-                    </div>
-
-                    {{ render(controller("VyperSiteBundle:Flashnew:tickerlist")) }}
-
-
-                    <div class="row">
-                        <div class="col-md-7 padding-off">
-                            <div class="sm2-bar-ui flat">
-
-                                <div class="bd sm2-main-controls">
-
-                                    <div class="sm2-inline-texture"></div>
-                                    <div class="sm2-inline-gradient"></div>
-
-                                    <div class="sm2-inline-element sm2-button-element">
-                                        <div class="sm2-button-bd">
-                                            <a href="#play" class="sm2-inline-button play-pause">Play / pause</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="sm2-inline-element sm2-inline-status">
-
-                                        <div class="sm2-playlist">
-                                            <div class="sm2-playlist-target">
-                                                <!-- playlist <ul> + <li> markup will be injected here -->
-                                                <!-- if you want default / non-JS content, you can put that here. -->
-                                                <noscript><p>JavaScript is required.</p></noscript>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="sm2-inline-element sm2-button-element sm2-volume">
-                                        <div class="sm2-button-bd">
-                                            <span class="sm2-inline-button sm2-volume-control volume-shade"></span>
-                                            <a href="#volume" class="sm2-inline-button sm2-volume-control">volume</a>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="bd sm2-playlist-drawer sm2-element">
-
-                                    <div class="sm2-inline-texture">
-                                        <div class="sm2-box-shadow"></div>
-                                    </div>
-
-                                    <!-- playlist content is mirrored here -->
-
-                                    <div class="sm2-playlist-wrapper">
-                                        <ul class="sm2-playlist-bd">
-                                            <li><a href="http://radio.japanfm.fr/japan"><b id="currentArtist-player">Japan FM</b> - <span id="currentTitle-player">Toute la Jmusic</span></a></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-                            </div>
+                        <div id="logo" class="title">
+                            <a href="/"><img src="http://betatest.japanfm.fr/assets/img/logo.png" /></a>
                         </div>
-                        <div class="col-md-3 pull-right">
-                            <ul id="social-links">
-                                <li id="social-facebook">
-                                    <a href="{{ jfm_facebook }}">
-                                        <span>Japan FM sur Facebook</span>
-                                    </a>
-                                </li>
-                                <li id="social-twitter">
-                                    <a href="{{ jfm_twitter }}">
-                                        <span>Japan FM sur Twitter</span>
-                                    </a>
-                                </li>
-                            </ul>
+
+
+                        <div id="player-button" class="rock_controls_default controls">
+                            <div class="fa fa-play jp-play" style="display: block;"></div>
+                            <div class="fa fa-pause jp-pause" style="display: none;"></div>
+                        </div>
+
+
+                        <div class="jp-title audio-title"><b id="currentArtist-player">Japan FM</b> - <span id="currentTitle-player">Toute la Jmusic</span></div>
+
+                        <div id="flash-news" class="ticker" style="display: block;">
+
+                            {{ render(controller("VyperSiteBundle:Flashnew:tickerlist")) }}
+
                         </div>
                     </div>
+                    <div class="col-lg-4 right">
+                        <ul id="header-right">
+                            <li class="jp-mute ui-state-default ui-corner-all"><a href="javascript:;" class="jp-mute ui-icon ui-icon-volume-off" tabindex="1" title="mute" style="display: block;">mute</a></li>
+                            <li class="jp-unmute ui-state-default ui-state-active ui-corner-all" style="display: none;"><a href="javascript:;" class="jp-unmute ui-icon ui-icon-volume-off" tabindex="1" title="unmute" style="display: none;">unmute</a></li>
+                            <li><div class="jp-volume-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all pull-right" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
+                            </li>
+                            <li id="social-facebook">
+                                <a href="https://www.facebook.com/japanfm">
+                                    <span>Japan FM sur Facebook</span>
+                                </a>
+                            </li>
+                            <li id="social-twitter">
+                                <a href="https://twitter.com/japanfm">
+                                    <span>Japan FM sur Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
 
+                        <div class="jp-clearboth"></div>
 
+                        <div class="jp-no-solution" style="display: none;">
+                            <span>Update Required</span>
+                            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
 
-
+                        <div class="search pull-right">
+                            <script>
+                                (function() {
+                                    var cx = '001775883577770650674:f0b74h1hzdo';
+                                    var gcse = document.createElement('script');
+                                    gcse.type = 'text/javascript';
+                                    gcse.async = true;
+                                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                            '//www.google.com/cse/cse.js?cx=' + cx;
+                                    var s = document.getElementsByTagName('script')[0];
+                                    s.parentNode.insertBefore(gcse, s);
+                                })();
+                            </script>
+                            <gcse:search></gcse:search>
+                        </div>
+                    </div>
                 </div>
-
 
             </div>
         </section>
@@ -259,8 +346,15 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
+
+                    <div id="spacer">
+                        &nbsp;
+                    </div>
+
+
                     <!-- Static navbar -->
                     <nav id="nav-fixed" class="navbar navbar-default primary-menu" role="navigation">
+
                         <div class="container-fluid">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -277,6 +371,7 @@
                                             <li><a href="{{ path('radio-programme') }}">Programme</a></li>
                                             <li><a href="{{ path('radio-emissions') }}">Émissions</a></li>
                                             <li><a href="{{ path('showAllPodcasts') }}">Podcasts</a></li>
+                                            <li><a href="{{ path('showAllPodcastsAudio') }}">Audio</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
@@ -681,6 +776,7 @@
 
 
 
+
 {# Include all compiled plugins (below), or include individual files as needed #}
 {# Latest compiled and minified JavaScript #}
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -688,8 +784,11 @@
 <script type='text/javascript' src='http://cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js'></script>
 
 
+
 {# Jquery UI #}
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+
+{#
 
 {% javascripts
     'assets/js/vendor/moment.min.js'
@@ -698,13 +797,15 @@
     'assets/js/prettyPhoto/prettyPhoto.js'
     'assets/bootstrap-star-rating/js/star-rating.min.js'
     'assets/js/jquery.isotope.js'
-    'assets/js/soundmanager/soundmanager2-jsmin.js'
-    'assets/js/soundmanager/bar-ui.js'
+
 %}
+
+
+
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
+#}
 
-{#
 <!-- Full calendar -->
 <script src="{{ asset('assets/js/vendor/moment.min.js') }}"></script>
 <script src="{{ asset('assets/js/fullcalendar/fullcalendar.min.js') }}"></script>
@@ -725,11 +826,12 @@
 <!-- Isotope -->
 <script type='text/javascript' src='{{ asset('assets/js/jquery.isotope.js') }}'></script>
 
-<!-- Soundmanager -->
-<script type='text/javascript' src='{{ asset('assets/js/soundmanager/soundmanager2-jsmin.js') }}'></script>
-<script type='text/javascript' src='{{ asset('assets/js/soundmanager/bar-ui.js') }}'></script>
 
-#}
+{# Jplayer #}
+<script type="text/javascript" src="{{ asset('assets/js/jplayer/jfm-jplayer.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/jplayer/jquery.jplayer.min.js') }}"></script>
+<script type="text/javascript" src="{{  asset('assets/js/jplayer/jquery.jplayer.inspector.min.js') }}"></script>
+
 
 
 
@@ -770,9 +872,19 @@
         $(function() {
             $(window).scroll(function(){
                 if ($(this).scrollTop() > 400) {
-                    $('#nav-fixed').addClass('fixed');
+                    $('#bar-fixed').addClass('fixed');
+                    $('#nav-fixed').addClass('fixed-the-nav');
+                    $('#logo').addClass('logo-soft');
+                    $('#player-button').removeClass('rock_controls_default').addClass('rock_controls');
+                    $('#flash-news').hide();
+                    $('#spacer').show();
                 } else {
-                    $('#nav-fixed').removeClass('fixed');
+                    $('#bar-fixed').removeClass('fixed');
+                    $('#nav-fixed').removeClass('fixed-the-nav');
+                    $('#logo').removeClass('logo-soft');
+                    $('#player-button').removeClass('rock_controls').addClass('rock_controls_default');
+                    $('#flash-news').show();
+                    $('#spacer').hide();
                 }
             });
         });

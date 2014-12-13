@@ -4,6 +4,7 @@ namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Vyper\SiteBundle\Components\Strings\StringMethods;
 
 /**
  * Video
@@ -334,5 +335,10 @@ class Video
     public function getPictureID()
     {
         return $this->pictureID;
+    }
+
+    public function getReleaseDateFrontFormat()
+    {
+        return StringMethods::sqlDateToCustom($this->getCreated()->format('Y-m-d'));
     }
 }

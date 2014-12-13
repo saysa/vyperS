@@ -336,6 +336,7 @@ h6{
 .ticker{
     overflow: hidden;
     display: none;
+    margin-top: 25px;
 }
 
 .ticker .title{
@@ -1133,7 +1134,7 @@ ul.playlist li {
 }
 
 .fiche-group img {
-   margin-left: 15px;
+    margin-left: 15px;
 }
 
 #sidebar .widget .widget-title{
@@ -2245,7 +2246,101 @@ a.small {
     position: fixed;
     top: 0;
     width: 960px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
 }
+
+.fixed-the-nav {
+    position: fixed;
+    top: 73px;
+    width: 960px;
+}
+
+
+
+#bar-fixed {
+    overflow: hidden;
+    border-bottom: 1px solid #ECECEC;
+    background: #F2F2F2;
+    z-index: 100;
+}
+
+#bar-fixed .title {
+    float: left;
+    max-width: 266px;
+    padding: 6px 8px 5px;
+    color: #FFFFFF;
+}
+
+#spacer {
+    height: 296px;
+    width: 100%;
+    display: none;
+}
+
+.logo-soft img {
+    height: 50px;
+}
+
+
+.jp-title {
+    font-size: 18px;
+    color: #444;
+    display: inline-block !important;
+    height: 24px;
+    overflow: hidden;
+    text-transform: uppercase;
+    max-width: 308px;
+    font-family: 'Interstate';
+}
+
+
+
+.rock_controls_default {
+    display: inline-block;
+    width: 30px;
+}
+
+
+.rock_controls_default div {
+    width: 25px;
+    height: 25px;
+    background: #E13F43;
+    line-height: 25px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.rock_controls {
+    display: inline-block;
+    width: 85px;
+}
+
+
+.rock_controls div {
+    width: 73px;
+    height: 72px;
+    background: #E13F43;
+    line-height: 67px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+ul#header-right {
+    margin: 6px 0 0 0;
+    padding: 0;
+}
+
+ul#header-right li {
+    display: inline-block;
+}
+
+
 
 /* Top */
 .top-2-plus, .top-1 {
@@ -2415,19 +2510,22 @@ a.small {
 }
 
 /* Social */
-#social-links li {
-    float: left;
+li#social-facebook,
+li#social-twitter {
+
     margin-right: 10px;
     position: relative;
 }
 
-#social-links li a {
+li#social-facebook a,
+li#social-twitter a {
     width: 30px;
     height: 30px;
     display: inline-block;
 }
 
-#social-links li span {
+li#social-facebook span,
+li#social-twitter span {
     display: none;
 }
 
@@ -2476,4 +2574,10 @@ footer .footer-top {
 .footer-info {
     padding: 20px 15px;
     background: #1D2123;
+}
+
+/* Remove blue border */
+#mediaplyer:focus,
+#mediaplyer {
+    outline:0;
 }
