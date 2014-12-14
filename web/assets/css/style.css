@@ -222,6 +222,10 @@ h6{
 
 /* 2. HEADER
  * ======================== */
+#header {
+    background: #F2F2F2;
+}
+
 #header .top{
     color: #FFFFFF;
     min-height: 50px;

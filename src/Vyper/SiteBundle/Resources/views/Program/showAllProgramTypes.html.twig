@@ -3,46 +3,70 @@
 {% block title %}Émissions | {{ parent() }}{% endblock %}
 
     {% block content %}
-        <div class="post-wrap">
-            <article id="post-28" class="post-28 post type-post status-publish format-standard hentry">
-                <header class="entry-header">
-                    <h1>Émissions</h1>
-                </header>
-            </article>
+
+        <header class="archive-header">
+            <h2 class="archive-title">Émissions</h2>
+        </header>
+
+        <div class="archive-postlist">
+            {% for key, programType in programTypes %}
+                {% if loop.index%2!=0 %}
+                    <div class="row">
+                {% endif %}
+
+                <div class="one-half{% if loop.index%2==0 %} last{% endif %} col-lg-6">
+                    <article class="post type-post status-publish format-standard hentry">
+
+
+                        <div class="thumb-wrap">
+                            <div class="thumb">
+                                <a href="{{ path('showProgramType', {'id': programType.getId, 'slug': programType.slug}) }}">
+
+                                    {% if programType.picture is not null %}
+
+                                        <img src="{{ asset(programType.picture.getPath('290-180')) }}" alt="{{ programType.title }}" />
+                                    {% else %}
+
+                                        <img src="{{ asset('assets/css/images/artists-music.jpg?size=290-180') }}" alt="" />
+                                    {% endif %}
+                                </a>
+                            </div>
+
+
+
+                            <div class="overlay">
+                                <a class="post-link" href="{{ path('showProgramType', {'id': programType.getId, 'slug': programType.slug}) }}"><i class="icon-link"></i></a>
+                            </div>
+                        </div>
+
+
+                        <header class="entry-header">
+                            <h3><a href="{{ path('showProgramType', {'id': programType.getId, 'slug': programType.slug}) }}">{{ programType.title }}</a></h3>
+
+                        </header>
+
+
+                    </article>
+                </div>
+
+                {% if loop.index%2==0 %}
+                    </div>
+                    <!-- end row -->
+                {% endif %}
+
+                {% if loop.index==4 %}
+                    <div class="add_468">
+                        {%  include '::add_468.html.twig' only %}
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
 
 
-        {% for key, programType in programTypes %}
-            <div class="row">
-                <div class="col-md-12 podcast-content">
-                    <div class="pull-left">
-
-                            {% if programType.picture is not null %}
-
-                                <img src="{{ asset(programType.picture.getPath('podcast')) }}" alt="{{ programType.title }}" />
-                            {% else %}
-
-                                <img src="{{ asset('assets/css/images/artists-music.jpg?size=podcast') }}" alt="" />
-                            {% endif %}
-
-                    </div>
-                    <div class="description">
-
-                        <h4>{{ programType.title }}</h4>
-                        <p>
-                            {{ programType.description }}
-                        </p>
-
-                        {% if programType.presenter is not null %}
-                        <p>
-                            Avec : {{ programType.presenter }}
-                        </p>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
 
 
 
-        {% endfor %}
+
     {% endblock %}
+
+

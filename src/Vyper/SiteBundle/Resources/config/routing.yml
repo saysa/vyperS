@@ -168,6 +168,12 @@ radio-emissions:
     path:    /emissions
     defaults: { _controller: VyperSiteBundle:Program:showAllProgramTypes }
 
+showProgramType:
+    path:    /emission/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Program:showProgramType }
+    requirements:
+        id: \d+
+
 showFlashnew:
     path:    /breve/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Flashnew:showFlashnew }

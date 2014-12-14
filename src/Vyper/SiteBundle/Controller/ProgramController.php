@@ -3,6 +3,8 @@
 namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Vyper\SiteBundle\Entity\ProgramType;
 
 
 class ProgramController extends Controller
@@ -60,6 +62,16 @@ class ProgramController extends Controller
         ;
 
         return $this->render('VyperSiteBundle:Program:showAllProgramTypes.html.twig', $view->getView());
+    }
+
+    public function showProgramTypeAction(ProgramType $programType)
+    {
+        $view = $this->container->get('saysa_view');
+
+        $view->set("img_type_big", "true");
+        $view->set('programType', $programType);
+
+        return $this->render('VyperSiteBundle:Program:showProgramType.html.twig', $view->getView());
     }
 
 }

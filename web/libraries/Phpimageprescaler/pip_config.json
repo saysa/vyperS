@@ -136,6 +136,13 @@
                 }
             }
         },
+        "partner": {
+            "dimensions": {
+                "0": {
+                    "w": 130
+                }
+            }
+        },
         "top1": {
             "dimensions": {
                 "0": {
