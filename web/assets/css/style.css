@@ -1005,6 +1005,7 @@ nav .container-fluid>.navbar-collapse {
 
 .content-title {
     padding: 10px;
+    margin: 20px 0;
 }
 
 .content-title h4 {
@@ -1117,6 +1118,10 @@ nav .container-fluid>.navbar-collapse {
 
 .bloc-playlist img {
     margin-left: 5px;
+}
+
+ul.playlist {
+    text-transform: uppercase;
 }
 
 ul.playlist li {
@@ -1878,12 +1883,13 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
     #casing {
         background: black url("images/casing/hg3/hab-int-hg3.jpg") no-repeat 50% 0;
-        /*background: black url("http://eu1.swbdds.com/9/33/77/9/@/upload/hab14-hpv-rec4.jpg") no-repeat 50% 0;*/
+        background: white;
 
     }
 
     #casing-top {
         height: 210px;
+        display: none;
     }
 }
 
@@ -1891,10 +1897,12 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
     #casing {
         background: black url("images/casing/hg3/1280x230-hg3.jpg") no-repeat 50% 0;
+        background: white;
     }
 
     #casing-top {
         height: 210px;
+        display: none;
     }
 }
 
@@ -1902,11 +1910,13 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
     #casing {
         background: black url("images/casing/hg3/320x100-hg3.jpg") no-repeat 50% 0;
+        background: white;
 
     }
 
     #casing-top {
         height: 100px;
+        display: none;
     }
 }
 
@@ -2584,4 +2594,29 @@ footer .footer-top {
 #mediaplyer:focus,
 #mediaplyer {
     outline:0;
+}
+
+
+/* Sidebar galery */
+.widget_flickr .flickr_thumbs{
+    overflow: hidden;
+}
+
+#sidebar .widget_flickr .flickr_thumbs {
+    width: 321px;
+}
+
+#sidebar .widget_flickr ul li{
+    width: 85px;
+    float: left;
+    margin-right: 22px;
+    margin-bottom: 22px;
+    padding: 0 !important;
+    border-bottom: none !important;
+}
+
+#sidebar .widget_flickr .flickr_thumbs img{
+    width: 85px;
+    height: 85px;
+    display: block;
 }
