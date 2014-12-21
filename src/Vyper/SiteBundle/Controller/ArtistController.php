@@ -80,7 +80,7 @@ class ArtistController extends Controller
         #die();
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
-        $discos     = $em->getRepository('VyperSiteBundle:Disco')->getByArtist($artist, $page, 12);
+        $discos     = $em->getRepository('VyperSiteBundle:Disco')->getByArtist($artist, $page);
         $view
             ->set('artist', $artist)
             ->set('discos', $discos)

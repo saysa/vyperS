@@ -1,9 +1,17 @@
 {% block content %}
+    {% set clear_count = 0 %}
     {% for key, disco in discos %}
+
         <div class="col-md-3 padding-off item" data-discoid="{{ disco.id }}">
             <div class="release-thumbnail">
                 <div style="height: 142px; background: url({{ asset(disco.picture.getPath('152')) }});">
 
+                </div>
+
+                <div class="release-meta">
+                    <h6 class="release-artist">
+                        <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a>
+                    </h6>
                 </div>
 
                 <div class="release-meta">
@@ -35,7 +43,21 @@
             </div>
 
         </div>
+
+        {% set clear_count = clear_count + 1 %}
+
+        {% if clear_count==4 %}
+
+            <div style="clear: both;"></div>
+            {% set clear_count = 0 %}
+        {% endif %}
+
     {% endfor %}
 {% endblock %}
 
 
+{#
+
+
+
+#}
