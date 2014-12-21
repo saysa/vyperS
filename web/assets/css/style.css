@@ -340,7 +340,6 @@ h6{
 .ticker{
     overflow: hidden;
     display: none;
-    margin-top: 25px;
 }
 
 .ticker .title{
@@ -363,7 +362,7 @@ h6{
 }
 
 .ticker .tickercontainer {
-    width: 600px;
+    width: 485px;
     margin: 0;
     padding: 3px 0;
     overflow: hidden;
@@ -395,6 +394,7 @@ h6{
 .ticker ul.newsticker a {
     white-space: nowrap;
     padding: 0;
+    color: #FFF;
 }
 
 .ticker ul.newsticker span {
@@ -425,7 +425,7 @@ h6{
 .ticker-section .search{
     width: 220px;
     float: right;
-    margin-top: 7px;
+    margin-top: 10px;
 }
 
 .search-form{
@@ -451,6 +451,9 @@ h6{
     top: 4px;
     padding: 0;
     background: none;
+}
+
+#japanfm-news {
 }
 
 /* 3. NAVIGATION MENU
@@ -1352,7 +1355,7 @@ ul.playlist li {
     }
 
     .ticker .tickercontainer {
-        width: 420px;
+        width: 570px;
     }
 
     #header .banner {
@@ -1847,8 +1850,8 @@ ul.playlist li {
 }
 
 .gsc-control-cse {
-    border-color: #F2F2F2 !important;
-    background-color: #F2F2F2 !important;
+    border-color: #A60000 !important;
+    background-color: #A60000 !important;
 }
 
 form.gsc-search-box {
@@ -2620,3 +2623,5 @@ footer .footer-top {
     height: 85px;
     display: block;
 }
+
+

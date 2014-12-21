@@ -264,12 +264,53 @@
                 <div class="social">
                     <ul class="list">
                         <li class="gplus"><a href="#" id="toggle-chat"><i class="fa fa-comments"></i> Live Chat</a></li>
-                        <li class="youtube"><a href="#"><i class="fa fa-play-circle"></i> Live Vidéo</a></li>
                     </ul>
                 </div>
             </div>
         </section>
         <!-- /top -section -->
+
+        <section class="main-color-bg">
+            <div id="japanfm-news" class="container">
+
+                <div class="row">
+                    <div class="col-md-9 left">
+                        <div id="flash-news" class="ticker" style="display: block;">
+
+                            <div class="title second-color-bg">
+
+                                <h6>Japan FM news</h6>
+                            </div>
+
+
+
+                            {{ render(controller("VyperSiteBundle:Flashnew:tickerlist")) }}
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 right">
+                        <div class="search pull-right">
+                            <script>
+                                (function() {
+                                    var cx = '001775883577770650674:f0b74h1hzdo';
+                                    var gcse = document.createElement('script');
+                                    gcse.type = 'text/javascript';
+                                    gcse.async = true;
+                                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                            '//www.google.com/cse/cse.js?cx=' + cx;
+                                    var s = document.getElementsByTagName('script')[0];
+                                    s.parentNode.insertBefore(gcse, s);
+                                })();
+                            </script>
+                            <gcse:search></gcse:search>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
         <section id="bar-fixed" class="container">
             <div id="jp_container_1" class="jp-state-looped jp-state-playing">
 
@@ -282,6 +323,7 @@
                         </div>
 
 
+
                         <div id="player-button" class="rock_controls_default controls">
                             <div class="fa fa-play jp-play" style="display: block;"></div>
                             <div class="fa fa-pause jp-pause" style="display: none;"></div>
@@ -290,11 +332,7 @@
 
                         <div class="jp-title audio-title"><b id="currentArtist-player">Japan FM</b> - <span id="currentTitle-player">Toute la Jmusic</span></div>
 
-                        <div id="flash-news" class="ticker" style="display: block;">
 
-                            {{ render(controller("VyperSiteBundle:Flashnew:tickerlist")) }}
-
-                        </div>
                     </div>
                     <div class="col-lg-4 right">
                         <ul id="header-right">
@@ -321,21 +359,7 @@
                             To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
                         </div>
 
-                        <div class="search pull-right">
-                            <script>
-                                (function() {
-                                    var cx = '001775883577770650674:f0b74h1hzdo';
-                                    var gcse = document.createElement('script');
-                                    gcse.type = 'text/javascript';
-                                    gcse.async = true;
-                                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                                            '//www.google.com/cse/cse.js?cx=' + cx;
-                                    var s = document.getElementsByTagName('script')[0];
-                                    s.parentNode.insertBefore(gcse, s);
-                                })();
-                            </script>
-                            <gcse:search></gcse:search>
-                        </div>
+
                     </div>
                 </div>
 
