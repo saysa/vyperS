@@ -69,6 +69,37 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
+    public function myFindByTheme($posts_per_page, $page, $theme)
+    {
+        if ($page < 1) {
+            throw new \InvalidArgumentException('Can not be < 1');
+        }
+
+
+
+
+        $queryBuilder = $this->createQueryBuilder('a')
+            ->leftJoin('a.themes', 't')
+            ->addSelect('t');
+        $queryBuilder->where('a.deleted = false');
+        $queryBuilder->add('where', $queryBuilder->expr()->in('t', ':theme'))
+            ->setParameter('theme', $theme->getId());
+
+        $queryBuilder
+            ->orderBy('a.releaseDate', 'DESC')
+
+        ;
+        $query = $queryBuilder->getQuery();
+
+
+        $query
+            ->setFirstResult(($page-1) * $posts_per_page)
+            ->setMaxResults($posts_per_page)
+        ;
+
+        return new Paginator($query);
+    }
+
 
     public function showAll($posts_per_page, $page, $type)
     {

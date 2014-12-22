@@ -65,10 +65,6 @@ class AdminThemeController extends AdminCommonController {
 
     public function addThemeAction(Request $request)
     {
-        if(!$this->_secure($request) || !$this->_admin($request)) {
-
-            return $this->redirect($this->generateUrl('login'));
-        }
 
         $view = $this->container->get('saysa_view');
         $view->set("active_article", true);

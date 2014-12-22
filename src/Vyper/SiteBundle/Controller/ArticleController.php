@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Vyper\SiteBundle\Entity\Article;
+use Vyper\SiteBundle\Entity\Theme;
 
 class ArticleController extends Controller
 {
@@ -48,6 +49,23 @@ class ArticleController extends Controller
         $view->set('article', $article);
 
         return $this->render('VyperSiteBundle:Article:showArticle.html.twig', $view->getView());
+    }
+
+    public function showThemeAction(Theme $theme, $page)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $view = $this->container->get('saysa_view');
+        $articles_per_page = $this->container->getParameter('articles_per_page');
+
+        $articles  = $em->getRepository('VyperSiteBundle:Article')->myFindByTheme($articles_per_page, $page, $theme);
+        $view
+            ->set('articles', $articles)
+            ->set('page', $page)
+            ->set('total_articles', ceil(count($articles)/$articles_per_page))
+            ->set('article_type', $theme->getTitle())
+        ;
+
+        return $this->render('VyperSiteBundle:Article:showAll.html.twig', $view->getView());
     }
 
     public function showAllAction(Request $request, $page, $type)
