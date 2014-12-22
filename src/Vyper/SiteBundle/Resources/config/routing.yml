@@ -124,6 +124,12 @@ showArtist:
     requirements:
         id: \d+
 
+showVideo:
+    path:    /video/{slug}/{id}
+    defaults: { _controller: VyperSiteBundle:Video:showVideo }
+    requirements:
+        id: \d+
+
 showDisco:
     path:    /disco/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Disco:showDisco }

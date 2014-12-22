@@ -171,7 +171,7 @@
 
                         <div class="post-details">
                             <h3>
-                                <a href="#">{{ video.getTitle|escape }}</a>
+                                <a href="{{ path('showVideo', {slug: video.slug, id: video.id}) }}">{{ video.getTitle|escape }}</a>
                             </h3>
 
                             <div class="entry-meta">
@@ -191,7 +191,7 @@
                     <div class="col-xs-6">
                         <div class="last-video">
 
-                            <a href="">
+                            <a href="{{ path('showVideo', {slug: video.slug, id: video.id}) }}">
                                 <img src="{{ asset(video.picture.getPath('130-130')) }}" alt="" />
                                 <div class="play-last-video">
 
