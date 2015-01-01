@@ -10,6 +10,14 @@ use Vyper\SiteBundle\Form\ContactForm;
 class StatiqueController extends Controller
 {
     /**
+     * @Template()
+     */
+    public function radioAction()
+    {
+        return array();
+    }
+
+    /**
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function aProposAction()

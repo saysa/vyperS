@@ -166,6 +166,10 @@ culture:
     requirements:
         page: \d*
 
+playerradio:
+    path:    /radio
+    defaults: { _controller: VyperSiteBundle:Statique:radio }
+
 radio-programme:
     path:    /programme
     defaults: { _controller: VyperSiteBundle:Program:showAllPrograms }

@@ -64,7 +64,7 @@
                 {% else %}
                     {% set bg = asset(artist.picture.getPath('290-180')) %}
                 {% endif %}
-                <div class="color-shape {{ artist.name|first|lower }} at-{{ artist.type.id }} {{ artist.type.name }} col-md-4 col-sm-6 padding-off">
+                <div class="color-shape {{ artist.name|first|lower }} at-{{ artist.type.id }} {{ artist.type.name }} col-md-4 col-sm-6 padding-off artist-all-container">
                     <div class="thumb artist-thumbnail" style="background: url('{{ bg }}') no-repeat center;">
                         <div class="hover-effect">
                             <div class="gallery-info">

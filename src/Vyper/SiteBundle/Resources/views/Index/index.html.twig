@@ -6,7 +6,9 @@
 
 
         <div id="program-banner">
-            <img src="{{ asset('assets/img/programs-banners/Yatta-Gamu-visuel-internet.jpg') }}" alt="">
+            <a href="{{ path('showAllEvent') }}">
+            <img src="{{ asset('assets/img/programs-banners/countdown_site.png') }}" width="100%" alt="">
+            </a>
         </div>
 
 
@@ -78,7 +80,7 @@
                         {% else %}
                             <div class="thumb-wrap">
                                 <div class="thumb">
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('303-162')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                 </div>
 
 
@@ -192,7 +194,7 @@
                         <div class="last-video">
 
                             <a href="{{ path('showVideo', {slug: video.slug, id: video.id}) }}">
-                                <img src="{{ asset(video.picture.getPath('130-130')) }}" alt="" />
+                                <img src="{{ asset(video.picture.getPath('video-daily')) }}" alt="" width="100%" height="130" />
                                 <div class="play-last-video">
 
                                 </div>
@@ -251,7 +253,7 @@
                                             {% else %}
                                                 <div class="thumb-wrap">
                                                     <div class="thumb">
-                                                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('303-162')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                                     </div>
 
 
@@ -358,7 +360,7 @@
                                         {% else %}
                                             <div class="thumb-wrap">
                                                 <div class="thumb">
-                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('303-162')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                                 </div>
 
 
@@ -466,7 +468,7 @@
                                         {% else %}
                                             <div class="thumb-wrap">
                                                 <div class="thumb">
-                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('290-180')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('303-162')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
                                                 </div>
 
 
