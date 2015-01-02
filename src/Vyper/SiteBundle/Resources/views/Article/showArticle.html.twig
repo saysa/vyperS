@@ -130,11 +130,25 @@
 
             <ul>
             {% for key, mag in article.magazines %}
-                {% if key <= 2 %}
-                <li>{{ mag.title }}</li>
-                {% endif %}
+                <div class="col-md-3 padding-off">
+                    <div class="release-thumbnail">
+                        <div class="release-cover">
+                            <a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}"><img src="{{ asset(mag.picture.getPath('cover-mag-front')) }}" class="fullwidth" alt=""></a>
+                        </div>
+
+                        <h4 class="release-title"><a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}">Vyper Magazine</a></h4>
+                        <h6 class="release-artist">Vol {{ mag.volume }}</h6>
+                        <div class="release-meta">
+
+                            <div class="release-info">{{ mag.dateRelease|date("d/m/Y") }}</div>
+                            <div class="clear"></div>
+
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
             </ul>
+            <div class="clear"></div>
         {% endif %}
 
 

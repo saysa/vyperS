@@ -2739,3 +2739,7 @@ footer .footer-top {
 .ui-tabs .ui-tabs-panel {
     padding: 0!important;
 }
+
+.clear {
+    clear: both;
+}
