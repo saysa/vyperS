@@ -73,6 +73,42 @@ class Manga
     private $publisherJA;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="summary", type="text")
+     */
+    private $summary;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="review", type="text")
+     */
+    private $review;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="price", type="text", nullable=true)
+     */
+    private $price;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ean", type="text", nullable=true)
+     */
+    private $ean;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="format", type="text", nullable=true)
+     */
+    private $format;
+
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="complete", type="boolean")
@@ -570,5 +606,121 @@ class Manga
     public function getMangaka()
     {
         return $this->mangaka;
+    }
+
+    /**
+     * Set summary
+     *
+     * @param string $summary
+     * @return Manga
+     */
+    public function setSummary($summary)
+    {
+        $this->summary = $summary;
+
+        return $this;
+    }
+
+    /**
+     * Get text
+     *
+     * @return string
+     */
+    public function getSummary()
+    {
+        return $this->summary;
+    }
+
+    /**
+     * Set review
+     *
+     * @param string $review
+     * @return Manga
+     */
+    public function setReview($review)
+    {
+        $this->review = $review;
+
+        return $this;
+    }
+
+    /**
+     * Get review
+     *
+     * @return string
+     */
+    public function getReview()
+    {
+        return $this->review;
+    }
+
+
+    /**
+     * Set price
+     *
+     * @param string $price
+     * @return Manga
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return string
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set ean
+     *
+     * @param string $ean
+     * @return Manga
+     */
+    public function setEan($ean)
+    {
+        $this->ean = $ean;
+
+        return $this;
+    }
+
+    /**
+     * Get ean
+     *
+     * @return string
+     */
+    public function getEan()
+    {
+        return $this->ean;
+    }
+
+    /**
+     * Set format
+     *
+     * @param string $format
+     * @return Manga
+     */
+    public function setFormat($format)
+    {
+        $this->format = $format;
+
+        return $this;
+    }
+
+    /**
+     * Get format
+     *
+     * @return string
+     */
+    public function getFormat()
+    {
+        return $this->format;
     }
 }
