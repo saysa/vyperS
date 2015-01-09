@@ -139,6 +139,51 @@
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <!-- EAN -->
+                                    <div class="row">
+                                        <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                            {{ form_label(form.ean, "EAN") }}
+                                            <div class="controls">
+                                                {{ form_widget(form.ean, {  'attr': {'class': 'form-control'} }) }}
+                                                {{ form_errors(form.ean) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- format -->
+                                    <div class="row">
+                                        <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                            {{ form_label(form.format, "Format") }}
+                                            <div class="controls">
+                                                {{ form_widget(form.format, {  'attr': {'class': 'form-control'} }) }}
+                                                {{ form_errors(form.format) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <!-- Price -->
+                                    <div class="row">
+                                        <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                            {{ form_label(form.price, "Price") }}
+                                            <div class="controls">
+                                                {{ form_widget(form.price, {  'attr': {'class': 'form-control'} }) }}
+                                                {{ form_errors(form.price) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+
+                                </div>
+                            </div>
+
                             <!-- Theme -->
                             <div class="row">
                                 <div class="form-group col-lg-5">
@@ -149,6 +194,23 @@
                                 </div>
                             </div>
 
+                            <!-- Summary -->
+                            <div class="form-group hidden-phone{%if error_text is defined %} has-error{% endif %}">
+                                {{ form_label(form.summary) }}
+                                <div class="controls">
+                                    {{ form_widget(form.summary, { 'attr': {'class': 'cleditor'} }) }}
+                                    {{ form_errors(form.summary) }}
+                                </div>
+                            </div>
+
+                            <!-- Review -->
+                            <div class="form-group hidden-phone{%if error_text is defined %} has-error{% endif %}">
+                                {{ form_label(form.review) }}
+                                <div class="controls">
+                                    {{ form_widget(form.review, { 'attr': {'class': 'cleditor'} }) }}
+                                    {{ form_errors(form.review) }}
+                                </div>
+                            </div>
 
                             <div class="row">
                                 <!-- Related Picture -->

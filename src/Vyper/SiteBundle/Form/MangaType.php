@@ -23,6 +23,8 @@ class MangaType extends AbstractType
             ->add('anime', 'checkbox', array('required' => false))
             ->add('tomeNumber', 'integer', array('required' => false, 'attr' => array('placeholder' => 'Title Real')))
             ->add('publicationDate', 'date', array('widget' => 'single_text'))
+            ->add('releaseDate', 'date', array('widget' => 'single_text'))
+            ->add('releaseTime', 'time', array('widget' => 'single_text'))
             ->add('pictureID', 'text', array('attr' => array('placeholder' => 'Picture ID')))
             ->add('type', 'entity', array(
                 'required' => false,
@@ -39,9 +41,15 @@ class MangaType extends AbstractType
                 'class' => 'VyperSiteBundle:Artist',
                 'property' => 'name',
             ))
+            ->add('price', 'text', array('required' => false, 'attr' => array('placeholder' => 'Price')))
+            ->add('ean', 'text', array('required' => false, 'attr' => array('placeholder' => 'EAN')))
+            ->add('format', 'text', array('required' => false, 'attr' => array('placeholder' => 'Format')))
             ->add('publisherFR', 'text', array('required' => false, 'attr' => array('placeholder' => 'Publisher FR')))
             ->add('publisherJA', 'text', array('required' => false, 'attr' => array('placeholder' => 'Publisher JAP')))
+            ->add('review', 'textarea', array('required' => false))
+            ->add('summary', 'textarea', array('required' => false))
             ->add('complete', 'checkbox', array('required' => false))
+            ->add('author', 'text', array('attr' => array('placeholder' => 'Author')))
         ;
 
         // On ajoute une fonction qui va écouter un évènement

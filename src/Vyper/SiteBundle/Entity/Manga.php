@@ -138,6 +138,27 @@ class Manga
     private $mangaka;
 
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="releaseDate", type="date")
+     */
+    private $releaseDate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="releaseTime", type="time")
+     */
+    private $releaseTime;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="author", type="string", length=50)
+     */
+    private $author;
+
+    /**
      * @var string
      * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(type="string", length=255, unique=true)
@@ -722,5 +743,74 @@ class Manga
     public function getFormat()
     {
         return $this->format;
+    }
+
+    /**
+     * Set releaseDate
+     *
+     * @param \DateTime $releaseDate
+     * @return Manga
+     */
+    public function setReleaseDate($releaseDate)
+    {
+        $this->releaseDate = $releaseDate;
+
+        return $this;
+    }
+
+    /**
+     * Get releaseDate
+     *
+     * @return \DateTime 
+     */
+    public function getReleaseDate()
+    {
+        return $this->releaseDate;
+    }
+
+    /**
+     * Set releaseTime
+     *
+     * @param \DateTime $releaseTime
+     * @return Manga
+     */
+    public function setReleaseTime($releaseTime)
+    {
+        $this->releaseTime = $releaseTime;
+
+        return $this;
+    }
+
+    /**
+     * Get releaseTime
+     *
+     * @return \DateTime 
+     */
+    public function getReleaseTime()
+    {
+        return $this->releaseTime;
+    }
+
+    /**
+     * Set author
+     *
+     * @param string $author
+     * @return Manga
+     */
+    public function setAuthor($author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return string 
+     */
+    public function getAuthor()
+    {
+        return $this->author;
     }
 }

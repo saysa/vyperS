@@ -182,6 +182,10 @@ showTheme:
     path:    /theme/{slug}/{id}/{page}
     defaults: { _controller: VyperSiteBundle:Article:showTheme, page: 1 }
 
+showManga:
+    path:    /manga/{slug}/{id}/{page}
+    defaults: { _controller: VyperSiteBundle:Manga:showManga, page: 1 }
+
 showProgramType:
     path:    /emission/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Program:showProgramType }
