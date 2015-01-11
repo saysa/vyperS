@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e280bb71-600b-43f2-9972-fbd1dc003f69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="local.dev.iws" />
@@ -66,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="245" column="58" selection-start="8776" selection-end="8776" vertical-scroll-proportion="0.6703911" vertical-offset="3315" max-vertical-offset="7470">
+            <state line="245" column="58" selection-start="8776" selection-end="8776" vertical-scroll-proportion="-15.0" vertical-offset="3315" max-vertical-offset="7470">
               <folding>
                 <element signature="e#996#1007#0" expanded="true" />
                 <element signature="e#1450#1461#0" expanded="true" />
@@ -95,6 +93,15 @@
                 <element signature="e#18593#18604#0" expanded="true" />
                 <element signature="e#19011#19022#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="375" column="0" selection-start="17171" selection-end="17171" vertical-scroll-proportion="0.53445065" vertical-offset="5338" max-vertical-offset="15045">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -234,15 +241,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reset.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/assets/css/reset.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="15" selection-start="519" selection-end="519" vertical-scroll-proportion="-8.076923" vertical-offset="0" max-vertical-offset="720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Manga.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Manga.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -301,7 +299,6 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php" />
         <option value="$PROJECT_DIR$/web/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/MangaType.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/addManga.html.twig" />
@@ -316,13 +313,14 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="86" />
-    <option name="y" value="24" />
+    <option name="y" value="23" />
     <option name="width" value="1734" />
     <option name="height" value="1022" />
   </component>
@@ -768,6 +766,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vyper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -970,11 +1002,15 @@
       <created>1420967733903</created>
       <updated>1420967733903</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Manga front index">
+      <created>1420977354980</created>
+      <updated>1420977354980</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="86" y="24" width="1734" height="1022" extended-state="0" />
+    <frame x="86" y="23" width="1734" height="1022" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1015,7 +1051,8 @@
     <MESSAGE value="Youtube, iOS, Android link and remove new eve banner" />
     <MESSAGE value="Manga avancement" />
     <MESSAGE value="Manga back office and front but not the front index" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manga back office and front but not the front index" />
+    <MESSAGE value="Manga front index" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manga front index" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1123,7 +1160,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Magazine/showAll.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="26" selection-start="682" selection-end="1604" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1080" />
+        <state line="32" column="26" selection-start="682" selection-end="1604" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1080">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/libraries/Phpimageprescaler/pip_config.json">
@@ -1134,13 +1173,6 @@
     <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="466" column="24" selection-start="7127" selection-end="7127" vertical-scroll-proportion="0.0" vertical-offset="6545" max-vertical-offset="41460">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="356" column="62" selection-start="16542" selection-end="16542" vertical-scroll-proportion="0.0" vertical-offset="4948" max-vertical-offset="15045">
           <folding />
         </state>
       </provider>
@@ -1483,7 +1515,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="245" column="58" selection-start="8776" selection-end="8776" vertical-scroll-proportion="0.6703911" vertical-offset="3315" max-vertical-offset="7470">
+        <state line="245" column="58" selection-start="8776" selection-end="8776" vertical-scroll-proportion="-15.0" vertical-offset="3315" max-vertical-offset="7470">
           <folding>
             <element signature="e#996#1007#0" expanded="true" />
             <element signature="e#1450#1461#0" expanded="true" />
@@ -1509,6 +1541,13 @@
             <element signature="e#18593#18604#0" expanded="true" />
             <element signature="e#19011#19022#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="375" column="0" selection-start="17171" selection-end="17171" vertical-scroll-proportion="0.53445065" vertical-offset="5338" max-vertical-offset="15045">
+          <folding />
         </state>
       </provider>
     </entry>
