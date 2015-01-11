@@ -28,8 +28,7 @@ class IndexController extends Controller
 
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'musique : news'));
         $latest_news = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
-        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Manga/Anime'));
-        $latest_manga = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+        $latest_manga = $em->getRepository('VyperSiteBundle:Manga')->latest();
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Jeux Vidéos'));
         $latest_jeux_videos = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Culture'));

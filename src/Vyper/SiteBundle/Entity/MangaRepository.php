@@ -44,4 +44,18 @@ class MangaRepository extends EntityRepository
 
         return new Paginator($query);
     }
+
+    public function latest()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->orderBy('a.releaseDate', 'DESC')
+            ->setMaxResults(5)
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }

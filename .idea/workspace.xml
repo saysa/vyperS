@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e280bb71-600b-43f2-9972-fbd1dc003f69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showAll.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminMangaController.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminMangaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Manga.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Manga.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MangaController.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MangaController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/addManga.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/addManga.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/updateManga.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/updateManga.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="local.dev.iws" />
@@ -34,11 +28,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="showManga.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="showManga.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="14" selection-start="5079" selection-end="5079" vertical-scroll-proportion="0.83798885" vertical-offset="1455" max-vertical-offset="2310">
+            <state line="127" column="14" selection-start="5079" selection-end="5079" vertical-scroll-proportion="-18.75" vertical-offset="1455" max-vertical-offset="2310">
+              <folding>
+                <element signature="e#12#52#0" expanded="false" />
+                <marker date="1420967543000" expanded="true" signature="182:4215" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="218:4168" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="391:4149" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="441:1808" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="545:1778" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="684:1175" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="1542:1745" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="1863:4072" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="1905:3277" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="1956:2176" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="2228:3243" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="2265:3208" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="3330:3996" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="3460:3551" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="3779:3868" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="4246:4717" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="4415:4592" placeholder="..." />
+                <marker date="1420967543000" expanded="false" signature="4440:4484" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="4613:4702" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="4759:5078" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="4796:5063" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="4852:5044" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="4895:4974" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="5208:5819" placeholder="..." />
+                <marker date="1420967543000" expanded="true" signature="5222:5298" placeholder="/*...*/" />
+                <marker date="1420967543000" expanded="true" signature="5413:5453" placeholder="/*...*/" />
+                <marker date="1420967543000" expanded="true" signature="5478:5798" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="245" column="58" selection-start="8776" selection-end="8776" vertical-scroll-proportion="0.6703911" vertical-offset="3315" max-vertical-offset="7470">
+              <folding>
+                <element signature="e#996#1007#0" expanded="true" />
+                <element signature="e#1450#1461#0" expanded="true" />
+                <element signature="e#1895#1906#0" expanded="true" />
+                <element signature="e#3120#3131#0" expanded="true" />
+                <element signature="e#3465#3476#0" expanded="true" />
+                <element signature="e#3805#3816#0" expanded="true" />
+                <element signature="e#4675#4686#0" expanded="true" />
+                <element signature="e#5029#5040#0" expanded="true" />
+                <element signature="e#6628#6637#0" expanded="true" />
+                <element signature="e#7449#7458#0" expanded="true" />
+                <element signature="e#8976#8985#0" expanded="true" />
+                <element signature="e#9338#9347#0" expanded="true" />
+                <element signature="e#9712#9721#0" expanded="true" />
+                <element signature="e#11825#11836#0" expanded="true" />
+                <element signature="e#12218#12229#0" expanded="true" />
+                <element signature="e#12654#12665#0" expanded="true" />
+                <element signature="e#13827#13838#0" expanded="true" />
+                <element signature="e#14245#14256#0" expanded="true" />
+                <element signature="e#16601#16612#0" expanded="true" />
+                <element signature="e#16993#17004#0" expanded="true" />
+                <element signature="e#17429#17440#0" expanded="true" />
+                <element signature="e#18593#18604#0" expanded="true" />
+                <element signature="e#19011#19022#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="88" selection-start="1089" selection-end="1089" vertical-scroll-proportion="-7.5" vertical-offset="225" max-vertical-offset="840">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleRepository.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="20" selection-start="1365" selection-end="1817" vertical-scroll-proportion="-9.5" vertical-offset="627" max-vertical-offset="2580">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MangaRepository.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="26" selection-start="1154" selection-end="1154" vertical-scroll-proportion="-12.916667" vertical-offset="395" max-vertical-offset="1005">
+              <folding>
+                <element signature="e#43#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,7 +141,86 @@
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showArtist.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state line="265" column="14" selection-start="10538" selection-end="10876" vertical-scroll-proportion="-4.3" vertical-offset="3760" max-vertical-offset="4680">
-              <folding />
+              <folding>
+                <element signature="e#12#52#0" expanded="false" />
+                <element signature="e#3243#3252#0" expanded="false" />
+                <element signature="e#3596#3605#0" expanded="false" />
+                <element signature="e#6251#6268#0" expanded="false" />
+                <element signature="e#7021#7030#0" expanded="false" />
+                <element signature="e#7339#7348#0" expanded="false" />
+                <element signature="e#8437#8448#0" expanded="false" />
+                <element signature="e#8783#8794#0" expanded="false" />
+                <element signature="e#9871#9880#0" expanded="false" />
+                <element signature="e#10479#10498#0" expanded="false" />
+                <marker date="1418465486000" expanded="true" signature="180:2339" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="349:2321" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="395:1591" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="556:1565" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="687:1150" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="1501:1536" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="1642:2252" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="1686:2104" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="2152:2227" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="2465:2520" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="2561:2626" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="2774:2831" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="2865:6175" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="2909:6134" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="2960:6110" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="3123:5954" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="3187:5918" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="3299:3471" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="3536:3718" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="3781:5879" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="3974:5614" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="4227:5563" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="4388:5508" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="4449:5449" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="6215:6385" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="6512:6772" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="6568:6753" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="6611:6690" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="6803:7831" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="6925:7782" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="6973:7261" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="7077:7230" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="7291:7511" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="7395:7481" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="7561:7756" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="7601:7725" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="7927:8185" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="7983:8166" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="8026:8105" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="8216:9273" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="8341:9226" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="8389:8705" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="8499:8674" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="8735:8963" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="8845:8933" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="9013:9200" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="9049:9169" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="9366:9623" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="9422:9604" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="9465:9544" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="9654:10398" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="9775:10351" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="9823:10129" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="9927:10098" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="10159:10324" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="10208:10294" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="10452:10521" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="10556:10875" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="10593:10860" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="10649:10841" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="10692:10771" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="11003:11614" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="11017:11093" placeholder="/*...*/" />
+                <marker date="1418465486000" expanded="true" signature="11208:11248" placeholder="/*...*/" />
+                <marker date="1418465486000" expanded="true" signature="11273:11593" placeholder="{...}" />
+                <marker date="1418465486000" expanded="true" signature="11869:12174" placeholder="..." />
+                <marker date="1418465486000" expanded="true" signature="11913:12153" placeholder="{...}" />
+                <marker date="1418465486000" expanded="true" signature="11983:12134" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,68 +243,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MangaController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MangaController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="33" selection-start="959" selection-end="959" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="690">
-              <folding>
-                <element signature="e#430#473#0" expanded="true" />
-                <element signature="e#1047#1088#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showAll.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showAll.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="179" selection-start="991" selection-end="991" vertical-scroll-proportion="-12.5" vertical-offset="30" max-vertical-offset="1320">
-              <folding>
-                <marker date="1420905619000" expanded="true" signature="12:52" placeholder="VyperSite:layouts:layout" />
-                <marker date="1420905619000" expanded="true" signature="58:117" placeholder="{% block title ...%}" />
-                <marker date="1420905619000" expanded="true" signature="123:2745" placeholder="{% block content ...%}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Manga.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Manga.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="138" column="20" selection-start="2655" selection-end="2662" vertical-scroll-proportion="-5.52" vertical-offset="1794" max-vertical-offset="12420">
               <folding>
                 <element signature="e#43#75#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticleController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="78" selection-start="5821" selection-end="5887" vertical-scroll-proportion="-23.75" vertical-offset="1515" max-vertical-offset="2910">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showAll.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="30" selection-start="0" selection-end="4532" vertical-scroll-proportion="-14.375" vertical-offset="390" max-vertical-offset="1590">
-              <folding>
-                <element signature="e#12#52#0" expanded="false" />
-                <element signature="e#1253#1264#0" expanded="false" />
-                <element signature="e#1598#1609#0" expanded="false" />
-                <element signature="e#1907#1918#0" expanded="false" />
-                <element signature="e#2717#2736#0" expanded="false" />
-                <element signature="e#3291#3311#0" expanded="false" />
-                <element signature="e#3476#3494#0" expanded="false" />
-                <element signature="e#3659#3677#0" expanded="false" />
-                <element signature="e#3843#3853#0" expanded="false" />
-                <element signature="e#4019#4029#0" expanded="false" />
-                <element signature="e#4191#4198#0" expanded="false" />
-                <element signature="e#4332#4344#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -194,7 +302,6 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php" />
         <option value="$PROJECT_DIR$/web/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/MangaType.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/addManga.html.twig" />
@@ -202,11 +309,13 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/updateManga.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Manga.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MangaController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showAll.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/css/reset.css" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
       </list>
     </option>
   </component>
@@ -688,210 +797,6 @@
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Disco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Artist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Article" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Album" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminManga" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Adminarticle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vyper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1061,7 +966,11 @@
       <created>1420789812437</created>
       <updated>1420789812437</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Manga back office and front but not the front index">
+      <created>1420967733903</created>
+      <updated>1420967733903</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1077,6 +986,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11879433" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16903073" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1085,7 +995,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36386767" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1105,17 +1014,13 @@
     </option>
     <MESSAGE value="Youtube, iOS, Android link and remove new eve banner" />
     <MESSAGE value="Manga avancement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manga avancement" />
+    <MESSAGE value="Manga back office and front but not the front index" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manga back office and front but not the front index" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArtistRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/DiscoRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="57" selection-start="614" selection-end="620" vertical-scroll-proportion="-6.875" vertical-offset="195" max-vertical-offset="810" />
@@ -1129,11 +1034,6 @@
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleTypeRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="74" selection-start="2242" selection-end="2247" vertical-scroll-proportion="-10.458333" vertical-offset="994" max-vertical-offset="2580" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Flashnew/showFlashnew.html.twig">
@@ -1243,11 +1143,6 @@
         <state line="356" column="62" selection-start="16542" selection-end="16542" vertical-scroll-proportion="0.0" vertical-offset="4948" max-vertical-offset="15045">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="14" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="8160" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/updateArticle.html.twig">
@@ -1363,15 +1258,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="44" selection-start="122" selection-end="122" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="795">
-          <folding>
-            <element signature="e#43#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="30" selection-start="0" selection-end="4532" vertical-scroll-proportion="-14.375" vertical-offset="390" max-vertical-offset="1590">
@@ -1413,9 +1299,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="179" selection-start="991" selection-end="991" vertical-scroll-proportion="-12.5" vertical-offset="30" max-vertical-offset="1320">
           <folding>
-            <marker date="1420905619000" expanded="true" signature="12:52" placeholder="VyperSite:layouts:layout" />
-            <marker date="1420905619000" expanded="true" signature="58:117" placeholder="{% block title ...%}" />
-            <marker date="1420905619000" expanded="true" signature="123:2745" placeholder="{% block content ...%}" />
+            <marker date="1420905619000" expanded="true" signature="-1:-1" placeholder="VyperSite:layouts:layout" />
+            <marker date="1420905619000" expanded="true" signature="-1:-1" placeholder="{% block title ...%}" />
+            <marker date="1420905619000" expanded="true" signature="-1:-1" placeholder="{% block content ...%}" />
           </folding>
         </state>
       </provider>
@@ -1453,14 +1339,176 @@
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showArtist.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="265" column="14" selection-start="10538" selection-end="10876" vertical-scroll-proportion="-4.3" vertical-offset="3760" max-vertical-offset="4680">
-          <folding />
+          <folding>
+            <element signature="e#12#52#0" expanded="false" />
+            <element signature="e#3243#3252#0" expanded="false" />
+            <element signature="e#3596#3605#0" expanded="false" />
+            <element signature="e#6251#6268#0" expanded="false" />
+            <element signature="e#7021#7030#0" expanded="false" />
+            <element signature="e#7339#7348#0" expanded="false" />
+            <element signature="e#8437#8448#0" expanded="false" />
+            <element signature="e#8783#8794#0" expanded="false" />
+            <element signature="e#9871#9880#0" expanded="false" />
+            <element signature="e#10479#10498#0" expanded="false" />
+            <marker date="1418465486000" expanded="true" signature="180:2339" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="349:2321" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="395:1591" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="556:1565" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="687:1150" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="1501:1536" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="1642:2252" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="1686:2104" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="2152:2227" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="2465:2520" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="2561:2626" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="2774:2831" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="2865:6175" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="2909:6134" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="2960:6110" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="3123:5954" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="3187:5918" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="3299:3471" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="3536:3718" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="3781:5879" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="3974:5614" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="4227:5563" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="4388:5508" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="4449:5449" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="6215:6385" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="6512:6772" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="6568:6753" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="6611:6690" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="6803:7831" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="6925:7782" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="6973:7261" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="7077:7230" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="7291:7511" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="7395:7481" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="7561:7756" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="7601:7725" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="7927:8185" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="7983:8166" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="8026:8105" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="8216:9273" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="8341:9226" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="8389:8705" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="8499:8674" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="8735:8963" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="8845:8933" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="9013:9200" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="9049:9169" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="9366:9623" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="9422:9604" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="9465:9544" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="9654:10398" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="9775:10351" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="9823:10129" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="9927:10098" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="10159:10324" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="10208:10294" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="10452:10521" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="10556:10875" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="10593:10860" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="10649:10841" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="10692:10771" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="11003:11614" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="11017:11093" placeholder="/*...*/" />
+            <marker date="1418465486000" expanded="true" signature="11208:11248" placeholder="/*...*/" />
+            <marker date="1418465486000" expanded="true" signature="11273:11593" placeholder="{...}" />
+            <marker date="1418465486000" expanded="true" signature="11869:12174" placeholder="..." />
+            <marker date="1418465486000" expanded="true" signature="11913:12153" placeholder="{...}" />
+            <marker date="1418465486000" expanded="true" signature="11983:12134" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="14" selection-start="5079" selection-end="5079" vertical-scroll-proportion="0.83798885" vertical-offset="1455" max-vertical-offset="2310">
+        <state line="127" column="14" selection-start="5079" selection-end="5079" vertical-scroll-proportion="-18.75" vertical-offset="1455" max-vertical-offset="2310">
+          <folding>
+            <element signature="e#12#52#0" expanded="false" />
+            <marker date="1420967543000" expanded="true" signature="182:4215" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="218:4168" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="391:4149" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="441:1808" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="545:1778" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="684:1175" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="1542:1745" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="1863:4072" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="1905:3277" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="1956:2176" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="2228:3243" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="2265:3208" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="3330:3996" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="3460:3551" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="3779:3868" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="4246:4717" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="4415:4592" placeholder="..." />
+            <marker date="1420967543000" expanded="false" signature="4440:4484" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="4613:4702" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="4759:5078" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="4796:5063" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="4852:5044" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="4895:4974" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="5208:5819" placeholder="..." />
+            <marker date="1420967543000" expanded="true" signature="5222:5298" placeholder="/*...*/" />
+            <marker date="1420967543000" expanded="true" signature="5413:5453" placeholder="/*...*/" />
+            <marker date="1420967543000" expanded="true" signature="5478:5798" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="20" selection-start="1365" selection-end="1817" vertical-scroll-proportion="-9.5" vertical-offset="627" max-vertical-offset="2580">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="26" selection-start="1154" selection-end="1154" vertical-scroll-proportion="-12.916667" vertical-offset="395" max-vertical-offset="1005">
+          <folding>
+            <element signature="e#43#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="88" selection-start="1089" selection-end="1089" vertical-scroll-proportion="-7.5" vertical-offset="225" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="245" column="58" selection-start="8776" selection-end="8776" vertical-scroll-proportion="0.6703911" vertical-offset="3315" max-vertical-offset="7470">
+          <folding>
+            <element signature="e#996#1007#0" expanded="true" />
+            <element signature="e#1450#1461#0" expanded="true" />
+            <element signature="e#1895#1906#0" expanded="true" />
+            <element signature="e#3120#3131#0" expanded="true" />
+            <element signature="e#3465#3476#0" expanded="true" />
+            <element signature="e#3805#3816#0" expanded="true" />
+            <element signature="e#4675#4686#0" expanded="true" />
+            <element signature="e#5029#5040#0" expanded="true" />
+            <element signature="e#6628#6637#0" expanded="true" />
+            <element signature="e#7449#7458#0" expanded="true" />
+            <element signature="e#8976#8985#0" expanded="true" />
+            <element signature="e#9338#9347#0" expanded="true" />
+            <element signature="e#9712#9721#0" expanded="true" />
+            <element signature="e#11825#11836#0" expanded="true" />
+            <element signature="e#12218#12229#0" expanded="true" />
+            <element signature="e#12654#12665#0" expanded="true" />
+            <element signature="e#13827#13838#0" expanded="true" />
+            <element signature="e#14245#14256#0" expanded="true" />
+            <element signature="e#16601#16612#0" expanded="true" />
+            <element signature="e#16993#17004#0" expanded="true" />
+            <element signature="e#17429#17440#0" expanded="true" />
+            <element signature="e#18593#18604#0" expanded="true" />
+            <element signature="e#19011#19022#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
