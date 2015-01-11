@@ -36,6 +36,9 @@ class AdminMangaController extends AdminCommonController {
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($manga);
                 $em->flush();
+
+                $request->getSession()->getFlashBag()->add('info', 'Article added.');
+                return $this->redirect($this->generateUrl('admin_show_mangas'));
             }
 
         }

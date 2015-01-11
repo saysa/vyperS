@@ -24,18 +24,18 @@ class MangaController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
-        $magazines_per_page = $this->container->getParameter('magazines_per_page');
+        $magazines_per_page = $this->container->getParameter('articles_per_page');
 
-        $magazines = $em->getRepository('VyperSiteBundle:Magazine')->showAll($magazines_per_page, $page);
+        $magazines = $em->getRepository('VyperSiteBundle:Manga')->showAll($magazines_per_page, $page);
 
         $view
-            ->set('current_magazine', true)
-            ->set('magazines', $magazines)
+            ->set('mangas', $magazines)
             ->set('page', $page)
-            ->set('total_magazines', ceil(count($magazines)/$magazines_per_page))
+            ->set('total_articles', ceil(count($magazines)/$magazines_per_page))
         ;
 
-        return $this->render('VyperSiteBundle:Magazine:showAll.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:Manga:showAll.html.twig', $view->getView());
+
     }
 
 }

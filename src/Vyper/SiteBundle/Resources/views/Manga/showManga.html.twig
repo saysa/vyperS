@@ -24,7 +24,7 @@
                             <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
                             <!-- AddThis Button END -->
                             <div class="left">
-                                <span>{{ article.author }}</span>, le <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat() }}</span>
+                                <span>{{ manga.author }}</span>, le <span class="date"><i class="icon-calendar"></i> {{ manga.getReleaseDateFrontFormat() }}</span>
 
 
 
@@ -37,68 +37,49 @@
 
 
                     <div class="entry-content-wrap">
-                        <div class="entry-image">
-                            {% if img_type_news is defined %}
-                                <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('article')) }}" alt="{{ article.getTitle|escape }}">
-                            {% else %}
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img width="100%" src="{{ app.request.getSchemeAndHttpHost() ~ asset(manga.picture.getPath()) }}" class="big-format" alt="{{ manga.getTitle|escape }}">
 
-                                <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" class="big-format" alt="{{ article.getTitle|escape }}">
+                            </div>
 
-                            {% endif %}
+                            <div class="col-xs-8">
+                                <ul>
+                                    {% if manga.mangaka %}<li>Auteur : <strong>{{ manga.mangaka.name }}</strong></li>{% endif %}
+                                    {% if manga.publicationDate %}<li>Sortie : <strong>{{ manga.publicationDate|date('Y-m-d') }}</strong></li>{% endif %}
+                                    {% if manga.format %}<li>Format : <strong>{{ manga.format }}</strong></li>{% endif %}
+                                    {% if manga.price %}<li>Prix : <strong>{{ manga.price }}</strong></li>{% endif %}
+                                    {% if manga.ean %}<li>EAN : <strong>{{ manga.ean }}</strong></li>{% endif %}
+                                    {% if manga.publisherFR %}<li>Editeur : <strong>{{ manga.publisherFR }}</strong></li>{% endif %}
+                                    {% if manga.publisherJA %}<li>Editeur : <strong>{{ manga.publisherJA }}</strong></li>{% endif %}
+
+
+
+                                </ul>
+                            </div>
+
 
 
                         </div>
 
                         <div class="entry-content">
-
-                            {% if (article.textEN is not null or article.textJP is not null)  %}
-                                <script>
-                                    $(function() {
-                                        $( "#lang-tabs" ).tabs();
-                                    });
-                                </script>
-
-                                <div id="lang-tabs">
-                                    <ul>
-                                        <li><a href="#tabs-1">FR <img src="{{ asset('assets/css/images/france.ico') }}" /></a></li>
-                                        {% if article.textEN is not null %}
-                                            <li><a href="#tabs-2">EN <img src="{{ asset('assets/css/images/uk.ico') }}" /></a></li>
-                                        {% endif %}
-                                        {% if article.textJP is not null %}
-                                            <li><a href="#tabs-3">JP <img src="{{ asset('assets/css/images/japan.ico') }}" /></a></li>
-                                        {% endif %}
-                                    </ul>
-                                    <div id="tabs-1">
-                                        {{ article.text|raw }}
-                                    </div>
-                                    {% if article.textEN is not null %}
-                                        <div id="tabs-2" lang="en">
-                                            {{ article.textEN|raw }}
-                                        </div>
-                                    {% endif %}
-                                    {% if article.textJP is not null %}
-                                        <div id="tabs-3" lang="ja">
-                                            {{ article.textJP|raw }}
-                                        </div>
-                                    {% endif %}
+                            {% if manga.summary %}
+                                <div class="content-title main-color-reverse">
+                                    <h4>Résumé</h4>
                                 </div>
-                            {% else %}
-                                {{ article.text|raw }}
+
+                                {{ manga.summary|raw }}
                             {% endif %}
 
 
+                            {% if manga.review %}
+                                <div class="content-title main-color-reverse">
+                                    <h4>Avis</h4>
+                                </div>
 
-                            {% if article.source != '' %}
-                                {% if article.sourceURL != '' %}
-                                    <p>
-                                        Source : <a href="{{ article.sourceURL }}">{{ article.source }}</a>
-                                    </p>
-                                {% else %}
-                                    <p>
-                                        Source : {{ article.source }}
-                                    </p>
-                                {% endif %}
+                                {{ manga.review|raw }}
                             {% endif %}
+
                         </div>
                         <!-- /entry-content -->
 
@@ -123,70 +104,27 @@
         </div>
 
 
-        {% if article.magazines is defined %}
-            <div class="content-title main-color-reverse">
-                <h4>Vyper Japanese Music</h4>
-            </div>
-
-            <ul>
-                {% for key, mag in article.magazines %}
-                    <div class="col-md-3 padding-off">
-                        <div class="release-thumbnail">
-                            <div class="release-cover">
-                                <a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}"><img src="{{ asset(mag.picture.getPath('cover-mag-front')) }}" class="fullwidth" alt=""></a>
-                            </div>
-
-                            <h4 class="release-title"><a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}">Vyper Magazine</a></h4>
-                            <h6 class="release-artist">Vol {{ mag.volume }}</h6>
-                            <div class="release-meta">
-
-                                <div class="release-info">{{ mag.dateRelease|date("d/m/Y") }}</div>
-                                <div class="clear"></div>
-
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </ul>
-            <div class="clear"></div>
-        {% endif %}
 
 
-        {% if article.album is not null %}
+
+
+
+
+
+
+
+
+
+
+        <div id="comments">
             <div class="cat-header">
                 <div class="cat-title second-color-bg">
                     <div class="cat-icon">
                         <i class="icon-rocket"></i>
                     </div>
-                    <h4>Galerie</h4>
+                    <h4>Donnez votre avis</h4>
                 </div>
             </div>
-
-            <ul class="slides">
-                {% for key, picture in article.album.pictures %}
-                    {% if key <= 2 %}
-                        <li class="galerie">
-                            <a rel="lightbox[album]" href="{{ asset(picture.getPath()) }}">
-                                <img src="{{ asset(picture.getPath('galerie')) }}">
-                            </a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-
-            <a href="{{ path('showAlbum', {'id': article.album.getId, 'slug': article.album.slug}) }}">Plus de photos</a>
-        {% endif %}
-
-
-
-
-
-
-
-
-
-        <div id="comments" class="content-title main-color-reverse">
-            <h4>Réagir</h4>
         </div>
         <!-- /comments -->
 

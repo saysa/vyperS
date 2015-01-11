@@ -4,6 +4,7 @@ namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Vyper\SiteBundle\Components\Strings\StringMethods;
 
 /**
  * Manga
@@ -812,5 +813,10 @@ class Manga
     public function getAuthor()
     {
         return $this->author;
+    }
+
+    public function getReleaseDateFrontFormat()
+    {
+        return StringMethods::sqlDateToCustom($this->getReleaseDate()->format('Y-m-d'));
     }
 }

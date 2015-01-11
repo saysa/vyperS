@@ -150,7 +150,7 @@ infiniteScrollArtistDiscography:
 
 mangaanime:
     path:    /manga-anime/{page}
-    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: manga-anime }
+    defaults: { _controller: VyperSiteBundle:Manga:showAll, page: 1, type: manga-anime }
     requirements:
         page: \d*
 
