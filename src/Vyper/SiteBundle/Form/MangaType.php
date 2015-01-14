@@ -42,6 +42,7 @@ class MangaType extends AbstractType
                 'property' => 'name',
             ))
             ->add('price', 'text', array('required' => false, 'attr' => array('placeholder' => 'Price')))
+            ->add('broadcastingPlatform', 'text', array('required' => false, 'attr' => array('placeholder' => 'Broadcasting Platform')))
             ->add('ean', 'text', array('required' => false, 'attr' => array('placeholder' => 'EAN')))
             ->add('format', 'text', array('required' => false, 'attr' => array('placeholder' => 'Format')))
             ->add('publisherFR', 'text', array('required' => false, 'attr' => array('placeholder' => 'Publisher FR')))

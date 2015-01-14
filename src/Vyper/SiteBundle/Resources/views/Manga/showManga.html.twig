@@ -46,12 +46,24 @@
                             <div class="col-xs-8">
                                 <ul>
                                     {% if manga.mangaka %}<li>Auteur : <strong>{{ manga.mangaka.name }}</strong></li>{% endif %}
+                                    {% if manga.title %}<li>Titre : <strong>{{ manga.title }}</strong></li>{% endif %}
+                                    {% if manga.titleReal %}<li>Titre original : <strong>{{ manga.titleReal }}</strong></li>{% endif %}
+                                    {% if manga.type is not empty %}<li>Genre :
+
+                                        {% for type in manga.type %}
+                                            <strong>{{ type.name }}</strong> -
+                                        {% endfor %}
+
+                                    </li>{% endif %}
+
                                     {% if manga.publicationDate %}<li>Sortie : <strong>{{ manga.publicationDate|date('Y-m-d') }}</strong></li>{% endif %}
                                     {% if manga.format %}<li>Format : <strong>{{ manga.format }}</strong></li>{% endif %}
                                     {% if manga.price %}<li>Prix : <strong>{{ manga.price }}</strong></li>{% endif %}
-                                    {% if manga.ean %}<li>EAN : <strong>{{ manga.ean }}</strong></li>{% endif %}
+                                    {% if manga.ean %}<li>EAN/ISBN : <strong>{{ manga.ean }}</strong></li>{% endif %}
                                     {% if manga.publisherFR %}<li>Editeur : <strong>{{ manga.publisherFR }}</strong></li>{% endif %}
-                                    {% if manga.publisherJA %}<li>Editeur : <strong>{{ manga.publisherJA }}</strong></li>{% endif %}
+                                    {% if manga.publisherJA %}<li>Editeur VO : <strong>{{ manga.publisherJA }}</strong></li>{% endif %}
+                                    <li>Existe en anime : <strong>{% if manga.anime == 1 %}Oui{% else %}Non{% endif %}</strong></li>
+                                    {% if manga.broadcastingPlatform %}<li>Plateforme de Diffusion : <strong>{{ manga.broadcastingPlatform }}</strong></li>{% endif %}
 
 
 

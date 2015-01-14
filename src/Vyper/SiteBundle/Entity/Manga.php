@@ -97,6 +97,13 @@ class Manga
     /**
      * @var string
      *
+     * @ORM\Column(name="broadcastingPlatform", type="text", nullable=true)
+     */
+    private $broadcastingPlatform;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="ean", type="text", nullable=true)
      */
     private $ean;
@@ -818,5 +825,28 @@ class Manga
     public function getReleaseDateFrontFormat()
     {
         return StringMethods::sqlDateToCustom($this->getReleaseDate()->format('Y-m-d'));
+    }
+
+    /**
+     * Set broadcastingPlatform
+     *
+     * @param string $broadcastingPlatform
+     * @return Manga
+     */
+    public function setBroadcastingPlatform($broadcastingPlatform)
+    {
+        $this->broadcastingPlatform = $broadcastingPlatform;
+
+        return $this;
+    }
+
+    /**
+     * Get broadcastingPlatform
+     *
+     * @return string 
+     */
+    public function getBroadcastingPlatform()
+    {
+        return $this->broadcastingPlatform;
     }
 }

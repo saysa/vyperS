@@ -86,6 +86,21 @@
 
                             <div class="row">
                                 <div class="col-lg-4">
+                                    <!-- Broadcasting Platform -->
+                                    <div class="row">
+                                        <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                            {{ form_label(form.broadcastingPlatform) }}
+                                            <div class="controls">
+                                                {{ form_widget(form.broadcastingPlatform, {  'attr': {'class': 'form-control'} }) }}
+                                                {{ form_errors(form.broadcastingPlatform) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4">
                                     <!-- Date Publication -->
                                     <div class="row">
                                         <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
@@ -224,7 +239,7 @@
                             <!-- Theme -->
                             <div class="row">
                                 <div class="form-group col-lg-5">
-                                    {{ form_label(form.type) }}
+                                    {{ form_label(form.type, "Type(s)") }}
                                     <div class="controls">
                                         {{ form_widget(form.type, { 'attr': {'class': 'form-control'} }) }}
                                     </div>
