@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e280bb71-600b-43f2-9972-fbd1dc003f69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="local.dev.iws" />
@@ -29,37 +28,8 @@
       <file leaf-file-name="showManga.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="14" selection-start="5079" selection-end="5079" vertical-scroll-proportion="-18.75" vertical-offset="1455" max-vertical-offset="2310">
-              <folding>
-                <element signature="e#12#52#0" expanded="false" />
-                <marker date="1420967543000" expanded="true" signature="182:4215" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="218:4168" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="391:4149" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="441:1808" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="545:1778" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="684:1175" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="1542:1745" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="1863:4072" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="1905:3277" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="1956:2176" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="2228:3243" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="2265:3208" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="3330:3996" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="3460:3551" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="3779:3868" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="4246:4717" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="4415:4592" placeholder="..." />
-                <marker date="1420967543000" expanded="false" signature="4440:4484" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="4613:4702" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="4759:5078" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="4796:5063" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="4852:5044" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="4895:4974" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="5208:5819" placeholder="..." />
-                <marker date="1420967543000" expanded="true" signature="5222:5298" placeholder="/*...*/" />
-                <marker date="1420967543000" expanded="true" signature="5413:5453" placeholder="/*...*/" />
-                <marker date="1420967543000" expanded="true" signature="5478:5798" placeholder="{...}" />
-              </folding>
+            <state line="127" column="14" selection-start="5079" selection-end="5079" vertical-scroll-proportion="0.0" vertical-offset="1455" max-vertical-offset="2310">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,32 +37,8 @@
       <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="245" column="58" selection-start="8776" selection-end="8776" vertical-scroll-proportion="-15.0" vertical-offset="3315" max-vertical-offset="7470">
-              <folding>
-                <element signature="e#996#1007#0" expanded="true" />
-                <element signature="e#1450#1461#0" expanded="true" />
-                <element signature="e#1895#1906#0" expanded="true" />
-                <element signature="e#3120#3131#0" expanded="true" />
-                <element signature="e#3465#3476#0" expanded="true" />
-                <element signature="e#3805#3816#0" expanded="true" />
-                <element signature="e#4675#4686#0" expanded="true" />
-                <element signature="e#5029#5040#0" expanded="true" />
-                <element signature="e#6628#6637#0" expanded="true" />
-                <element signature="e#7449#7458#0" expanded="true" />
-                <element signature="e#8976#8985#0" expanded="true" />
-                <element signature="e#9338#9347#0" expanded="true" />
-                <element signature="e#9712#9721#0" expanded="true" />
-                <element signature="e#11825#11836#0" expanded="true" />
-                <element signature="e#12218#12229#0" expanded="true" />
-                <element signature="e#12654#12665#0" expanded="true" />
-                <element signature="e#13827#13838#0" expanded="true" />
-                <element signature="e#14245#14256#0" expanded="true" />
-                <element signature="e#16601#16612#0" expanded="true" />
-                <element signature="e#16993#17004#0" expanded="true" />
-                <element signature="e#17429#17440#0" expanded="true" />
-                <element signature="e#18593#18604#0" expanded="true" />
-                <element signature="e#19011#19022#0" expanded="true" />
-              </folding>
+            <state line="245" column="58" selection-start="8776" selection-end="8776" vertical-scroll-proportion="0.0" vertical-offset="3675" max-vertical-offset="7470">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,7 +46,16 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="375" column="0" selection-start="17171" selection-end="17171" vertical-scroll-proportion="0.53445065" vertical-offset="5338" max-vertical-offset="15045">
+            <state line="639" column="32" selection-start="32158" selection-end="32158" vertical-scroll-proportion="0.38919926" vertical-offset="9376" max-vertical-offset="15045">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1479" column="0" selection-start="25026" selection-end="25026" vertical-scroll-proportion="-5.1153846" vertical-offset="22052" max-vertical-offset="41280">
               <folding />
             </state>
           </provider>
@@ -109,7 +64,7 @@
       <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="88" selection-start="1089" selection-end="1089" vertical-scroll-proportion="-7.5" vertical-offset="225" max-vertical-offset="840">
+            <state line="29" column="88" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
@@ -118,7 +73,7 @@
       <file leaf-file-name="ArticleRepository.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="20" selection-start="1365" selection-end="1817" vertical-scroll-proportion="-9.5" vertical-offset="627" max-vertical-offset="2580">
+            <state line="58" column="20" selection-start="1365" selection-end="1817" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="2595">
               <folding />
             </state>
           </provider>
@@ -127,10 +82,8 @@
       <file leaf-file-name="MangaRepository.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="26" selection-start="1154" selection-end="1154" vertical-scroll-proportion="-12.916667" vertical-offset="395" max-vertical-offset="1005">
-              <folding>
-                <element signature="e#43#77#0" expanded="true" />
-              </folding>
+            <state line="47" column="26" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1005">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,7 +91,7 @@
       <file leaf-file-name="AdminMangaController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminMangaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="76" selection-start="1232" selection-end="1232" vertical-scroll-proportion="9.375" vertical-offset="705" max-vertical-offset="1515">
+            <state line="40" column="76" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1635">
               <folding />
             </state>
           </provider>
@@ -147,18 +100,8 @@
       <file leaf-file-name="showArtist.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showArtist.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="265" column="14" selection-start="10538" selection-end="10876" vertical-scroll-proportion="-4.3" vertical-offset="3760" max-vertical-offset="4680">
+            <state line="265" column="14" selection-start="10538" selection-end="10876" vertical-scroll-proportion="0.0" vertical-offset="3760" max-vertical-offset="4680">
               <folding>
-                <element signature="e#12#52#0" expanded="false" />
-                <element signature="e#3243#3252#0" expanded="false" />
-                <element signature="e#3596#3605#0" expanded="false" />
-                <element signature="e#6251#6268#0" expanded="false" />
-                <element signature="e#7021#7030#0" expanded="false" />
-                <element signature="e#7339#7348#0" expanded="false" />
-                <element signature="e#8437#8448#0" expanded="false" />
-                <element signature="e#8783#8794#0" expanded="false" />
-                <element signature="e#9871#9880#0" expanded="false" />
-                <element signature="e#10479#10498#0" expanded="false" />
                 <marker date="1418465486000" expanded="true" signature="180:2339" placeholder="..." />
                 <marker date="1418465486000" expanded="true" signature="349:2321" placeholder="..." />
                 <marker date="1418465486000" expanded="true" signature="395:1591" placeholder="..." />
@@ -235,19 +178,8 @@
       <file leaf-file-name="Artist.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Artist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.625" vertical-offset="15" max-vertical-offset="8280">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8295">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Manga.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Manga.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="20" selection-start="2655" selection-end="2662" vertical-scroll-proportion="-5.52" vertical-offset="1794" max-vertical-offset="12420">
-              <folding>
-                <element signature="e#43#75#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -298,7 +230,6 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Statique/radio.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php" />
-        <option value="$PROJECT_DIR$/web/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/MangaType.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/addManga.html.twig" />
@@ -313,15 +244,16 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="86" />
+    <option name="x" value="104" />
     <option name="y" value="23" />
-    <option name="width" value="1734" />
+    <option name="width" value="1805" />
     <option name="height" value="1022" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -1006,11 +938,15 @@
       <created>1420977354980</created>
       <updated>1420977354980</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixbug firefox double tabs while opening player">
+      <created>1420978867065</created>
+      <updated>1420978867065</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="86" y="23" width="1734" height="1022" extended-state="0" />
+    <frame x="104" y="23" width="1805" height="1022" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1022,18 +958,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11879433" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16903073" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11401021" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15995462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36386767" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1052,7 +988,8 @@
     <MESSAGE value="Manga avancement" />
     <MESSAGE value="Manga back office and front but not the front index" />
     <MESSAGE value="Manga front index" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manga front index" />
+    <MESSAGE value="Fixbug firefox double tabs while opening player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixbug firefox double tabs while opening player" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1170,13 +1107,6 @@
         <state line="185" column="14" selection-start="3941" selection-end="3952" vertical-scroll-proportion="0.0" vertical-offset="2775" max-vertical-offset="3060" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="466" column="24" selection-start="7127" selection-end="7127" vertical-scroll-proportion="0.0" vertical-offset="6545" max-vertical-offset="41460">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/updateArticle.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="34" selection-start="3283" selection-end="3766" vertical-scroll-proportion="-14.375" vertical-offset="735" max-vertical-offset="6135" />
@@ -1184,74 +1114,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Form/ArticleType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="74" selection-start="1060" selection-end="1122" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1560">
-          <folding />
-        </state>
+        <state line="27" column="74" selection-start="1060" selection-end="1122" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Adminarticle/addArticle.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="42" selection-start="6662" selection-end="7263" vertical-scroll-proportion="-22.5" vertical-offset="1335" max-vertical-offset="3510">
-          <folding />
-        </state>
+        <state line="125" column="42" selection-start="6662" selection-end="7263" vertical-scroll-proportion="-22.5" vertical-offset="1335" max-vertical-offset="3510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminarticleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="82" selection-start="2507" selection-end="2659" vertical-scroll-proportion="-30.0" vertical-offset="270" max-vertical-offset="1875">
-          <folding />
-        </state>
+        <state line="74" column="82" selection-start="2507" selection-end="2659" vertical-scroll-proportion="-30.0" vertical-offset="270" max-vertical-offset="1875" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/addManga.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="34" selection-start="11923" selection-end="13683" vertical-scroll-proportion="-31.875" vertical-offset="2520" max-vertical-offset="4260">
-          <folding />
-        </state>
+        <state line="219" column="34" selection-start="11923" selection-end="13683" vertical-scroll-proportion="-31.875" vertical-offset="2520" max-vertical-offset="4260" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/updateManga.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="220" column="34" selection-start="13707" selection-end="13707" vertical-scroll-proportion="-34.375" vertical-offset="2475" max-vertical-offset="4320">
-          <folding />
-        </state>
+        <state line="220" column="34" selection-start="13707" selection-end="13707" vertical-scroll-proportion="-34.375" vertical-offset="2475" max-vertical-offset="4320" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/showMangas.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-          <folding>
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418465486000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Form/MangaType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="74" selection-start="1151" selection-end="1151" vertical-scroll-proportion="-3.75" vertical-offset="225" max-vertical-offset="1380">
-          <folding />
-        </state>
+        <state line="26" column="74" selection-start="1151" selection-end="1151" vertical-scroll-proportion="-3.75" vertical-offset="225" max-vertical-offset="1380" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="115" selection-end="169" vertical-scroll-proportion="-1.76" vertical-offset="2" max-vertical-offset="13875">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="115" selection-end="169" vertical-scroll-proportion="-1.76" vertical-offset="2" max-vertical-offset="13875" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
@@ -1278,16 +1176,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="0" selection-start="4038" selection-end="4038" vertical-scroll-proportion="-9.769231" vertical-offset="1981" max-vertical-offset="7605">
-          <folding />
-        </state>
+        <state line="149" column="0" selection-start="4038" selection-end="4038" vertical-scroll-proportion="-9.769231" vertical-offset="1981" max-vertical-offset="7605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MagazineRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="78" selection-end="122" vertical-scroll-proportion="-3.0833333" vertical-offset="1" max-vertical-offset="1035">
-          <folding />
-        </state>
+        <state line="5" column="0" selection-start="78" selection-end="122" vertical-scroll-proportion="-3.0833333" vertical-offset="1" max-vertical-offset="1035" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig">
@@ -1312,29 +1206,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="78" selection-start="5821" selection-end="5887" vertical-scroll-proportion="-23.75" vertical-offset="1515" max-vertical-offset="2910">
-          <folding />
-        </state>
+        <state line="143" column="78" selection-start="5821" selection-end="5887" vertical-scroll-proportion="-23.75" vertical-offset="1515" max-vertical-offset="2910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MangaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="33" selection-start="959" selection-end="959" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="690">
-          <folding>
-            <element signature="e#430#473#0" expanded="true" />
-            <element signature="e#1047#1088#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="33" column="33" selection-start="959" selection-end="959" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="690" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showAll.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="179" selection-start="991" selection-end="991" vertical-scroll-proportion="-12.5" vertical-offset="30" max-vertical-offset="1320">
-          <folding>
-            <marker date="1420905619000" expanded="true" signature="-1:-1" placeholder="VyperSite:layouts:layout" />
-            <marker date="1420905619000" expanded="true" signature="-1:-1" placeholder="{% block title ...%}" />
-            <marker date="1420905619000" expanded="true" signature="-1:-1" placeholder="{% block content ...%}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1347,41 +1230,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Manga.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="20" selection-start="2655" selection-end="2662" vertical-scroll-proportion="-5.52" vertical-offset="1794" max-vertical-offset="12420">
-          <folding>
-            <element signature="e#43#75#0" expanded="true" />
-          </folding>
+        <state line="138" column="20" selection-start="2655" selection-end="2662" vertical-scroll-proportion="0.0" vertical-offset="1794" max-vertical-offset="12420">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Artist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.625" vertical-offset="15" max-vertical-offset="8280">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8295">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminMangaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="76" selection-start="1232" selection-end="1232" vertical-scroll-proportion="9.375" vertical-offset="705" max-vertical-offset="1515">
+        <state line="40" column="76" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1635">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showArtist.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="265" column="14" selection-start="10538" selection-end="10876" vertical-scroll-proportion="-4.3" vertical-offset="3760" max-vertical-offset="4680">
+        <state line="265" column="14" selection-start="10538" selection-end="10876" vertical-scroll-proportion="0.0" vertical-offset="3760" max-vertical-offset="4680">
           <folding>
-            <element signature="e#12#52#0" expanded="false" />
-            <element signature="e#3243#3252#0" expanded="false" />
-            <element signature="e#3596#3605#0" expanded="false" />
-            <element signature="e#6251#6268#0" expanded="false" />
-            <element signature="e#7021#7030#0" expanded="false" />
-            <element signature="e#7339#7348#0" expanded="false" />
-            <element signature="e#8437#8448#0" expanded="false" />
-            <element signature="e#8783#8794#0" expanded="false" />
-            <element signature="e#9871#9880#0" expanded="false" />
-            <element signature="e#10479#10498#0" expanded="false" />
             <marker date="1418465486000" expanded="true" signature="180:2339" placeholder="..." />
             <marker date="1418465486000" expanded="true" signature="349:2321" placeholder="..." />
             <marker date="1418465486000" expanded="true" signature="395:1591" placeholder="..." />
@@ -1456,97 +1327,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="14" selection-start="5079" selection-end="5079" vertical-scroll-proportion="-18.75" vertical-offset="1455" max-vertical-offset="2310">
-          <folding>
-            <element signature="e#12#52#0" expanded="false" />
-            <marker date="1420967543000" expanded="true" signature="182:4215" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="218:4168" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="391:4149" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="441:1808" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="545:1778" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="684:1175" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="1542:1745" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="1863:4072" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="1905:3277" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="1956:2176" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="2228:3243" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="2265:3208" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="3330:3996" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="3460:3551" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="3779:3868" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="4246:4717" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="4415:4592" placeholder="..." />
-            <marker date="1420967543000" expanded="false" signature="4440:4484" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="4613:4702" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="4759:5078" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="4796:5063" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="4852:5044" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="4895:4974" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="5208:5819" placeholder="..." />
-            <marker date="1420967543000" expanded="true" signature="5222:5298" placeholder="/*...*/" />
-            <marker date="1420967543000" expanded="true" signature="5413:5453" placeholder="/*...*/" />
-            <marker date="1420967543000" expanded="true" signature="5478:5798" placeholder="{...}" />
-          </folding>
+        <state line="127" column="14" selection-start="5079" selection-end="5079" vertical-scroll-proportion="0.0" vertical-offset="1455" max-vertical-offset="2310">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="20" selection-start="1365" selection-end="1817" vertical-scroll-proportion="-9.5" vertical-offset="627" max-vertical-offset="2580">
+        <state line="58" column="20" selection-start="1365" selection-end="1817" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="2595">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/MangaRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="26" selection-start="1154" selection-end="1154" vertical-scroll-proportion="-12.916667" vertical-offset="395" max-vertical-offset="1005">
-          <folding>
-            <element signature="e#43#77#0" expanded="true" />
-          </folding>
+        <state line="47" column="26" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1005">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="88" selection-start="1089" selection-end="1089" vertical-scroll-proportion="-7.5" vertical-offset="225" max-vertical-offset="840">
+        <state line="29" column="88" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="870">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="245" column="58" selection-start="8776" selection-end="8776" vertical-scroll-proportion="-15.0" vertical-offset="3315" max-vertical-offset="7470">
-          <folding>
-            <element signature="e#996#1007#0" expanded="true" />
-            <element signature="e#1450#1461#0" expanded="true" />
-            <element signature="e#1895#1906#0" expanded="true" />
-            <element signature="e#3120#3131#0" expanded="true" />
-            <element signature="e#3465#3476#0" expanded="true" />
-            <element signature="e#3805#3816#0" expanded="true" />
-            <element signature="e#4675#4686#0" expanded="true" />
-            <element signature="e#5029#5040#0" expanded="true" />
-            <element signature="e#6628#6637#0" expanded="true" />
-            <element signature="e#7449#7458#0" expanded="true" />
-            <element signature="e#8976#8985#0" expanded="true" />
-            <element signature="e#9338#9347#0" expanded="true" />
-            <element signature="e#9712#9721#0" expanded="true" />
-            <element signature="e#11825#11836#0" expanded="true" />
-            <element signature="e#12218#12229#0" expanded="true" />
-            <element signature="e#12654#12665#0" expanded="true" />
-            <element signature="e#13827#13838#0" expanded="true" />
-            <element signature="e#14245#14256#0" expanded="true" />
-            <element signature="e#16601#16612#0" expanded="true" />
-            <element signature="e#16993#17004#0" expanded="true" />
-            <element signature="e#17429#17440#0" expanded="true" />
-            <element signature="e#18593#18604#0" expanded="true" />
-            <element signature="e#19011#19022#0" expanded="true" />
-          </folding>
+        <state line="245" column="58" selection-start="8776" selection-end="8776" vertical-scroll-proportion="0.0" vertical-offset="3675" max-vertical-offset="7470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1479" column="0" selection-start="25026" selection-end="25026" vertical-scroll-proportion="-5.1153846" vertical-offset="22052" max-vertical-offset="41280">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="375" column="0" selection-start="17171" selection-end="17171" vertical-scroll-proportion="0.53445065" vertical-offset="5338" max-vertical-offset="15045">
+        <state line="639" column="32" selection-start="32158" selection-end="32158" vertical-scroll-proportion="0.38919926" vertical-offset="9376" max-vertical-offset="15045">
           <folding />
         </state>
       </provider>
