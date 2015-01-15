@@ -137,14 +137,10 @@
         {% endif %}
         <div class="clear"></div>
         {% if events is defined %}
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-rocket"></i>
-                    </div>
-                    <h4>événements</h4>
-                </div>
+            <div class="content-title main-color-reverse">
+                <h4>événements</h4>
             </div>
+
 
             <ul class="list">
 
@@ -176,13 +172,8 @@
         {% endif %}
 
         {% if articles is defined %}
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-rocket"></i>
-                    </div>
-                    <h4>Articles</h4>
-                </div>
+            <div class="content-title main-color-reverse">
+                <h4>Articles</h4>
             </div>
 
             <ul class="list">
@@ -212,13 +203,8 @@
         {% endif %}
 
         {% if albums is defined %}
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-rocket"></i>
-                    </div>
-                    <h4>Galerie</h4>
-                </div>
+            <div class="content-title main-color-reverse">
+                <h4>Galerie</h4>
             </div>
 
             <ul class="list">
@@ -239,6 +225,20 @@
                     </li>
                 {% endfor %}
             </ul>
+        {% endif %}
+
+
+
+        {% if artist.youtubeChannel is not empty or artist.officialWebsite is not empty %}
+        <div class="content-title main-color-reverse">
+            <h4>Liens</h4>
+        </div>
+
+            <ul>
+                {% if artist.officialWebsite is not empty %}<li><a href="{{ artist.officialWebsite }}">Site officiel</a></li>{% endif %}
+                {% if artist.youtubeChannel is not empty %}<li><a href="{{ artist.youtubeChannel }}">Chaine Youtube</a></li>{% endif %}
+            </ul>
+
         {% endif %}
 
 
