@@ -25,19 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="18" selection-start="868" selection-end="1117" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="15195">
+            <state line="27" column="117" selection-start="1717" selection-end="1717" vertical-scroll-proportion="0.24590164" vertical-offset="270" max-vertical-offset="15225">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showArticle.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="showArticle.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="14" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.5217391" vertical-offset="0" max-vertical-offset="3510">
+            <state line="18" column="76" selection-start="921" selection-end="955" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="3510">
               <folding>
                 <element signature="e#757#768#0" expanded="true" />
                 <element signature="e#7291#7303#0" expanded="true" />
@@ -206,8 +206,8 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AdminArticleController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/ArticleRepository.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -1359,22 +1359,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="18" selection-start="868" selection-end="1117" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="15195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.5217391" vertical-offset="0" max-vertical-offset="3510">
+        <state line="18" column="76" selection-start="921" selection-end="955" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="3510">
           <folding>
             <element signature="e#757#768#0" expanded="true" />
             <element signature="e#7291#7303#0" expanded="true" />
             <element signature="e#7540#7552#0" expanded="true" />
             <element signature="e#8931#8940#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="117" selection-start="1717" selection-end="1717" vertical-scroll-proportion="0.24590164" vertical-offset="270" max-vertical-offset="15225">
+          <folding />
         </state>
       </provider>
     </entry>
