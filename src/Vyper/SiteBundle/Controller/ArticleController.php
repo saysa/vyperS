@@ -13,11 +13,16 @@ class ArticleController extends Controller
     /**
      * @param \Symfony\Component\HttpFoundation\Request $request
      * @param Article $article
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function showArticleAction(Request $request, Article $article)
     {
         $em = $this->getDoctrine()->getManager();
+
+        if (!$article->getLive()) {
+            throw $this->createNotFoundException('This page does not exist.');
+        }
 
         $increment = $this->container->get('vpr_visit_increment');
         $increment->increment($article, $em);
