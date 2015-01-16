@@ -29,7 +29,7 @@ class ArticleRepository extends EntityRepository
         $queryBuilder
             ->where('a.deleted = false')
             ->andWhere('a.highlight = true')
-            ->orderBy('a.releaseDate', 'DESC')
+            ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
             ->setMaxResults(8)
         ;
 
@@ -44,9 +44,10 @@ class ArticleRepository extends EntityRepository
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder
             ->where('a.deleted = false')
-            ->orderBy('a.releaseDate', 'DESC')
+            ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
             ->setMaxResults($limit)
         ;
+
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();
 
@@ -59,7 +60,7 @@ class ArticleRepository extends EntityRepository
         $queryBuilder
             ->where('a.deleted = false')
             ->andWhere('a.articleType = :type')
-            ->orderBy('a.releaseDate', 'DESC')
+            ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
             ->setMaxResults(5)
             ->setParameter('type', $type)
         ;
@@ -86,7 +87,7 @@ class ArticleRepository extends EntityRepository
             ->setParameter('theme', $theme->getId());
 
         $queryBuilder
-            ->orderBy('a.releaseDate', 'DESC')
+            ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
 
         ;
         $query = $queryBuilder->getQuery();
@@ -131,11 +132,8 @@ class ArticleRepository extends EntityRepository
                 ->setParameter('type', $type);
         }
 
+        $queryBuilder->add('orderBy','a.releaseDate DESC, a.releaseTime DESC');
 
-        $queryBuilder
-            ->orderBy('a.releaseDate', 'DESC')
-
-        ;
         $query = $queryBuilder->getQuery();
 
 
@@ -153,7 +151,7 @@ class ArticleRepository extends EntityRepository
         $queryBuilder
             ->join('a.artists', 'artist', 'WITH', 'artist.id = :id')
             ->where('a.deleted = false')
-            ->orderBy('a.releaseDate', 'DESC')
+            ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
             ->setMaxResults(3)
             ->setParameter('id', $artist_id);
         ;
