@@ -16,7 +16,10 @@ class ArticleRepository extends EntityRepository
     public function myFindAll()
     {
         $queryBuilder = $this->createQueryBuilder('a');
-        $queryBuilder->where('a.deleted = false');
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->andWhere('a.live = true')
+        ;
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();
 
@@ -28,6 +31,7 @@ class ArticleRepository extends EntityRepository
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder
             ->where('a.deleted = false')
+            ->andWhere('a.live = true')
             ->andWhere('a.highlight = true')
             ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
             ->setMaxResults(8)
@@ -44,6 +48,7 @@ class ArticleRepository extends EntityRepository
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder
             ->where('a.deleted = false')
+            ->andWhere('a.live = true')
             ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
             ->setMaxResults($limit)
         ;
@@ -60,6 +65,7 @@ class ArticleRepository extends EntityRepository
         $queryBuilder
             ->where('a.deleted = false')
             ->andWhere('a.articleType = :type')
+            ->andWhere('a.live = true')
             ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
             ->setMaxResults(5)
             ->setParameter('type', $type)
@@ -82,7 +88,10 @@ class ArticleRepository extends EntityRepository
         $queryBuilder = $this->createQueryBuilder('a')
             ->leftJoin('a.themes', 't')
             ->addSelect('t');
-        $queryBuilder->where('a.deleted = false');
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->andWhere('a.live = true')
+        ;
         $queryBuilder->add('where', $queryBuilder->expr()->in('t', ':theme'))
             ->setParameter('theme', $theme->getId());
 
@@ -110,7 +119,10 @@ class ArticleRepository extends EntityRepository
 
         $queryBuilder = $this->createQueryBuilder('a');
 
-        $queryBuilder->where('a.deleted = false');
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->andWhere('a.live = true')
+        ;
         if (!is_object($type[0])) {
             $w = '';
 
@@ -151,6 +163,7 @@ class ArticleRepository extends EntityRepository
         $queryBuilder
             ->join('a.artists', 'artist', 'WITH', 'artist.id = :id')
             ->where('a.deleted = false')
+            ->andWhere('a.live = true')
             ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
             ->setMaxResults(3)
             ->setParameter('id', $artist_id);
