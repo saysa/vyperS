@@ -13,7 +13,12 @@
     <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
 
     <meta name="description" content="Japan FM : Toute la J-music, une seule web radio. Japan FM est la 1ère webradio japonaise de France. Tous les hits et toute l'actu Jpop sont sur Japan FM !" />
-    <meta name="keywords" content="actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
+
+    {% if article.metaKeywords is defined and article.metaKeywords is not empty %}
+        <meta name="keywords" content="{{ article.metaKeywords }}" />
+    {% else %}
+        <meta name="keywords" content="actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
+    {% endif %}
     <meta name="author" content="japanfm.fr" />
     <meta name="ROBOTS" content="index,follow" />
 
