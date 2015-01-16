@@ -18,7 +18,6 @@ class ArticleRepository extends EntityRepository
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder
             ->where('a.deleted = false')
-            ->andWhere('a.live = true')
         ;
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();

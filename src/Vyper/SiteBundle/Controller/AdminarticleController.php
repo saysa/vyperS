@@ -65,6 +65,15 @@ class AdminArticleController extends AdminCommonController {
             $article->setUser($this->getUser());
             $article->setPicture($picture);
 
+            $dateArticle = new \DateTime($article->getReleaseDate()->format("Y-m-d") . " " . $article->getReleaseTime()->format("H:i:s"));
+            $dateNow = new \DateTime("NOW");
+
+            if ($dateArticle < $dateNow) {
+                $article->setLive(true);
+            } else if ($dateArticle > $dateNow) {
+                $article->setLive(false);
+            }
+
             if ($form->isValid()) {
 
                 $em = $this->getDoctrine()->getManager();
@@ -105,6 +114,15 @@ class AdminArticleController extends AdminCommonController {
             $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
 
             $article->setPicture($picture);
+
+            $dateArticle = new \DateTime($article->getReleaseDate()->format("Y-m-d") . " " . $article->getReleaseTime()->format("H:i:s"));
+            $dateNow = new \DateTime("NOW");
+
+            if ($dateArticle < $dateNow) {
+                $article->setLive(true);
+            } else if ($dateArticle > $dateNow) {
+                $article->setLive(false);
+            }
 
             if ($form->isValid()) {
 
