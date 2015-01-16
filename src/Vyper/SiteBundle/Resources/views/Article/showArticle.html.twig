@@ -2,6 +2,10 @@
 
 {% block title %}{{ article.title }} | {{ parent() }}{% endblock %}
 
+{% block meta_description %}
+    <meta name="description" content="{{ article.getDescription|escape }}" />
+{% endblock %}
+
 {% block social_card %}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@japanfm" />

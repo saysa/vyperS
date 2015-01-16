@@ -28,7 +28,7 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="47" selection-start="1491" selection-end="1491" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="15150">
+            <state line="16" column="18" selection-start="868" selection-end="1117" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="15195">
               <folding />
             </state>
           </provider>
@@ -37,12 +37,12 @@
       <file leaf-file-name="showArticle.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="62" selection-start="213" selection-end="213" vertical-scroll-proportion="0.13043478" vertical-offset="0" max-vertical-offset="3450">
+            <state line="20" column="14" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.5217391" vertical-offset="0" max-vertical-offset="3510">
               <folding>
-                <element signature="e#634#645#0" expanded="true" />
-                <element signature="e#7168#7180#0" expanded="true" />
-                <element signature="e#7417#7429#0" expanded="true" />
-                <element signature="e#8808#8817#0" expanded="true" />
+                <element signature="e#757#768#0" expanded="true" />
+                <element signature="e#7291#7303#0" expanded="true" />
+                <element signature="e#7540#7552#0" expanded="true" />
+                <element signature="e#8931#8940#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1334,13 +1334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="47" selection-start="1491" selection-end="1491" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="15150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="107" selection-start="1906" selection-end="1964" vertical-scroll-proportion="-8.125" vertical-offset="390" max-vertical-offset="1590">
@@ -1366,14 +1359,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="18" selection-start="868" selection-end="1117" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="15195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="62" selection-start="213" selection-end="213" vertical-scroll-proportion="0.13043478" vertical-offset="0" max-vertical-offset="3450">
+        <state line="20" column="14" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.5217391" vertical-offset="0" max-vertical-offset="3510">
           <folding>
-            <element signature="e#634#645#0" expanded="true" />
-            <element signature="e#7168#7180#0" expanded="true" />
-            <element signature="e#7417#7429#0" expanded="true" />
-            <element signature="e#8808#8817#0" expanded="true" />
+            <element signature="e#757#768#0" expanded="true" />
+            <element signature="e#7291#7303#0" expanded="true" />
+            <element signature="e#7540#7552#0" expanded="true" />
+            <element signature="e#8931#8940#0" expanded="true" />
           </folding>
         </state>
       </provider>

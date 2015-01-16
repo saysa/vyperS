@@ -12,7 +12,10 @@
     <title>{% block title %}Japan FM | Toute la J-music, une seule web radio | Radio Japonaise{% endblock %}</title>
     <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
 
-    <meta name="description" content="Japan FM : Toute la J-music, une seule web radio. Japan FM est la 1ère webradio japonaise de France. Tous les hits et toute l'actu Jpop sont sur Japan FM !" />
+    {% block meta_description %}
+        <meta name="description" content="Japan FM : Toute la J-music, une seule web radio. Japan FM est la 1ère webradio japonaise de France. Tous les hits et toute l'actu Jpop sont sur Japan FM !" />
+    {% endblock %}
+
 
     {% if article.metaKeywords is defined and article.metaKeywords is not empty %}
         <meta name="keywords" content="{{ article.metaKeywords }}" />
