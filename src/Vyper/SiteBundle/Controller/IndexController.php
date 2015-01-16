@@ -19,6 +19,22 @@ class IndexController extends Controller
         $session = $request->getSession();
         $user = $session->get('user');
 
+        // get old article < now AND live = 0 // put to 1
+        $articlesNotLive = $em->getRepository('VyperSiteBundle:Article')->articlesNotLive();
+        #var_dump($articlesNotLive);
+        foreach($articlesNotLive as $article) {
+            $dateArticle = new \DateTime($article->getReleaseDate()->format("Y-m-d") . " " . $article->getReleaseTime()->format("H:i:s"));
+            $dateNow = new \DateTime("NOW");
+
+            if ($dateArticle < $dateNow) {
+
+                // "set live true and persist
+                $article->setLive(true);
+                $em->persist($article);
+            }
+        }
+        $em->flush();
+
         $articles_carousel = $em->getRepository('VyperSiteBundle:Article')->carousel();
 
         foreach ($articles_carousel as $article) {

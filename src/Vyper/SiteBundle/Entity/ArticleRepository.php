@@ -25,6 +25,20 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
+    public function articlesNotLive()
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->andWhere('a.live = false')
+        ;
+
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function carousel()
     {
         $queryBuilder = $this->createQueryBuilder('a');
