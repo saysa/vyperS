@@ -24,7 +24,7 @@ class MangaController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
-        $magazines_per_page = $this->container->getParameter('articles_per_page');
+        $magazines_per_page = $this->container->getParameter('mangas_per_page');
 
         $magazines = $em->getRepository('VyperSiteBundle:Manga')->showAll($magazines_per_page, $page);
 
