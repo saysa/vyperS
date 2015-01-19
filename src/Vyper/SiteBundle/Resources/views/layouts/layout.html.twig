@@ -280,6 +280,11 @@
                             <a href="{{ path('partenaires') }}">Partenaires</a>
                         </li>
 
+                        <li>
+                            <i class="fa fa-calendar"></i>
+                            <a href="{{ path('showAllEvent') }}">Events</a>
+                        </li>
+
                     </ul>
                 </div>
                 <div class="social">
@@ -483,7 +488,6 @@
                                     </li>
                                     <li class="q{% if current_artists is defined %} current_page_item{% endif %}"><a href="{{ path('showAllArtist') }}">Artistes</a></li>
                                     <li class="q{% if current_album is defined %} current_page_item{% endif %}"><a href="{{ path('showAlbums') }}">Galerie</a></li>
-                                    <li class="q{% if current_event is defined %} current_page_item{% endif %}"><a href="{{ path('showAllEvent') }}">Events</a></li>
 
                                     <li class="q{% if current_magazine is defined %} current_page_item{% endif %}"><a href="{{ path('showAllMagazine') }}"><i class="fa fa-book"></i> Vyper</a></li>
 
