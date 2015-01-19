@@ -28,6 +28,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="287" column="76" selection-start="13155" selection-end="13155" vertical-scroll-proportion="0.4076087" vertical-offset="4080" max-vertical-offset="15270">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="showAll.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Podcast/showAll.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,15 +84,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showEvent.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Event/showEvent.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="3152" selection-end="3152" vertical-scroll-proportion="-7.375" vertical-offset="888" max-vertical-offset="1650">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="showFlashnew.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Flashnew/showFlashnew.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showManga.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="showManga.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="5118" selection-end="5118" vertical-scroll-proportion="0.59782606" vertical-offset="1245" max-vertical-offset="2280">
+            <state line="135" column="0" selection-start="5796" selection-end="5796" vertical-scroll-proportion="-12.375" vertical-offset="1728" max-vertical-offset="2280">
               <folding />
             </state>
           </provider>
@@ -173,7 +175,6 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MangaController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showAll.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showAll.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showArtist.html.twig" />
@@ -184,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showAllProgramTypes.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Program/showProgramType.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Video/showVideo.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -1005,10 +1007,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="102" y="23" width="1805" height="1022" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31330472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31330472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36158797" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1239,16 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="658" column="32" selection-start="32984" selection-end="32984" vertical-scroll-proportion="-12.34" vertical-offset="9253" max-vertical-offset="15255">
-          <folding>
-            <element signature="n#style#0;n#ins#0;n#aside#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#aside#6;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Album/showAlbum.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="20" selection-start="1321" selection-end="1321" vertical-scroll-proportion="-16.75" vertical-offset="123" max-vertical-offset="1860">
@@ -1367,8 +1359,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="5118" selection-end="5118" vertical-scroll-proportion="0.59782606" vertical-offset="1245" max-vertical-offset="2280">
+        <state line="135" column="0" selection-start="5796" selection-end="5796" vertical-scroll-proportion="-12.375" vertical-offset="1728" max-vertical-offset="2280">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="287" column="76" selection-start="13155" selection-end="13155" vertical-scroll-proportion="0.4076087" vertical-offset="4080" max-vertical-offset="15270">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
