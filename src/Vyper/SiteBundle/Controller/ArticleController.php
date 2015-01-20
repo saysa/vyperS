@@ -88,7 +88,7 @@ class ArticleController extends Controller
                     $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Culture"),
                     $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Manga/Anime"),
                     $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : chronique"),
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : interview"),
+                    #$em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : interview"),
                     $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : live report"),
                     $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : news"),
                     $em->getRepository('VyperSiteBundle:ArticleType')->findByName("news"),
@@ -102,7 +102,7 @@ class ArticleController extends Controller
                 $type = array(
                     '',
                     $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : chronique"),
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : interview"),
+                    #$em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : interview"),
                     $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : live report"),
                     $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : news"),
                 );
@@ -128,7 +128,7 @@ class ArticleController extends Controller
             case "musique-chroniques":
                 $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : chronique");
                 $view
-                    ->set('article_type', "Chroniques")
+                    ->set('article_type', "Review")
                     ->set('current_musique', true)
                 ;
                 break;
