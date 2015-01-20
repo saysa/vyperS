@@ -40,8 +40,14 @@ mentions_legales:
     path:     /mentions-legales
     defaults: { _controller: VyperSiteBundle:Statique:mentionsLegales }
 
+shoAllArticles:
+    path:    /actualites/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: actualites }
+    requirements:
+        page: \d*
+
 musique-news:
-    path:    /musique-news/{page}
+    path:    /musique-archives/{page}
     defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-news }
     requirements:
         page: \d*

@@ -469,13 +469,15 @@
                                         </ul>
                                     </li>
                                     <li><a href="{{ path('showTheme', {slug: 'shoko-nakagawa', id: 3}) }}">Marraine</a></li>
-                                    <li class="dropdown">
+                                    <li class="q{% if current_actualites is defined %} current_page_item{% endif %}"><a href="{{ path('shoAllArticles') }}">Actualités</a></li>
+                                    <li class="dropdown {% if current_musique is defined %}current_page_item{% endif %}">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Musique <span class="caret"></span></a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="{{ path('musique-news') }}">News</a></li>
-                                            <li><a href="{{ path('musique-interviews') }}">Interviews</a></li>
                                             <li><a href="{{ path('musique-live-reports') }}">Live Report</a></li>
-                                            <li><a href="{{ path('musique-chroniques') }}">Chroniques</a></li>
+                                            <li><a href="{{ path('musique-chroniques') }}">Review</a></li>
+                                            {# <li><a href="#">Oricon</a></li> #}
+                                            <li><a href="{{ path('showAllArtist') }}">Artistes</a></li>
+                                            <li><a href="{{ path('musique-news') }}">Archives</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
@@ -486,7 +488,6 @@
                                             <li><a href="{{ path('culture') }}">Culture</a></li>
                                         </ul>
                                     </li>
-                                    <li class="q{% if current_artists is defined %} current_page_item{% endif %}"><a href="{{ path('showAllArtist') }}">Artistes</a></li>
                                     <li class="q{% if current_album is defined %} current_page_item{% endif %}"><a href="{{ path('showAlbums') }}">Galerie</a></li>
 
                                     <li class="q{% if current_magazine is defined %} current_page_item{% endif %}"><a href="{{ path('showAllMagazine') }}"><i class="fa fa-book"></i> Vyper</a></li>

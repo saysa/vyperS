@@ -13,10 +13,16 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
  */
 class ArtistRepository extends EntityRepository
 {
-    public function myFindAll()
+    public function myFindAll($type)
     {
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder->where('a.deleted = false');
+        if (!is_object($type[0])) {
+
+        } else {
+            $queryBuilder->andWhere('a.type = :type')
+                ->setParameter('type', $type);
+        }
         $queryBuilder->orderBy('a.name', 'ASC');
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();

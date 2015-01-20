@@ -45,15 +45,14 @@
 
             </div>
 
+            {#
             <div class="button-group" data-filter-group="a-type">
                 <a href="javascript: void(0);" data-filter="" class="iso current">Tous</a>
                 {% for artistType in artistTypes %}
                     <a href="javascript: void(0);" data-filter=".at-{{ artistType.id }}" class="iso">{{ artistType.name }}</a>
                 {% endfor %}
             </div>
-
-
-
+            #}
 
         </div>
 
