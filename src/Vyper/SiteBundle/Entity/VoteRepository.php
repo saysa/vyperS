@@ -27,6 +27,21 @@ class VoteRepository extends EntityRepository
         return $results[0]['nb'];
     }
 
+    public function countSongVotes($song)
+    {
+        $queryBuilder = $this->createQueryBuilder('v');
+        $queryBuilder
+            ->select('COUNT(v.song) as nb')
+            ->where('v.song = :song')
+            ->setParameter('song', $song)
+        ;
+
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results[0]['nb'];
+    }
+
     public function ipAlreadyVoted($picture)
     {
         $queryBuilder = $this->createQueryBuilder('v');
@@ -35,6 +50,28 @@ class VoteRepository extends EntityRepository
             ->where('v.picture = :picture')
             ->andWhere('v.ip = :ip')
             ->setParameter('picture', $picture)
+            ->setParameter('ip', $_SERVER['REMOTE_ADDR'])
+        ;
+
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+
+        if ($results[0]['nb'] > 0) {
+            return $readonly = true;
+        } else {
+            return $readonly = false;
+        }
+    }
+
+    public function ipAlreadyVotedSong($song)
+    {
+        $queryBuilder = $this->createQueryBuilder('v');
+        $queryBuilder
+            ->select('COUNT(v.id) as nb')
+            ->where('v.song = :song')
+            ->andWhere('v.ip = :ip')
+            ->setParameter('song', $song)
             ->setParameter('ip', $_SERVER['REMOTE_ADDR'])
         ;
 
@@ -58,6 +95,15 @@ class VoteRepository extends EntityRepository
         }
     }
 
+    public function averageSongMark($song)
+    {
+        if ($this->countSongVotes($song) == 0) {
+            return 0;
+        } else {
+            return $this->getSongSumMark($song)/$this->countSongVotes($song);
+        }
+    }
+
     private function getSumMark($picture)
     {
         $queryBuilder = $this->createQueryBuilder('v');
@@ -65,6 +111,25 @@ class VoteRepository extends EntityRepository
             ->select('v.mark')
             ->where('v.picture = :picture')
             ->setParameter('picture', $picture)
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        $sum = 0;
+        foreach ($results as $rowMark) {
+            $sum = $sum + $rowMark['mark'];
+        }
+
+        return $sum;
+    }
+
+    private function getSongSumMark($song)
+    {
+        $queryBuilder = $this->createQueryBuilder('v');
+        $queryBuilder
+            ->select('v.mark')
+            ->where('v.song = :song')
+            ->setParameter('song', $song)
         ;
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();

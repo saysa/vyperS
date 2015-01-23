@@ -35,6 +35,12 @@ class Vote
     private $picture;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Song")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $song;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="mark", type="string", length=5)
@@ -119,5 +125,28 @@ class Vote
     public function getPicture()
     {
         return $this->picture;
+    }
+
+    /**
+     * Set song
+     *
+     * @param \Vyper\SiteBundle\Entity\Song $song
+     * @return Vote
+     */
+    public function setSong(\Vyper\SiteBundle\Entity\Song $song = null)
+    {
+        $this->song = $song;
+
+        return $this;
+    }
+
+    /**
+     * Get song
+     *
+     * @return \Vyper\SiteBundle\Entity\Song 
+     */
+    public function getSong()
+    {
+        return $this->song;
     }
 }

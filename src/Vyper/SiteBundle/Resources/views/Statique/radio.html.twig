@@ -418,11 +418,13 @@
                 <img src="" id="cover-1" class="pull-left" />
                 <span id="get-artist-1"></span><br />
                 <span id="get-title-1"></span><br />
+                <input id="input-1" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" >
             </div>
             <div class="col-md-6 playlist-container">
                 <img src="" id="cover-2" class="pull-left" />
                 <span id="get-artist-2"></span><br />
                 <span id="get-title-2"></span><br />
+                <input id="input-2" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" >
             </div>
         </div>
 
@@ -621,6 +623,24 @@
 
     $(document).ready(function() {
 
+        $("#input-1").rating({
+
+            glyphicon: false,
+            showClear: false,
+            showCaption: false,
+            readonly: false
+
+        });
+
+        $("#input-2").rating({
+
+            glyphicon: false,
+            showClear: false,
+            showCaption: false,
+            readonly: false
+
+        });
+
         getPlaylist();
         intID = setInterval(function(){
             getPlaylist();
@@ -638,7 +658,6 @@
                 success: function(data){
 
                     $("#currentTitle-player").html(data[0].title);
-
 
                     if (data[0].title == 'On Air') {
                         $("#currentCover").attr('src', '{{ asset('assets/css/images/nocover_jfm.jpg') }}');
@@ -665,6 +684,10 @@
                     } else {
                         $("#cover-1").attr('src', 'http://japanfm.fr/cover/'+data[1].cover);
                     }
+                    options = { "showClear": false, "showCaption": false };
+                    options['readonly'] = data[1].readonly == 1;
+                    $("#input-1").rating(options);
+                    $("#input-1").rating('update', data[1].averageMark);
 
 
                     $("#get-title-2").html(data[2].title);
@@ -674,6 +697,10 @@
                     } else {
                         $("#cover-2").attr('src', 'http://japanfm.fr/cover/'+data[2].cover);
                     }
+                    options = { "showClear": false, "showCaption": false };
+                    options['readonly'] = data[2].readonly == 1;
+                    $("#input-1").rating(options);
+                    $("#input-1").rating('update', data[2].averageMark);
 
                     $("#get-title-3").html(data[3].title);
                     $("#get-artist-3").html(data[3].artist);
@@ -730,6 +757,7 @@
                     } else {
                         $("#cover-9").attr('src', 'http://japanfm.fr/cover/'+data[9].cover);
                     }
+
 
 
                     //$('#relArtistLinkTable tr:last').after('<tr id="'+ data.artist.id +'"><td>' + data.artist.id + '</td><td>' + data.artist.name + '</td><td><a class="btn btn-danger deleteLink" href="#"><i class="icon-trash "></i> </a></td></tr>');

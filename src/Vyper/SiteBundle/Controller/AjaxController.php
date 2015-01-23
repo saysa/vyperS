@@ -5,6 +5,7 @@ namespace Vyper\SiteBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Vyper\SiteBundle\Entity\Song;
 use Vyper\SiteBundle\Entity\Vote;
 
 
@@ -55,6 +56,41 @@ class AjaxController extends Controller
         return new Response();
     }
 
+    private function fillSong($playlist)
+    {
+        $em = $this->getDoctrine()->getManager();
+        #var_dump($playlist);
+
+        foreach($playlist as $song) {
+
+            if ($em->getRepository('VyperSiteBundle:Song')->songAlreadyRegistered($song['artist'], $song['title']) == false) {
+                $oSong = new Song();
+                $oSong->setArtist($song['artist']);
+                $oSong->setTitle($song['title']);
+                $oSong->setPicture($song['cover']);
+                $em->persist($oSong);
+            }
+        }
+        $em->flush();
+    }
+
+    private function getSongsVote($playlist)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        foreach($playlist as $k => $item) {
+            $song = $em->getRepository('VyperSiteBundle:Song')->findByArtistTitle($item['artist'], $item['title']);
+            $playlist[$k]['nbVotes'] = $em->getRepository('VyperSiteBundle:Vote')->countSongVotes($song);
+            $playlist[$k]['averageMark'] = $em->getRepository('VyperSiteBundle:Vote')->averageSongMark($song);
+            ###$playlist[$k]['readonly'] = $em->getRepository('VyperSiteBundle:Vote')->ipAlreadyVotedSong($song);
+            $playlist[$k]['readonly'] = true;
+            $playlist[$k]['songId'] = $song[0]->getId();
+
+        }
+
+        return $playlist;
+    }
+
     public function getPlaylistAction()
     {
         $filename = "http://japanfm.fr/playlist/playlist.xml";
@@ -69,6 +105,13 @@ class AjaxController extends Controller
                 "cover" => str_replace(" ","%20",$cover),
             );
         }
+
+        // Fill database with new songs
+        $this->fillSong($playlist);
+
+        // get the vote for each song
+        $playlist = $this->getSongsVote($playlist);
+
         echo json_encode($playlist);
         return new Response();
     }
