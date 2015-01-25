@@ -47,6 +47,13 @@ class Vote
      */
     private $mark;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="moment", type="datetime")
+     */
+    private $moment;
+
 
     /**
      * Get id
@@ -148,5 +155,28 @@ class Vote
     public function getSong()
     {
         return $this->song;
+    }
+
+    /**
+     * Set moment
+     *
+     * @param \DateTime $moment
+     * @return Vote
+     */
+    public function setMoment($moment)
+    {
+        $this->moment = $moment;
+
+        return $this;
+    }
+
+    /**
+     * Get moment
+     *
+     * @return \DateTime 
+     */
+    public function getMoment()
+    {
+        return $this->moment;
     }
 }

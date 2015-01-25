@@ -31,6 +31,30 @@ class AjaxController extends Controller
         return new Response($response);
     }
 
+    public function voteSongAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $item_id    = $request->request->get('item_id');
+        $mark       = $request->request->get('mark');
+        $ip         = $_SERVER['REMOTE_ADDR'];
+
+        $song = $em->getRepository('VyperSiteBundle:Song')->find($item_id);
+
+        if ($em->getRepository('VyperSiteBundle:Vote')->ipAlreadyVotedSong($song) == false) {
+
+            $vote = new Vote();
+            $vote->setIp($ip);
+            $vote->setMark($mark);
+            $vote->setSong($song);
+            $vote->setMoment(new \DateTime('now'));
+
+            $em->persist($vote);
+            $em->flush();
+        }
+
+        return new Response();
+    }
+
     public function votePictureAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -82,8 +106,8 @@ class AjaxController extends Controller
             $song = $em->getRepository('VyperSiteBundle:Song')->findByArtistTitle($item['artist'], $item['title']);
             $playlist[$k]['nbVotes'] = $em->getRepository('VyperSiteBundle:Vote')->countSongVotes($song);
             $playlist[$k]['averageMark'] = $em->getRepository('VyperSiteBundle:Vote')->averageSongMark($song);
-            ###$playlist[$k]['readonly'] = $em->getRepository('VyperSiteBundle:Vote')->ipAlreadyVotedSong($song);
-            $playlist[$k]['readonly'] = true;
+            $playlist[$k]['readonly'] = $em->getRepository('VyperSiteBundle:Vote')->ipAlreadyVotedSong($song);
+            ###$playlist[$k]['readonly'] = true;
             $playlist[$k]['songId'] = $song[0]->getId();
 
         }
@@ -110,9 +134,10 @@ class AjaxController extends Controller
         $this->fillSong($playlist);
 
         // get the vote for each song
-        $playlist = $this->getSongsVote($playlist);
+        ###$playlist = $this->getSongsVote($playlist);
 
         echo json_encode($playlist);
+
         return new Response();
     }
 }

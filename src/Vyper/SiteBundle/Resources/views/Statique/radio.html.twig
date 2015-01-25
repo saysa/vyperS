@@ -381,7 +381,8 @@
                     <div class="col-xs-8">
                         <div class="jp-title audio-title">
                             <b id="currentArtist-player">Japan FM</b><br />
-                            <span id="currentTitle-player">Toute la Jmusic</span>
+                            <span id="currentTitle-player">Toute la Jmusic</span><br />
+                            {# <input id="input-0" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" > #}
                         </div>
                     </div>
                 </div>
@@ -418,13 +419,13 @@
                 <img src="" id="cover-1" class="pull-left" />
                 <span id="get-artist-1"></span><br />
                 <span id="get-title-1"></span><br />
-                <input id="input-1" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" >
+                {# <input id="input-1" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" > #}
             </div>
             <div class="col-md-6 playlist-container">
                 <img src="" id="cover-2" class="pull-left" />
                 <span id="get-artist-2"></span><br />
                 <span id="get-title-2"></span><br />
-                <input id="input-2" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" >
+                {# <input id="input-2" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" > #}
             </div>
         </div>
 
@@ -434,11 +435,13 @@
                 <img src="" id="cover-3" class="pull-left" />
                 <span id="get-artist-3"></span><br />
                 <span id="get-title-3"></span><br />
+                {# <input id="input-3" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" > #}
             </div>
             <div class="col-md-6 playlist-container">
                 <img src="" id="cover-4" class="pull-left" />
                 <span id="get-artist-4"></span><br />
                 <span id="get-title-4"></span><br />
+                {# <input id="input-4" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" > #}
             </div>
         </div>
 
@@ -448,11 +451,13 @@
                 <img src="" id="cover-5" class="pull-left" />
                 <span id="get-artist-5"></span><br />
                 <span id="get-title-5"></span><br />
+                {# <input id="input-5" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" > #}
             </div>
             <div class="col-md-6 playlist-container">
                 <img src="" id="cover-6" class="pull-left" />
                 <span id="get-artist-6"></span><br />
                 <span id="get-title-6"></span><br />
+                {# <input id="input-6" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" >  #}
             </div>
         </div>
 
@@ -462,11 +467,13 @@
                 <img src="" id="cover-7" class="pull-left" />
                 <span id="get-artist-7"></span><br />
                 <span id="get-title-7"></span><br />
+                {# <input id="input-7" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" > #}
             </div>
             <div class="col-md-6 playlist-container">
                 <img src="" id="cover-8" class="pull-left" />
                 <span id="get-artist-8"></span><br />
                 <span id="get-title-8"></span><br />
+                {# <input id="input-8" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" > #}
             </div>
         </div>
 
@@ -476,6 +483,7 @@
                 <img src="" id="cover-9" class="pull-left" />
                 <span id="get-artist-9"></span><br />
                 <span id="get-title-9"></span><br />
+                {# <input id="input-9" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" > #}
             </div>
             <div class="col-md-6">
                 
@@ -623,22 +631,256 @@
 
     $(document).ready(function() {
 
+        $("#input-0").rating({
+
+            glyphicon: false,
+            showClear: false,
+            showCaption: false
+
+        });
         $("#input-1").rating({
 
             glyphicon: false,
             showClear: false,
-            showCaption: false,
-            readonly: false
+            showCaption: false
 
         });
-
         $("#input-2").rating({
 
             glyphicon: false,
             showClear: false,
-            showCaption: false,
-            readonly: false
+            showCaption: false
 
+        });
+        $("#input-3").rating({
+
+            glyphicon: false,
+            showClear: false,
+            showCaption: false
+
+        });
+        $("#input-4").rating({
+
+            glyphicon: false,
+            showClear: false,
+            showCaption: false
+
+        });
+        $("#input-5").rating({
+
+            glyphicon: false,
+            showClear: false,
+            showCaption: false
+
+        });
+        $("#input-6").rating({
+
+            glyphicon: false,
+            showClear: false,
+            showCaption: false
+
+        });
+        $("#input-7").rating({
+
+            glyphicon: false,
+            showClear: false,
+            showCaption: false
+
+        });
+        $("#input-8").rating({
+
+            glyphicon: false,
+            showClear: false,
+            showCaption: false
+
+        });
+        $("#input-9").rating({
+
+            glyphicon: false,
+            showClear: false,
+            showCaption: false
+
+        });
+
+        $("#input-0").on('rating.change', function(event, value, caption) {
+            songID = $('#input-0').data('song');
+            //console.log('J ai vote : '+value + ' pour ' + songID);
+            /* update database with the vote */
+            $.ajax({
+                type: "POST",
+                url: "{{ path('vote_song') }}",
+
+                data:{
+                    item_id : songID,
+                    mark : value
+                },
+                success: function(data){
+                    // readonly true
+                    $('#input-0').rating('refresh', { "readonly": true });
+                }
+            });
+        });
+        $("#input-1").on('rating.change', function(event, value, caption) {
+            songID = $('#input-1').data('song');
+            //console.log('J ai vote : '+value + ' pour ' + songID);
+            /* update database with the vote */
+            $.ajax({
+             type: "POST",
+             url: "{{ path('vote_song') }}",
+
+             data:{
+             item_id : songID,
+             mark : value
+             },
+             success: function(data){
+                 // readonly true
+                 $('#input-1').rating('refresh', { "readonly": true });
+             }
+             });
+        });
+        $("#input-2").on('rating.change', function(event, value, caption) {
+            songID = $('#input-2').data('song');
+            //console.log('J ai vote : '+value + ' pour ' + songID);
+            /* update database with the vote */
+            $.ajax({
+                type: "POST",
+                url: "{{ path('vote_song') }}",
+
+                data:{
+                    item_id : songID,
+                    mark : value
+                },
+                success: function(data){
+                    // readonly true
+                    $('#input-2').rating('refresh', { "readonly": true });
+                }
+            });
+        });
+        $("#input-3").on('rating.change', function(event, value, caption) {
+            songID = $('#input-3').data('song');
+            //console.log('J ai vote : '+value + ' pour ' + songID);
+            /* update database with the vote */
+            $.ajax({
+                type: "POST",
+                url: "{{ path('vote_song') }}",
+
+                data:{
+                    item_id : songID,
+                    mark : value
+                },
+                success: function(data){
+                    // readonly true
+                    $('#input-3').rating('refresh', { "readonly": true });
+                }
+            });
+        });
+        $("#input-4").on('rating.change', function(event, value, caption) {
+            songID = $('#input-4').data('song');
+            //console.log('J ai vote : '+value + ' pour ' + songID);
+            /* update database with the vote */
+            $.ajax({
+                type: "POST",
+                url: "{{ path('vote_song') }}",
+
+                data:{
+                    item_id : songID,
+                    mark : value
+                },
+                success: function(data){
+                    // readonly true
+                    $('#input-4').rating('refresh', { "readonly": true });
+                }
+            });
+        });
+        $("#input-5").on('rating.change', function(event, value, caption) {
+            songID = $('#input-5').data('song');
+            //console.log('J ai vote : '+value + ' pour ' + songID);
+            /* update database with the vote */
+            $.ajax({
+                type: "POST",
+                url: "{{ path('vote_song') }}",
+
+                data:{
+                    item_id : songID,
+                    mark : value
+                },
+                success: function(data){
+                    // readonly true
+                    $('#input-5').rating('refresh', { "readonly": true });
+                }
+            });
+        });
+        $("#input-6").on('rating.change', function(event, value, caption) {
+            songID = $('#input-6').data('song');
+            //console.log('J ai vote : '+value + ' pour ' + songID);
+            /* update database with the vote */
+            $.ajax({
+                type: "POST",
+                url: "{{ path('vote_song') }}",
+
+                data:{
+                    item_id : songID,
+                    mark : value
+                },
+                success: function(data){
+                    // readonly true
+                    $('#input-6').rating('refresh', { "readonly": true });
+                }
+            });
+        });
+        $("#input-7").on('rating.change', function(event, value, caption) {
+            songID = $('#input-7').data('song');
+            //console.log('J ai vote : '+value + ' pour ' + songID);
+            /* update database with the vote */
+            $.ajax({
+                type: "POST",
+                url: "{{ path('vote_song') }}",
+
+                data:{
+                    item_id : songID,
+                    mark : value
+                },
+                success: function(data){
+                    // readonly true
+                    $('#input-7').rating('refresh', { "readonly": true });
+                }
+            });
+        });
+        $("#input-8").on('rating.change', function(event, value, caption) {
+            songID = $('#input-8').data('song');
+            //console.log('J ai vote : '+value + ' pour ' + songID);
+            /* update database with the vote */
+            $.ajax({
+                type: "POST",
+                url: "{{ path('vote_song') }}",
+
+                data:{
+                    item_id : songID,
+                    mark : value
+                },
+                success: function(data){
+                    // readonly true
+                    $('#input-8').rating('refresh', { "readonly": true });
+                }
+            });
+        });
+        $("#input-9").on('rating.change', function(event, value, caption) {
+            songID = $('#input-9').data('song');
+            //console.log('J ai vote : '+value + ' pour ' + songID);
+            /* update database with the vote */
+            $.ajax({
+                type: "POST",
+                url: "{{ path('vote_song') }}",
+
+                data:{
+                    item_id : songID,
+                    mark : value
+                },
+                success: function(data){
+                    // readonly true
+                    $('#input-9').rating('refresh', { "readonly": true });
+                }
+            });
         });
 
         getPlaylist();
@@ -672,6 +914,14 @@
 
                         $("#currentArtist-player").html(data[0].artist);
                     }
+                    if (data[0].readonly == 1) {
+                        options = { "readonly": true };
+                    } else {
+                        options = { "readonly": false };
+                    }
+                    $('#input-0').data('song', data[0].songId);
+                    $('#input-0').rating('refresh', options);
+                    $("#input-0").rating('update', data[0].averageMark);
 
 
                     $("#currentTitle").html(data[0].title);
@@ -684,10 +934,15 @@
                     } else {
                         $("#cover-1").attr('src', 'http://japanfm.fr/cover/'+data[1].cover);
                     }
-                    options = { "showClear": false, "showCaption": false };
-                    options['readonly'] = data[1].readonly == 1;
-                    $("#input-1").rating(options);
+                    if (data[1].readonly == 1) {
+                        options = { "readonly": true };
+                    } else {
+                        options = { "readonly": false };
+                    }
+                    $('#input-1').data('song', data[1].songId);
+                    $('#input-1').rating('refresh', options);
                     $("#input-1").rating('update', data[1].averageMark);
+
 
 
                     $("#get-title-2").html(data[2].title);
@@ -697,10 +952,14 @@
                     } else {
                         $("#cover-2").attr('src', 'http://japanfm.fr/cover/'+data[2].cover);
                     }
-                    options = { "showClear": false, "showCaption": false };
-                    options['readonly'] = data[2].readonly == 1;
-                    $("#input-1").rating(options);
-                    $("#input-1").rating('update', data[2].averageMark);
+                    if (data[2].readonly == 1) {
+                        options = { "readonly": true };
+                    } else {
+                        options = { "readonly": false };
+                    }
+                    $('#input-2').data('song', data[2].songId);
+                    $('#input-2').rating('refresh', options);
+                    $("#input-2").rating('update', data[2].averageMark);
 
                     $("#get-title-3").html(data[3].title);
                     $("#get-artist-3").html(data[3].artist);
@@ -709,6 +968,15 @@
                     } else {
                         $("#cover-3").attr('src', 'http://japanfm.fr/cover/'+data[3].cover);
                     }
+                    if (data[3].readonly == 1) {
+                        options = { "readonly": true };
+                    } else {
+                        options = { "readonly": false };
+                    }
+                    $('#input-3').data('song', data[3].songId);
+                    $('#input-3').rating('refresh', options);
+                    $("#input-3").rating('update', data[3].averageMark);
+
 
                     $("#get-title-4").html(data[4].title);
                     $("#get-artist-4").html(data[4].artist);
@@ -717,6 +985,16 @@
                     } else {
                         $("#cover-4").attr('src', 'http://japanfm.fr/cover/'+data[4].cover);
                     }
+                    if (data[4].readonly == 1) {
+                        options = { "readonly": true };
+                    } else {
+                        options = { "readonly": false };
+                    }
+                    $('#input-4').data('song', data[4].songId);
+                    $('#input-4').rating('refresh', options);
+                    $("#input-4").rating('update', data[4].averageMark);
+
+
 
                     $("#get-title-5").html(data[5].title);
                     $("#get-artist-5").html(data[5].artist);
@@ -725,6 +1003,16 @@
                     } else {
                         $("#cover-5").attr('src', 'http://japanfm.fr/cover/'+data[5].cover);
                     }
+                    if (data[5].readonly == 1) {
+                        options = { "readonly": true };
+                    } else {
+                        options = { "readonly": false };
+                    }
+                    $('#input-5').data('song', data[5].songId);
+                    $('#input-5').rating('refresh', options);
+                    $("#input-5").rating('update', data[5].averageMark);
+
+
 
                     $("#get-title-6").html(data[6].title);
                     $("#get-artist-6").html(data[6].artist);
@@ -733,6 +1021,16 @@
                     } else {
                         $("#cover-6").attr('src', 'http://japanfm.fr/cover/'+data[6].cover);
                     }
+                    if (data[6].readonly == 1) {
+                        options = { "readonly": true };
+                    } else {
+                        options = { "readonly": false };
+                    }
+                    $('#input-6').data('song', data[6].songId);
+                    $('#input-6').rating('refresh', options);
+                    $("#input-6").rating('update', data[6].averageMark);
+
+
 
                     $("#get-title-7").html(data[7].title);
                     $("#get-artist-7").html(data[7].artist);
@@ -741,6 +1039,16 @@
                     } else {
                         $("#cover-7").attr('src', 'http://japanfm.fr/cover/'+data[7].cover);
                     }
+                    if (data[7].readonly == 1) {
+                        options = { "readonly": true };
+                    } else {
+                        options = { "readonly": false };
+                    }
+                    $('#input-7').data('song', data[7].songId);
+                    $('#input-7').rating('refresh', options);
+                    $("#input-7").rating('update', data[7].averageMark);
+
+
 
                     $("#get-title-8").html(data[8].title);
                     $("#get-artist-8").html(data[8].artist);
@@ -749,6 +1057,16 @@
                     } else {
                         $("#cover-8").attr('src', 'http://japanfm.fr/cover/'+data[8].cover);
                     }
+                    if (data[8].readonly == 1) {
+                        options = { "readonly": true };
+                    } else {
+                        options = { "readonly": false };
+                    }
+                    $('#input-8').data('song', data[8].songId);
+                    $('#input-8').rating('refresh', options);
+                    $("#input-8").rating('update', data[8].averageMark);
+
+
 
                     $("#get-title-9").html(data[9].title);
                     $("#get-artist-9").html(data[9].artist);
@@ -757,6 +1075,14 @@
                     } else {
                         $("#cover-9").attr('src', 'http://japanfm.fr/cover/'+data[9].cover);
                     }
+                    if (data[9].readonly == 1) {
+                        options = { "readonly": true };
+                    } else {
+                        options = { "readonly": false };
+                    }
+                    $('#input-9').data('song', data[9].songId);
+                    $('#input-9').rating('refresh', options);
+                    $("#input-9").rating('update', data[9].averageMark);
 
 
 

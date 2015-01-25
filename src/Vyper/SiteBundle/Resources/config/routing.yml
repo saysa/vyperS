@@ -448,6 +448,10 @@ vote_picture:
     path:     /ajax/vote_picture
     defaults: { _controller: VyperSiteBundle:Ajax:votePicture }
 
+vote_song:
+    path:     /ajax/vote_song
+    defaults: { _controller: VyperSiteBundle:Ajax:voteSong }
+
 ajax_switch_article_highlight:
     path:     /_admin_/ajax/switch_article_highlight
     defaults: { _controller: VyperSiteBundle:AdminAjax:switchArticleHighlight }
