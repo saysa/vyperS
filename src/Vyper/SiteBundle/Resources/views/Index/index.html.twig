@@ -4,13 +4,13 @@
 
     {% block content %}
 
-{#
-<div id="program-banner">
+
+        <div id="program-banner">
             <a href="{{ path('showAllEvent') }}">
-            <img src="{{ asset('assets/img/programs-banners/countdown_site.png') }}" width="100%" alt="">
+            <img src="{{ asset('assets/img/programs-banners/Dimension-emission-site-internetmatinale.jpg') }}" width="100%" alt="">
             </a>
         </div>
-#}
+
 
 
 
@@ -62,13 +62,13 @@
 
             <div class="cat-header">
                 <div class="cat-title second-color-bg">
-                    <h4><i class="fa fa-music"></i> Musique</h4>
+                    <h4><i class="fa fa-newspaper-o"></i> Actualités</h4>
                 </div>
             </div>
 
 
 
-            {% for article in latest_news %}
+            {% for article in latest_actu %}
                 {% if loop.index == 1 %}
 
 
@@ -118,7 +118,7 @@
 
             <div class="post-list feat-cat">
 
-                {% for key, article in latest_news %}
+                {% for key, article in latest_actu %}
                     {% if key>0 and key<4 %}
 
                         <div class="item-post">
@@ -222,7 +222,110 @@
 
 
 
+        <!-- category2 -->
+        <div class="feat-cat section">
 
+
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <h4><i class="fa fa-music"></i> Musique</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 homepage-section">
+                    <div class="row">
+                        <div class="col-md-6">
+                            {%  if latest_jeux_videos is defined %}
+                                {% for article in latest_news %}
+                                    {% if loop.index == 1 %}
+
+
+
+                                        {% if article.getYoutube %}
+                                            <div class="thumb-wrap video-thumb">
+                                                <iframe width="290" height="180" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                                            </div>
+
+                                        {% else %}
+                                            <div class="thumb-wrap">
+                                                <div class="thumb">
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('303-162')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                                </div>
+
+
+
+                                                <div class="overlay">
+                                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+
+
+                                        <div class="post-details">
+                                            <h3>
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
+                                            </h3>
+
+                                            <div class="entry-meta">
+                                                <span class="date"><i class="fa fa-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+
+
+                                            </div>
+                                            <p>{{ article.getDescription }}</p>
+                                        </div>
+
+
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6 feat-cat">
+                            {%  if latest_news is defined %}
+                                {% for key, article in latest_news %}
+                                    {% if key>0 and key<4 %}
+
+                                        <div class="item-post">
+                                            <div class="thumb">
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="3"></a>
+                                            </div>
+
+                                            <div class="post-right">
+                                                <h5>
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" rel="bookmark">{{ article.getTitle }}</a>
+                                                </h5>
+
+                                                <div class="entry-meta">
+                                                            <span class="date">
+                                                                <i class="fa fa-calendar"></i>
+                                                                {{ article.getReleaseDateFrontFormat(article.getId) }}
+                                                            </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div><!-- /feat-cat -->
+        <!-- /category2 -->
 
 
         <!-- category1 -->

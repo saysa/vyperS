@@ -42,6 +42,18 @@ class IndexController extends Controller
             $article->excerpt = $w->cutElypse($article->getDescription(), 150);
         }
 
+        $type = array(
+            '',
+            $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Jeux Vidéos"),
+            $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Culture"),
+            $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Manga/Anime"),
+            $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : chronique"),
+            $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : live report"),
+            $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : news"),
+            $em->getRepository('VyperSiteBundle:ArticleType')->findByName("news"),
+        );
+        $latest_actu  = $em->getRepository('VyperSiteBundle:Article')->showAll($articles_per_page=5, $page=1, $type);
+
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'musique : news'));
         $latest_news = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
         $latest_manga = $em->getRepository('VyperSiteBundle:Manga')->latest();
@@ -53,6 +65,7 @@ class IndexController extends Controller
         $last_videos = $em->getRepository('VyperSiteBundle:Video')->lastFive();
 
         $view
+            ->set('latest_actu', $latest_actu)
             ->set('articles_carousel', $articles_carousel)
             ->set('latest_news', $latest_news)
             ->set('latest_mangas', $latest_manga)
