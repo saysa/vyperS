@@ -140,8 +140,9 @@ class Manga
     private $pictureID;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Artist")
-     * @ORM\JoinColumn(nullable=true)
+     * @var string
+     *
+     * @ORM\Column(name="mangaka", type="text", nullable=true)
      */
     private $mangaka;
 
@@ -614,28 +615,7 @@ class Manga
         $this->type->removeElement($type);
     }
 
-    /**
-     * Set mangaka
-     *
-     * @param \Vyper\SiteBundle\Entity\Artist $mangaka
-     * @return Manga
-     */
-    public function setMangaka(\Vyper\SiteBundle\Entity\Artist $mangaka)
-    {
-        $this->mangaka = $mangaka;
 
-        return $this;
-    }
-
-    /**
-     * Get mangaka
-     *
-     * @return \Vyper\SiteBundle\Entity\Artist 
-     */
-    public function getMangaka()
-    {
-        return $this->mangaka;
-    }
 
     /**
      * Set summary
@@ -848,5 +828,28 @@ class Manga
     public function getBroadcastingPlatform()
     {
         return $this->broadcastingPlatform;
+    }
+
+    /**
+     * Set mangaka
+     *
+     * @param string $mangaka
+     * @return Manga
+     */
+    public function setMangaka($mangaka)
+    {
+        $this->mangaka = $mangaka;
+
+        return $this;
+    }
+
+    /**
+     * Get mangaka
+     *
+     * @return string 
+     */
+    public function getMangaka()
+    {
+        return $this->mangaka;
     }
 }

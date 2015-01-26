@@ -51,7 +51,7 @@
                                 <div class="form-group col-lg-5{% if error_name is defined %} has-error{% endif %}">
                                     {{ form_label(form.mangaka, "Mangaka") }}
                                     <div class="controls">
-                                        {{ form_widget(form.mangaka, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                        {{ form_widget(form.mangaka, {  'attr': {'class': 'form-control'} }) }}
                                         {{ form_errors(form.mangaka) }}
                                     </div>
                                 </div>
