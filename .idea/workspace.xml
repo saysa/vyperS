@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e280bb71-600b-43f2-9972-fbd1dc003f69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Manga.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Manga.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/MangaType.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/MangaType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/addManga.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/addManga.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/updateManga.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/updateManga.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" afterPath="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="local.dev.iws" />
@@ -39,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="162" selection-end="162" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="8985">
+            <state line="385" column="36" selection-start="15164" selection-end="15164" vertical-scroll-proportion="0.38235295" vertical-offset="5580" max-vertical-offset="9045">
               <folding>
                 <element signature="e#228#240#0" expanded="true" />
                 <element signature="e#1026#1037#0" expanded="true" />
@@ -60,19 +57,16 @@
                 <element signature="e#10155#10166#0" expanded="true" />
                 <element signature="e#11314#11325#0" expanded="true" />
                 <element signature="e#11732#11743#0" expanded="true" />
-                <element signature="e#13673#13682#0" expanded="true" />
-                <element signature="e#14035#14044#0" expanded="true" />
-                <element signature="e#14409#14418#0" expanded="true" />
-                <element signature="e#16522#16533#0" expanded="true" />
-                <element signature="e#16915#16926#0" expanded="true" />
-                <element signature="e#17351#17362#0" expanded="true" />
-                <element signature="e#18524#18535#0" expanded="true" />
-                <element signature="e#18942#18953#0" expanded="true" />
-                <element signature="e#21298#21309#0" expanded="true" />
-                <element signature="e#21690#21701#0" expanded="true" />
-                <element signature="e#22126#22137#0" expanded="true" />
-                <element signature="e#23290#23301#0" expanded="true" />
-                <element signature="e#23708#23719#0" expanded="true" />
+                <element signature="e#16546#16557#0" expanded="true" />
+                <element signature="e#16939#16950#0" expanded="true" />
+                <element signature="e#17375#17386#0" expanded="true" />
+                <element signature="e#18548#18559#0" expanded="true" />
+                <element signature="e#18966#18977#0" expanded="true" />
+                <element signature="e#21322#21333#0" expanded="true" />
+                <element signature="e#21714#21725#0" expanded="true" />
+                <element signature="e#22150#22161#0" expanded="true" />
+                <element signature="e#23314#23325#0" expanded="true" />
+                <element signature="e#23732#23743#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showManga.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="showManga.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="95" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.6511194" vertical-offset="356" max-vertical-offset="2280">
+            <state line="38" column="52" selection-start="1864" selection-end="1864" vertical-scroll-proportion="-8.916667" vertical-offset="356" max-vertical-offset="2280">
               <folding />
             </state>
           </provider>
@@ -126,7 +120,7 @@
       <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="30" selection-start="3130" selection-end="3141" vertical-scroll-proportion="-15.625" vertical-offset="600" max-vertical-offset="1275">
+            <state line="70" column="13" selection-start="3278" selection-end="3278" vertical-scroll-proportion="-17.5" vertical-offset="600" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
@@ -207,13 +201,13 @@
         <option value="$PROJECT_DIR$/web/app.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/AjaxController.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Statique/radio.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Manga.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Form/MangaType.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/updateManga.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/AdminManga/addManga.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
       </list>
     </option>
   </component>
@@ -872,7 +866,11 @@
       <created>1422218470900</created>
       <updated>1422218470900</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Auteur Manga become a text field">
+      <created>1422256525538</created>
+      <updated>1422256525538</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -922,7 +920,8 @@
     <MESSAGE value="show all podcast video has a scroll to #podcast title" />
     <MESSAGE value="Vote finished but not working on production" />
     <MESSAGE value="Actualites on Index, Musique just at the bottom" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualites on Index, Musique just at the bottom" />
+    <MESSAGE value="Auteur Manga become a text field" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auteur Manga become a text field" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1236,31 +1235,13 @@
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Statique/radio.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="485" column="108" selection-start="21168" selection-end="21168" vertical-scroll-proportion="-11.7" vertical-offset="6690" max-vertical-offset="17850">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#section#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#section#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#section#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="161" column="110" selection-start="6900" selection-end="7002" vertical-scroll-proportion="-11.375" vertical-offset="2082" max-vertical-offset="3240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="30" selection-start="3130" selection-end="3141" vertical-scroll-proportion="-15.625" vertical-offset="600" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
@@ -1276,43 +1257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="126" column="50" selection-start="3281" selection-end="3286" vertical-scroll-proportion="7.32" vertical-offset="2241" max-vertical-offset="2940">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="162" selection-end="162" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="8985">
-          <folding>
-            <element signature="e#228#240#0" expanded="true" />
-            <element signature="e#1026#1037#0" expanded="true" />
-            <element signature="e#1480#1491#0" expanded="true" />
-            <element signature="e#1925#1936#0" expanded="true" />
-            <element signature="e#3159#3170#0" expanded="true" />
-            <element signature="e#3504#3515#0" expanded="true" />
-            <element signature="e#3844#3855#0" expanded="true" />
-            <element signature="e#4714#4725#0" expanded="true" />
-            <element signature="e#5068#5079#0" expanded="true" />
-            <element signature="e#6667#6676#0" expanded="true" />
-            <element signature="e#7488#7497#0" expanded="true" />
-            <element signature="e#9326#9337#0" expanded="true" />
-            <element signature="e#9719#9730#0" expanded="true" />
-            <element signature="e#10155#10166#0" expanded="true" />
-            <element signature="e#11314#11325#0" expanded="true" />
-            <element signature="e#11732#11743#0" expanded="true" />
-            <element signature="e#13673#13682#0" expanded="true" />
-            <element signature="e#14035#14044#0" expanded="true" />
-            <element signature="e#14409#14418#0" expanded="true" />
-            <element signature="e#16522#16533#0" expanded="true" />
-            <element signature="e#16915#16926#0" expanded="true" />
-            <element signature="e#17351#17362#0" expanded="true" />
-            <element signature="e#18524#18535#0" expanded="true" />
-            <element signature="e#18942#18953#0" expanded="true" />
-            <element signature="e#21298#21309#0" expanded="true" />
-            <element signature="e#21690#21701#0" expanded="true" />
-            <element signature="e#22126#22137#0" expanded="true" />
-            <element signature="e#23290#23301#0" expanded="true" />
-            <element signature="e#23708#23719#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1346,8 +1290,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showManga.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="95" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.6511194" vertical-offset="356" max-vertical-offset="2280">
+        <state line="38" column="52" selection-start="1864" selection-end="1864" vertical-scroll-proportion="-8.916667" vertical-offset="356" max-vertical-offset="2280">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="13" selection-start="3278" selection-end="3278" vertical-scroll-proportion="-17.5" vertical-offset="600" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="385" column="36" selection-start="15164" selection-end="15164" vertical-scroll-proportion="0.38235295" vertical-offset="5580" max-vertical-offset="9045">
+          <folding>
+            <element signature="e#228#240#0" expanded="true" />
+            <element signature="e#1026#1037#0" expanded="true" />
+            <element signature="e#1480#1491#0" expanded="true" />
+            <element signature="e#1925#1936#0" expanded="true" />
+            <element signature="e#3159#3170#0" expanded="true" />
+            <element signature="e#3504#3515#0" expanded="true" />
+            <element signature="e#3844#3855#0" expanded="true" />
+            <element signature="e#4714#4725#0" expanded="true" />
+            <element signature="e#5068#5079#0" expanded="true" />
+            <element signature="e#6667#6676#0" expanded="true" />
+            <element signature="e#7488#7497#0" expanded="true" />
+            <element signature="e#9326#9337#0" expanded="true" />
+            <element signature="e#9719#9730#0" expanded="true" />
+            <element signature="e#10155#10166#0" expanded="true" />
+            <element signature="e#11314#11325#0" expanded="true" />
+            <element signature="e#11732#11743#0" expanded="true" />
+            <element signature="e#16546#16557#0" expanded="true" />
+            <element signature="e#16939#16950#0" expanded="true" />
+            <element signature="e#17375#17386#0" expanded="true" />
+            <element signature="e#18548#18559#0" expanded="true" />
+            <element signature="e#18966#18977#0" expanded="true" />
+            <element signature="e#21322#21333#0" expanded="true" />
+            <element signature="e#21714#21725#0" expanded="true" />
+            <element signature="e#22150#22161#0" expanded="true" />
+            <element signature="e#23314#23325#0" expanded="true" />
+            <element signature="e#23732#23743#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
