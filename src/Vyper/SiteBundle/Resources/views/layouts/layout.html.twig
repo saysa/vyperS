@@ -468,7 +468,8 @@
                                             <li><a href="{{ path('showAllPodcastsAudio') }}">Audio</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{ path('showTheme', {slug: 'shoko-nakagawa', id: 3}) }}">Marraine</a></li>
+
+                                    <li><a href="{{ path('showArtist', {'id': 79, 'slug': 'shoko-nakagawa'}) }}">Marraine</a></li>
                                     <li class="q{% if current_actualites is defined %} current_page_item{% endif %}"><a href="{{ path('shoAllArticles') }}">Actualités</a></li>
                                     <li class="dropdown {% if current_musique is defined %}current_page_item{% endif %}">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Musique <span class="caret"></span></a>
