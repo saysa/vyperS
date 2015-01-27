@@ -180,11 +180,11 @@
         {% endif %}
 
         {% if articles is defined %}
-            <div class="content-title main-color-reverse" id="toggle-target-articles">
+            <div class="content-title main-color-reverse" id="toggle-articles">
                 <h4>Articles</h4>
             </div>
 
-            <ul class="list" id="toggle-articles">
+            <ul class="list" id="toggle-target-articles">
                 {% for key, article in articles %}
                     <li class="one-third{% if key==2 %} last{% endif %}">
                         <div class="thumbnail">
@@ -201,8 +201,8 @@
 
                         <div class="entry-meta">
                 <span class="date">
-                    <i class="icon-calendar"></i>
-                    article.getReleaseDate }}
+                    <i class="fa fa-calendar"></i>
+                    {{ article.getReleaseDateFrontFormat(article.getId) }}
                 </span>
                         </div>
                     </li>
