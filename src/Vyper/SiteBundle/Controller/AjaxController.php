@@ -134,7 +134,7 @@ class AjaxController extends Controller
         $this->fillSong($playlist);
 
         // get the vote for each song
-        ###$playlist = $this->getSongsVote($playlist);
+        $playlist = $this->getSongsVote($playlist);
 
         echo json_encode($playlist);
 
