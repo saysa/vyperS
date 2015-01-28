@@ -7,7 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Song
  *
- * @ORM\Table()
+ * @ORM\Table(uniqueConstraints={
+ *     @ORM\UniqueConstraint(name="search_idx", columns={"artist", "title"})})
  * @ORM\Entity(repositoryClass="Vyper\SiteBundle\Entity\SongRepository")
  */
 class Song
