@@ -27,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="437" column="67" selection-start="20024" selection-end="20087" vertical-scroll-proportion="-3.9" vertical-offset="6360" max-vertical-offset="15420">
+            <state line="519" column="0" selection-start="25373" selection-end="25373" vertical-scroll-proportion="0.1404806" vertical-offset="7709" max-vertical-offset="15360">
               <folding>
                 <element signature="e#12199#12207#0" expanded="true" />
                 <element signature="e#12389#12397#0" expanded="true" />
@@ -64,15 +64,14 @@
                 <element signature="e#24105#24112#0" expanded="true" />
                 <element signature="e#24354#24364#0" expanded="true" />
                 <element signature="e#24522#24537#0" expanded="true" />
-                <element signature="n#style#0;n#ins#0;n#aside#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ins#0;n#aside#6;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ins#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#34553#34569#0" expanded="true" />
-                <element signature="e#34690#34693#0" expanded="true" />
-                <element signature="e#34814#34821#0" expanded="true" />
-                <element signature="e#36080#36092#0" expanded="true" />
-                <element signature="e#36836#36848#0" expanded="true" />
-                <element signature="e#41688#41699#0" expanded="true" />
+                <element signature="e#34164#34180#0" expanded="true" />
+                <element signature="e#34301#34304#0" expanded="true" />
+                <element signature="e#34425#34432#0" expanded="true" />
+                <element signature="e#35691#35703#0" expanded="true" />
+                <element signature="e#36447#36459#0" expanded="true" />
+                <element signature="e#41299#41310#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,10 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="radio.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="radio.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Statique/radio.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="325" column="63" selection-start="14030" selection-end="14030" vertical-scroll-proportion="-0.11090573" vertical-offset="4935" max-vertical-offset="17865">
+            <state line="325" column="63" selection-start="14030" selection-end="14030" vertical-scroll-proportion="1.2" vertical-offset="4935" max-vertical-offset="17865">
               <folding>
                 <element signature="e#13295#13310#0" expanded="true" />
                 <element signature="e#13406#13426#0" expanded="true" />
@@ -348,9 +347,9 @@
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Artist/showArtist.html.twig" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Entity/Song.php" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Index/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Statique/radio.html.twig" />
+        <option value="$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -504,110 +503,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="programs-banners" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="casing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -963,11 +858,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/assets/img" />
       <recent name="$PROJECT_DIR$/web/assets/css/images/casing/parismanga" />
       <recent name="$PROJECT_DIR$/src/Vyper/SiteBundle/Controller" />
       <recent name="$PROJECT_DIR$/web/assets/img/programs-banners" />
       <recent name="$PROJECT_DIR$/web/assets/css/jplayer" />
-      <recent name="$PROJECT_DIR$/web/assets/css/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/assets/img/programs-banners" />
@@ -1090,16 +985,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Controller/MangaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="77" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="705" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Manga/showAll.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="525" selection-end="525" vertical-scroll-proportion="-5.9583335" vertical-offset="97" max-vertical-offset="1365" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Article/showArticle.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="130" column="8" selection-start="6355" selection-end="6355" vertical-scroll-proportion="-5.7916665" vertical-offset="1811" max-vertical-offset="3360" />
@@ -1475,9 +1360,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Statique/radio.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="325" column="63" selection-start="14030" selection-end="14030" vertical-scroll-proportion="1.2" vertical-offset="4935" max-vertical-offset="17865">
+          <folding>
+            <element signature="e#13295#13310#0" expanded="true" />
+            <element signature="e#13406#13426#0" expanded="true" />
+            <element signature="e#24661#24677#0" expanded="true" />
+            <element signature="e#24798#24801#0" expanded="true" />
+            <element signature="e#24922#24929#0" expanded="true" />
+            <element signature="e#27395#27404#0" expanded="true" />
+            <element signature="e#28043#28052#0" expanded="true" />
+            <element signature="e#28666#28675#0" expanded="true" />
+            <element signature="e#29320#29329#0" expanded="true" />
+            <element signature="e#29974#29983#0" expanded="true" />
+            <element signature="e#30628#30637#0" expanded="true" />
+            <element signature="e#31282#31291#0" expanded="true" />
+            <element signature="e#31936#31945#0" expanded="true" />
+            <element signature="e#32590#32599#0" expanded="true" />
+            <element signature="e#33244#33253#0" expanded="true" />
+            <element signature="e#33807#33819#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/img/banner.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/img/forum300.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/layouts/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="437" column="67" selection-start="20024" selection-end="20087" vertical-scroll-proportion="-3.9" vertical-offset="6360" max-vertical-offset="15420">
+        <state line="519" column="0" selection-start="25373" selection-end="25373" vertical-scroll-proportion="0.1404806" vertical-offset="7709" max-vertical-offset="15360">
           <folding>
             <element signature="e#12199#12207#0" expanded="true" />
             <element signature="e#12389#12397#0" expanded="true" />
@@ -1511,39 +1430,14 @@
             <element signature="e#24105#24112#0" expanded="true" />
             <element signature="e#24354#24364#0" expanded="true" />
             <element signature="e#24522#24537#0" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#aside#0;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ins#0;n#aside#6;n#section#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ins#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#34553#34569#0" expanded="true" />
-            <element signature="e#34690#34693#0" expanded="true" />
-            <element signature="e#34814#34821#0" expanded="true" />
-            <element signature="e#36080#36092#0" expanded="true" />
-            <element signature="e#36836#36848#0" expanded="true" />
-            <element signature="e#41688#41699#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vyper/SiteBundle/Resources/views/Statique/radio.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="325" column="63" selection-start="14030" selection-end="14030" vertical-scroll-proportion="-0.11090573" vertical-offset="4935" max-vertical-offset="17865">
-          <folding>
-            <element signature="e#13295#13310#0" expanded="true" />
-            <element signature="e#13406#13426#0" expanded="true" />
-            <element signature="e#24661#24677#0" expanded="true" />
-            <element signature="e#24798#24801#0" expanded="true" />
-            <element signature="e#24922#24929#0" expanded="true" />
-            <element signature="e#27395#27404#0" expanded="true" />
-            <element signature="e#28043#28052#0" expanded="true" />
-            <element signature="e#28666#28675#0" expanded="true" />
-            <element signature="e#29320#29329#0" expanded="true" />
-            <element signature="e#29974#29983#0" expanded="true" />
-            <element signature="e#30628#30637#0" expanded="true" />
-            <element signature="e#31282#31291#0" expanded="true" />
-            <element signature="e#31936#31945#0" expanded="true" />
-            <element signature="e#32590#32599#0" expanded="true" />
-            <element signature="e#33244#33253#0" expanded="true" />
-            <element signature="e#33807#33819#0" expanded="true" />
+            <element signature="e#34164#34180#0" expanded="true" />
+            <element signature="e#34301#34304#0" expanded="true" />
+            <element signature="e#34425#34432#0" expanded="true" />
+            <element signature="e#35691#35703#0" expanded="true" />
+            <element signature="e#36447#36459#0" expanded="true" />
+            <element signature="e#41299#41310#0" expanded="true" />
           </folding>
         </state>
       </provider>
