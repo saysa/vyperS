@@ -1735,6 +1735,10 @@ ul.playlist li {
         display: none;
     }
 
+    .add-mobile {
+        display: block;
+    }
+
 }
 
 /* 10.4. Mobile Portrait Size to Mobile Landscape Size
@@ -1920,6 +1924,10 @@ ul.playlist li {
         display: none;
     }
 
+    .add-mobile {
+        display: block;
+    }
+
 
 }
 
@@ -1979,6 +1987,10 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     #player {
         background: #E0E0E0;
     }
+
+    .add-mobile {
+        display: none;
+    }
 }
 
 @media all and (max-width: 1280px) {
@@ -1991,6 +2003,10 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     #casing-top {
         height: 210px;
         /*display: none;*/
+    }
+
+    .add-mobile {
+        display: none;
     }
 }
 
@@ -2014,6 +2030,10 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
     #top-link {
         bottom:-9999px;
+    }
+
+    .add-mobile {
+        display: block;
     }
 }
 
@@ -2683,6 +2703,11 @@ footer {
 .leaderboard {
     margin: 10px auto;
     width: 728px;
+}
+
+.add-mobile {
+    margin: 10px auto;
+    width: 320px;
 }
 
 footer .border-left {

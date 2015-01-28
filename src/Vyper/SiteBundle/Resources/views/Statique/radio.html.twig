@@ -569,8 +569,68 @@
 </div>
 </div>
 
+<div class="add-mobile">
+    <a id="add-mobile-link" href="#">
+        <img src="{{ asset('assets/img/japanFM-app-320x50.jpg') }}" alt="Application Japan FM">
+    </a>
+</div>
+
+<script>
+
+    $(document).ready(function() {
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            }
+
+        };
+
+        if ( isMobile.Android() ) {
+            var device = 'android';
+        } else if(isMobile.iOS()) {
+            var device = 'ios';
+        } else {
+            var device = 'any';
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "{{ path('get_device') }}",
+
+            data:{
+                device : device
+            },
+            success: function(data){
+
+                $('#add-mobile-link').attr("href", data);
+            }
+        });
+    });
+
+</script>
+
+
 <footer>
     <div class="container">
+
+
+
+
         <div class="leaderboard">
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- footer-leaderboard -->
@@ -582,6 +642,8 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
+
+
 
         <div class="row">
             <div class="col-md-12 footer">

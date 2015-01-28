@@ -31,6 +31,21 @@ class AjaxController extends Controller
         return new Response($response);
     }
 
+    public function getDeviceAction(Request $request)
+    {
+        $device    = $request->request->get('device');
+
+        if ($device == 'android') {
+            echo 'https://play.google.com/store/apps/details?id=com.conduit.app_4e50177a5739444585a029434352002a.app&hl=fr_FR';
+        } else if ($device == 'ios') {
+            echo 'https://itunes.apple.com/US/app/id902475027';
+        } else {
+            echo 'https://itunes.apple.com/US/app/id902475027';
+        }
+
+        return new Response();
+    }
+
     public function voteSongAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();

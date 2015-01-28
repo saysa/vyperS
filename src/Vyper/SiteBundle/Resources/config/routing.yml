@@ -452,6 +452,10 @@ vote_song:
     path:     /ajax/vote_song
     defaults: { _controller: VyperSiteBundle:Ajax:voteSong }
 
+get_device:
+    path:     /ajax/get_device
+    defaults: { _controller: VyperSiteBundle:Ajax:getDevice }
+
 ajax_switch_article_highlight:
     path:     /_admin_/ajax/switch_article_highlight
     defaults: { _controller: VyperSiteBundle:AdminAjax:switchArticleHighlight }
