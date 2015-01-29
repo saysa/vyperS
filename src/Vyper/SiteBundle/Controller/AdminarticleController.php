@@ -101,6 +101,7 @@ class AdminArticleController extends AdminCommonController {
      */
     public function updateArticleAction(Request $request, Article $article)
     {
+        $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
 
         $form = $this->createForm(new ArticleType, $article);
@@ -111,7 +112,7 @@ class AdminArticleController extends AdminCommonController {
 
             $form->submit($request);
 
-            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
 
             $article->setPicture($picture);
 
@@ -126,13 +127,14 @@ class AdminArticleController extends AdminCommonController {
 
             if ($form->isValid()) {
 
-                $em = $this->getDoctrine()->getManager();
+
                 $em->flush();
             }
 
         }
 
-        $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->myFindAll();
+        $type = $em->getRepository('VyperSiteBundle:ArtistType')->findByName("Musique");
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll($type);
 
         $view
             ->set('article', $article)

@@ -57,6 +57,7 @@ class AdminVideoController extends AdminCommonController {
      */
     public function updateVideoAction(Request $request, Video $video)
     {
+        $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
 
         $form = $this->createForm(new VideoType, $video);
@@ -64,20 +65,24 @@ class AdminVideoController extends AdminCommonController {
         if ('POST' === $request->getMethod()) {
 
             $post_data = $request->request->get('vyper_sitebundle_video');
-            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
             $video->setPicture($picture);
 
             $form->submit($request);
 
             if ($form->isValid()) {
-                $em = $this->getDoctrine()->getManager();
+
                 $em->flush();
             }
 
         }
 
+        $type = $em->getRepository('VyperSiteBundle:ArtistType')->findByName("Musique");
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll($type);
+
         $view
             ->set('video', $video)
+            ->set('artists', $artists)
             ->set('active_video', true)
             ->set('form', $form->createView())
         ;

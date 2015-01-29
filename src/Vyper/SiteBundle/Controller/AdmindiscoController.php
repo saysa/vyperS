@@ -62,6 +62,7 @@ class AdminDiscoController extends AdminCommonController {
         $view = $this->container->get('saysa_view');
 
         $form = $this->createForm(new DiscoType, $disco);
+        $em = $this->getDoctrine()->getManager();
 
         if ('POST' === $request->getMethod()) {
 
@@ -69,7 +70,7 @@ class AdminDiscoController extends AdminCommonController {
 
             $form->submit($request);
 
-            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
 
             $disco->setPicture($picture);
 
@@ -80,8 +81,9 @@ class AdminDiscoController extends AdminCommonController {
 
         }
 
-        $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->myFindAll();
-        $titles   = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Title')->findBy(
+        $type = $em->getRepository('VyperSiteBundle:ArtistType')->findByName("Musique");
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll($type);
+        $titles   = $em->getRepository('VyperSiteBundle:Title')->findBy(
             array('disco' => $disco)
         );
 

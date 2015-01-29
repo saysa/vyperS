@@ -500,6 +500,14 @@ ajax_magazineArtistLinkDelete:
     path:     /_admin_/ajax/magazine_artist_link_delete
     defaults: { _controller: VyperSiteBundle:AdminAjax:magazineArtistLinkDelete }
 
+ajax_videoArtistLink:
+    path:     /_admin_/ajax/video_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:videoArtistLink }
+
+ajax_videoArtistLinkDelete:
+    path:     /_admin_/ajax/video_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:videoArtistLinkDelete }
+
 ajax_addTitleDisco:
     path:     /_admin_/ajax/add_title_to_disco
     defaults: { _controller: VyperSiteBundle:AdminAjax:addTitleDisco }

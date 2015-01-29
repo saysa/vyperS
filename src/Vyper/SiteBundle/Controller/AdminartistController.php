@@ -23,12 +23,13 @@ class AdminArtistController extends AdminCommonController {
      */
     public function showArtistsAction(Request $request)
     {
-
+        $em = $this->getDoctrine()->getManager();
 
         $view = $this->container->get('saysa_view');
 
         // Get all the articles not deleted
-        $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->myFindAll();
+        $type = $em->getRepository('VyperSiteBundle:ArtistType')->findByName("Musique");
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll($type);
 
         $view->set('artists', $artists);
         $view->set("active_artist", true);

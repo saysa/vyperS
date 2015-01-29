@@ -65,6 +65,11 @@ class Video
     private $pictureID;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Vyper\SiteBundle\Entity\Artist", cascade={"persist"})
+     */
+    private $artists;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="created", type="datetime")
@@ -340,5 +345,45 @@ class Video
     public function getReleaseDateFrontFormat()
     {
         return StringMethods::sqlDateToCustom($this->getCreated()->format('Y-m-d'));
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->artists = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add artists
+     *
+     * @param \Vyper\SiteBundle\Entity\Artist $artists
+     * @return Video
+     */
+    public function addArtist(\Vyper\SiteBundle\Entity\Artist $artists)
+    {
+        $this->artists[] = $artists;
+
+        return $this;
+    }
+
+    /**
+     * Remove artists
+     *
+     * @param \Vyper\SiteBundle\Entity\Artist $artists
+     */
+    public function removeArtist(\Vyper\SiteBundle\Entity\Artist $artists)
+    {
+        $this->artists->removeElement($artists);
+    }
+
+    /**
+     * Get artists
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getArtists()
+    {
+        return $this->artists;
     }
 }

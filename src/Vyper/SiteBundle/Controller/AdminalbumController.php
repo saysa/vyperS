@@ -51,6 +51,7 @@ class AdminAlbumController extends AdminCommonController {
      */
     public function updateAlbumAction(Request $request, Album $album)
     {
+        $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
 
         $form = $this->createForm(new AlbumType, $album);
@@ -60,13 +61,14 @@ class AdminAlbumController extends AdminCommonController {
             $form->submit($request);
 
             if ($form->isValid()) {
-                $em = $this->getDoctrine()->getManager();
+
                 $em->flush();
             }
 
         }
 
-        $artists  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Artist')->myFindAll();
+        $type = $em->getRepository('VyperSiteBundle:ArtistType')->findByName("Musique");
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll($type);
 
         $view
             ->set('album', $album)
