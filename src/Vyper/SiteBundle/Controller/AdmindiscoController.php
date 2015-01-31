@@ -66,6 +66,10 @@ class AdminDiscoController extends AdminCommonController {
 
         if ('POST' === $request->getMethod()) {
 
+
+            var_dump($post_data);
+            die();
+
             $post_data = $request->request->get('vyper_sitebundle_disco');
 
             $form->submit($request);

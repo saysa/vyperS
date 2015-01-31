@@ -268,6 +268,12 @@ admin_update_magazine:
     requirements:
         id: \d+
 
+admin_update_top:
+    path:     _admin_/top/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminTop:updateTop }
+    requirements:
+        id: \d+
+
 admin_update_flashnew:
     path:     _admin_/flashnew/update/{id}
     defaults: { _controller: VyperSiteBundle:AdminFlashnew:updateFlashnew }

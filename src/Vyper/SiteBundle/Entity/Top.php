@@ -57,6 +57,13 @@ class Top
     private $author;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="link", type="string", length=255, nullable=true)
+     */
+    private $link;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Picture", cascade={"persist"})
      */
     private $picture;
@@ -230,5 +237,28 @@ class Top
     public function getPicture()
     {
         return $this->picture;
+    }
+
+    /**
+     * Set link
+     *
+     * @param string $link
+     * @return Top
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
+
+        return $this;
+    }
+
+    /**
+     * Get link
+     *
+     * @return string 
+     */
+    public function getLink()
+    {
+        return $this->link;
     }
 }
