@@ -218,6 +218,16 @@ admin_delete_article:
     requirements:
         id: \d+
 
+admin_show_editables:
+    path:     /_admin_/editables
+    defaults: { _controller: VyperSiteBundle:AdminEditable:showAll }
+
+admin_update_editable:
+    path:     _admin_/editable/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminEditable:update }
+    requirements:
+        id: \d+
+
 admin_show_mangas:
     path:     /_admin_/mangas
     defaults: { _controller: VyperSiteBundle:AdminManga:showMangas }

@@ -22,12 +22,24 @@ class StatiqueController extends Controller
      */
     public function aProposAction()
     {
-        return $this->render('VyperSiteBundle:Statique:aPropos.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $view = $this->container->get('saysa_view');
+        $editable = $em->getRepository('VyperSiteBundle:Editable')->findByName('A propos');
+        $view
+            ->set('editable', $editable)
+        ;
+        return $this->render('VyperSiteBundle:Statique:aPropos.html.twig', $view->getView());
     }
 
     public function lEquipeAction()
     {
-        return $this->render('VyperSiteBundle:Statique:lEquipe.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $view = $this->container->get('saysa_view');
+        $editable = $em->getRepository('VyperSiteBundle:Editable')->findByName("L'equipe");
+        $view
+            ->set('editable', $editable)
+        ;
+        return $this->render('VyperSiteBundle:Statique:lEquipe.html.twig', $view->getView());
     }
 
     /**
