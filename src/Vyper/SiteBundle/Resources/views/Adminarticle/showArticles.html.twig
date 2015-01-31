@@ -58,7 +58,7 @@
                                     <td>{{ article.getTitle }}</td>
                                     <td><a class="btn btn-success" href="{{ base_url }}"><i class="icon-zoom-in "></i></a></td>
                                     <td><a class="btn btn-info" href="{{ path('admin_update_article', {'id': article.getId}) }}"><i class="icon-edit "></i></a></td>
-                                    <td><a class="btn btn-danger" href="#"><i class="icon-trash "></i> </a></td>
+                                    <td><a class="btn btn-danger" href="{{ path('admin_delete_article', {'id': article.getId}) }}"><i class="icon-trash "></i> </a></td>
                                 </tr>
                             {% endfor %}
                             </tbody>

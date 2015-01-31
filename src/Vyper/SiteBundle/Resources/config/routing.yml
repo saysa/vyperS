@@ -212,6 +212,12 @@ admin_add_article:
     path:     /_admin_/article/add
     defaults: { _controller: VyperSiteBundle:AdminArticle:addArticle }
 
+admin_delete_article:
+    path:     /_admin_/article/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminArticle:deleteArticle }
+    requirements:
+        id: \d+
+
 admin_show_mangas:
     path:     /_admin_/mangas
     defaults: { _controller: VyperSiteBundle:AdminManga:showMangas }

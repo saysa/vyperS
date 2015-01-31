@@ -145,4 +145,16 @@ class AdminArticleController extends AdminCommonController {
 
         return $this->render('VyperSiteBundle:AdminArticle:updateArticle.html.twig', $view->getView());
     }
+
+    public function deleteArticleAction(Request $request, Article $article)
+    {
+        // todo delete visit and search other relations in order to also delete them
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($article);
+        $em->flush();
+
+        $request->getSession()->getFlashBag()->add('info', 'Article deleted.');
+        return $this->redirect($this->generateUrl('admin_show_articles'));
+    }
 } 
