@@ -161,26 +161,28 @@
 
 
         {% if article.album is not null %}
-            <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-rocket"></i>
-                    </div>
-                    <h4>Galerie</h4>
-                </div>
+            <div class="content-title main-color-reverse">
+                <h4>Galerie</h4>
             </div>
 
-            <ul class="slides">
-                {% for key, picture in article.album.pictures %}
-                    {% if key <= 2 %}
-                    <li class="galerie">
-                        <a rel="lightbox[album]" href="{{ asset(picture.getPath()) }}">
-                            <img src="{{ asset(picture.getPath('galerie')) }}">
-                        </a>
-                    </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+
+
+                    {% for key, picture in article.album.pictures %}
+                        {% if key <= 2 %}
+
+                            <div class="col-md-4 col-sm-6">
+                                <div class="thumb album-thumbnail" style="background: url('{{ asset(picture.getPath('album-cover')) }}') no-repeat center;">
+
+                                </div>
+
+                            </div>
+
+                        {% endif %}
+                    {% endfor %}
+
+
+
+
 
             <a href="{{ path('showAlbum', {'id': article.album.getId, 'slug': article.album.slug}) }}">Plus de photos</a>
         {% endif %}

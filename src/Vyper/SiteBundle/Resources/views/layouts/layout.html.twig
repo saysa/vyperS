@@ -490,7 +490,6 @@
                                             <li><a href="{{ path('culture') }}">Culture</a></li>
                                         </ul>
                                     </li>
-                                    <li class="q{% if current_album is defined %} current_page_item{% endif %}"><a href="{{ path('showAlbums') }}">Galerie</a></li>
 
                                     <li class="q{% if current_magazine is defined %} current_page_item{% endif %}"><a href="{{ path('showAllMagazine') }}"><i class="fa fa-book"></i> Vyper</a></li>
 
@@ -526,18 +525,7 @@
 
 
 
-                        {% if article is defined %}
-                            {% if article.album is not null %}
-                                {% if article.articleType.name == 'musique : live report' %}
-                                    Apercu
-                                    {% for key, picture in article.album.pictures %}
-                                        {% if key <= 2 %}
-                                            i {{ key }} -
-                                        {% endif %}
-                                    {% endfor %}
-                                {% endif %}
-                            {% endif %}
-                        {% endif %}
+
 
                         <aside class="widget widget_tabs">
                             <script>
@@ -637,13 +625,7 @@
 
 
 
-                        <aside id="fairpixels_flickr_widget-2" class="widget widget_flickr">
-                            <div class="widget-title"><h4>Galerie</h4></div>
 
-                            {{ render(controller("VyperSiteBundle:Album:recentPictures")) }}
-
-
-                        </aside>
 
                         <aside class="widget">
                             <div class="widget-title"><h4>Suivez-nous</h4></div>

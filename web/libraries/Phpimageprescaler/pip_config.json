@@ -42,6 +42,13 @@
                 }
             }
         },
+        "album-cover-2": {
+            "dimensions": {
+                "0": {
+                    "h": 248
+                }
+            }
+        },
         "galerie": {
             "dimensions": {
                 "0": {
