@@ -94,7 +94,20 @@ class StatiqueController extends Controller
 
     public function partenairesAction()
     {
-        return $this->render('VyperSiteBundle:Statique:partenaires.html.twig');
+        $view = $this->container->get('saysa_view');
+        $em = $this->getDoctrine()->getManager();
+
+        $type = $em->getRepository('VyperSiteBundle:PartnerType')->find(1);
+        $partner_media    = $em->getRepository('VyperSiteBundle:Partner')->partnerMedia($type);
+        $type = $em->getRepository('VyperSiteBundle:PartnerType')->find(2);
+        $partner_event  = $em->getRepository('VyperSiteBundle:Partner')->partnerEvent($type);
+
+
+
+        $view->set('partner_media',       $partner_media);
+        $view->set('partner_event',     $partner_event);
+
+        return $this->render('VyperSiteBundle:Statique:partenaires.html.twig', $view->getView());
     }
 
     public function cguAction()

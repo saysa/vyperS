@@ -12,134 +12,54 @@
             <h4>Production et Médias</h4>
         </div>
 
-        <div class="row">
+        {% set count = 1 %}
+        {% for partner in partner_media %}
+            {% if count==1 %}
+                <div class="row">
+            {% endif %}
             <div class="col-md-3">
-                <a href="http://www.b7klan.com">
-                    <img src="{{ asset('assets/img/partners/b7klan.jpg?size=partner') }}"
+                <a href="{{ partner.link }}">
+                    <img src="{{ asset(partner.picture.getPath('partner')) }}"
                 </a>
             </div>
-            <div class="col-md-3">
-                <a href="http://www.torpedo-productions.com">
-                    <img src="{{ asset('assets/img/partners/Torpedo.jpg?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://33degrees.eu">
-                    <img src="{{ asset('assets/img/partners/33degrees.png?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.elokami-production.com">
-                    <img src="{{ asset('assets/img/partners/elokami.png?size=partner') }}"
-                </a>
-            </div>
-        </div>
+            {% if count==4 or loop.last %}
+                </div>
+            {% endif %}
 
-        <div class="row">
-            <div class="col-md-3">
-                <a href="http://www.highfeel.jp">
-                    <img src="{{ asset('assets/img/partners/highfeel.jpg?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://olydri.com">
-                    <img src="{{ asset('assets/img/partners/olydri.gif?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.nolife-tv.com">
-                    <img src="{{ asset('assets/img/partners/nolife.jpg?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.japan-in-motion.tv">
-                    <img src="{{ asset('assets/img/partners/japaninmotion.gif?size=partner') }}"
-                </a>
-            </div>
-        </div>
+            {% set count = count + 1 %}
 
-        <div class="row">
-            <div class="col-md-3">
-                <a href="http://e-talentbank.co.jp">
-                    <img src="{{ asset('assets/img/partners/Etalentbank.png?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.watanabepro.co.jp">
-                    <img src="{{ asset('assets/img/partners/watanabe.png?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.facebook.com/vyperjmusic">
-                    <img src="{{ asset('assets/img/partners/vyper.png?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.shibuya-international.com">
-                    <img src="{{ asset('assets/img/partners/shibuya.jpg?size=partner') }}"
-                </a>
-            </div>
-        </div>
+            {% if count==5 %}
+                {% set count = 1 %}
+            {% endif %}
+        {% endfor %}
 
-        <div class="row">
-            <div class="col-md-3">
-                <a href="http://taifu-comics.com">
-                    <img src="{{ asset('assets/img/partners/taifu.png?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.ototo.fr">
-                    <img src="{{ asset('assets/img/partners/ototo.png?size=partner') }}"
-                </a>
-            </div>
 
-        </div>
 
 
         <div class="content-title main-color-reverse">
             <h4>Evénements</h4>
         </div>
+        {% set count = 1 %}
+        {% for partner in partner_event %}
+            {% if count==1 %}
+                <div class="row">
+            {% endif %}
+            <div class="col-md-3">
+                <a href="{{ partner.link }}">
+                    <img src="{{ asset(partner.picture.getPath('partner')) }}"
+                </a>
+            </div>
+            {% if count==4 or loop.last %}
+                </div>
+            {% endif %}
 
-        <div class="row">
-            <div class="col-md-3">
-                <a href="http://www.facebook.com/japanmusicfest2014">
-                    <img src="{{ asset('assets/img/partners/japanmusicfest.jpg?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.mangazur.fr">
-                    <img src="{{ asset('assets/img/partners/mangazur.png?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.toulouse-game-show.fr">
-                    <img src="{{ asset('assets/img/partners/tgs.jpg?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.asiexpo.com/japantouch2014">
-                    <img src="{{ asset('assets/img/partners/japantouch.png?size=partner') }}"
-                </a>
-            </div>
-        </div>
+            {% set count = count + 1 %}
 
-        <div class="row">
-            <div class="col-md-3">
-                <a href="http://www.animest.net">
-                    <img src="{{ asset('assets/img/partners/animest.png?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.magic-ip.com">
-                    <img src="{{ asset('assets/img/partners/magic.png?size=partner') }}"
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://www.japantoursfestival.com">
-                    <img src="{{ asset('assets/img/partners/japantoursfest.png?size=partner') }}"
-                </a>
-            </div>
-        </div>
+            {% if count==5 %}
+                {% set count = 1 %}
+            {% endif %}
+        {% endfor %}
+
 
 
 
