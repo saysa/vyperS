@@ -4,6 +4,7 @@ namespace Vyper\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Vyper\SiteBundle\Entity\Top;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 
 class TopController extends Controller
@@ -35,6 +36,21 @@ class TopController extends Controller
         $view->set('top_musics', $top_music);
 
         return $this->render('VyperSiteBundle:Top:topMusics.html.twig', $view->getView());
+    }
+
+    /**
+     * @Template
+     */
+    public function pageMusicAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $top_music  = $em->getRepository('VyperSiteBundle:Top')->topMusic();
+
+
+        $view = $this->container->get('saysa_view')->set('top_musics', $top_music);
+
+        return $view->getView();
     }
 
     public function topOstsAction()
