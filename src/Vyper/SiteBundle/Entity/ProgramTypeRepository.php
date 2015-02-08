@@ -12,4 +12,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class ProgramTypeRepository extends EntityRepository
 {
+    public function getByPictureId($pictureID)
+    {
+        $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder
+            ->where('t.picture = :pictureID')
+            ->setParameter('pictureID', $pictureID)
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }

@@ -151,6 +151,13 @@ class AdminArticleController extends AdminCommonController {
         // todo delete visit and search other relations in order to also delete them
 
         $em = $this->getDoctrine()->getManager();
+
+        $visits = $em->getRepository('VyperSiteBundle:Visit')->getArticleVisitByArticleId($article->getId());
+
+        foreach($visits as $visit) {
+            $em->remove($visit);
+        }
+
         $em->remove($article);
         $em->flush();
 

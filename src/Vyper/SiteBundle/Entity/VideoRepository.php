@@ -12,6 +12,19 @@ use Doctrine\ORM\EntityRepository;
  */
 class VideoRepository extends EntityRepository
 {
+    public function getByPictureId($pictureID)
+    {
+        $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder
+            ->where('t.picture = :pictureID')
+            ->setParameter('pictureID', $pictureID)
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function myFindAll()
     {
         $queryBuilder = $this->createQueryBuilder('v');

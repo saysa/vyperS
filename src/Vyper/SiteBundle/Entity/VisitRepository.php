@@ -12,6 +12,20 @@ use Doctrine\ORM\EntityRepository;
  */
 class VisitRepository extends EntityRepository
 {
+    public function getArticleVisitByArticleId($articleID)
+    {
+        $queryBuilder = $this->createQueryBuilder('v');
+        $queryBuilder
+            ->where('v.article = :article_id')
+            ->setParameter('article_id'     , $articleID)
+        ;
+
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function findVisit($options, $item) {
 
         $earlier = new \DateTime('now');
