@@ -2103,13 +2103,13 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
     #casing {
         background: #6FC7D5 url("images/casing/japanexposud/JES06_japanfm.jpg") no-repeat 50% 0;
-        /* background: white; */
+        background: white;
 
     }
 
     #casing-top {
         height: 210px;
-        /* display: none; */
+        display: none;
     }
 
     #player {
@@ -2125,12 +2125,12 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
     #casing {
         background: #6FC7D5 url("images/casing/japanexposud/JES06_japanfm.jpg") no-repeat 50% 0;
-        /* background: white; */
+        background: white;
     }
 
     #casing-top {
         height: 210px;
-        /* display: none; */
+        display: none;
     }
 
     .add-mobile {
@@ -2142,13 +2142,13 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
 
     #casing {
         background: #6FC7D5 url("images/casing/japanexposud/JES06_japanfm.jpg") no-repeat 50% 0;
-        /*background: white;*/
+        background: white;
 
     }
 
     #casing-top {
         height: 100px;
-        /*display: none;*/
+        display: none;
     }
 
     #top-link,
